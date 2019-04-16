@@ -1,0 +1,234 @@
+---
+title: 'Network Analysis Final Project: Mapping #QAnon on Twitter'
+author: "Alex Newhouse"
+output:
+  html_document:
+    df_print: paged
+header-includes:
+- \onehalfspacing
+- \counterwithin{figure}{section}
+- \counterwithin{table}{section}
+---
+
+```{r setup, include = FALSE}
+library(tidyverse)
+library(igraph)
+library(statnet)
+library(intergraph)
+library(visNetwork)
+library(knitr)
+library(tweetbotornot)
+library(ggthemes)
+```
+
+On June 15, 2018, Matthew Wright used an armored vehicle to block traffic on the Hoover Dam bypass. He brought an AR-15 and a handgun with him, and he had a single goal: to force the United States government to release a report from the Office of the Inspector General that would, he believed, contain evidence of blatant criminality by FBI agents while they were handling the investigation into Hillary Clinton's use of a private email server.
+
+The real OIG report had been released the previous day, which was the catalyst for Wright's action: a vast, nebulous, and complicated conspiracy theory community had convinced themselves that there was a "real" OIG report, one that the government was hiding from the American people. Motivated by cryptic posts on the 4Chan message boards by a person claiming to have Q-level security clearance, the community had rallied around the belief that branches of the federal government were actively working to stage a coup against Donald Trump; that Special Counsel Robert Mueller was actually working *with* Donald Trump to arrest, prosecute, and imprison political opponents including Clinton, Barack Obama, and George Soros; and that high-profile liberal politicians, celebrities, and Jewish figures are members of a global child-trafficking ring. 
+
+The conspiracy theory spun out of the ashes of the #pizzagate conspiracy theory, and it has amassed a sizeable following since the election of Donald Trump. It has gained several noteworthy adherents, including Roseanne Barr, and believers have appeared at Trump rallies, in photographs of military personnel, and even at the White House.
+
+From its roots on 4Chan, the QAnon community branched out across social media platforms. One of its strongest bases of support was on Reddit, where the subreddit r/GreatAwakening organized, recruited, and disseminated propaganda related to the conspiracy. After Reddit banned all associated subreddits, the community largely moved onto Voat and Gab. However, a significant portion of QAnon discussion and organization still takes place on Twitter, which has not, as of yet, taken meaningful action against the conspiracy theory. 
+
+While liberal news sites, right-wing watchdogs, and mainstream media have all covered QAnon, little rigorous social network analysis of the conspiracy and its members has been undertaken. Because of its maximalist approach to freedom of speech and reluctance to ban communities, Twitter provides the best opportunity to glean information about how the network is currently structured: who are the message magnifiers? How do adherents arrange themselves around more mainstream figures? Do automated accounts or foreign influencers play major roles in the network?
+
+To answer these questions, this paper analyzes a corpus of 50,000 Tweets posted with the hashtag #QAnon on December 5, 2018, to visualize the conspiracy theory's community and identify important actors and subgroups. The date was not chosen arbitrarily: #D5, as it was called, was promoted as a crucial day in QAnon circles, with various unsubstantiated claims asserting that Trump's political enemies would finally be brought to justice. With the community already cracking apart due to growing discontent with the number of Q's predictions that were definitively proven false, #D5 was seen as the day that the conspiracy theory would finally be validated. 
+
+In this paper, I employ an array of social network analysis tools. I first look at the overarching network to identify the main clusters of activity and whether these clusters are hierarchical or more egalitarian. Next, I find the accounts with the highest centralities in order to identify the most influential posters, those who may act as bridges from one Twitter sub-community to another, and those who are the message magnifiers. Finally, I attempt to break down the network even further into sub-groups in order to investigate specific characteristics of smaller groups.
+
+### Methodology
+
+The D5-QAnon network was built using a corpus of 52,228 Tweets gathered via rtweet (Kearney 2018), an R wrapper for the Twitter API. Since I am interested in the broader network of interactions and message-sharing, I opted not to base ties on the follower-followed Twitter relationship. Rather, user mentions constitute the edges in the network. If one user mentions another in a Tweet, the first user will have an arc going from their node to the mentioned user's node.
+
+In this way, the network captures the flow of information more accurately than the follower/followed relationship. Since some of the actors are bots, which often have follow counts on the extremes--either no one or tens of thousands of users--the follow relationship is inherently limited in visualizing message flows.
+
+With the initial network built from the edgelist, I performed several analyses: component identification to understand where the core network of users is located; centralization calculations to determine the level of hierarchy present; user centrality calculations to locate power users, message magnifiers, and users who span multiple communities; and subgroup visualization to understand how clusters within the main component operate.
+
+### Locating Components
+
+An inherent part of mining Twitter based on a search term or a hashtag and not a specific set of users, is that the dataset will inevitably catch users who do not belong in the network, or multiple, disconnect networks. With a hashtag like #QAnon, which has garnered significant attention outside of the core network of believers, any set of Tweets will likely include journalists and academics studying the community; laypeople who do not understand what the hashtag stands for; and users who specifically push back against those in the community.
+
+From a first glance at the full network visualization, it is easy to see these separate groups of people. They appear as isolates or smaller networks orbiting the large, central web. I simplify this broad network so that multiple mentions of the same person are collapsed to one arc.
+
+```{r, echo = FALSE, warning=FALSE}
+el1 <- read_csv('edgelist1.csv') %>% select(-X1)
+el1 <- el1[,c(1,8,2,3,4,5,6, 7)]
+el2 <- el1 %>% select(screen_name)
+nodes1 <- read_csv('nodes.csv') %>% select(-X1)
+
+g <- graph_from_data_frame(el1, directed = TRUE, vertices = nodes1) %>% igraph::simplify()
+plot(g, asp = 0, main = "Figure 1: Entire Network With Isolates", vertex.label = NA, vertex.size = .2, edge.arrow.size = .05, edge.width = .05)
+
+```
+
+Immediately notable, however, is that there are *not* a lot of separate networks in this dataset. Normally, with other terms, we would expect several disjointed networks who are all talking about a similar topic. With #QAnon, however, the community appears to be particularly dense and dominant on that hashtag--an indication of a fairly insular social network.
+
+Since the dense center is of the most interest in this study, I pick out the largest component connected by weak ties. I choose to base the decomposition on weak ties instead of strong ties to capture highly active or highly influential individuals--those who reply to a lot of other users without getting replies back, or vise versa.
+
+```{r include = FALSE, echo = FALSE, warning=FALSE}
+members <- membership(clusters(g, mode="weak"))
+dg <- lapply(unique(members), function (x) induced.subgraph(g, which(members == x)))
+max.g <- which.max(sapply(dg, vcount))
+g_q <- dg[[max.g]]
+```
+
+```{r echo = FALSE, warning = FALSE}
+plot(g_q, asp = 0, main = "Figure 2: Main Core of Twitter Network", vertex.label = NA, vertex.size = .2, edge.arrow.size = .05, edge.width = .05)
+```
+
+Further analysis will be based on this central, core network to avoid dealing with issues that arise in disconnected networks. This network has an order of 18807, and an average degree of 14.2. Although in an absolute sense this indicates a relatively sparse network, the fact that, on average, users tweeting with #QAnon are mentioning or being mentioned by over 14 people is unusual. As the median degree is only 2, several users are clearly mentioning at much higher frequenciess than most others. 
+
+### Centralization and Centrality
+
+Indeed, measures of centralization reveal a fairly hierarchical network. 
+
+```{r echo = FALSE, warning=FALSE}
+cent_in_deg <- centr_degree(g_q, mode = 'in', normalized = TRUE)$centralization
+cent_out_deg <- centr_degree(g_q, mode = 'out', normalized = TRUE)$centralization
+cent_bet <- centr_betw(g_q)$centralization
+cent_eig <- centr_eigen(g_q, directed = TRUE)$centralization
+
+kable(data.frame(cent_in_deg, cent_out_deg, cent_bet, cent_eig), caption = 'Table 1: Centralization Measures', digits = 3)
+```
+
+Most notably, the eigenvector centralization is very close to one--meaning that there are several users who have the most connections to others users and are also well-connected to other users. In-degree centralization is also somewhat high, meaning that there are some users who garner significantly more mentions than the majority of the network. 
+
+Taking a look at local measures of centrality, it is possible to tease out who are the dominant tweeters in the network. Certain celebrities and brands like YouTube, Donald Trump, and General Flynn appear at the top of in-degree centrality because of their topicality in this right-wing community. Out-degree centrality, on the other hand, is dominated by users who have relatively low in-degree centrality. These are power users and message magnifiers, those whose existence on Twitter is geared toward spreading a message as widely as possible--often with assistance from automated software.
+
+```{r echo = FALSE, warning=FALSE}
+in_deg <- igraph::degree(g_q, mode = 'in')
+out_deg <- igraph::degree(g_q, mode = 'out')
+bet <- igraph::betweenness(g_q)
+eig <- igraph::evcent(g_q, directed = TRUE)$vector
+close_in <- igraph::closeness(g_q, mode = 'in')
+close_out <- igraph::closeness(g_q, mode = 'out')
+
+cent_df <- data.frame(in_deg, out_deg, bet, eig, close_in, close_out)
+cent_df$name <- row.names(cent_df)
+rownames(cent_df) <- 1:nrow(cent_df)
+cent_df <- cent_df %>% arrange(desc(out_deg))
+kable(head(cent_df %>% select(name, out_deg)), caption = 'Table 2: Top 5 Out-Degree Users', digits = 3)
+cent_df <- cent_df %>% arrange(desc(in_deg))
+kable(head(cent_df %>% select(name, in_deg)), caption = 'Table 3: Top 5 In-Degree Users', digits = 3)
+cent_df <- cent_df %>% arrange(desc(bet))
+kable(head(cent_df %>% select(name, bet)), caption = 'Table 4: Top 5 Betweenness Users', digits = 3)
+cent_df <- cent_df %>% arrange(desc(eig))
+kable(head(cent_df %>% select(name, eig)), caption = 'Table 5: Top 5 Eigenvector Users', digits = 3)
+```
+
+### Sub-groups and K-cores
+
+Centrality tells only one part of the story, however. On Twitter, users arrange themselves into heterogeneous structures based on a variety of factors. We can visualize these internal sub-group structures via k-core analysis, which locates "cores" of varying densities. For these purposes, we will use both the simplified network that collapses multiple mentions of the same person into one arc, and the full network where each individual mention is represented by its own arc. The simplified network reveals a maximally dense core with a variety of different types of actors:
+
+```{r echo = FALSE, warning=FALSE}
+kcore1 <- coreness(g_q)
+V(g_q)$core <- kcore1
+g25c <- induced_subgraph(g_q, kcore1 == 25)
+V(g25c)$size <- scale(igraph::betweenness(g25c)) + 1
+plot(g25c, asp = 0, edge.arrow.size = .05, vertex.label.cex = .8, vertex.label.color = 'black', edge.width = .1, layout = layout_with_kk(g25c), main = 'Figure 3: 25-Core Center of Simplified Network')
+```
+
+This core includes several prolific #QAnon community members, as well as a few celebrities who unsurprisingly appear frequently in the Tweets of these generally far-right users. Donald Trump and Michael Flynn, for instance, are often the recipients of Tweets--and this specific sub-group seems particularly likely to call out the President and his ex-National Security Advisor in their Tweets. 
+
+This sub-group gives insight into the dominant topics spoken about on "#D5" by QAnon believers. Since Flynn shows up, it is reasonable to assume that he was discussed. We can see this clearly by checking the text of the Tweets in this sub-group:
+
+```{r echo = FALSE, warning=FALSE}
+names <- V(g25c)$name %>% as.data.frame()
+names$screen_name <- names$.
+names <- names %>% select(-.)
+tweets <- read_csv('tweets_q_12_5.csv')
+tweets %>%
+  filter(screen_name %in% names$screen_name) %>% 
+  mutate(text = tolower(text)) %>%
+  filter(grepl("flynn", text)) %>%
+  select(screen_name, text) %>% 
+  tail()
+
+
+```
+
+The accounts in this sub-group exhibit a specific style of Tweet indicative of a message-magnifying strategy. They mention sometimes dozens of other users at once, in an attempt to draw attention to their Tweet content. Often this content is nothing more than a link to a chat room, a list of hashtags, or a single sentence. Flynn has, seemingly unwillingly, been drawn into these mention-heavy Tweets as a result of his plea agreement and cooperation with Robert Mueller, as well as actions that the community has adopted as proof of Flynn's alignment with Q (Anonymous Information YouTube Channel, 2018). 
+
+I also utilize Latent-Dirichlet Association (LDA), a statistical technique that groups documents (in this case, Tweets) into buckets based on topic discussed. As this is an unsupervised algorithm, the topics assigned do not have qualitative descriptions attached to them. However, manual review demonstrates that the vast majority of Tweets sent in this cluster use either hashtag-heavy or mention-heavy style, which are both presumably intended to maximize social engagement with specific content. Topic 9 (hashtag-heavy) and topic 5 (mention-heavy), as seen in the table below, compose the bulk of Tweets in this sub-group.
+
+```{r echo = FALSE, warning=FALSE}
+tweets %>%
+  filter(screen_name %in% names$screen_name) %>%
+  count(topics) %>%
+  kable(caption = 'Table 6: Count of Topics in 25-core Center')
+```
+
+While the simplified network allows us to get a sense of the abstracted mention-based structure of a specific group of users, it also has the limitation of ignoring frequency-based characteristics of density. In other words, if there are prolific bot-style accounts mentioning the same several users over and over, the cores in the simplified network will not detect these bot-groups. As a result, I also investigate the full network, where each and every mention is represented by an arc.
+
+```{r echo = FALSE, warning=FALSE}
+g_all <- graph_from_data_frame(el1, directed = TRUE, vertices = nodes1)
+#g_all <- igraph::delete.vertices(g_q_all, V(g_q_all)[ igraph::degree(g_q_all, mode = 'out')==0])
+members_all <- membership(clusters(g_all, mode="weak"))
+dg_all <- lapply(unique(members_all), function (x) induced.subgraph(g_all, which(members_all == x)))
+max.g_all <- which.max(sapply(dg_all, vcount))
+g_q_all <- dg_all[[max.g_all]]
+kcore <- coreness(g_q_all)
+V(g_q_all)$core <- kcore
+
+
+#plot.igraph(g_q, vertex.color=V(g_q)$core, vertex.label = NA, vertex.size = 2, edge.arrow.size = .01, layout = layout_with_kk(g_q))
+
+g925c <- induced_subgraph(g_q_all, kcore==925)
+
+
+plot(g925c, edge.arrow.size = .1, vertex.size = 3, vertex.label.cex = .8, vertex.label.color = 'black', edge_width = .1, main = 'Figure 4: 925-core Center of Full Network')
+
+name_925 <- V(g925c)$name
+
+reach3<-function(x){
+    r=vector(length=vcount(x))
+    for (i in 1:vcount(x)){
+    n=igraph::neighborhood(x,3,nodes=i)
+    ni=unlist(n)
+    l=length(ni)
+    r[i]=(l)/vcount(x)}
+    r}
+V(g_q_all)$reach3 <- reach3(g_q_all)
+reach_cent <- igraph::get.data.frame(g_q_all, c('vertices')) %>% as.data.frame()
+reach_cent$name <- row.names(reach_cent)
+row.names(reach_cent) <- 1:nrow(reach_cent)
+```
+
+In the highest-density core in the full network, which is a 925-core, the users do not interact with celebrities--they interact with each other. Several have out-degree measures so high that they are likely not "normal" users. @PrimeCreator2 is a good example of one of these anomalous users. @PrimeCreator2 has mentioned 46,000 users in his Tweets collected in the dataset, which requires an extraordinary frequency of Tweeting. In fact, according to analysis run with the Tweetbotornot package (Kearney 2018), the user is roughly 90% likely to use automated bot-like techniques. The flower-like appearance of the sub-group network and the connections between the "petals" show that this sub-group comprises @PrimeCreator2's primary engagement community.
+
+Manual review of @PrimeCreator2 shows that the account is probably not entirely fake, and there may be an actual person in charge of the account. However, his relatively high number of followers and followed accounts, combined with the sustained and high rate of tweeting, indicates that this account operates primarily as a message dissemenator--a user whose purpose is to garner as much engagement as possible spread his message as far as possible. 
+
+Local measures of centrality help quantify his role as a message magnifier. In the simplified network, his out-degree of 233 indicates he is engaging with hundreds of accounts per day; his in-degree of 12 indicates a moderate (although disproportionate) level of response from his community. However, his betweenness score reveals the most significant indicator of his role as an information broker and spreader. At 368,588, his betweenness score is the third-highest in the entire network. This high of a score demonstrates that he occupies a special position on the shortest path between over 368,000 different combinations of users. 
+
+In fact, four of the 10 members in this sub-group exhibit high betweenness traits and high out-degree. Even though the other three only tweeted a few times, their participation in @PrimeCreator2's enormous Twitter thread with dozens of mentions granted them a high betweenness score--which, in the context of Twitter, is important. It means that they participated as an information broker. The top four users also have extremely high three-step reach centrality, with @PrimeCreator2 able to reach 72 percent of the entire network within three steps. 
+
+```{r echo = FALSE, warning=FALSE}
+cent_df %>% 
+  filter(name %in% name_925) %>% 
+  arrange(desc(bet)) %>%
+  kable(caption = 'Table 7: Betweenness Scores of 925-Core Center', digits = 2)
+reach_cent %>% 
+  select(name, reach3) %>%
+  filter(name %in% name_925) %>%
+  arrange(desc(reach3)) %>%
+  kable(caption = 'Table 8: 3-Step Reach Scores of 925-core Center', digits = 2)
+```
+
+### Recommendations and Conclusions
+
+The #QAnon network is composed of thousands of actors who often use a unique mix of rhetorical devices, in-group language, and Twitter-specific engagement strategies. The conspiracy community has developed such a large array of acronyms and language that the Tweets present in this dataset can be nearly incomprehensible to the broader public. Many of the most prolific users also include dozens of hashtags and mentions in their Tweets, further obfuscating the content itself. 
+
+But what this network demonstrates is that the unusual mentioning strategies and the countless hashtags *are* content, because they are strategically deployed to maximize engagement and exposure. Using k-core analysis coupled with LDA topic modeling, I find that the densest cores in both the simplified and full networks are dominated by users leveraging these engagement strategies to inflate the reach of their messages, as demonstrated most definitively by user @PrimeCreator2, a power user who has tweeted over 150,000 times over the course of the existence of his account, which was created in March 2018.
+
+Global measures of centralization also confirm that this network is structured hierarchically around several high-frequency, strategic posters. Out-degree centralization is extremely high, and a check of out-degree centrality shows that only a handful of accounts make up most of the Tweets posted. As shown in the table below, only the top quartile of users have meaningful out-degree measures, while the histogram below demonstrates that the vast majority of users are clustered near 0.
+
+```{r echo = FALSE, warning=FALSE}
+out_all <- igraph::degree(g_q_all, mode = 'out') %>% as.data.frame()
+out_all$name <- row.names(out_all)
+row.names(out_all) <- 1:nrow(out_all)
+quantile(out_all$.) %>% kable(caption = 'Table 9: Quantiles of Out-Degree Centrality')
+ggplot(out_all, aes(x = log(.))) + geom_histogram() + labs(title = 'Figure 5: Distribution of users over log out-degree centrality', x = 'Log of out-degree measure', y = 'Number of users')
+```
+
+The dominance of this network by a few message-magnifiers has significant implications for security considerations. As #QAnon has already proven dangerous enough to incite violence, it is important to understand how its online radicalization and communications network is structured and might be mitigated. From this analysis, it is likely that the removal of several of the most high-profile and prolific users would dramatically reduce the information flow throughout the network. There is a significant chance that it would even fracture the network. 
+
+In the future, more analysis should be done on some of the peripheral cores and sub-groups outside of the dense center. How do the less prolific users interact with the #QAnon network? Are they passive observers, or do they have more "human", less strategic methods of engagement? Further, there is significant opportunity to tease apart how the content of Tweets relates to the structure of the network. Statistical models like ERGMs might be deployed alongside topic modelling or other text analysis to better understand who create ties, who form sub-communities, and if language or subject matter govern the creation of those ties. 
