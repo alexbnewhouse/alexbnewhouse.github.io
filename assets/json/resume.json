@@ -16,21 +16,7 @@
       }
     ]
   },
-  "work": [
-    {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
-      "highlights": [
-        "Relativity"
-      ]
-    }
-  ],
-  "volunteer": [],
-  "education": [
+	"education": [
     {
       "institution": "University of Colorado Boulder",
       "url": "https://www.colorado.edu/polisci/",
@@ -45,6 +31,17 @@
       ]
     }
   ],
+  "work": [
+    {
+      "name": "Self-Employed",
+      "position": "Consultant",
+      "url": "https://example.com",
+      "startDate": "2019-01-01",
+      "summary": "I leverage my experience in trust and safety and extremism studies to provide intelligence, analysis, and recommendations to technology companies and government agencies. I work with clients to produce research products that provide policy and enforcement teams actionable insights to enhance mitigation efforts against violent, extremist, and criminal actors.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
   "awards": [],
   "certificates": [],
   "publications": [],
