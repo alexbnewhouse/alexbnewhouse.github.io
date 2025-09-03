@@ -14,8 +14,6 @@ I believe in making complex political science concepts accessible through hands-
 
 **Fall 2025** - **PSCI 2075: Quantitative Methods** 
 
-* [Tutorial 1: Getting Started with R](/tutorial1.qmd)
-
 **Spring 2025** - **PSCI 1101: Introduction to Western Political Thought**
 
 **Fall 2024** - **PSCI 2223: Introduction to Comparative Politics**
@@ -34,19 +32,24 @@ I believe in making complex political science concepts accessible through hands-
 
 #### As Adjunct Professor
 
-**January 2021** - **Online Extremism** (self-designed) - Intensive winter term course on digital radicalization - Focus on methodological approaches to studying online political violence - Integration of computational methods with political science theory
+**January 2021** - **Online Extremism** (self-designed) 
+* Intensive winter term course on digital radicalization 
+* Focus on methodological approaches to studying online political violence 
+* Integration of computational methods with political science theory
 
 ## Teaching Materials & Resources
 
 ### Quantitative Methods Resources
 
--   [Tutorial 1: Getting Started with R](/tutorial1.qmd) - Introduction to R programming for political science research
--   Data visualization techniques for political analysis
--   Causal inference methods in observational data
+-   [Tutorial 1: Getting Started with Greek Notation and Descriptive Stats](/tutorial1.qmd)
 
 ### Student Mentorship
 
-I have extensive experience mentoring student researchers, having supervised **30 undergraduate and graduate research assistants** and **15 independent projects** between 2019-2023. Student projects have covered topics including:
+I have extensive experience mentoring student researchers, having supervised **34 undergraduate and graduate research assistants** and **15 independent projects** since 2019-2025. 
+
+At CU, I currently supervise four undergradaute RAs. They provide qualitative coding and research assistance for a long-term project aiming to better understand apocalyptic language on social media. 
+
+At Middlebury, I oversaw projects covering topics such as:
 
 -   Italian neofascism and political violence
 -   Militant accelerationism and coalition-building
@@ -62,5 +65,3 @@ My courses integrate cutting-edge research methods with substantive political sc
 -   Critically evaluate digital media and online communities
 -   Understand the methodological challenges of studying sensitive political topics
 -   Connect theoretical frameworks to empirical analysis
-
-Through partnerships with technology companies and government agencies, students gain exposure to real-world applications of political science research in policy and industry settings.
