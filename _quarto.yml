@@ -13,7 +13,7 @@ website:
             - text: "Blog"
               href: posts.html
             - text: "Teaching" 
-              href: tutorial1.html
+              href: teaching.html
             - text: "Research"
               href: research.html
             - text: "Notes" 

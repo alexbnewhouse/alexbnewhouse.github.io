@@ -28,6 +28,41 @@
     "text": "Variance\nLet’s turn to another important descriptive statistic, variance. This measures the “spread”, or “dispersion”, of your data around the mean. Think how long the tails on the left and right of the mean are.\nFinding variance in code is easy:\n\nvar(df$x)\n\n[1] 1.07084\n\n\nWhat does a higher or lower variance actually mean? Let’s investigate. We’re going to create two new vectors/columns: a high variance one (var = 4) and a low variance one (var = .25). Note: the code we use to generate this asks for standard deviation, which is just the square root of the variance.\nAfter adding a “high_var” and a “low_var” column to our data frame, we then create a histogram showing the different columns on the same graph. Our high-variance data is shown in blue, our original data is shown in orange, and our low-variance data is shown in green. What do you notice?\n\ndf &lt;- df %&gt;% \n    mutate(high_var = rnorm(500, mean = 0, sd = 2)) %&gt;% \n    mutate(low_var = rnorm(500, mean = 0, sd = .5))\n\ndf %&gt;% \n    ggplot() + \n    geom_histogram(aes(x = high_var), fill = \"navy\", alpha = .5) +\n    geom_histogram(aes(x = low_var), fill = \"darkgreen\", alpha = .5) +\n    geom_histogram(aes(x = x), fill = \"orange\") + \n    geom_vline(aes(xintercept = mean(x)), color = \"red\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nVariance in Greek notation is pretty similar to that of the mean–in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:\n\\(\\text{Var(X)} = \\sigma^2 = s^2 = \\frac{\\sum_{i=1}^n (X_i - \\mu)^2}{n-1}\\)\nLet’s walk through it piece by piece. First, \\(\\text{Var(X)}, \\sigma^2, \\text{and } s^2\\) are all different ways of saying “variance of X”. Second, now we have a slightly different summation than what’s in the equation for mean. \\(\\sum_{i=1}^n (X_i - \\mu)^2\\) is depicting how we are summing (\\(\\sum\\)) from our first element (\\(i=1\\)) to our \\(n\\)-th element for the value \\((X_i - \\mu)^2\\), where \\(\\mu\\) is simply the mean of \\(X\\). Intuitively, this is finding the sum of all of the distances (squared) between a single value \\(X_i\\) and the mean of all of the values. Last, we divide that summed value by \\(n-1\\).\nNote that variance includes mean as part of its equation. You can literally take the mean we calculated above and plug it into this function and find the right value! Let’s see how that looks:\n\nvar(df$x)\n\n[1] 1.07084\n\nmean_x &lt;- mean(df$x)\nsum_squared_distance &lt;- sum((df$x - mean_x)^2)\nvar_calc = sum_squared_distance/(length(df$x)-1)\nvar_calc\n\n[1] 1.07084\n\n\nSo the variance of a sample is a function of the mean of that sample."
   },
   {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence."
+  },
+  {
+    "objectID": "teaching.html#teaching-philosophy",
+    "href": "teaching.html#teaching-philosophy",
+    "title": "Teaching",
+    "section": "",
+    "text": "I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence."
+  },
+  {
+    "objectID": "teaching.html#courses-taught",
+    "href": "teaching.html#courses-taught",
+    "title": "Teaching",
+    "section": "Courses Taught",
+    "text": "Courses Taught\n\nUniversity of Colorado Boulder\n\nAs Teaching Assistant\nFall 2025 - PSCI 2075: Quantitative Methods - Tutorial 1: Getting Started with R\nSpring 2025 - PSCI 1101: Introduction to Western Political Thought\nFall 2024 - PSCI 2223: Introduction to Comparative Politics\nSpring 2024 - PSCI 2075: Quantitative Methods\nFall 2023 - PSCI 1824: Introduction to International Relations\n\n\n\nMiddlebury Institute of International Studies\n\nAs Adjunct Professor\nSpring 2023 - Digital Extremism (self-designed) - Examined the intersection of technology and political violence - Covered online radicalization processes, platform dynamics, and content moderation - Students conducted original research on extremist communities across digital platforms\n\n\n\nMiddlebury College\n\nAs Adjunct Professor\nJanuary 2021 - Online Extremism (self-designed) - Intensive winter term course on digital radicalization - Focus on methodological approaches to studying online political violence - Integration of computational methods with political science theory"
+  },
+  {
+    "objectID": "teaching.html#teaching-materials-resources",
+    "href": "teaching.html#teaching-materials-resources",
+    "title": "Teaching",
+    "section": "Teaching Materials & Resources",
+    "text": "Teaching Materials & Resources\n\nQuantitative Methods Resources\n\nTutorial 1: Getting Started with R - Introduction to R programming for political science research\nData visualization techniques for political analysis\nCausal inference methods in observational data\n\n\n\nStudent Mentorship\nI have extensive experience mentoring student researchers, having supervised 30 undergraduate and graduate research assistants and 15 independent projects between 2019-2023. Student projects have covered topics including:\n\nItalian neofascism and political violence\nMilitant accelerationism and coalition-building\nFrench far-right movements on encrypted platforms\nAI implications for domestic counterterrorism\nChristian identity movements in contemporary extremism"
+  },
+  {
+    "objectID": "teaching.html#research-teaching-integration",
+    "href": "teaching.html#research-teaching-integration",
+    "title": "Teaching",
+    "section": "Research-Teaching Integration",
+    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to political phenomena\nCritically evaluate digital media and online communities\nUnderstand the methodological challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis\n\nThrough partnerships with technology companies and government agencies, students gain exposure to real-world applications of political science research in policy and industry settings."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Alex Newhouse",
@@ -74,6 +109,6 @@
     "href": "index.html#teaching",
     "title": "Alex Newhouse",
     "section": "Teaching",
-    "text": "Teaching\nI have taught courses on digital extremism and online radicalization at both Middlebury College and MIIS, and currently serve as a teaching assistant for courses in comparative politics, international relations, and quantitative methods at CU Boulder.\n\nThis website showcases my research at the intersection of political science, technology, and data science. For collaboration inquiries or media requests, please reach out via email."
+    "text": "Teaching\nI have taught courses on digital extremism and online radicalization at both Middlebury College and MIIS, and currently serve as a teaching assistant for courses in comparative politics, international relations, and quantitative methods at CU Boulder.\n\nFor collaboration inquiries or media requests, please reach out via email."
   }
 ]

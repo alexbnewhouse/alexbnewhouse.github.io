@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Greek Notation and Univariate Descrpitive Statistics – Alex Bradley Newhouse</title>
+<title>Teaching – Alex Bradley Newhouse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -104,35 +69,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -165,7 +101,7 @@ window.Quarto = {
 <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html"> 
+    <a class="nav-link active" href="./teaching.html" aria-current="page"> 
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
@@ -192,9 +128,19 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-is-going-on-with-all-those-greek-letters" id="toc-what-is-going-on-with-all-those-greek-letters" class="nav-link active" data-scroll-target="#what-is-going-on-with-all-those-greek-letters">What is going on with all those Greek letters?</a></li>
-  <li><a href="#mean-a.k.a-first-population-moment-a.k.a-expected-value" id="toc-mean-a.k.a-first-population-moment-a.k.a-expected-value" class="nav-link" data-scroll-target="#mean-a.k.a-first-population-moment-a.k.a-expected-value">Mean (a.k.a first population moment) (a.k.a expected value)</a></li>
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
+  <li><a href="#teaching-philosophy" id="toc-teaching-philosophy" class="nav-link active" data-scroll-target="#teaching-philosophy">Teaching Philosophy</a></li>
+  <li><a href="#courses-taught" id="toc-courses-taught" class="nav-link" data-scroll-target="#courses-taught">Courses Taught</a>
+  <ul class="collapse">
+  <li><a href="#university-of-colorado-boulder" id="toc-university-of-colorado-boulder" class="nav-link" data-scroll-target="#university-of-colorado-boulder">University of Colorado Boulder</a></li>
+  <li><a href="#middlebury-institute-of-international-studies" id="toc-middlebury-institute-of-international-studies" class="nav-link" data-scroll-target="#middlebury-institute-of-international-studies">Middlebury Institute of International Studies</a></li>
+  <li><a href="#middlebury-college" id="toc-middlebury-college" class="nav-link" data-scroll-target="#middlebury-college">Middlebury College</a></li>
+  </ul></li>
+  <li><a href="#teaching-materials-resources" id="toc-teaching-materials-resources" class="nav-link" data-scroll-target="#teaching-materials-resources">Teaching Materials &amp; Resources</a>
+  <ul class="collapse">
+  <li><a href="#quantitative-methods-resources" id="toc-quantitative-methods-resources" class="nav-link" data-scroll-target="#quantitative-methods-resources">Quantitative Methods Resources</a></li>
+  <li><a href="#student-mentorship" id="toc-student-mentorship" class="nav-link" data-scroll-target="#student-mentorship">Student Mentorship</a></li>
+  </ul></li>
+  <li><a href="#research-teaching-integration" id="toc-research-teaching-integration" class="nav-link" data-scroll-target="#research-teaching-integration">Research-Teaching Integration</a></li>
   </ul>
 </nav>
     </div>
@@ -203,7 +149,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Intro to Greek Notation and Univariate Descrpitive Statistics</h1>
+<h1 class="title">Teaching</h1>
 </div>
 
 
@@ -220,123 +166,70 @@ window.Quarto = {
 </header>
 
 
-<section id="what-is-going-on-with-all-those-greek-letters" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-going-on-with-all-those-greek-letters">What is going on with all those Greek letters?</h2>
-<p>For most people, one of the most challenging parts about learning data analysis and quantitative methods is getting used to all of the complicated notation. This is perfectly understandable: math notation uses Greek (literally a different language than English) and combines it with math!</p>
-<p>While the learning curve is steep, you will eventually get more comfortable consuming Greek notation. In this tutorial, I’ll walk through some of the most common symbols you’ll encounter and illustrate them with the univariate descriptive statistics that you’ll need to know.</p>
+<section id="teaching-philosophy" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-philosophy">Teaching Philosophy</h2>
+<p>I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence.</p>
 </section>
-<section id="mean-a.k.a-first-population-moment-a.k.a-expected-value" class="level2">
-<h2 class="anchored" data-anchor-id="mean-a.k.a-first-population-moment-a.k.a-expected-value">Mean (a.k.a first population moment) (a.k.a expected value)</h2>
-<p>Mean, which is one measure of the “average” or central tendency of a set of values, is calculated by summing all of your values and dividing by the total number of values that you have. This should be pretty familiar for you, you likely know intuitively that the average of <span class="math inline">\(1 + 2 + 3 = 2\)</span>.</p>
-<p>Shown below is how this looks in code. I first generate 500 random values and store them as a column in a dataframe. Then, I print the mean of that column. Last, I create a histogram of the values and show the mean wtih a red line.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.2     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># simulate 500 values and store as a vector in a dataframe</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">500</span>))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print the mean</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.001838821</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># graph the histogram and show the mean line (in red)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>We simulated data from the “standard normal” distribution, which by definition has a mean of 0–and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic “add up all the values and divide by the number of values”, you’ll get the same value:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sum_x <span class="ot">=</span> <span class="fu">sum</span>(df<span class="sc">$</span>x)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sum_x <span class="sc">/</span> <span class="fu">length</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.001838821</code></pre>
-</div>
-</div>
-<p>What does this look like in Greek notation? Let’s take a look:</p>
-<p><span class="math inline">\(\mathbb{E}[X] = \frac{\sum_{i=1}^n X_i}{n}\)</span></p>
-<p>Despite the fact that you’re probably comfortable with the concept of mean, there are a lot of symbols here to describe that concept. It can be daunting! But we can break it down and show that it really isn’t that bad.</p>
-<p><span class="math inline">\(\mathbb{E}[X]\)</span> is how we symbolize “Expected Value of X”; in this case, we’re using X to refer to our whole set of values (the vector containing all of the numbers that we want to find the mean of). Expected value, remember, just means “mean”.</p>
-<p><span class="math inline">\(\sum_{i=1}^n X_i\)</span> symbolizes a <em>summation</em>. The sigma <span class="math inline">\(\sum\)</span> is the greek symbol for “add all of the elements together”. The <span class="math inline">\(i\)</span> below the sigma indicates that we’re going to start at the <em>first element</em> of our data. The <span class="math inline">\(n\)</span> above the sigma indicates that we’re going to use <em>all</em> of the data up to the last value. <span class="math inline">\(X_i\)</span> refers to the <span class="math inline">\(i\)</span>-th element of X, our vector holding all of the values that we want to average.</p>
-<p>To put it together, we’re summing every value from <span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_n\)</span>, and then we’re dividing that by <span class="math inline">\(n\)</span>. In this case, our <span class="math inline">\(X\)</span> vector is the data that we simulated, and we’re going to go from <span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_500\)</span> (since we created 500 values in our original code).</p>
+<section id="courses-taught" class="level2">
+<h2 class="anchored" data-anchor-id="courses-taught">Courses Taught</h2>
+<section id="university-of-colorado-boulder" class="level3">
+<h3 class="anchored" data-anchor-id="university-of-colorado-boulder">University of Colorado Boulder</h3>
+<section id="as-teaching-assistant" class="level4">
+<h4 class="anchored" data-anchor-id="as-teaching-assistant">As Teaching Assistant</h4>
+<p><strong>Fall 2025</strong> - <strong>PSCI 2075: Quantitative Methods</strong> - <a href="./tutorial1.html">Tutorial 1: Getting Started with R</a></p>
+<p><strong>Spring 2025</strong> - <strong>PSCI 1101: Introduction to Western Political Thought</strong></p>
+<p><strong>Fall 2024</strong> - <strong>PSCI 2223: Introduction to Comparative Politics</strong></p>
+<p><strong>Spring 2024</strong> - <strong>PSCI 2075: Quantitative Methods</strong></p>
+<p><strong>Fall 2023</strong> - <strong>PSCI 1824: Introduction to International Relations</strong></p>
 </section>
-<section id="variance" class="level2">
-<h2 class="anchored" data-anchor-id="variance">Variance</h2>
-<p>Let’s turn to another important descriptive statistic, variance. This measures the “spread”, or “dispersion”, of your data around the mean. Think how long the tails on the left and right of the mean are.</p>
-<p>Finding variance in code is easy:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.07084</code></pre>
-</div>
-</div>
-<p>What does a higher or lower variance actually mean? Let’s investigate. We’re going to create two new vectors/columns: a high variance one (var = 4) and a low variance one (var = .25). Note: the code we use to generate this asks for standard deviation, which is just the square root of the variance.</p>
-<p>After adding a “high_var” and a “low_var” column to our data frame, we then create a histogram showing the different columns on the same graph. Our high-variance data is shown in blue, our original data is shown in orange, and our low-variance data is shown in green. What do you notice?</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">high_var =</span> <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">low_var =</span> <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> .<span class="dv">5</span>))</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> high_var), <span class="at">fill =</span> <span class="st">"navy"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> low_var), <span class="at">fill =</span> <span class="st">"darkgreen"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> x), <span class="at">fill =</span> <span class="st">"orange"</span>) <span class="sc">+</span> </span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>Variance in Greek notation is pretty similar to that of the mean–in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:</p>
-<p><span class="math inline">\(\text{Var(X)} = \sigma^2 = s^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n-1}\)</span></p>
-<p>Let’s walk through it piece by piece. First, <span class="math inline">\(\text{Var(X)}, \sigma^2, \text{and } s^2\)</span> are all different ways of saying “variance of X”. Second, now we have a slightly different summation than what’s in the equation for mean. <span class="math inline">\(\sum_{i=1}^n (X_i - \mu)^2\)</span> is depicting how we are summing (<span class="math inline">\(\sum\)</span>) from our first element (<span class="math inline">\(i=1\)</span>) to our <span class="math inline">\(n\)</span>-th element for the value <span class="math inline">\((X_i - \mu)^2\)</span>, where <span class="math inline">\(\mu\)</span> is simply the mean of <span class="math inline">\(X\)</span>. Intuitively, this is finding the sum of all of the distances (squared) between a single value <span class="math inline">\(X_i\)</span> and the mean of all of the values. Last, we divide that summed value by <span class="math inline">\(n-1\)</span>.</p>
-<p>Note that variance includes mean as part of its equation. You can literally take the mean we calculated above and plug it into this function and find the right value! Let’s see how that looks:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.07084</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mean_x <span class="ot">&lt;-</span> <span class="fu">mean</span>(df<span class="sc">$</span>x)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>sum_squared_distance <span class="ot">&lt;-</span> <span class="fu">sum</span>((df<span class="sc">$</span>x <span class="sc">-</span> mean_x)<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>var_calc <span class="ot">=</span> sum_squared_distance<span class="sc">/</span>(<span class="fu">length</span>(df<span class="sc">$</span>x)<span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>var_calc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.07084</code></pre>
-</div>
-</div>
-<p>So the variance of a sample is a function of the mean of that sample.</p>
+</section>
+<section id="middlebury-institute-of-international-studies" class="level3">
+<h3 class="anchored" data-anchor-id="middlebury-institute-of-international-studies">Middlebury Institute of International Studies</h3>
+<section id="as-adjunct-professor" class="level4">
+<h4 class="anchored" data-anchor-id="as-adjunct-professor">As Adjunct Professor</h4>
+<p><strong>Spring 2023</strong> - <strong>Digital Extremism</strong> (self-designed) - Examined the intersection of technology and political violence - Covered online radicalization processes, platform dynamics, and content moderation - Students conducted original research on extremist communities across digital platforms</p>
+</section>
+</section>
+<section id="middlebury-college" class="level3">
+<h3 class="anchored" data-anchor-id="middlebury-college">Middlebury College</h3>
+<section id="as-adjunct-professor-1" class="level4">
+<h4 class="anchored" data-anchor-id="as-adjunct-professor-1">As Adjunct Professor</h4>
+<p><strong>January 2021</strong> - <strong>Online Extremism</strong> (self-designed) - Intensive winter term course on digital radicalization - Focus on methodological approaches to studying online political violence - Integration of computational methods with political science theory</p>
+</section>
+</section>
+</section>
+<section id="teaching-materials-resources" class="level2">
+<h2 class="anchored" data-anchor-id="teaching-materials-resources">Teaching Materials &amp; Resources</h2>
+<section id="quantitative-methods-resources" class="level3">
+<h3 class="anchored" data-anchor-id="quantitative-methods-resources">Quantitative Methods Resources</h3>
+<ul>
+<li><a href="./tutorial1.html">Tutorial 1: Getting Started with R</a> - Introduction to R programming for political science research</li>
+<li>Data visualization techniques for political analysis</li>
+<li>Causal inference methods in observational data</li>
+</ul>
+</section>
+<section id="student-mentorship" class="level3">
+<h3 class="anchored" data-anchor-id="student-mentorship">Student Mentorship</h3>
+<p>I have extensive experience mentoring student researchers, having supervised <strong>30 undergraduate and graduate research assistants</strong> and <strong>15 independent projects</strong> between 2019-2023. Student projects have covered topics including:</p>
+<ul>
+<li>Italian neofascism and political violence</li>
+<li>Militant accelerationism and coalition-building</li>
+<li>French far-right movements on encrypted platforms</li>
+<li>AI implications for domestic counterterrorism</li>
+<li>Christian identity movements in contemporary extremism</li>
+</ul>
+</section>
+</section>
+<section id="research-teaching-integration" class="level2">
+<h2 class="anchored" data-anchor-id="research-teaching-integration">Research-Teaching Integration</h2>
+<p>My courses integrate cutting-edge research methods with substantive political science questions. Students learn to:</p>
+<ul>
+<li>Apply computational methods to political phenomena</li>
+<li>Critically evaluate digital media and online communities</li>
+<li>Understand the methodological challenges of studying sensitive political topics</li>
+<li>Connect theoretical frameworks to empirical analysis</li>
+</ul>
+<p>Through partnerships with technology companies and government agencies, students gain exposure to real-world applications of political science research in policy and industry settings.</p>
 
 
 </section>
