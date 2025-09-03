@@ -1,6 +1,6 @@
 ---
 title: "Alex Newhouse"
-subtitle: "Political Scientist & Data Scientist"
+subtitle: "Computational Political Scientist"
 about:
   template: trestles
   image: profpic.jpeg

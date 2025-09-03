@@ -1,66 +1,101 @@
 [
   {
-    "objectID": "tutorial1.html",
-    "href": "tutorial1.html",
-    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Alex Newhouse",
     "section": "",
-    "text": "For most people, one of the most challenging parts about learning data analysis and quantitative methods is getting used to all of the complicated notation. This is perfectly understandable: math notation uses Greek (literally a different language than English) and combines it with math!\nWhile the learning curve is steep, you will eventually get more comfortable consuming Greek notation. In this tutorial, I’ll walk through some of the most common symbols you’ll encounter and illustrate them with the univariate descriptive statistics that you’ll need to know."
+    "text": "📧 alex.newhouse@colorado.edu | 📍 Boulder, CO | 💼 linkedin.com/in/alexbnewhouse"
   },
   {
-    "objectID": "tutorial1.html#what-is-going-on-with-all-those-greek-letters",
-    "href": "tutorial1.html#what-is-going-on-with-all-those-greek-letters",
-    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
-    "section": "",
-    "text": "For most people, one of the most challenging parts about learning data analysis and quantitative methods is getting used to all of the complicated notation. This is perfectly understandable: math notation uses Greek (literally a different language than English) and combines it with math!\nWhile the learning curve is steep, you will eventually get more comfortable consuming Greek notation. In this tutorial, I’ll walk through some of the most common symbols you’ll encounter and illustrate them with the univariate descriptive statistics that you’ll need to know."
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Alex Newhouse",
+    "section": "🎓 EDUCATION",
+    "text": "🎓 EDUCATION\n\nUniversity of Colorado Boulder, Boulder, CO {.institution}\nDoctor of Philosophy, Political Science {.degree-title} Anticipated: May 2027\n• Research focus: Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference\n• Comparative Politics and Political Methodology subfields\n• PSCI committee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel\n• Other advisor: Brian Keegan (Information Science, CU Boulder)\n\n\nGeorgia Institute of Technology, Atlanta, GA (Remote Student) {.institution}\nMaster of Science, Analytics {.degree-title} Fall 2021\n• Coursework in Python, R, JavaScript, Deep and Machine Learning, and Data Visualization\n\n\nMiddlebury Institute of International Studies (MIIS), Monterey, CA {.institution}\nMaster of Arts, Nonproliferation and Terrorism Studies {.degree-title} Dec. 2018\n• Financial Crimes Management Specialization; Foreign Language of Study: Russian\n\n\nMiddlebury College, Middlebury, VT {.institution}\nBachelor of Arts, Political Science and English Literature, Russian Minor {.degree-title} May 2017\n• Graduated Summa cum Laude, departmental honors in English"
   },
   {
-    "objectID": "tutorial1.html#mean-a.k.a-first-population-moment-a.k.a-expected-value",
-    "href": "tutorial1.html#mean-a.k.a-first-population-moment-a.k.a-expected-value",
-    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
-    "section": "Mean (a.k.a first population moment) (a.k.a expected value)",
-    "text": "Mean (a.k.a first population moment) (a.k.a expected value)\nMean, which is one measure of the “average” or central tendency of a set of values, is calculated by summing all of your values and dividing by the total number of values that you have. This should be pretty familiar for you, you likely know intuitively that the average of \\(1 + 2 + 3 = 2\\).\nShown below is how this looks in code. I first generate 500 random values and store them as a column in a dataframe. Then, I print the mean of that column. Last, I create a histogram of the values and show the mean wtih a red line.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nset.seed(1234)\n# simulate 500 values and store as a vector in a dataframe\ndf &lt;- data.frame(x = rnorm(500))\n\n# print the mean\nmean(df$x)\n\n[1] 0.001838821\n\n# graph the histogram and show the mean line (in red)\ndf %&gt;% \n    ggplot() + \n    geom_histogram(aes(x = x)) + \n    geom_vline(aes(xintercept = mean(x)), color = \"red\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nWe simulated data from the “standard normal” distribution, which by definition has a mean of 0–and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic “add up all the values and divide by the number of values”, you’ll get the same value:\n\nsum_x = sum(df$x)\nsum_x / length(df$x)\n\n[1] 0.001838821\n\n\nWhat does this look like in Greek notation? Let’s take a look:\n\\(\\mathbb{E}[X] = \\frac{\\sum_{i=1}^n X_i}{n}\\)\nDespite the fact that you’re probably comfortable with the concept of mean, there are a lot of symbols here to describe that concept. It can be daunting! But we can break it down and show that it really isn’t that bad.\n\\(\\mathbb{E}[X]\\) is how we symbolize “Expected Value of X”; in this case, we’re using X to refer to our whole set of values (the vector containing all of the numbers that we want to find the mean of). Expected value, remember, just means “mean”.\n\\(\\sum_{i=1}^n X_i\\) symbolizes a summation. The sigma \\(\\sum\\) is the greek symbol for “add all of the elements together”. The \\(i\\) below the sigma indicates that we’re going to start at the first element of our data. The \\(n\\) above the sigma indicates that we’re going to use all of the data up to the last value. \\(X_i\\) refers to the \\(i\\)-th element of X, our vector holding all of the values that we want to average.\nTo put it together, we’re summing every value from \\(X_1\\) to \\(X_n\\), and then we’re dividing that by \\(n\\). In this case, our \\(X\\) vector is the data that we simulated, and we’re going to go from \\(X_1\\) to \\(X_500\\) (since we created 500 values in our original code)."
+    "objectID": "cv.html#research-assistanceships-and-labs",
+    "href": "cv.html#research-assistanceships-and-labs",
+    "title": "Alex Newhouse",
+    "section": "🔬 RESEARCH ASSISTANCESHIPS AND LABS",
+    "text": "🔬 RESEARCH ASSISTANCESHIPS AND LABS\n\n🏆 Fellowships\nSenior Non-Resident Fellow, MIIS Mar. 2025 – Present\n\n\n🧪 Labs\nGraduate Affiliate, Institute for Behavioral Science 2023 – Present\nLab Member, Colorado Laboratory on Users, Media, and Networks 2023 – Present\nLab Member, American Politics Research Lab 2024 - Present\n\n\n💼 Paid Research Positions\n\nGraduate Research Assistant, CU Boulder 2025 – Present\n• Exploratory quantitative and qualitative analysis for Jennifer Fitzgerald and Jeffrey Nonmacher’s work on global perceptions of inequality\n\n\nGraduate Research Assistant, CU Boulder 2025 – Present\n• Qualitative and quantitative support for Alexandra Siegel’s book project on the interactions between online influencers and political regimes\n\n\nGraduate Research Assistant, CU Boulder 2024 – Present\n• “‘Mind the Gap!’ Policy Dissonance and Financial Markets”, supervised by Andrew Q. Philips and in collaboration with Allyson L. Benton\n\n\nGraduate Research Assistant, CU Boulder 2023 – Present\n• “Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media”, supervised by Andrew Q. Philips and in collaboration with Komal P. Kaur\n\n\nGraduate Research Assistant, CU Boulder Summer 2024\n• Data analysis and synthesis of original survey data on Australian attitudes around Voice to Parliament referendum, supervised by Carew Boulding\n\n\nGraduate Research Assistant, MIIS Fall 2018\n• Assisted with launch of the Center on Terrorism, Extremism, and Counterterrorism, and built first project to secure funding from technology industry partner, supervised by Jason Blazakis\n\n\nGraduate Research Assistant, MIIS Fall 2018\n• UNIDIR-funded project collecting data on global cybersecurity projects, supervised by Elaine Korzak\n\n\nGraduate Research Assistant, MIIS Feb. 2018 – Dec. 2018\n• Contributed to META Lab research and education projects, supervised by Philip Murphy\n\n\nGraduate Research Assistant, MIIS and Naval Postgraduate School Feb. 2018 – Aug. 2018\n• Lead data analyst on processing and analysis of Islamic State primary-source documents, supervised by Craig Whiteside\n\n\nUndergraduate Research Assistant, Middlebury Aug. 2016 – May 2017\n• Data analysis and background research on intervention, civil conflict, and the CNN Effect, supervised by Orion Lewis\n\n\nUndergraduate Research Assistant, MIIS Feb. 2016 – May 2016\n• Contributed to various research and analysis projects at the James Martin Center for Nonproliferation Studies"
   },
   {
-    "objectID": "tutorial1.html#variance",
-    "href": "tutorial1.html#variance",
-    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
-    "section": "Variance",
-    "text": "Variance\nLet’s turn to another important descriptive statistic, variance. This measures the “spread”, or “dispersion”, of your data around the mean. Think how long the tails on the left and right of the mean are.\nFinding variance in code is easy:\n\nvar(df$x)\n\n[1] 1.07084\n\n\nWhat does a higher or lower variance actually mean? Let’s investigate. We’re going to create two new vectors/columns: a high variance one (var = 4) and a low variance one (var = .25). Note: the code we use to generate this asks for standard deviation, which is just the square root of the variance.\nAfter adding a “high_var” and a “low_var” column to our data frame, we then create a histogram showing the different columns on the same graph. Our high-variance data is shown in blue, our original data is shown in orange, and our low-variance data is shown in green. What do you notice?\n\ndf &lt;- df %&gt;% \n    mutate(high_var = rnorm(500, mean = 0, sd = 2)) %&gt;% \n    mutate(low_var = rnorm(500, mean = 0, sd = .5))\n\ndf %&gt;% \n    ggplot() + \n    geom_histogram(aes(x = high_var), fill = \"navy\", alpha = .5) +\n    geom_histogram(aes(x = low_var), fill = \"darkgreen\", alpha = .5) +\n    geom_histogram(aes(x = x), fill = \"orange\") + \n    geom_vline(aes(xintercept = mean(x)), color = \"red\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nVariance in Greek notation is pretty similar to that of the mean–in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:\n\\(\\text{Var(X)} = \\sigma^2 = s^2 = \\frac{\\sum_{i=1}^n (X_i - \\mu)^2}{n-1}\\)\nLet’s walk through it piece by piece. First, \\(\\text{Var(X)}, \\sigma^2, \\text{and } s^2\\) are all different ways of saying “variance of X”. Second, now we have a slightly different summation than what’s in the equation for mean. \\(\\sum_{i=1}^n (X_i - \\mu)^2\\) is depicting how we are summing (\\(\\sum\\)) from our first element (\\(i=1\\)) to our \\(n\\)-th element for the value \\((X_i - \\mu)^2\\), where \\(\\mu\\) is simply the mean of \\(X\\). Intuitively, this is finding the sum of all of the distances (squared) between a single value \\(X_i\\) and the mean of all of the values. Last, we divide that summed value by \\(n-1\\).\nNote that variance includes mean as part of its equation. You can literally take the mean we calculated above and plug it into this function and find the right value! Let’s see how that looks:\n\nvar(df$x)\n\n[1] 1.07084\n\nmean_x &lt;- mean(df$x)\nsum_squared_distance &lt;- sum((df$x - mean_x)^2)\nvar_calc = sum_squared_distance/(length(df$x)-1)\nvar_calc\n\n[1] 1.07084\n\n\nSo the variance of a sample is a function of the mean of that sample."
+    "objectID": "cv.html#teaching-experience",
+    "href": "cv.html#teaching-experience",
+    "title": "Alex Newhouse",
+    "section": "🎯 TEACHING EXPERIENCE",
+    "text": "🎯 TEACHING EXPERIENCE\n\n📚 As Teaching Assistant\n• Introduction to Western Political Thought, CU Boulder, Spring 2025\n• Introduction to Comparative Politics, CU Boulder, Fall 2024\n• Quantitative Research Methods, CU Boulder, Spring 2024\n• Introduction to International Relations, CU Boulder, Fall 2023\n\n\n👨‍🏫 As Adjunct Professor\n• Digital Extremism, Middlebury Institute of International Studies, Spring 2023 (self-designed)\n• Online Extremism, Middlebury College, Jan. 2021 (self-designed)"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching",
-    "section": "",
-    "text": "I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence."
+    "objectID": "cv.html#mentorship-and-supervision",
+    "href": "cv.html#mentorship-and-supervision",
+    "title": "Alex Newhouse",
+    "section": "🌟 MENTORSHIP AND SUPERVISION",
+    "text": "🌟 MENTORSHIP AND SUPERVISION\n\nManaged a total of 30 Middlebury undergraduate and graduate research assistants between 2019-2023\n\nSample projects: • Partnership with Roblox to detect and mitigate violent and hateful networks of users\n• Partnership with Spectrum Labs to develop datasets of online toxicity, white supremacy, and violent behavior in 7 languages\n• Long-term research and policy support for a video social media platform’s policy enforcement team\nSupervised independent projects for 15 Middlebury undergraduate interns and 4 graduate fellows. Sample projects supervised:\n• “Italian Neofascism and the Years of Lead: A Closer Look at the Nuclei Armati Rivoluzionari”\n• “Archeofuturism and Its Parallels to Militant Accelerationism”\n• “The French Far-Right on Telegram: Laundering Extremism Through Support For Political Activism”\n• “Christian Identity’s New Role on the Extreme Right”\n• “The AI Revolution and Its Implications on Domestic Counterterrorism”"
   },
   {
-    "objectID": "teaching.html#teaching-philosophy",
-    "href": "teaching.html#teaching-philosophy",
-    "title": "Teaching",
-    "section": "",
-    "text": "I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence."
+    "objectID": "cv.html#grants-and-fundraising",
+    "href": "cv.html#grants-and-fundraising",
+    "title": "Alex Newhouse",
+    "section": "💰 GRANTS AND FUNDRAISING",
+    "text": "💰 GRANTS AND FUNDRAISING\n\nMiddlebury Conflict Transformation Grant, FY 2022 - $50,000, Principal Investigator\n\n\nDHS Terrorism and Targeted Violence Prevention Grant, FY 2022 - $700,000, Principal Investigator\n\n\nDHS Terrorism and Targeted Violence Prevention Grant, FY 2021 – $630,000, Principal Investigator"
   },
   {
-    "objectID": "teaching.html#courses-taught",
-    "href": "teaching.html#courses-taught",
-    "title": "Teaching",
-    "section": "Courses Taught",
-    "text": "Courses Taught\n\nUniversity of Colorado Boulder\n\nAs Teaching Assistant\nFall 2025 - PSCI 2075: Quantitative Methods\nSpring 2025 - PSCI 1101: Introduction to Western Political Thought\nFall 2024 - PSCI 2223: Introduction to Comparative Politics\nSpring 2024 - PSCI 2075: Quantitative Methods\nFall 2023 - PSCI 1824: Introduction to International Relations\n\n\n\nMiddlebury Institute of International Studies\n\nAs Adjunct Professor\nSpring 2023 - Digital Extremism (self-designed) - Examined the intersection of technology and political violence - Covered online radicalization processes, platform dynamics, and content moderation - Students conducted original research on extremist communities across digital platforms\n\n\n\nMiddlebury College\n\nAs Adjunct Professor\nJanuary 2021 - Online Extremism (self-designed) * Intensive winter term course on digital radicalization * Focus on methodological approaches to studying online political violence * Integration of computational methods with political science theory"
+    "objectID": "cv.html#employment",
+    "href": "cv.html#employment",
+    "title": "Alex Newhouse",
+    "section": "💼 EMPLOYMENT",
+    "text": "💼 EMPLOYMENT\n\nMiddlebury Institute of International Studies, Monterey, CA\nSenior Research Fellow – Emerging Tech, CTEC June 2023-August 2024\n• Supervised CTEC’s portfolio of projects that engage with the video game industry\n• Led cutting-edge research into the influence of emerging technologies like AI on worldwide extremism and terrorism trends\n• Assisted with CTEC’s relationships with the tech industry\n• Engaged with media, published research, and served as a leading voice at CTEC on various extremism-related issues\n• Coordinated CTEC’s data science projects and analyst resources\n\n\nDeputy Director, CTEC April 2021-May 2023\n• Oversaw CTEC’s research, operations, and development\n• Hired and managed a team of full-time, part-time, and student researchers\n• Directly supervised external relationships with technology companies, government agencies, academia, and nonprofits\n• Served as Principal Investigator on several research projects, including two funded by grants from the Department of Homeland Security\n• Built CTEC’s Data Science functions, including overseeing development of innovative tools using AI, machine learning, NLP, and social network analysis\n\n\nData Analyst and Research Lead, CTEC Jan. 2019-April 2021\n• Built and delivered an end-to-end data analysis and visualization platform for understanding trends in hate and violence on social video platforms at scale\n• Led development of glossary of right-wing terminology, slang, and images\n• Raised money to expand CTEC by developing client relationships in the tech industry\n\n\nUnited States House of Representatives, Washington, DC\nInvestigative Consultant, Select Committee to Investigate the January 6th Attack Feb. 2022-Oct. 2022\n• Designed and executed cross-platform investigations on how online communities contributed to the January 6th attack on the U.S. Capitol\n• Provided expertise in online extremism, including the activities of Oath Keepers, Proud Boys, QAnon, Three Percenters, and neo-fascists, to investigators and Members of Congress\n• Drafted sections of public hearings conducted by Members of Congress in June-July 2022\n• Delivered written material included in the Committee’s final report\n\n\nSony Interactive Entertainment, San Mateo, CA\nData Governance Analyst Jan. 2019-Jan. 2020\n• Managed and coordinated PlayStation’s data-sharing process\n• Assisted with creation and implementation of privacy policies and standards\n• Operationalized SIE’s privacy-by-design goals so that users have safety, security, control, and transparency over their own data\n• Collaborated closely with privacy lawyers to develop a shared language that allows for understanding of and compliance with privacy legislation, like the GDPR and CCPA\n\n\nSony Interactive Entertainment, San Diego, CA\nGlobal Fraud Monitoring Analyst Intern Summer 2018\n• Worked on fraud monitoring and development of fraud prevention rules for PlayStation Network\n• Led project streamlining cooperation between Customer Service and Global Fraud Management\n• Assisted Holiday Season 2018 planning by creating Splunk dashboards, revising runbooks, and laying out on-call procedures\n\n\nUber, San Francisco, CA\nCrisis Management Intern Fall 2017\n• Worked with the Crisis Management/Business Continuity Team to develop business continuity plans for all divisions within Uber\n• Developed set of metrics using SQL for assessing crisis response and impact, which the Crisis Management Team incorporated into its performance reports and incident database\n• Cooperated with a variety of stakeholders to help develop a global Crisis Management Playbook\n• Assisted Protective Intelligence team with research for a city launch geopolitical risk assessment\n\n\nGameSpot – CBS Interactive, San Francisco, CA\nEditorial Intern Summers 2014, 2015, 2016"
   },
   {
-    "objectID": "teaching.html#teaching-materials-resources",
-    "href": "teaching.html#teaching-materials-resources",
-    "title": "Teaching",
-    "section": "Teaching Materials & Resources",
-    "text": "Teaching Materials & Resources\n\nQuantitative Methods Resources\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\n\n\n\nStudent Mentorship\nI have extensive experience mentoring student researchers, having supervised 34 undergraduate and graduate research assistants and 15 independent projects since 2019-2025.\nAt CU, I currently supervise four undergradaute RAs. They provide qualitative coding and research assistance for a long-term project aiming to better understand apocalyptic language on social media.\nAt Middlebury, I oversaw projects covering topics such as:\n\nItalian neofascism and political violence\nMilitant accelerationism and coalition-building\nFrench far-right movements on encrypted platforms\nAI implications for domestic counterterrorism\nChristian identity movements in contemporary extremism"
+    "objectID": "cv.html#peer-reviewed-publications",
+    "href": "cv.html#peer-reviewed-publications",
+    "title": "Alex Newhouse",
+    "section": "📝 PEER-REVIEWED PUBLICATIONS",
+    "text": "📝 PEER-REVIEWED PUBLICATIONS\nBenton, A., Newhouse, A., and Philips, A. “Mind the Gap! Policy Dissonance and Financial Markets.” May 2025 (under review).\nNewhouse, A. and Kowert, R. “Extremist Identity Creation Through Performative Infighting on Steam.” Frontiers in Psychology (forthcoming).\nKowert, R., Kilmer, E., and Newhouse, A. “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology. August 2024.\nKowert, R., Kilmer, E., and Newhouse, A. “Culturally Justified Hate: Prevalence and Mental Health Impact of Dark Participation in Games.” Proceedings of the 57th Hawaii International Conference on System Sciences. January 2024.\nNewhouse, A. “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel. June 2021."
   },
   {
-    "objectID": "teaching.html#research-teaching-integration",
-    "href": "teaching.html#research-teaching-integration",
-    "title": "Teaching",
-    "section": "Research-Teaching Integration",
-    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to political phenomena\nCritically evaluate digital media and online communities\nUnderstand the methodological challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis"
+    "objectID": "cv.html#book-chapters",
+    "href": "cv.html#book-chapters",
+    "title": "Alex Newhouse",
+    "section": "📚 BOOK CHAPTERS",
+    "text": "📚 BOOK CHAPTERS\nNewhouse, A. and Kowert, R. “Recruitment and mobilization in digital gaming spaces.” Handbuch Gaming & Rechtsextremismus (ed. Linda Schlegel). Forthcoming.\nKowert, R. and Newhouse, A. “Digital games as cultural assets of influence.” The Sociology of Violent Extremism (ed. Suraj Lakhani and Amarnath Amarasingam). May 2025.\nNewhouse, A. and Kowert, R. “Digital games as vehicles for extremist recruitment and mobilization.” Gaming and Extremism: The Radicalization of Digital Playgrounds (ed. Linda Schlegel and Rachel Kowert). March 2024."
+  },
+  {
+    "objectID": "cv.html#pre-prints-and-other-research-publications",
+    "href": "cv.html#pre-prints-and-other-research-publications",
+    "title": "Alex Newhouse",
+    "section": "📄 PRE-PRINTS AND OTHER RESEARCH PUBLICATIONS",
+    "text": "📄 PRE-PRINTS AND OTHER RESEARCH PUBLICATIONS\nKriner, M., Conroy, M., Newhouse, A., and Lewis, J. “Understanding Accelerationist Narratives: The Great Replacement Theory.” Global Network on Extremism and Technology. May 2022.\nKowert, R., Botehlo, A., and Newhouse, A. “Breaking the Building Blocks of Hate: A Case Study of Minecraft Servers.” Anti-Defamation League. July 2022.\nShadnia, D., Newhouse, A., Kriner, M., and Bradley, A. “Militant Accelerationism Coalitions: A Case-Study in Neo-Fascist Accelerationist Coalition-Building Online.” Center on Terrorism, Extremism, and Counterterrorism. June 2022.\nNewhouse, A. and Gunesch, N. “The Boogaloo Movement Wants to Be Seen as Anti-Racist, But It Has a White Supremacist Fringe.” Center on Terrorism, Extremism, and Counterterrorism. May 2021.\nMcGuffie, K. and Newhouse, A. “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” Arxiv pre-print. September 2020.\n[Author list truncated] “Release Strategies and the Social Impacts of Language Models.” Arxiv pre-print. August 2019.\nNewhouse, A. “From classifieds to crypto: how white supremacist groups have embraced crowdfunding.” Center on Terrorism, Extremism, and Counterterrorism. 2019."
+  },
+  {
+    "objectID": "cv.html#editorials",
+    "href": "cv.html#editorials",
+    "title": "Alex Newhouse",
+    "section": "✍️ EDITORIALS",
+    "text": "✍️ EDITORIALS\nJackson, D., Conroy, M., and Newhouse, A. “Insiders’ View of the January 6th Committee’s Social Media Investigation.” Just Security. January 2023.\nNewhouse, A. “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” The Conversation. January 2021. (35,400 views)\nNewhouse, A. “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” The Conversation. November 2020, updated January 2021. (241,000 views)"
+  },
+  {
+    "objectID": "cv.html#public-speaking-and-conferences",
+    "href": "cv.html#public-speaking-and-conferences",
+    "title": "Alex Newhouse",
+    "section": "🎤 PUBLIC SPEAKING AND CONFERENCES",
+    "text": "🎤 PUBLIC SPEAKING AND CONFERENCES\n“Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media.” Paper Presentation. Midwest Political Science Association Annual Meeting. April 2025.\n“Elite Influence in an Online Neo-Fascist Forum.” Paper Presentation. Midwest Political Science Association Annual Meeting. April 2025.\n“Media Bias in COVID-19 Coverage.” Paper Presentation. Midwest Political Science Association Annual Meeting. April 2024.\n“Manifesting a Coup: Cross-Website Toxicity and Extremism on the Dot Win Network Prior to January 6, 2021.” Poster Session. New Frontiers in Text as Data. November 2023.\n“Mitigating Harm in Design.” Game Developers Conference. March 2023.\n“Accelerationism Research in Practice.” Terrorism and Social Media Conference. June 2022.\n“The Landscape of Extremist Behavior in Games.” Game Developers Conference. March 2022.\n“The Aesthetics of Acceleration.” Reactionary Digital Politics: Ideologies, Rhetorics, Aesthetics. June 2021."
+  },
+  {
+    "objectID": "cv.html#media-appearances",
+    "href": "cv.html#media-appearances",
+    "title": "Alex Newhouse",
+    "section": "📺 MEDIA APPEARANCES",
+    "text": "📺 MEDIA APPEARANCES\nRadio/Podcast: Bloomberg, BBC, NPR’s Morning Edition, All Things Considered, and On Point\nWritten: Washington Post, New York Times, Vice, Axios, Politico, FiveThirtyEight, Wired, ProPublica\nVideo: Meet the Press Now, Denver7"
+  },
+  {
+    "objectID": "cv.html#skills",
+    "href": "cv.html#skills",
+    "title": "Alex Newhouse",
+    "section": "⚙️ SKILLS",
+    "text": "⚙️ SKILLS\nProgramming languages: R, Python, MATLAB, Stata\nMachine learning frameworks: PyTorch, Scikit-Learn, Caret, Hugging Face Transformers\nSocial Network Analysis: igraph, statnet\nQuery languages: SQL, Splunk"
   },
   {
     "objectID": "index.html",
@@ -110,5 +145,68 @@
     "title": "Alex Newhouse",
     "section": "Teaching",
     "text": "Teaching\nI have taught courses on digital extremism and online radicalization at both Middlebury College and MIIS, and currently serve as a teaching assistant for courses in comparative politics, international relations, and quantitative methods at CU Boulder.\n\nFor collaboration inquiries or media requests, please reach out via email."
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence."
+  },
+  {
+    "objectID": "teaching.html#teaching-philosophy",
+    "href": "teaching.html#teaching-philosophy",
+    "title": "Teaching",
+    "section": "",
+    "text": "I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence."
+  },
+  {
+    "objectID": "teaching.html#courses-taught",
+    "href": "teaching.html#courses-taught",
+    "title": "Teaching",
+    "section": "Courses Taught",
+    "text": "Courses Taught\n\nUniversity of Colorado Boulder\n\nAs Teaching Assistant\nFall 2025 - PSCI 2075: Quantitative Methods\nSpring 2025 - PSCI 1101: Introduction to Western Political Thought\nFall 2024 - PSCI 2223: Introduction to Comparative Politics\nSpring 2024 - PSCI 2075: Quantitative Methods\nFall 2023 - PSCI 1824: Introduction to International Relations\n\n\n\nMiddlebury Institute of International Studies\n\nAs Adjunct Professor\nSpring 2023 - Digital Extremism (self-designed) - Examined the intersection of technology and political violence - Covered online radicalization processes, platform dynamics, and content moderation - Students conducted original research on extremist communities across digital platforms\n\n\n\nMiddlebury College\n\nAs Adjunct Professor\nJanuary 2021 - Online Extremism (self-designed) * Intensive winter term course on digital radicalization * Focus on methodological approaches to studying online political violence * Integration of computational methods with political science theory"
+  },
+  {
+    "objectID": "teaching.html#teaching-materials-resources",
+    "href": "teaching.html#teaching-materials-resources",
+    "title": "Teaching",
+    "section": "Teaching Materials & Resources",
+    "text": "Teaching Materials & Resources\n\nQuantitative Methods Resources\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\n\n\n\nStudent Mentorship\nI have extensive experience mentoring student researchers, having supervised 34 undergraduate and graduate research assistants and 15 independent projects since 2019-2025.\nAt CU, I currently supervise four undergradaute RAs. They provide qualitative coding and research assistance for a long-term project aiming to better understand apocalyptic language on social media.\nAt Middlebury, I oversaw projects covering topics such as:\n\nItalian neofascism and political violence\nMilitant accelerationism and coalition-building\nFrench far-right movements on encrypted platforms\nAI implications for domestic counterterrorism\nChristian identity movements in contemporary extremism"
+  },
+  {
+    "objectID": "teaching.html#research-teaching-integration",
+    "href": "teaching.html#research-teaching-integration",
+    "title": "Teaching",
+    "section": "Research-Teaching Integration",
+    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to political phenomena\nCritically evaluate digital media and online communities\nUnderstand the methodological challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis"
+  },
+  {
+    "objectID": "tutorial1.html",
+    "href": "tutorial1.html",
+    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
+    "section": "",
+    "text": "For most people, one of the most challenging parts about learning data analysis and quantitative methods is getting used to all of the complicated notation. This is perfectly understandable: math notation uses Greek (literally a different language than English) and combines it with math!\nWhile the learning curve is steep, you will eventually get more comfortable consuming Greek notation. In this tutorial, I’ll walk through some of the most common symbols you’ll encounter and illustrate them with the univariate descriptive statistics that you’ll need to know."
+  },
+  {
+    "objectID": "tutorial1.html#what-is-going-on-with-all-those-greek-letters",
+    "href": "tutorial1.html#what-is-going-on-with-all-those-greek-letters",
+    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
+    "section": "",
+    "text": "For most people, one of the most challenging parts about learning data analysis and quantitative methods is getting used to all of the complicated notation. This is perfectly understandable: math notation uses Greek (literally a different language than English) and combines it with math!\nWhile the learning curve is steep, you will eventually get more comfortable consuming Greek notation. In this tutorial, I’ll walk through some of the most common symbols you’ll encounter and illustrate them with the univariate descriptive statistics that you’ll need to know."
+  },
+  {
+    "objectID": "tutorial1.html#mean-a.k.a-first-population-moment-a.k.a-expected-value",
+    "href": "tutorial1.html#mean-a.k.a-first-population-moment-a.k.a-expected-value",
+    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
+    "section": "Mean (a.k.a first population moment) (a.k.a expected value)",
+    "text": "Mean (a.k.a first population moment) (a.k.a expected value)\nMean, which is one measure of the “average” or central tendency of a set of values, is calculated by summing all of your values and dividing by the total number of values that you have. This should be pretty familiar for you, you likely know intuitively that the average of \\(1 + 2 + 3 = 2\\).\nShown below is how this looks in code. I first generate 500 random values and store them as a column in a dataframe. Then, I print the mean of that column. Last, I create a histogram of the values and show the mean wtih a red line.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.2     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nset.seed(1234)\n# simulate 500 values and store as a vector in a dataframe\ndf &lt;- data.frame(x = rnorm(500))\n\n# print the mean\nmean(df$x)\n\n[1] 0.001838821\n\n# graph the histogram and show the mean line (in red)\ndf %&gt;% \n    ggplot() + \n    geom_histogram(aes(x = x)) + \n    geom_vline(aes(xintercept = mean(x)), color = \"red\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nWe simulated data from the “standard normal” distribution, which by definition has a mean of 0–and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic “add up all the values and divide by the number of values”, you’ll get the same value:\n\nsum_x = sum(df$x)\nsum_x / length(df$x)\n\n[1] 0.001838821\n\n\nWhat does this look like in Greek notation? Let’s take a look:\n\\(\\mathbb{E}[X] = \\frac{\\sum_{i=1}^n X_i}{n}\\)\nDespite the fact that you’re probably comfortable with the concept of mean, there are a lot of symbols here to describe that concept. It can be daunting! But we can break it down and show that it really isn’t that bad.\n\\(\\mathbb{E}[X]\\) is how we symbolize “Expected Value of X”; in this case, we’re using X to refer to our whole set of values (the vector containing all of the numbers that we want to find the mean of). Expected value, remember, just means “mean”.\n\\(\\sum_{i=1}^n X_i\\) symbolizes a summation. The sigma \\(\\sum\\) is the greek symbol for “add all of the elements together”. The \\(i\\) below the sigma indicates that we’re going to start at the first element of our data. The \\(n\\) above the sigma indicates that we’re going to use all of the data up to the last value. \\(X_i\\) refers to the \\(i\\)-th element of X, our vector holding all of the values that we want to average.\nTo put it together, we’re summing every value from \\(X_1\\) to \\(X_n\\), and then we’re dividing that by \\(n\\). In this case, our \\(X\\) vector is the data that we simulated, and we’re going to go from \\(X_1\\) to \\(X_500\\) (since we created 500 values in our original code)."
+  },
+  {
+    "objectID": "tutorial1.html#variance",
+    "href": "tutorial1.html#variance",
+    "title": "Intro to Greek Notation and Univariate Descrpitive Statistics",
+    "section": "Variance",
+    "text": "Variance\nLet’s turn to another important descriptive statistic, variance. This measures the “spread”, or “dispersion”, of your data around the mean. Think how long the tails on the left and right of the mean are.\nFinding variance in code is easy:\n\nvar(df$x)\n\n[1] 1.07084\n\n\nWhat does a higher or lower variance actually mean? Let’s investigate. We’re going to create two new vectors/columns: a high variance one (var = 4) and a low variance one (var = .25). Note: the code we use to generate this asks for standard deviation, which is just the square root of the variance.\nAfter adding a “high_var” and a “low_var” column to our data frame, we then create a histogram showing the different columns on the same graph. Our high-variance data is shown in blue, our original data is shown in orange, and our low-variance data is shown in green. What do you notice?\n\ndf &lt;- df %&gt;% \n    mutate(high_var = rnorm(500, mean = 0, sd = 2)) %&gt;% \n    mutate(low_var = rnorm(500, mean = 0, sd = .5))\n\ndf %&gt;% \n    ggplot() + \n    geom_histogram(aes(x = high_var), fill = \"navy\", alpha = .5) +\n    geom_histogram(aes(x = low_var), fill = \"darkgreen\", alpha = .5) +\n    geom_histogram(aes(x = x), fill = \"orange\") + \n    geom_vline(aes(xintercept = mean(x)), color = \"red\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\nVariance in Greek notation is pretty similar to that of the mean–in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:\n\\(\\text{Var(X)} = \\sigma^2 = s^2 = \\frac{\\sum_{i=1}^n (X_i - \\mu)^2}{n-1}\\)\nLet’s walk through it piece by piece. First, \\(\\text{Var(X)}, \\sigma^2, \\text{and } s^2\\) are all different ways of saying “variance of X”. Second, now we have a slightly different summation than what’s in the equation for mean. \\(\\sum_{i=1}^n (X_i - \\mu)^2\\) is depicting how we are summing (\\(\\sum\\)) from our first element (\\(i=1\\)) to our \\(n\\)-th element for the value \\((X_i - \\mu)^2\\), where \\(\\mu\\) is simply the mean of \\(X\\). Intuitively, this is finding the sum of all of the distances (squared) between a single value \\(X_i\\) and the mean of all of the values. Last, we divide that summed value by \\(n-1\\).\nNote that variance includes mean as part of its equation. You can literally take the mean we calculated above and plug it into this function and find the right value! Let’s see how that looks:\n\nvar(df$x)\n\n[1] 1.07084\n\nmean_x &lt;- mean(df$x)\nsum_squared_distance &lt;- sum((df$x - mean_x)^2)\nvar_calc = sum_squared_distance/(length(df$x)-1)\nvar_calc\n\n[1] 1.07084\n\n\nSo the variance of a sample is a function of the mean of that sample."
   }
 ]
