@@ -12,7 +12,9 @@ I believe in making complex political science concepts accessible through hands-
 
 #### As Teaching Assistant
 
-**Fall 2025** - **PSCI 2075: Quantitative Methods** - [Tutorial 1: Getting Started with R](/tutorial1.qmd)
+**Fall 2025** - **PSCI 2075: Quantitative Methods** 
+
+* [Tutorial 1: Getting Started with R](/tutorial1.qmd)
 
 **Spring 2025** - **PSCI 1101: Introduction to Western Political Thought**
 
