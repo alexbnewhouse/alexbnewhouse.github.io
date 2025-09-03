@@ -3,7 +3,7 @@ title: "Alex Newhouse"
 subtitle: "Political Scientist & Data Scientist"
 about:
   template: trestles
-  image: profile.jpg
+  image: profpic.jpeg
   image-width: 15em
   image-shape: round
   links:
