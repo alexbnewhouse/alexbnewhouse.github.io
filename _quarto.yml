@@ -1,3 +1,28 @@
 project:
   type: website
   output-dir: docs
+
+website:
+    title: "Alex Bradley Newhouse"
+    navbar:
+        background: primary
+        search: true
+        left:
+            - text: "CV"
+              href: cv.html
+            - text: "Blog"
+              href: posts.html
+            - text: "Teaching" 
+              href: tutorial1.html
+            - text: "Research"
+              href: research.html
+            - text: "Notes" 
+              href: notes.html
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual

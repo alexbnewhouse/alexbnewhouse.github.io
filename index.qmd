@@ -19,20 +19,6 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/alexbnewhouse
-navbar:
-  left:
-    - text: "Home"
-      href: index.qmd
-    - text: "Research"
-      href: research.qmd
-    - text: "Publications"
-      href: publications.qmd
-    - text: "Teaching"
-      href: teaching.qmd
-    - text: "Tutorials"
-      href: tutorial1.html
-    - text: "CV"
-      href: cv.pdf
 ---
 
 ## About
