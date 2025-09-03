@@ -1,0 +1,63 @@
+---
+title: "Alex Newhouse"
+subtitle: "Political Scientist & Data Scientist"
+about:
+  template: trestles
+  image: profile.jpg
+  image-width: 15em
+  image-shape: round
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:alex.newhouse@colorado.edu
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/alexbnewhouse
+    - icon: github
+      text: GitHub
+      href: https://github.com/alexbnewhouse
+---
+
+## About
+
+I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in the intersection of technology, political violence, and extremism. My research focuses on measuring online-offline relationships in political violence using advanced computational methods including machine learning, natural language processing, and social network analysis.
+
+Currently, I serve as a Senior Non-Resident Fellow at the Middlebury Institute of International Studies, where I previously held leadership roles at the Center on Terrorism, Extremism, and Counterterrorism (CTEC). My work bridges academic research with real-world applications, having served as an investigative consultant for the House Select Committee to Investigate the January 6th Attack and collaborated extensively with technology companies on content moderation and safety initiatives.
+
+## Research Interests
+
+- **Political Violence & Extremism**: Online-offline dynamics of radicalization and mobilization
+- **Computational Social Science**: Machine learning and NLP applications to political phenomena  
+- **Technology & Society**: Digital platforms, gaming environments, and extremist recruitment
+- **Causal Inference**: Time-series analysis of political and social processes
+- **Visual Politics**: Media framing and partisan polarization in news coverage
+
+## Current Projects
+
+**Dissertation Research**: Examining how online extremist communities translate digital engagement into offline political violence through computational analysis of social media data and network structures.
+
+**COVID-19 Media Framing**: Investigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets (with Andrew Q. Philips and Komal P. Kaur).
+
+**Gaming & Extremism**: Studying recruitment and radicalization processes within digital gaming environments, including partnerships with major gaming platforms for harm mitigation.
+
+## Selected Publications
+
+**Kowert, R., Kilmer, E., and Newhouse, A.** "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*. August 2024.
+
+**Newhouse, A.** "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*. June 2021.
+
+**McGuffie, K. and Newhouse, A.** "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *Arxiv preprint*. September 2020.
+
+## In the Media
+
+My research has been featured in major outlets including *The Washington Post*, *New York Times*, *NPR*, *BBC*, *Politico*, and *Wired*. I regularly provide expert commentary on extremism, technology policy, and political violence.
+
+Recent appearances include NPR's *Morning Edition* and *All Things Considered*, Bloomberg Radio, and *Meet the Press Now*.
+
+## Teaching
+
+I have taught courses on digital extremism and online radicalization at both Middlebury College and MIIS, and currently serve as a teaching assistant for courses in comparative politics, international relations, and quantitative methods at CU Boulder.
+
+---
+
+*This website showcases my research at the intersection of political science, technology, and data science. For collaboration inquiries or media requests, please reach out via email.*
