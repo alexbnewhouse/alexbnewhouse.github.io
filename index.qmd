@@ -13,9 +13,26 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/alexbnewhouse
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/alexbnewhouse
     - icon: github
       text: GitHub
       href: https://github.com/alexbnewhouse
+navbar:
+  left:
+    - text: "Home"
+      href: index.qmd
+    - text: "Research"
+      href: research.qmd
+    - text: "Publications"
+      href: publications.qmd
+    - text: "Teaching"
+      href: teaching.qmd
+    - text: "Tutorials"
+      href: tutorial1.html
+    - text: "CV"
+      href: cv.pdf
 ---
 
 ## About
