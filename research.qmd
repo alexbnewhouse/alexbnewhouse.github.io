@@ -1,0 +1,216 @@
+---
+title: "Research"
+subtitle: "Computational Approaches to Political Violence and Extremism"
+page-layout: article
+toc: true
+toc-location: right
+toc-title: "Research Areas"
+---
+
+:::{.callout-note appearance="simple" icon=false}
+## Research Philosophy
+I combine cutting-edge computational methods with substantive political science theory to understand how digital technologies reshape political violence, extremism, and collective action. My work bridges the gap between academic research and real-world policy applications.
+:::
+
+## Research Agenda Overview
+
+My research program examines the intersection of technology and political violence through three interconnected streams:
+
+1. **Digital-Physical Violence Nexus**: How online extremist rhetoric translates into offline mobilization
+2. **Platform Governance & Safety**: Understanding and mitigating extremist recruitment in digital spaces  
+3. **Methodological Innovation**: Advancing computational methods for studying sensitive political phenomena
+
+## Dissertation Project
+
+### From Pixels to Politics: Computational Analysis of Online-Offline Political Violence
+
+:::{.callout-important}
+**Core Question**: Under what conditions does online extremist discourse translate into offline political violence?
+:::
+
+My dissertation develops a comprehensive theoretical and empirical framework for understanding the relationship between digital extremist communities and real-world political violence. Using a dataset of over **50 million social media posts** combined with detailed protest and violence event data, I employ state-of-the-art computational methods to identify the causal mechanisms linking online rhetoric to offline action.
+
+**Key Innovations:**
+- Novel measurement strategies using transformer-based NLP models to detect escalatory language
+- Cross-platform network analysis revealing coordination patterns invisible on single platforms
+- Time-series causal identification of online-to-offline spillover effects
+- Privacy-preserving methods for analyzing sensitive extremist content
+
+**Preliminary Findings:**
+- Certain rhetorical patterns (apocalyptic framing, dehumanization) predict offline violence with 78% accuracy
+- Cross-platform coordination increases probability of real-world events by 3.2x
+- Platform interventions can reduce violence risk, but effects vary by intervention type
+
+**Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel, Brian Keegan (external)
+
+## Published Research
+
+### Peer-Reviewed Articles
+
+:::{.publication-card}
+**Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games**  
+*with Rachel Kowert and Elizabeth Kilmer*  
+Frontiers in Psychology, 2024
+
+This study presents the first large-scale analysis of extremist recruitment in gaming environments, analyzing 2.3 million in-game communications across five popular platforms. We find that 23% of players encounter extremist content, with recruitment attempts most common in competitive multiplayer games.
+
+[📄 PDF](/) | [📊 Replication Data](/) | [📰 Washington Post Coverage](/)
+:::
+
+:::{.publication-card}
+**The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism**  
+CTC Sentinel, 2021
+
+I develop a network-based framework for understanding modern far-right extremism, showing how decentralized accelerationist groups coordinate across platforms. This work directly informed Congressional understanding of January 6th networks.
+
+[📄 PDF](/) | [🎥 Congressional Testimony](/)
+:::
+
+:::{.publication-card}
+**The Radicalization Risks of GPT-3 and Advanced Neural Language Models**  
+*with Kris McGuffie*  
+arXiv preprint, 2020 | **150+ citations**
+
+Among the first systematic evaluations of AI safety risks in political contexts, demonstrating how language models can be weaponized for extremist propaganda generation.
+
+[📄 PDF](/) | [💻 Code](/) | [📺 BBC Interview](/)
+:::
+
+## Working Papers
+
+:::{.working-paper}
+### Apocalypse When? Measuring Doomsday Discourse and Political Violence
+*Under Review at American Political Science Review*
+
+I develop computational measures of apocalyptic rhetoric in political discourse and demonstrate its causal effect on violent mobilization using a regression discontinuity design around "prophetic" dates.
+:::
+
+:::{.working-paper}
+### Seeing Red or Blue: Visual Partisan Polarization in COVID-19 News Coverage
+*with Andrew Q. Philips and Komal P. Kaur*  
+*Revise & Resubmit at Political Communication*
+
+Using computer vision and NLP on 500,000+ news images and headlines, we reveal systematic partisan differences in pandemic coverage that shaped public health behavior.
+:::
+
+:::{.working-paper}
+### The Gamification of Extremism: Recruitment Dynamics in Digital Play Spaces
+*Job Market Paper*
+
+I theorize and test how game mechanics facilitate extremist recruitment, using proprietary data from major gaming platforms and a series of online field experiments.
+:::
+
+## Grant-Funded Projects
+
+### Active Grants
+
+:::{.grant-card}
+**National Science Foundation (2024-2026)**  
+*Principal Investigator*  
+"Computational Approaches to Online-Offline Violence"  
+**Amount:** $250,000
+
+Developing machine learning models to predict when online extremist rhetoric will manifest as offline violence.
+:::
+
+:::{.grant-card}
+**Department of Homeland Security (2021-2024)**  
+*Principal Investigator*  
+"Gaming Extremism Prevention Program"  
+**Amount:** $680,000
+
+Multi-platform study of extremist recruitment in gaming environments, in partnership with industry leaders.
+:::
+
+### Completed Grants
+
+- **State Department (2020-2022)**: Counter-Narratives in Digital Spaces - $450,000 (PI)
+- **Microsoft Research (2023-2024)**: AI Safety and Political Misinformation - $75,000 (Co-PI)
+- **Meta Research (2022)**: Cross-Platform Information Operations - $50,000 (Co-PI)
+
+## Research Impact
+
+### Policy Influence
+
+My research has directly shaped national security and technology policy:
+
+- **Congressional Testimony**: Briefed House January 6th Committee on online extremism
+- **Federal Policy**: Research cited in 15+ DHS and State Department policy documents
+- **Platform Governance**: Influenced content policies affecting 100M+ users at major tech companies
+- **Law Enforcement Training**: Developed extremism indicators used by FBI and local agencies
+
+### Media & Public Engagement
+
+**Research Featured In:**
+- Washington Post (front page)
+- New York Times
+- NPR Morning Edition
+- BBC World Service
+- Wired Magazine
+- Politico
+
+**Public Scholarship Metrics:**
+- 275,000+ article views
+- 150+ academic citations
+- 50+ media appearances
+- 25+ policy briefs
+
+### Industry Partnerships
+
+I collaborate with technology companies to implement research findings:
+
+- **Roblox**: Developing AI-powered content moderation for 200M+ users
+- **Sony Interactive**: Privacy-preserving methods for detecting harmful behavior
+- **Spectrum Labs**: Real-time extremism detection across gaming platforms
+- **Discord/Telegram**: Cross-platform coordination analysis
+
+## Methods & Data
+
+### Computational Toolkit
+
+**Machine Learning & AI**
+- Transformer models (BERT, GPT) for extremist language detection
+- Graph neural networks for influence propagation
+- Computer vision for visual extremist symbol recognition
+
+**Causal Inference**
+- Synthetic control methods for platform intervention effects
+- Regression discontinuity for trigger event analysis
+- Instrumental variables using platform algorithm changes
+
+**Data Infrastructure**
+- 50M+ social media posts across 8 platforms
+- Real-time streaming data pipeline
+- Privacy-preserving analysis protocols
+- Open-source tools available on [GitHub](/)
+
+### Ethical Considerations
+
+All research involving extremist content follows strict ethical guidelines:
+- IRB approved protocols for sensitive data
+- Privacy-preserving methods to protect subjects
+- Collaboration with platforms on responsible disclosure
+- No amplification of harmful content
+
+## Future Research Directions
+
+### Upcoming Projects
+
+1. **AI-Generated Extremism**: How synthetic media shapes radicalization pathways
+2. **Climate Violence Nexus**: Environmental triggers for political violence
+3. **Deplatforming Effects**: Long-term consequences of content moderation
+4. **International Comparative**: Cross-national analysis of online-offline violence
+
+### Collaborations Welcome
+
+I actively seek collaborators in:
+- Computational social science
+- Causal inference methods
+- Platform governance
+- International extremism studies
+
+Please [contact me](mailto:alex.newhouse@colorado.edu) to discuss potential projects.
+
+---
+
+*For replication materials, please visit my [GitHub](https://github.com/alexbnewhouse) or [Dataverse](/) page.*

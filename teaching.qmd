@@ -1,67 +1,106 @@
 ---
-title: "Teaching"
+title: "Teaching & Mentorship"
+format:
+  html:
+    theme: flatly
 ---
 
 ## Teaching Philosophy
 
-I believe in making complex political science concepts accessible through hands-on learning and real-world applications. My teaching emphasizes the intersection of theory and practice, particularly in quantitative methods and comparative politics, drawing from my research experience in computational social science and political violence.
+My approach centers on **active learning**, **methodological rigor**, and **practical application**—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.
+
+I believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics.
+
+---
+
+## Teaching Impact
+
+**45+** students mentored | **15** independent projects supervised | **7** courses taught | **3** institutions
+
+---
 
 ## Courses Taught
 
 ### University of Colorado Boulder
+*Teaching Assistant*
 
-#### As Teaching Assistant
+**PSCI 2075: Quantitative Methods** (Fall 2025, Spring 2024)
+: Comprehensive introduction to statistical analysis in political science, covering descriptive statistics, hypothesis testing, regression analysis, and research design. Emphasized practical application using R and real political datasets.
 
-**Fall 2025** - **PSCI 2075: Quantitative Methods** 
+**PSCI 1101: Introduction to Western Political Thought** (Spring 2025)
+: Survey of foundational political philosophy from ancient Greece through Enlightenment thinkers, connecting classical ideas to contemporary political challenges.
 
-**Spring 2025** - **PSCI 1101: Introduction to Western Political Thought**
+**PSCI 2223: Introduction to Comparative Politics** (Fall 2024)
+: Exploration of political systems, institutions, and processes across different countries and regions, with emphasis on democratization, authoritarianism, and political development.
 
-**Fall 2024** - **PSCI 2223: Introduction to Comparative Politics**
-
-**Spring 2024** - **PSCI 2075: Quantitative Methods**
-
-**Fall 2023** - **PSCI 1824: Introduction to International Relations**
+**PSCI 1824: Introduction to International Relations** (Fall 2023)
+: Comprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.
 
 ### Middlebury Institute of International Studies
+*Adjunct Professor*
 
-#### As Adjunct Professor
+**Digital Extremism** (Spring 2023)
+: **Self-designed course** examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.
 
-**Spring 2023** - **Digital Extremism** (self-designed) - Examined the intersection of technology and political violence - Covered online radicalization processes, platform dynamics, and content moderation - Students conducted original research on extremist communities across digital platforms
+### Middlebury College  
+*Adjunct Professor*
 
-### Middlebury College
+**Online Extremism** (January 2021)
+: **Intensive winter term course** on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis.
 
-#### As Adjunct Professor
+---
 
-**January 2021** - **Online Extremism** (self-designed) 
-* Intensive winter term course on digital radicalization 
-* Focus on methodological approaches to studying online political violence 
-* Integration of computational methods with political science theory
+## Teaching Resources
 
-## Teaching Materials & Resources
+### Quantitative Methods Materials
 
-### Quantitative Methods Resources
+**[Tutorial 1: Getting Started with Greek Notation and Descriptive Stats](tutorial1.html)**
 
--   [Tutorial 1: Getting Started with Greek Notation and Descriptive Stats](/tutorial1.qmd)
+Comprehensive introduction to mathematical notation in political science, designed to reduce barriers for students intimidated by quantitative methods. Includes interactive R code examples and practical applications.
 
-### Student Mentorship
+**Custom R Tutorials:** Developed series of hands-on coding exercises covering data visualization, regression analysis, and causal inference specifically tailored to political science applications.
 
-I have extensive experience mentoring student researchers, having supervised **34 undergraduate and graduate research assistants** and **15 independent projects** since 2019-2025. 
+---
 
-At CU, I currently supervise four undergradaute RAs. They provide qualitative coding and research assistance for a long-term project aiming to better understand apocalyptic language on social media. 
+## Student Research Mentorship
 
-At Middlebury, I oversaw projects covering topics such as:
+I have supervised **45 undergraduate and graduate research assistants** and **15 independent projects** since 2019. My mentorship philosophy emphasizes **methodological rigor**, **ethical research practices**, and **practical skill development**.
 
--   Italian neofascism and political violence
--   Militant accelerationism and coalition-building
--   French far-right movements on encrypted platforms
--   AI implications for domestic counterterrorism
--   Christian identity movements in contemporary extremism
+### Current Projects
+- **Apocalyptic Language Analysis:** Four undergraduate RAs working on qualitative coding for social media research
+
+### Past Student Projects
+
+:::: {.columns}
+
+::: {.column width="50%"}
+- Italian Neofascism & Political Violence
+- Militant Accelerationism & Coalition-Building  
+- French Far-Right on Encrypted Platforms
+:::
+
+::: {.column width="50%"}
+- AI Implications for Domestic Counterterrorism
+- Christian Identity Movements
+- Gaming Platform Radicalization
+:::
+
+::::
+
+---
 
 ## Research-Teaching Integration
 
 My courses integrate cutting-edge research methods with substantive political science questions. Students learn to:
 
--   Apply computational methods to political phenomena
--   Critically evaluate digital media and online communities
--   Understand the methodological challenges of studying sensitive political topics
--   Connect theoretical frameworks to empirical analysis
+- **Apply computational methods** to real political phenomena using Python, R, and specialized software
+- **Critically evaluate** digital media, online communities, and algorithmic systems  
+- **Navigate ethical challenges** of studying sensitive political topics
+- **Connect theoretical frameworks** to empirical analysis through hands-on projects
+- **Develop professional skills** in data visualization, statistical analysis, and research communication
+
+**Signature Approach:** Each course includes substantial research components where students collect and analyze original data, preparing them for graduate study or professional research roles.
+
+---
+
+*Interested in collaboration or guest lectures? Contact alex.newhouse@colorado.edu*

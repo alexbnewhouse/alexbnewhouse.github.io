@@ -1,306 +1,119 @@
 ---
 title: "Alex Newhouse"
-subtitle: "Political Scientist & Data Scientist"
+subtitle: "Curriculum Vitae"
 format: 
   html:
+    theme: flatly
     toc: true
     toc-location: right
-    toc-title: "Contents"
-    theme: flatly
-    css: |
-      body {
-        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
-      }
-      .contact-bar {
-        text-align: center;
-        font-size: 1.1em;
-        margin-bottom: 2em;
-        padding: 1.5em;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border-radius: 10px;
-      }
-      .contact-bar a {
-        color: #fff;
-        text-decoration: none;
-        border-bottom: 1px solid rgba(255,255,255,0.5);
-      }
-      .contact-bar a:hover {
-        border-bottom: 1px solid #fff;
-      }
-      h2 {
-        color: #2c3e50;
-        border-bottom: 3px solid #3498db;
-        padding-bottom: 0.5em;
-        margin-top: 2.5em;
-        font-weight: 600;
-      }
-      .degree-block, .position-block {
-        background: #f8f9fa;
-        border-left: 5px solid #3498db;
-        padding: 1.5em;
-        margin: 1.5em 0;
-        border-radius: 0 8px 8px 0;
-      }
-      .institution {
-        font-size: 1.2em;
-        font-weight: 700;
-        color: #2c3e50;
-        margin-bottom: 0.3em;
-      }
-      .degree, .position-title {
-        font-size: 1.1em;
-        color: #34495e;
-        font-weight: 600;
-        margin-bottom: 0.5em;
-      }
-      .date {
-        background: #ecf0f1;
-        color: #7f8c8d;
-        padding: 0.3em 0.8em;
-        border-radius: 15px;
-        font-size: 0.9em;
-        font-weight: 500;
-        display: inline-block;
-        margin-bottom: 0.5em;
-      }
-      .highlight-stat {
-        background: #e8f5e8;
-        color: #27ae60;
-        padding: 0.3em 0.8em;
-        border-radius: 15px;
-        font-weight: 700;
-        display: inline-block;
-        margin: 0.2em 0;
-      }
-      .publication {
-        margin: 1em 0;
-        padding: 1em;
-        border-radius: 6px;
-        background: #fdfdfe;
-        border: 1px solid #e1e8ed;
-      }
-      .pub-title {
-        font-weight: 600;
-        color: #2c3e50;
-        font-size: 1.05em;
-      }
-      .pub-venue {
-        color: #8e44ad;
-        font-weight: 600;
-      }
-      .my-name {
-        font-weight: 700;
-        color: #2c3e50;
-      }
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1em;
-        margin: 1em 0;
-      }
-      .skill-category {
-        background: #f1f2f6;
-        padding: 1em;
-        border-radius: 8px;
-        border-left: 4px solid #3498db;
-      }
-      .skill-category h4 {
-        margin-top: 0;
-        color: #2c3e50;
-      }
-      .media-impact {
-        background: #fff5f5;
-        border: 1px solid #fed7d7;
-        border-radius: 6px;
-        padding: 1em;
-        margin: 1em 0;
-      }
-      .impact-number {
-        font-size: 1.2em;
-        font-weight: 700;
-        color: #e53e3e;
-      }
 ---
 
-::: {.contact-bar}
 📧 alex.newhouse@colorado.edu • 📍 Boulder, CO • 💼 [linkedin.com/in/alexbnewhouse](https://linkedin.com/in/alexbnewhouse)
-:::
+
+---
+
+**$1.38M** in grant funding (PI) • **45+** students mentored • **276K** article views • **8** major media outlets
+
+---
 
 ## Education
 
-::: {.degree-block}
-::: {.institution}
-University of Colorado Boulder
-:::
-::: {.degree}
-PhD in Political Science
-:::
-::: {.date}
-Expected May 2027
-:::
+**University of Colorado Boulder**  
+PhD in Political Science, *Expected May 2027*
 
-**Dissertation Focus:** Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference
+- **Dissertation:** Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference
+- **Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel
+- **External Advisor:** Brian Keegan (Information Science)
 
-**Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel  
-**External Advisor:** Brian Keegan (Information Science)
-:::
+**Georgia Institute of Technology**  
+MS in Analytics, *2021*
 
-::: {.degree-block}
-::: {.institution}
-Georgia Institute of Technology
-:::
-::: {.degree}
-MS in Analytics
-:::
-::: {.date}
-2021
-:::
+- Advanced coursework in Python, R, JavaScript, Deep Learning, Machine Learning, and Data Visualization
 
-Advanced coursework in Python, R, JavaScript, Deep Learning, Machine Learning, and Data Visualization
-:::
+**Middlebury Institute of International Studies**  
+MA in Nonproliferation and Terrorism Studies, *2018*
 
-::: {.degree-block}
-::: {.institution}
-Middlebury Institute of International Studies
-:::
-::: {.degree}
-MA in Nonproliferation and Terrorism Studies
-:::
-::: {.date}
-2018
-:::
+- Financial Crimes Management Specialization • Russian Language Focus
 
-Financial Crimes Management Specialization • Russian Language Focus
-:::
+**Middlebury College**  
+BA in Political Science and English Literature, *2017*
 
-::: {.degree-block}
-::: {.institution}
-Middlebury College
-:::
-::: {.degree}
-BA in Political Science and English Literature
-:::
-::: {.date}
-2017
-:::
+- **Summa Cum Laude** • Russian Minor • Departmental Honors in English
 
-::: {.highlight-stat}
-Summa Cum Laude
-:::
-Russian Minor • Departmental Honors in English
-:::
+---
 
 ## Professional Experience
 
-::: {.position-block}
-::: {.institution}
-US House of Representatives - January 6th Select Committee
-:::
-::: {.position-title}
-Investigative Consultant
-:::
-::: {.date}
-Feb 2022 - Oct 2022
-:::
+**US House of Representatives - January 6th Select Committee**  
+*Investigative Consultant* (Feb 2022 - Oct 2022)
 
-• Designed cross-platform investigations into online communities' role in January 6th attack  
-• Provided extremism expertise on Oath Keepers, Proud Boys, QAnon, Three Percenters  
-• Drafted sections of public hearings and contributed to Committee's final report  
-• Briefed Members of Congress and investigative staff on online radicalization patterns
-:::
+- Designed cross-platform investigations into online communities' role in January 6th attack
+- Provided extremism expertise on Oath Keepers, Proud Boys, QAnon, Three Percenters
+- Drafted sections of public hearings and contributed to Committee's final report
+- Briefed Members of Congress and investigative staff on online radicalization patterns
 
-::: {.position-block}
-::: {.institution}
-Middlebury Institute - Center on Terrorism, Extremism & Counterterrorism
-:::
-::: {.position-title}
-Deputy Director & Senior Research Fellow
-:::
-::: {.date}
-2019 - 2024
-:::
+**Middlebury Institute - Center on Terrorism, Extremism & Counterterrorism**  
+*Deputy Director & Senior Research Fellow* (2019 - 2024)
 
-• **Managed research operations** for leading academic counterterrorism center  
-• **Principal Investigator** on ::: {.highlight-stat}
-$1.38M in federal grants
-:::  
-• **Built data science capabilities** using AI, ML, NLP, and network analysis  
-• **Supervised 30+ student researchers** on industry partnership projects  
-• **Led partnerships** with major tech companies (Roblox, Spectrum Labs, social media platforms)
-:::
+- **Managed research operations** for leading academic counterterrorism center
+- **Principal Investigator** on **$1.38M in federal grants**
+- **Built data science capabilities** using AI, ML, NLP, and network analysis
+- **Supervised 30+ student researchers** on industry partnership projects
+- **Led partnerships** with major tech companies (Roblox, Spectrum Labs, social media platforms)
 
-::: {.position-block}
-::: {.institution}
-Sony Interactive Entertainment
-:::
-::: {.position-title}
-Data Governance Analyst
-:::
-::: {.date}
-2019 - 2020
-:::
+**Sony Interactive Entertainment**  
+*Data Governance Analyst* (2019 - 2020)
 
-• Managed PlayStation's global data-sharing processes and privacy compliance  
-• Implemented GDPR and CCPA compliance frameworks  
-• Developed privacy-by-design protocols for user data protection
-:::
+- Managed PlayStation's global data-sharing processes and privacy compliance
+- Implemented GDPR and CCPA compliance frameworks
+- Developed privacy-by-design protocols for user data protection
 
-## Research Impact
+---
 
-### Peer-Reviewed Publications
+## Publications
 
-::: {.publication}
-Kowert, R., Kilmer, E., and [**Newhouse, A.**]{.my-name} "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." [*Frontiers in Psychology*]{.pub-venue}, August 2024.
-:::
+**Peer-Reviewed**
 
-::: {.publication}
-[**Newhouse, A.**]{.my-name} "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." [*CTC Sentinel*]{.pub-venue}, June 2021.
-:::
+Kowert, R., Kilmer, E., and **Newhouse, A.** "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*, August 2024.
 
-::: {.publication}
-McGuffie, K. and [**Newhouse, A.**]{.my-name} "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." [*arXiv preprint*]{.pub-venue}, September 2020.
-:::
+**Newhouse, A.** "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*, June 2021.
 
-### Public Impact
+McGuffie, K. and **Newhouse, A.** "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *arXiv preprint*, September 2020.
 
-::: {.media-impact}
-**Media Reach:** Research featured in major outlets including *Washington Post*, *New York Times*, *NPR*, *BBC*, *Politico*, *Wired*
+**Media Impact**
 
-**High-Impact Publications:**  
-• "Parler analysis" article: ::: {.impact-number}
-241,000 views
-:::  
-• "January 6th prediction" article: ::: {.impact-number}
-35,400 views
-:::
-:::
+Research featured in: *Washington Post*, *New York Times*, *NPR*, *BBC*, *Politico*, *Wired*
+
+- "Parler analysis" article: **241,000 views**
+- "January 6th prediction" article: **35,400 views**
+
+---
 
 ## Technical Skills
 
-::: {.skills-grid}
-::: {.skill-category}
-**Programming & Analysis**  
-Python • R • MATLAB • Stata • SQL • JavaScript
-:::
+:::: {.columns}
 
-::: {.skill-category}
+::: {.column width="50%"}
+**Programming & Analysis**
+- Python • R • MATLAB • Stata • SQL • JavaScript
+
 **Machine Learning**  
-PyTorch • Scikit-Learn • Hugging Face Transformers • Deep Learning
+- PyTorch • Scikit-Learn • Hugging Face Transformers • Deep Learning
 :::
 
-::: {.skill-category}
-**Specialized Methods**  
-Social Network Analysis (igraph, statnet) • NLP • Time-Series Analysis • Causal Inference
+::: {.column width="50%"}
+**Specialized Methods**
+- Social Network Analysis (igraph, statnet) • NLP • Time-Series Analysis • Causal Inference
+
+**Data & Platforms**
+- Splunk • Large-scale social media data • Survey analysis • Text-as-data
 :::
 
-::: {.skill-category}
-**Data & Platforms**  
-Splunk • Large-scale social media data • Survey analysis • Text-as-data
-:::
-:::
+::::
 
-## Current Research Projects
+---
+
+## Current Research
 
 **Dissertation Research:** Computational analysis of online extremist networks and their translation to offline political violence
 
@@ -310,19 +123,24 @@ Splunk • Large-scale social media data • Survey analysis • Text-as-data
 
 **Policy & Markets:** Analysis of how political messaging affects financial market responses (under review)
 
-## Teaching & Mentorship
+---
 
-**Teaching Assistant** - CU Boulder (2023-2025)  
-Courses: Quantitative Methods, Comparative Politics, International Relations, Political Theory
+## Teaching
+
+**Teaching Assistant** - University of Colorado Boulder (2023-2025)
+- Quantitative Methods, Comparative Politics, International Relations, Political Theory
 
 **Adjunct Professor** - MIIS & Middlebury College (2021, 2023)  
-Self-designed courses on Digital Extremism and Online Radicalization
+- Self-designed courses on Digital Extremism and Online Radicalization
 
-**Research Mentorship:** Supervised ::: {.highlight-stat}
-45+ undergraduate and graduate researchers
-::: across multiple institutions on projects ranging from platform policy to AI safety
+**Research Mentorship:** Supervised **45+ undergraduate and graduate researchers** across multiple institutions
 
-## Languages & Certifications
+---
 
-**Languages:** English (native), Russian (intermediate)  
-**Security:** Completed background investigations for federal consulting work
+## Additional Information
+
+**Languages:** English (native), Russian (intermediate)
+
+**Security Clearance:** Completed background investigations for federal consulting work
+
+**Media Appearances:** Regular expert commentary on extremism, technology policy, and political violence

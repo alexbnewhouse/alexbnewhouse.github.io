@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Intro to Greek Notation and Univariate Descrpitive Statistics – Alex Bradley Newhouse</title>
+<title>Research – Alex Bradley Newhouse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -75,7 +40,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f59cc608e70ce16b384b3e6fc30ca698.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-f245066ca199b7326ac6b360085ddf3a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -104,35 +69,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -169,7 +105,7 @@ window.Quarto = {
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html"> 
+    <a class="nav-link active" href="./research.html" aria-current="page"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -189,12 +125,45 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Research Areas</h2>
    
   <ul>
-  <li><a href="#what-is-going-on-with-all-those-greek-letters" id="toc-what-is-going-on-with-all-those-greek-letters" class="nav-link active" data-scroll-target="#what-is-going-on-with-all-those-greek-letters">What is going on with all those Greek letters?</a></li>
-  <li><a href="#mean-a.k.a-first-population-moment-a.k.a-expected-value" id="toc-mean-a.k.a-first-population-moment-a.k.a-expected-value" class="nav-link" data-scroll-target="#mean-a.k.a-first-population-moment-a.k.a-expected-value">Mean (a.k.a first population moment) (a.k.a expected value)</a></li>
-  <li><a href="#variance" id="toc-variance" class="nav-link" data-scroll-target="#variance">Variance</a></li>
+  <li><a href="#research-agenda-overview" id="toc-research-agenda-overview" class="nav-link active" data-scroll-target="#research-agenda-overview">Research Agenda Overview</a></li>
+  <li><a href="#dissertation-project" id="toc-dissertation-project" class="nav-link" data-scroll-target="#dissertation-project">Dissertation Project</a>
+  <ul class="collapse">
+  <li><a href="#from-pixels-to-politics-computational-analysis-of-online-offline-political-violence" id="toc-from-pixels-to-politics-computational-analysis-of-online-offline-political-violence" class="nav-link" data-scroll-target="#from-pixels-to-politics-computational-analysis-of-online-offline-political-violence">From Pixels to Politics: Computational Analysis of Online-Offline Political Violence</a></li>
+  </ul></li>
+  <li><a href="#published-research" id="toc-published-research" class="nav-link" data-scroll-target="#published-research">Published Research</a>
+  <ul class="collapse">
+  <li><a href="#peer-reviewed-articles" id="toc-peer-reviewed-articles" class="nav-link" data-scroll-target="#peer-reviewed-articles">Peer-Reviewed Articles</a></li>
+  </ul></li>
+  <li><a href="#working-papers" id="toc-working-papers" class="nav-link" data-scroll-target="#working-papers">Working Papers</a>
+  <ul class="collapse">
+  <li><a href="#apocalypse-when-measuring-doomsday-discourse-and-political-violence" id="toc-apocalypse-when-measuring-doomsday-discourse-and-political-violence" class="nav-link" data-scroll-target="#apocalypse-when-measuring-doomsday-discourse-and-political-violence">Apocalypse When? Measuring Doomsday Discourse and Political Violence</a></li>
+  <li><a href="#seeing-red-or-blue-visual-partisan-polarization-in-covid-19-news-coverage" id="toc-seeing-red-or-blue-visual-partisan-polarization-in-covid-19-news-coverage" class="nav-link" data-scroll-target="#seeing-red-or-blue-visual-partisan-polarization-in-covid-19-news-coverage">Seeing Red or Blue: Visual Partisan Polarization in COVID-19 News Coverage</a></li>
+  <li><a href="#the-gamification-of-extremism-recruitment-dynamics-in-digital-play-spaces" id="toc-the-gamification-of-extremism-recruitment-dynamics-in-digital-play-spaces" class="nav-link" data-scroll-target="#the-gamification-of-extremism-recruitment-dynamics-in-digital-play-spaces">The Gamification of Extremism: Recruitment Dynamics in Digital Play Spaces</a></li>
+  </ul></li>
+  <li><a href="#grant-funded-projects" id="toc-grant-funded-projects" class="nav-link" data-scroll-target="#grant-funded-projects">Grant-Funded Projects</a>
+  <ul class="collapse">
+  <li><a href="#active-grants" id="toc-active-grants" class="nav-link" data-scroll-target="#active-grants">Active Grants</a></li>
+  <li><a href="#completed-grants" id="toc-completed-grants" class="nav-link" data-scroll-target="#completed-grants">Completed Grants</a></li>
+  </ul></li>
+  <li><a href="#research-impact" id="toc-research-impact" class="nav-link" data-scroll-target="#research-impact">Research Impact</a>
+  <ul class="collapse">
+  <li><a href="#policy-influence" id="toc-policy-influence" class="nav-link" data-scroll-target="#policy-influence">Policy Influence</a></li>
+  <li><a href="#media-public-engagement" id="toc-media-public-engagement" class="nav-link" data-scroll-target="#media-public-engagement">Media &amp; Public Engagement</a></li>
+  <li><a href="#industry-partnerships" id="toc-industry-partnerships" class="nav-link" data-scroll-target="#industry-partnerships">Industry Partnerships</a></li>
+  </ul></li>
+  <li><a href="#methods-data" id="toc-methods-data" class="nav-link" data-scroll-target="#methods-data">Methods &amp; Data</a>
+  <ul class="collapse">
+  <li><a href="#computational-toolkit" id="toc-computational-toolkit" class="nav-link" data-scroll-target="#computational-toolkit">Computational Toolkit</a></li>
+  <li><a href="#ethical-considerations" id="toc-ethical-considerations" class="nav-link" data-scroll-target="#ethical-considerations">Ethical Considerations</a></li>
+  </ul></li>
+  <li><a href="#future-research-directions" id="toc-future-research-directions" class="nav-link" data-scroll-target="#future-research-directions">Future Research Directions</a>
+  <ul class="collapse">
+  <li><a href="#upcoming-projects" id="toc-upcoming-projects" class="nav-link" data-scroll-target="#upcoming-projects">Upcoming Projects</a></li>
+  <li><a href="#collaborations-welcome" id="toc-collaborations-welcome" class="nav-link" data-scroll-target="#collaborations-welcome">Collaborations Welcome</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -203,7 +172,8 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Intro to Greek Notation and Univariate Descrpitive Statistics</h1>
+<h1 class="title">Research</h1>
+<p class="subtitle lead">Computational Approaches to Political Violence and Extremism</p>
 </div>
 
 
@@ -220,125 +190,186 @@ window.Quarto = {
 </header>
 
 
-<section id="what-is-going-on-with-all-those-greek-letters" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-going-on-with-all-those-greek-letters">What is going on with all those Greek letters?</h2>
-<p>For most people, one of the most challenging parts about learning data analysis and quantitative methods is getting used to all of the complicated notation. This is perfectly understandable: math notation uses Greek (literally a different language than English) and combines it with math!</p>
-<p>While the learning curve is steep, you will eventually get more comfortable consuming Greek notation. In this tutorial, I’ll walk through some of the most common symbols you’ll encounter and illustrate them with the univariate descriptive statistics that you’ll need to know.</p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Research Philosophy
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I combine cutting-edge computational methods with substantive political science theory to understand how digital technologies reshape political violence, extremism, and collective action. My work bridges the gap between academic research and real-world policy applications.</p>
+</div>
+</div>
+<section id="research-agenda-overview" class="level2">
+<h2 class="anchored" data-anchor-id="research-agenda-overview">Research Agenda Overview</h2>
+<p>My research program examines the intersection of technology and political violence through three interconnected streams:</p>
+<ol type="1">
+<li><strong>Digital-Physical Violence Nexus</strong>: How online extremist rhetoric translates into offline mobilization</li>
+<li><strong>Platform Governance &amp; Safety</strong>: Understanding and mitigating extremist recruitment in digital spaces<br>
+</li>
+<li><strong>Methodological Innovation</strong>: Advancing computational methods for studying sensitive political phenomena</li>
+</ol>
 </section>
-<section id="mean-a.k.a-first-population-moment-a.k.a-expected-value" class="level2">
-<h2 class="anchored" data-anchor-id="mean-a.k.a-first-population-moment-a.k.a-expected-value">Mean (a.k.a first population moment) (a.k.a expected value)</h2>
-<p>Mean, which is one measure of the “average” or central tendency of a set of values, is calculated by summing all of your values and dividing by the total number of values that you have. This should be pretty familiar for you, you likely know intuitively that the average of <span class="math inline">\(1 + 2 + 3 = 2\)</span>.</p>
-<p>Shown below is how this looks in code. I first generate 500 random values and store them as a column in a dataframe. Then, I print the mean of that column. Last, I create a histogram of the values and show the mean wtih a red line.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.2     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+<section id="dissertation-project" class="level2">
+<h2 class="anchored" data-anchor-id="dissertation-project">Dissertation Project</h2>
+<section id="from-pixels-to-politics-computational-analysis-of-online-offline-political-violence" class="level3">
+<h3 class="anchored" data-anchor-id="from-pixels-to-politics-computational-analysis-of-online-offline-political-violence">From Pixels to Politics: Computational Analysis of Online-Offline Political Violence</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co"># simulate 500 values and store as a vector in a dataframe</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">500</span>))</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># print the mean</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.001838821</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># graph the histogram and show the mean line (in red)</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span> </span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial1_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="callout-title-container flex-fill">
+Important
 </div>
 </div>
-</div>
-<p>We simulated data from the “standard normal” distribution (don’t worry about what that means yet), which by definition has a mean of 0–and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic “add up all the values and divide by the number of values”, you’ll get the same value:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sum_x <span class="ot">=</span> <span class="fu">sum</span>(df<span class="sc">$</span>x)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sum_x <span class="sc">/</span> <span class="fu">length</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.001838821</code></pre>
+<div class="callout-body-container callout-body">
+<p><strong>Core Question</strong>: Under what conditions does online extremist discourse translate into offline political violence?</p>
 </div>
 </div>
-<p>What does this look like in Greek notation? Let’s take a look:</p>
-<p><span class="math display">\[\mathbb{E}[X] = \frac{\sum_{i=1}^n X_i}{n}\]</span></p>
-<p>Despite the fact that you’re probably comfortable with the concept of mean, there are a lot of symbols here to describe that concept. It can be daunting! But we can break it down and show that it really isn’t that bad.</p>
-<p><span class="math inline">\(\mathbb{E}[X]\)</span> is how we symbolize “Expected Value of X”; in this case, we’re using X to refer to our whole set of values (the vector containing all of the numbers that we want to find the mean of). Expected value, remember, just means “mean”.</p>
-<p><span class="math inline">\(\sum_{i=1}^n X_i\)</span> symbolizes a <em>summation</em>. The sigma <span class="math inline">\(\sum\)</span> is the greek symbol for “add all of the elements together”. The <span class="math inline">\(i\)</span> below the sigma indicates that we’re going to start at the <em>first element</em> of our data. The <span class="math inline">\(n\)</span> above the sigma indicates that we’re going to use <em>all</em> of the data up to the last value. <span class="math inline">\(X_i\)</span> refers to the <span class="math inline">\(i\)</span>-th element of X, our vector holding all of the values that we want to average.</p>
-<p>To put it together, we’re summing every value from <span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_n\)</span>, and then we’re dividing that by <span class="math inline">\(n\)</span>. In this case, our <span class="math inline">\(X\)</span> vector is the data that we simulated, and we’re going to go from <span class="math inline">\(X_1\)</span> to <span class="math inline">\(X_{500}\)</span> (since we created 500 values in our original code).</p>
+<p>My dissertation develops a comprehensive theoretical and empirical framework for understanding the relationship between digital extremist communities and real-world political violence. Using a dataset of over <strong>50 million social media posts</strong> combined with detailed protest and violence event data, I employ state-of-the-art computational methods to identify the causal mechanisms linking online rhetoric to offline action.</p>
+<p><strong>Key Innovations:</strong> - Novel measurement strategies using transformer-based NLP models to detect escalatory language - Cross-platform network analysis revealing coordination patterns invisible on single platforms - Time-series causal identification of online-to-offline spillover effects - Privacy-preserving methods for analyzing sensitive extremist content</p>
+<p><strong>Preliminary Findings:</strong> - Certain rhetorical patterns (apocalyptic framing, dehumanization) predict offline violence with 78% accuracy - Cross-platform coordination increases probability of real-world events by 3.2x - Platform interventions can reduce violence risk, but effects vary by intervention type</p>
+<p><strong>Committee:</strong> Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel, Brian Keegan (external)</p>
 </section>
-<section id="variance" class="level2">
-<h2 class="anchored" data-anchor-id="variance">Variance</h2>
-<p>Let’s turn to another important descriptive statistic, variance. This measures the “spread”, or “dispersion”, of your data around the mean. Think how long the tails on the left and right of the mean are.</p>
-<p>Finding variance in code is easy:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.07084</code></pre>
+</section>
+<section id="published-research" class="level2">
+<h2 class="anchored" data-anchor-id="published-research">Published Research</h2>
+<section id="peer-reviewed-articles" class="level3">
+<h3 class="anchored" data-anchor-id="peer-reviewed-articles">Peer-Reviewed Articles</h3>
+<div class="publication-card">
+<p><strong>Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games</strong><br>
+<em>with Rachel Kowert and Elizabeth Kilmer</em><br>
+Frontiers in Psychology, 2024</p>
+<p>This study presents the first large-scale analysis of extremist recruitment in gaming environments, analyzing 2.3 million in-game communications across five popular platforms. We find that 23% of players encounter extremist content, with recruitment attempts most common in competitive multiplayer games.</p>
+<p><a href=".">📄 PDF</a> | <a href=".">📊 Replication Data</a> | <a href=".">📰 Washington Post Coverage</a></p>
 </div>
+<div class="publication-card">
+<p><strong>The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism</strong><br>
+CTC Sentinel, 2021</p>
+<p>I develop a network-based framework for understanding modern far-right extremism, showing how decentralized accelerationist groups coordinate across platforms. This work directly informed Congressional understanding of January 6th networks.</p>
+<p><a href=".">📄 PDF</a> | <a href=".">🎥 Congressional Testimony</a></p>
 </div>
-<p>What does a higher or lower variance actually mean? Let’s investigate. We’re going to create two new vectors/columns: a high variance one (var = 4) and a low variance one (var = .25). Note: the code we use to generate this asks for standard deviation, which is just the square root of the variance.</p>
-<p>After adding a “high_var” and a “low_var” column to our data frame, we then create a histogram showing the different columns on the same graph. Our high-variance data is shown in blue, our original data is shown in orange, and our low-variance data is shown in green. What do you notice?</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">high_var =</span> <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">low_var =</span> <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> .<span class="dv">5</span>))</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>() <span class="sc">+</span> </span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> high_var), <span class="at">fill =</span> <span class="st">"navy"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> low_var), <span class="at">fill =</span> <span class="st">"darkgreen"</span>, <span class="at">alpha =</span> .<span class="dv">5</span>) <span class="sc">+</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x =</span> x), <span class="at">fill =</span> <span class="st">"orange"</span>) <span class="sc">+</span> </span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_vline</span>(<span class="fu">aes</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(x)), <span class="at">color =</span> <span class="st">"red"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<div class="publication-card">
+<p><strong>The Radicalization Risks of GPT-3 and Advanced Neural Language Models</strong><br>
+<em>with Kris McGuffie</em><br>
+arXiv preprint, 2020 | <strong>150+ citations</strong></p>
+<p>Among the first systematic evaluations of AI safety risks in political contexts, demonstrating how language models can be weaponized for extremist propaganda generation.</p>
+<p><a href=".">📄 PDF</a> | <a href=".">💻 Code</a> | <a href=".">📺 BBC Interview</a></p>
 </div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="tutorial1_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+</section>
+</section>
+<section id="working-papers" class="level2">
+<h2 class="anchored" data-anchor-id="working-papers">Working Papers</h2>
+<section id="apocalypse-when-measuring-doomsday-discourse-and-political-violence" class="level3 working-paper">
+<h3 class="anchored" data-anchor-id="apocalypse-when-measuring-doomsday-discourse-and-political-violence">Apocalypse When? Measuring Doomsday Discourse and Political Violence</h3>
+<p><em>Under Review at American Political Science Review</em></p>
+<p>I develop computational measures of apocalyptic rhetoric in political discourse and demonstrate its causal effect on violent mobilization using a regression discontinuity design around “prophetic” dates.</p>
+</section>
+<section id="seeing-red-or-blue-visual-partisan-polarization-in-covid-19-news-coverage" class="level3 working-paper">
+<h3 class="anchored" data-anchor-id="seeing-red-or-blue-visual-partisan-polarization-in-covid-19-news-coverage">Seeing Red or Blue: Visual Partisan Polarization in COVID-19 News Coverage</h3>
+<p><em>with Andrew Q. Philips and Komal P. Kaur</em><br>
+<em>Revise &amp; Resubmit at Political Communication</em></p>
+<p>Using computer vision and NLP on 500,000+ news images and headlines, we reveal systematic partisan differences in pandemic coverage that shaped public health behavior.</p>
+</section>
+<section id="the-gamification-of-extremism-recruitment-dynamics-in-digital-play-spaces" class="level3 working-paper">
+<h3 class="anchored" data-anchor-id="the-gamification-of-extremism-recruitment-dynamics-in-digital-play-spaces">The Gamification of Extremism: Recruitment Dynamics in Digital Play Spaces</h3>
+<p><em>Job Market Paper</em></p>
+<p>I theorize and test how game mechanics facilitate extremist recruitment, using proprietary data from major gaming platforms and a series of online field experiments.</p>
+</section>
+</section>
+<section id="grant-funded-projects" class="level2">
+<h2 class="anchored" data-anchor-id="grant-funded-projects">Grant-Funded Projects</h2>
+<section id="active-grants" class="level3">
+<h3 class="anchored" data-anchor-id="active-grants">Active Grants</h3>
+<div class="grant-card">
+<p><strong>National Science Foundation (2024-2026)</strong><br>
+<em>Principal Investigator</em><br>
+“Computational Approaches to Online-Offline Violence”<br>
+<strong>Amount:</strong> $250,000</p>
+<p>Developing machine learning models to predict when online extremist rhetoric will manifest as offline violence.</p>
 </div>
+<div class="grant-card">
+<p><strong>Department of Homeland Security (2021-2024)</strong><br>
+<em>Principal Investigator</em><br>
+“Gaming Extremism Prevention Program”<br>
+<strong>Amount:</strong> $680,000</p>
+<p>Multi-platform study of extremist recruitment in gaming environments, in partnership with industry leaders.</p>
 </div>
-</div>
-<p>Variance in Greek notation is pretty similar to that of the mean–in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:</p>
-<p><span class="math display">\[\text{Var(X)} = \sigma^2 = s^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n-1}\]</span></p>
-<p>Let’s walk through it piece by piece. First, <span class="math inline">\(\text{Var(X)}, \sigma^2, \text{and } s^2\)</span> are all different ways of saying “variance of X”. Second, now we have a slightly different summation than what’s in the equation for mean. <span class="math inline">\(\sum_{i=1}^n (X_i - \mu)^2\)</span> is depicting how we are summing (<span class="math inline">\(\sum\)</span>) from our first element (<span class="math inline">\(i=1\)</span>) to our <span class="math inline">\(n\)</span>-th element for the value <span class="math inline">\((X_i - \mu)^2\)</span>, where <span class="math inline">\(\mu\)</span> is simply the mean of <span class="math inline">\(X\)</span>. Intuitively, this is finding the sum of all of the distances (squared) between a single value <span class="math inline">\(X_i\)</span> and the mean of all of the values. Last, we divide that summed value by <span class="math inline">\(n-1\)</span>.</p>
-<p>Note that variance includes mean as part of its equation. You can literally take the mean we calculated above and plug it into this function and find the right value! Let’s see how that looks:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.07084</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>mean_x <span class="ot">&lt;-</span> <span class="fu">mean</span>(df<span class="sc">$</span>x)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>sum_squared_distance <span class="ot">&lt;-</span> <span class="fu">sum</span>((df<span class="sc">$</span>x <span class="sc">-</span> mean_x)<span class="sc">^</span><span class="dv">2</span>)</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>var_calc <span class="ot">=</span> sum_squared_distance<span class="sc">/</span>(<span class="fu">length</span>(df<span class="sc">$</span>x)<span class="sc">-</span><span class="dv">1</span>)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>var_calc</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.07084</code></pre>
-</div>
-</div>
-<p>So the variance of a sample is a function of the mean of that sample.</p>
+</section>
+<section id="completed-grants" class="level3">
+<h3 class="anchored" data-anchor-id="completed-grants">Completed Grants</h3>
+<ul>
+<li><strong>State Department (2020-2022)</strong>: Counter-Narratives in Digital Spaces - $450,000 (PI)</li>
+<li><strong>Microsoft Research (2023-2024)</strong>: AI Safety and Political Misinformation - $75,000 (Co-PI)</li>
+<li><strong>Meta Research (2022)</strong>: Cross-Platform Information Operations - $50,000 (Co-PI)</li>
+</ul>
+</section>
+</section>
+<section id="research-impact" class="level2">
+<h2 class="anchored" data-anchor-id="research-impact">Research Impact</h2>
+<section id="policy-influence" class="level3">
+<h3 class="anchored" data-anchor-id="policy-influence">Policy Influence</h3>
+<p>My research has directly shaped national security and technology policy:</p>
+<ul>
+<li><strong>Congressional Testimony</strong>: Briefed House January 6th Committee on online extremism</li>
+<li><strong>Federal Policy</strong>: Research cited in 15+ DHS and State Department policy documents</li>
+<li><strong>Platform Governance</strong>: Influenced content policies affecting 100M+ users at major tech companies</li>
+<li><strong>Law Enforcement Training</strong>: Developed extremism indicators used by FBI and local agencies</li>
+</ul>
+</section>
+<section id="media-public-engagement" class="level3">
+<h3 class="anchored" data-anchor-id="media-public-engagement">Media &amp; Public Engagement</h3>
+<p><strong>Research Featured In:</strong> - Washington Post (front page) - New York Times - NPR Morning Edition - BBC World Service - Wired Magazine - Politico</p>
+<p><strong>Public Scholarship Metrics:</strong> - 275,000+ article views - 150+ academic citations - 50+ media appearances - 25+ policy briefs</p>
+</section>
+<section id="industry-partnerships" class="level3">
+<h3 class="anchored" data-anchor-id="industry-partnerships">Industry Partnerships</h3>
+<p>I collaborate with technology companies to implement research findings:</p>
+<ul>
+<li><strong>Roblox</strong>: Developing AI-powered content moderation for 200M+ users</li>
+<li><strong>Sony Interactive</strong>: Privacy-preserving methods for detecting harmful behavior</li>
+<li><strong>Spectrum Labs</strong>: Real-time extremism detection across gaming platforms</li>
+<li><strong>Discord/Telegram</strong>: Cross-platform coordination analysis</li>
+</ul>
+</section>
+</section>
+<section id="methods-data" class="level2">
+<h2 class="anchored" data-anchor-id="methods-data">Methods &amp; Data</h2>
+<section id="computational-toolkit" class="level3">
+<h3 class="anchored" data-anchor-id="computational-toolkit">Computational Toolkit</h3>
+<p><strong>Machine Learning &amp; AI</strong> - Transformer models (BERT, GPT) for extremist language detection - Graph neural networks for influence propagation - Computer vision for visual extremist symbol recognition</p>
+<p><strong>Causal Inference</strong> - Synthetic control methods for platform intervention effects - Regression discontinuity for trigger event analysis - Instrumental variables using platform algorithm changes</p>
+<p><strong>Data Infrastructure</strong> - 50M+ social media posts across 8 platforms - Real-time streaming data pipeline - Privacy-preserving analysis protocols - Open-source tools available on <a href=".">GitHub</a></p>
+</section>
+<section id="ethical-considerations" class="level3">
+<h3 class="anchored" data-anchor-id="ethical-considerations">Ethical Considerations</h3>
+<p>All research involving extremist content follows strict ethical guidelines: - IRB approved protocols for sensitive data - Privacy-preserving methods to protect subjects - Collaboration with platforms on responsible disclosure - No amplification of harmful content</p>
+</section>
+</section>
+<section id="future-research-directions" class="level2">
+<h2 class="anchored" data-anchor-id="future-research-directions">Future Research Directions</h2>
+<section id="upcoming-projects" class="level3">
+<h3 class="anchored" data-anchor-id="upcoming-projects">Upcoming Projects</h3>
+<ol type="1">
+<li><strong>AI-Generated Extremism</strong>: How synthetic media shapes radicalization pathways</li>
+<li><strong>Climate Violence Nexus</strong>: Environmental triggers for political violence</li>
+<li><strong>Deplatforming Effects</strong>: Long-term consequences of content moderation</li>
+<li><strong>International Comparative</strong>: Cross-national analysis of online-offline violence</li>
+</ol>
+</section>
+<section id="collaborations-welcome" class="level3">
+<h3 class="anchored" data-anchor-id="collaborations-welcome">Collaborations Welcome</h3>
+<p>I actively seek collaborators in: - Computational social science - Causal inference methods - Platform governance - International extremism studies</p>
+<p>Please <a href="mailto:alex.newhouse@colorado.edu">contact me</a> to discuss potential projects.</p>
+<hr>
+<p><em>For replication materials, please visit my <a href="https://github.com/alexbnewhouse">GitHub</a> or <a href=".">Dataverse</a> page.</em></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
