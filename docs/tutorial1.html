@@ -268,7 +268,7 @@ window.Quarto = {
 </div>
 </div>
 </div>
-<p>We simulated data from the “standard normal” distribution, which by definition has a mean of 0–and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic “add up all the values and divide by the number of values”, you’ll get the same value:</p>
+<p>We simulated data from the “standard normal” distribution (don’t worry about what that means yet), which by definition has a mean of 0–and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic “add up all the values and divide by the number of values”, you’ll get the same value:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sum_x <span class="ot">=</span> <span class="fu">sum</span>(df<span class="sc">$</span>x)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sum_x <span class="sc">/</span> <span class="fu">length</span>(df<span class="sc">$</span>x)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -277,7 +277,7 @@ window.Quarto = {
 </div>
 </div>
 <p>What does this look like in Greek notation? Let’s take a look:</p>
-<p><span class="math inline">\(\mathbb{E}[X] = \frac{\sum_{i=1}^n X_i}{n}\)</span></p>
+<p><span class="math display">\[\mathbb{E}[X] = \frac{\sum_{i=1}^n X_i}{n}\]</span></p>
 <p>Despite the fact that you’re probably comfortable with the concept of mean, there are a lot of symbols here to describe that concept. It can be daunting! But we can break it down and show that it really isn’t that bad.</p>
 <p><span class="math inline">\(\mathbb{E}[X]\)</span> is how we symbolize “Expected Value of X”; in this case, we’re using X to refer to our whole set of values (the vector containing all of the numbers that we want to find the mean of). Expected value, remember, just means “mean”.</p>
 <p><span class="math inline">\(\sum_{i=1}^n X_i\)</span> symbolizes a <em>summation</em>. The sigma <span class="math inline">\(\sum\)</span> is the greek symbol for “add all of the elements together”. The <span class="math inline">\(i\)</span> below the sigma indicates that we’re going to start at the <em>first element</em> of our data. The <span class="math inline">\(n\)</span> above the sigma indicates that we’re going to use <em>all</em> of the data up to the last value. <span class="math inline">\(X_i\)</span> refers to the <span class="math inline">\(i\)</span>-th element of X, our vector holding all of the values that we want to average.</p>
@@ -320,7 +320,7 @@ window.Quarto = {
 </div>
 </div>
 <p>Variance in Greek notation is pretty similar to that of the mean–in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:</p>
-<p><span class="math inline">\(\text{Var(X)} = \sigma^2 = s^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n-1}\)</span></p>
+<p><span class="math display">\[\text{Var(X)} = \sigma^2 = s^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n-1}\]</span></p>
 <p>Let’s walk through it piece by piece. First, <span class="math inline">\(\text{Var(X)}, \sigma^2, \text{and } s^2\)</span> are all different ways of saying “variance of X”. Second, now we have a slightly different summation than what’s in the equation for mean. <span class="math inline">\(\sum_{i=1}^n (X_i - \mu)^2\)</span> is depicting how we are summing (<span class="math inline">\(\sum\)</span>) from our first element (<span class="math inline">\(i=1\)</span>) to our <span class="math inline">\(n\)</span>-th element for the value <span class="math inline">\((X_i - \mu)^2\)</span>, where <span class="math inline">\(\mu\)</span> is simply the mean of <span class="math inline">\(X\)</span>. Intuitively, this is finding the sum of all of the distances (squared) between a single value <span class="math inline">\(X_i\)</span> and the mean of all of the values. Last, we divide that summed value by <span class="math inline">\(n-1\)</span>.</p>
 <p>Note that variance includes mean as part of its equation. You can literally take the mean we calculated above and plug it into this function and find the right value! Let’s see how that looks:</p>
 <div class="cell">

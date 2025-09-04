@@ -33,7 +33,7 @@ df %>%
 
 ```
 
-We simulated data from the "standard normal" distribution, which by definition has a mean of 0--and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic "add up all the values and divide by the number of values", you'll get the same value:
+We simulated data from the "standard normal" distribution (don't worry about what that means yet), which by definition has a mean of 0--and you can see that we are finding a mean of close to zero! And, indeed, if we do the basic "add up all the values and divide by the number of values", you'll get the same value:
 
 ```{r}
 sum_x = sum(df$x)
@@ -42,7 +42,7 @@ sum_x / length(df$x)
 
 What does this look like in Greek notation? Let's take a look:
 
-$\mathbb{E}[X] = \frac{\sum_{i=1}^n X_i}{n}$
+$$\mathbb{E}[X] = \frac{\sum_{i=1}^n X_i}{n}$$
 
 Despite the fact that you're probably comfortable with the concept of mean, there are a lot of symbols here to describe that concept. It can be daunting! But we can break it down and show that it really isn't that bad.
 
@@ -50,7 +50,7 @@ $\mathbb{E}[X]$ is how we symbolize "Expected Value of X"; in this case, we're u
 
 $\sum_{i=1}^n X_i$ symbolizes a *summation*. The sigma $\sum$ is the greek symbol for "add all of the elements together". The $i$ below the sigma indicates that we're going to start at the *first element* of our data. The $n$ above the sigma indicates that we're going to use *all* of the data up to the last value. $X_i$ refers to the $i$-th element of X, our vector holding all of the values that we want to average.
 
-To put it together, we're summing every value from $X_1$ to $X_n$, and then we're dividing that by $n$. In this case, our $X$ vector is the data that we simulated, and we're going to go from $X_1$ to $X_500$ (since we created 500 values in our original code).
+To put it together, we're summing every value from $X_1$ to $X_n$, and then we're dividing that by $n$. In this case, our $X$ vector is the data that we simulated, and we're going to go from $X_1$ to $X_{500}$ (since we created 500 values in our original code).
 
 ## Variance
 
@@ -81,7 +81,7 @@ df %>%
 
 Variance in Greek notation is pretty similar to that of the mean--in fact, mean and variance are linked mathematically, too! The variance equation is depicted by:
 
-$\text{Var(X)} = \sigma^2 = s^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n-1}$
+$$\text{Var(X)} = \sigma^2 = s^2 = \frac{\sum_{i=1}^n (X_i - \mu)^2}{n-1}$$
 
 Let's walk through it piece by piece. First, $\text{Var(X)}, \sigma^2, \text{and } s^2$ are all different ways of saying "variance of X". Second, now we have a slightly different summation than what's in the equation for mean. $\sum_{i=1}^n (X_i - \mu)^2$ is depicting how we are summing ($\sum$) from our first element ($i=1$) to our $n$-th element for the value $(X_i - \mu)^2$, where $\mu$ is simply the mean of $X$. Intuitively, this is finding the sum of all of the distances (squared) between a single value $X_i$ and the mean of all of the values. Last, we divide that summed value by $n-1$.
 
