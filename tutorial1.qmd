@@ -1,8 +1,7 @@
 ---
 title: "Intro to Greek Notation and Univariate Descrpitive Statistics"
 format:
-  html:
-    theme: flatly
+  html
 ---
 
 ## What is going on with all those Greek letters?

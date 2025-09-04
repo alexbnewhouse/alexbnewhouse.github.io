@@ -165,21 +165,21 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions: - How do digital platforms facilitate political radicalization and mobilization? - What role do emerging technologies play in extremist recruitment and organization?\n- How can computational methods help us understand and counter political violence?"
+    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions:\n\nHow do digital platforms facilitate political radicalization and mobilization?\nWhat role do emerging technologies play in extremist recruitment and organization?\n\nHow can computational methods help us understand and counter political violence?"
   },
   {
     "objectID": "research.html#research-overview",
     "href": "research.html#research-overview",
     "title": "Research",
     "section": "",
-    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions: - How do digital platforms facilitate political radicalization and mobilization? - What role do emerging technologies play in extremist recruitment and organization?\n- How can computational methods help us understand and counter political violence?"
+    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions:\n\nHow do digital platforms facilitate political radicalization and mobilization?\nWhat role do emerging technologies play in extremist recruitment and organization?\n\nHow can computational methods help us understand and counter political violence?"
   },
   {
     "objectID": "research.html#citation-metrics",
     "href": "research.html#citation-metrics",
     "title": "Research",
     "section": "Citation Metrics",
-    "text": "Citation Metrics\nGoogle Scholar Profile: 1,093 total citations | Research Areas: collective behavior, online communities, extremism, conspiracy theories, video games\nImpact Highlights: - Featured in 8+ major media outlets - 276K+ total article views - Research cited in policy reports and academic literature"
+    "text": "Citation Metrics\nGoogle Scholar Profile: 1,093 total citations | Research Areas: collective behavior, online communities, extremism, conspiracy theories, video games\nImpact Highlights:\n\nFeatured in 8+ major media outlets\n276K+ total article views\nResearch cited in policy reports and academic literature"
   },
   {
     "objectID": "research.html#featured-publications",
@@ -193,7 +193,7 @@
     "href": "research.html#research-areas-methods",
     "title": "Research",
     "section": "Research Areas & Methods",
-    "text": "Research Areas & Methods\n\nSubstantive Focus Areas\nPolitical Violence & Extremism - Neo-fascist accelerationism and network structures - Online-offline radicalization pathways\n- Gaming platforms as extremist recruitment venues - AI and synthetic media threats\nTechnology & Society - Digital platform governance and content moderation - AI safety and misuse potential - Social media data analysis and behavioral patterns - Gaming culture and political socialization\n\n\nMethodological Expertise\nComputational Methods - Machine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers) - Natural Language Processing and text-as-data approaches - Social Network Analysis (igraph, statnet) - Time-series analysis and causal inference\nData & Platforms - Large-scale social media data collection and analysis - Gaming platform research and mixed-methods approaches - Survey research and experimental design - Qualitative coding and content analysis"
+    "text": "Research Areas & Methods\n\nSubstantive Focus Areas\nPolitical Violence & Extremism\n\nNeo-fascist accelerationism and network structures\nOnline-offline radicalization pathways\n\nGaming platforms as extremist recruitment venues\nAI and synthetic media threats\n\nTechnology & Society\n\nDigital platform governance and content moderation\nAI safety and misuse potential\nSocial media data analysis and behavioral patterns\nGaming culture and political socialization\n\n\n\nMethodological Expertise\nComputational Methods\n\nMachine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers)\nNatural Language Processing and text-as-data approaches\nSocial Network Analysis (igraph, statnet)\nTime-series analysis and causal inference\n\nData & Platforms\n\nLarge-scale social media data collection and analysis\nGaming platform research and mixed-methods approaches\nSurvey research and experimental design\nQualitative coding and content analysis"
   },
   {
     "objectID": "research.html#current-research-projects",
@@ -207,7 +207,7 @@
     "href": "research.html#research-impact-media-coverage",
     "title": "Research",
     "section": "Research Impact & Media Coverage",
-    "text": "Research Impact & Media Coverage\n\nAcademic Recognition\n\nResearch extensively cited in terrorism studies literature\nWork featured in CTC Sentinel, premier counterterrorism publication\nPublications in top-tier psychology and computer science venues\n\n\n\nPolicy & Industry Impact\n\nJanuary 6th Committee: Investigative consultant providing expertise on extremist movements\nTechnology Partnerships: Direct collaboration with gaming companies (Roblox, Spectrum Labs)\nFederal Funding: $1.38M in grants as Principal Investigator\n\n\n\nMedia & Public Engagement\nMajor Media Features: Washington Post • New York Times • NPR (Morning Edition, All Things Considered) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now\nHigh-Impact Articles: - Parler analysis: 241,000 views - January 6th prediction: 35,400 views\nExpert Commentary Topics: - AI safety and misuse potential - Gaming platform moderation - Extremist recruitment strategies\n- Social media radicalization - Technology policy implications"
+    "text": "Research Impact & Media Coverage\n\nAcademic Recognition\n\nResearch extensively cited in terrorism studies literature\nWork featured in CTC Sentinel, premier counterterrorism publication\nPublications in top-tier psychology and computer science venues\n\n\n\nPolicy & Industry Impact\n\nJanuary 6th Committee: Investigative consultant providing expertise on extremist movements\nTechnology Partnerships: Direct collaboration with gaming companies (Roblox, Spectrum Labs)\nFederal Funding: $1.38M in grants as Principal Investigator\n\n\n\nMedia & Public Engagement\nMajor Media Features: Washington Post • New York Times • NPR (Morning Edition, All Things Considered) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now\nHigh-Impact Articles:\n\nParler analysis: 241,000 views\nJanuary 6th prediction: 35,400 views\n\nExpert Commentary Topics:\n\nAI safety and misuse potential\nGaming platform moderation\nExtremist recruitment strategies\n\nSocial media radicalization\nTechnology policy implications"
   },
   {
     "objectID": "research.html#funding-grants",
@@ -221,7 +221,7 @@
     "href": "research.html#future-research-directions",
     "title": "Research",
     "section": "Future Research Directions",
-    "text": "Future Research Directions\nEmerging Technologies & Political Violence - AI-generated disinformation and radicalization - Virtual/augmented reality environments as political spaces - Blockchain and decentralized platform governance\nComparative Extremism Studies\n- Cross-national analysis of digital radicalization patterns - Comparative platform governance approaches - International cooperation in countering online extremism\nMethodological Innovation - Advanced causal inference methods for social media data - Multi-modal analysis combining text, visual, and network data - Real-time detection and intervention systems\n\nFor collaboration inquiries, media requests, or access to datasets, contact alex.newhouse@colorado.edu.\nGoogle Scholar: Alex Newhouse • ORCID: Available upon request"
+    "text": "Future Research Directions\nEmerging Technologies & Political Violence\n\nAI-generated disinformation and radicalization\nVirtual/augmented reality environments as political spaces\nBlockchain and decentralized platform governance\n\nComparative Extremism Studies\n\nCross-national analysis of digital radicalization patterns\nComparative platform governance approaches\nInternational cooperation in countering online extremism\n\nMethodological Innovation\n\nAdvanced causal inference methods for social media data\nMulti-modal analysis combining text, visual, and network data\nReal-time detection and intervention systems\n\n\nFor collaboration inquiries, media requests, or access to datasets, contact alex.newhouse@colorado.edu.\nGoogle Scholar: Alex Newhouse • ORCID: Available upon request"
   },
   {
     "objectID": "tutorial1.html",

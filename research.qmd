@@ -3,7 +3,6 @@ title: "Research"
 subtitle: "Computational Political Science & Extremism Studies"
 format:
   html:
-    theme: flatly
     toc: true
     toc-location: right
 ---
@@ -13,6 +12,7 @@ format:
 My research program sits at the intersection of **computational social science**, **political violence**, and **technology studies**. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.
 
 **Core Questions:**
+
 - How do digital platforms facilitate political radicalization and mobilization?
 - What role do emerging technologies play in extremist recruitment and organization?  
 - How can computational methods help us understand and counter political violence?
@@ -24,6 +24,7 @@ My research program sits at the intersection of **computational social science**
 **Google Scholar Profile:** 1,093 total citations | **Research Areas:** collective behavior, online communities, extremism, conspiracy theories, video games
 
 **Impact Highlights:**
+
 - Featured in 8+ major media outlets
 - 276K+ total article views
 - Research cited in policy reports and academic literature
@@ -74,12 +75,14 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 ### Substantive Focus Areas
 
 **Political Violence & Extremism**
+
 - Neo-fascist accelerationism and network structures
 - Online-offline radicalization pathways  
 - Gaming platforms as extremist recruitment venues
 - AI and synthetic media threats
 
 **Technology & Society**
+
 - Digital platform governance and content moderation
 - AI safety and misuse potential
 - Social media data analysis and behavioral patterns
@@ -88,12 +91,14 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 ### Methodological Expertise
 
 **Computational Methods**
+
 - Machine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers)
 - Natural Language Processing and text-as-data approaches
 - Social Network Analysis (igraph, statnet)
 - Time-series analysis and causal inference
 
 **Data & Platforms**
+
 - Large-scale social media data collection and analysis
 - Gaming platform research and mixed-methods approaches
 - Survey research and experimental design
@@ -132,11 +137,13 @@ Analysis of how political communications affect financial market behavior and in
 ## Research Impact & Media Coverage
 
 ### Academic Recognition
+
 - Research extensively cited in terrorism studies literature
 - Work featured in *CTC Sentinel*, premier counterterrorism publication
 - Publications in top-tier psychology and computer science venues
 
 ### Policy & Industry Impact
+
 - **January 6th Committee:** Investigative consultant providing expertise on extremist movements
 - **Technology Partnerships:** Direct collaboration with gaming companies (Roblox, Spectrum Labs)
 - **Federal Funding:** $1.38M in grants as Principal Investigator
@@ -147,10 +154,12 @@ Analysis of how political communications affect financial market behavior and in
 Washington Post • New York Times • NPR (*Morning Edition*, *All Things Considered*) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now
 
 **High-Impact Articles:**
+
 - Parler analysis: **241,000 views**
 - January 6th prediction: **35,400 views**
 
 **Expert Commentary Topics:**
+
 - AI safety and misuse potential
 - Gaming platform moderation
 - Extremist recruitment strategies  
@@ -174,16 +183,19 @@ Washington Post • New York Times • NPR (*Morning Edition*, *All Things Consi
 ## Future Research Directions
 
 **Emerging Technologies & Political Violence**
+
 - AI-generated disinformation and radicalization
 - Virtual/augmented reality environments as political spaces
 - Blockchain and decentralized platform governance
 
 **Comparative Extremism Studies**  
+
 - Cross-national analysis of digital radicalization patterns
 - Comparative platform governance approaches
 - International cooperation in countering online extremism
 
 **Methodological Innovation**
+
 - Advanced causal inference methods for social media data
 - Multi-modal analysis combining text, visual, and network data
 - Real-time detection and intervention systems

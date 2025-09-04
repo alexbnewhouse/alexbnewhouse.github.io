@@ -20,8 +20,7 @@ about:
       text: GitHub
       href: https://github.com/alexbnewhouse
 format:
-  html:
-    theme: flatly
+  html
 ---
 
 ## About

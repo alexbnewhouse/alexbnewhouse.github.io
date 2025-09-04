@@ -3,7 +3,6 @@ title: "Alex Newhouse"
 subtitle: "Curriculum Vitae"
 format: 
   html:
-    theme: flatly
     toc: true
     toc-location: right
 ---

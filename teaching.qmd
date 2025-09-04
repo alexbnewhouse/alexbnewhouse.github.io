@@ -1,8 +1,7 @@
 ---
 title: "Teaching & Mentorship"
 format:
-  html:
-    theme: flatly
+  html
 ---
 
 ## Teaching Philosophy
