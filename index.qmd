@@ -24,12 +24,6 @@ format:
     theme: flatly
 ---
 
-## Research Impact
-
-**$1.38M** in grant funding (Principal Investigator) | **45+** students mentored | **276K** article views | Featured in **8** major media outlets
-
----
-
 ## About
 
 I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.
@@ -76,6 +70,12 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 **Newhouse, A.** "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*, 2021.
 
 **McGuffie, K. and Newhouse, A.** "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *arXiv*, 2020.
+
+---
+
+## Research Impact
+
+**$1.38M** in grant funding (Principal Investigator) | **45+** students mentored | **276K** article views | Featured in **8** major media outlets
 
 ---
 

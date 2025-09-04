@@ -60,21 +60,14 @@
     "href": "index.html",
     "title": "Alex Newhouse",
     "section": "",
-    "text": "$1.38M in grant funding (Principal Investigator) | 45+ students mentored | 276K article views | Featured in 8 major media outlets"
-  },
-  {
-    "objectID": "index.html#research-impact",
-    "href": "index.html#research-impact",
-    "title": "Alex Newhouse",
-    "section": "",
-    "text": "$1.38M in grant funding (Principal Investigator) | 45+ students mentored | 276K article views | Featured in 8 major media outlets"
+    "text": "I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
   },
   {
     "objectID": "index.html#about",
     "href": "index.html#about",
     "title": "Alex Newhouse",
-    "section": "About",
-    "text": "About\nI am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
+    "section": "",
+    "text": "I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
   },
   {
     "objectID": "index.html#research-expertise",
@@ -89,6 +82,13 @@
     "title": "Alex Newhouse",
     "section": "Featured Publications",
     "text": "Featured Publications\nKowert, R., Kilmer, E., and Newhouse, A. “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 2024.\nNewhouse, A. “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 2021.\nMcGuffie, K. and Newhouse, A. “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv, 2020."
+  },
+  {
+    "objectID": "index.html#research-impact",
+    "href": "index.html#research-impact",
+    "title": "Alex Newhouse",
+    "section": "Research Impact",
+    "text": "Research Impact\n$1.38M in grant funding (Principal Investigator) | 45+ students mentored | 276K article views | Featured in 8 major media outlets"
   },
   {
     "objectID": "index.html#media-recognition",
@@ -165,63 +165,63 @@
     "href": "research.html",
     "title": "Research",
     "section": "",
-    "text": "NoteResearch Philosophy\n\n\n\nI combine cutting-edge computational methods with substantive political science theory to understand how digital technologies reshape political violence, extremism, and collective action. My work bridges the gap between academic research and real-world policy applications."
+    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions: - How do digital platforms facilitate political radicalization and mobilization? - What role do emerging technologies play in extremist recruitment and organization?\n- How can computational methods help us understand and counter political violence?"
   },
   {
-    "objectID": "research.html#research-agenda-overview",
-    "href": "research.html#research-agenda-overview",
+    "objectID": "research.html#research-overview",
+    "href": "research.html#research-overview",
     "title": "Research",
-    "section": "Research Agenda Overview",
-    "text": "Research Agenda Overview\nMy research program examines the intersection of technology and political violence through three interconnected streams:\n\nDigital-Physical Violence Nexus: How online extremist rhetoric translates into offline mobilization\nPlatform Governance & Safety: Understanding and mitigating extremist recruitment in digital spaces\n\nMethodological Innovation: Advancing computational methods for studying sensitive political phenomena"
+    "section": "",
+    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions: - How do digital platforms facilitate political radicalization and mobilization? - What role do emerging technologies play in extremist recruitment and organization?\n- How can computational methods help us understand and counter political violence?"
   },
   {
-    "objectID": "research.html#dissertation-project",
-    "href": "research.html#dissertation-project",
+    "objectID": "research.html#citation-metrics",
+    "href": "research.html#citation-metrics",
     "title": "Research",
-    "section": "Dissertation Project",
-    "text": "Dissertation Project\n\nFrom Pixels to Politics: Computational Analysis of Online-Offline Political Violence\n\n\n\n\n\n\nImportant\n\n\n\nCore Question: Under what conditions does online extremist discourse translate into offline political violence?\n\n\nMy dissertation develops a comprehensive theoretical and empirical framework for understanding the relationship between digital extremist communities and real-world political violence. Using a dataset of over 50 million social media posts combined with detailed protest and violence event data, I employ state-of-the-art computational methods to identify the causal mechanisms linking online rhetoric to offline action.\nKey Innovations: - Novel measurement strategies using transformer-based NLP models to detect escalatory language - Cross-platform network analysis revealing coordination patterns invisible on single platforms - Time-series causal identification of online-to-offline spillover effects - Privacy-preserving methods for analyzing sensitive extremist content\nPreliminary Findings: - Certain rhetorical patterns (apocalyptic framing, dehumanization) predict offline violence with 78% accuracy - Cross-platform coordination increases probability of real-world events by 3.2x - Platform interventions can reduce violence risk, but effects vary by intervention type\nCommittee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel, Brian Keegan (external)"
+    "section": "Citation Metrics",
+    "text": "Citation Metrics\nGoogle Scholar Profile: 1,093 total citations | Research Areas: collective behavior, online communities, extremism, conspiracy theories, video games\nImpact Highlights: - Featured in 8+ major media outlets - 276K+ total article views - Research cited in policy reports and academic literature"
   },
   {
-    "objectID": "research.html#published-research",
-    "href": "research.html#published-research",
+    "objectID": "research.html#featured-publications",
+    "href": "research.html#featured-publications",
     "title": "Research",
-    "section": "Published Research",
-    "text": "Published Research\n\nPeer-Reviewed Articles\n\nTaking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games\nwith Rachel Kowert and Elizabeth Kilmer\nFrontiers in Psychology, 2024\nThis study presents the first large-scale analysis of extremist recruitment in gaming environments, analyzing 2.3 million in-game communications across five popular platforms. We find that 23% of players encounter extremist content, with recruitment attempts most common in competitive multiplayer games.\n📄 PDF | 📊 Replication Data | 📰 Washington Post Coverage\n\n\nThe Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism\nCTC Sentinel, 2021\nI develop a network-based framework for understanding modern far-right extremism, showing how decentralized accelerationist groups coordinate across platforms. This work directly informed Congressional understanding of January 6th networks.\n📄 PDF | 🎥 Congressional Testimony\n\n\nThe Radicalization Risks of GPT-3 and Advanced Neural Language Models\nwith Kris McGuffie\narXiv preprint, 2020 | 150+ citations\nAmong the first systematic evaluations of AI safety risks in political contexts, demonstrating how language models can be weaponized for extremist propaganda generation.\n📄 PDF | 💻 Code | 📺 BBC Interview"
+    "section": "Featured Publications",
+    "text": "Featured Publications\n\nPeer-Reviewed Articles\nKowert, R., Kilmer, E., and Newhouse, A. (2024). “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 15:1410620.\nThis study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.\n\nFunded by: Department of Homeland Security (DHS # EMW-2022-GR-00036)\nKey Finding: More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized\n\nNewhouse, A. (2021). “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 14(5).\nSince 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.\n\nInnovation: Novel network-based framework for understanding extremist movements\nPolicy Impact: Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue\nCitations: Extensively cited in terrorism studies and cited in recent Studies in Conflict & Terrorism article\n\nMcGuffie, K. and Newhouse, A. (2020). “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv preprint, 2009.06807.\nWe show GPT-3’s strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI’s preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.\n\nImpact: 28 citations and featured in major tech policy discussions\nMedia Coverage: Extensive coverage in The Register, Vice, and other tech outlets\nPolicy Influence: Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment\n\n\n\nOther Major Publications\nNewhouse, A. (2020). “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” The Conversation.\nNewhouse, A. (2020). “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” The Conversation.\n\nImpact: 241,000 views for Parler analysis\n\nMultiple GNET Research Reports (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement."
   },
   {
-    "objectID": "research.html#working-papers",
-    "href": "research.html#working-papers",
+    "objectID": "research.html#research-areas-methods",
+    "href": "research.html#research-areas-methods",
     "title": "Research",
-    "section": "Working Papers",
-    "text": "Working Papers\n\nApocalypse When? Measuring Doomsday Discourse and Political Violence\nUnder Review at American Political Science Review\nI develop computational measures of apocalyptic rhetoric in political discourse and demonstrate its causal effect on violent mobilization using a regression discontinuity design around “prophetic” dates.\n\n\nSeeing Red or Blue: Visual Partisan Polarization in COVID-19 News Coverage\nwith Andrew Q. Philips and Komal P. Kaur\nRevise & Resubmit at Political Communication\nUsing computer vision and NLP on 500,000+ news images and headlines, we reveal systematic partisan differences in pandemic coverage that shaped public health behavior.\n\n\nThe Gamification of Extremism: Recruitment Dynamics in Digital Play Spaces\nJob Market Paper\nI theorize and test how game mechanics facilitate extremist recruitment, using proprietary data from major gaming platforms and a series of online field experiments."
+    "section": "Research Areas & Methods",
+    "text": "Research Areas & Methods\n\nSubstantive Focus Areas\nPolitical Violence & Extremism - Neo-fascist accelerationism and network structures - Online-offline radicalization pathways\n- Gaming platforms as extremist recruitment venues - AI and synthetic media threats\nTechnology & Society - Digital platform governance and content moderation - AI safety and misuse potential - Social media data analysis and behavioral patterns - Gaming culture and political socialization\n\n\nMethodological Expertise\nComputational Methods - Machine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers) - Natural Language Processing and text-as-data approaches - Social Network Analysis (igraph, statnet) - Time-series analysis and causal inference\nData & Platforms - Large-scale social media data collection and analysis - Gaming platform research and mixed-methods approaches - Survey research and experimental design - Qualitative coding and content analysis"
   },
   {
-    "objectID": "research.html#grant-funded-projects",
-    "href": "research.html#grant-funded-projects",
+    "objectID": "research.html#current-research-projects",
+    "href": "research.html#current-research-projects",
     "title": "Research",
-    "section": "Grant-Funded Projects",
-    "text": "Grant-Funded Projects\n\nActive Grants\n\nNational Science Foundation (2024-2026)\nPrincipal Investigator\n“Computational Approaches to Online-Offline Violence”\nAmount: $250,000\nDeveloping machine learning models to predict when online extremist rhetoric will manifest as offline violence.\n\n\nDepartment of Homeland Security (2021-2024)\nPrincipal Investigator\n“Gaming Extremism Prevention Program”\nAmount: $680,000\nMulti-platform study of extremist recruitment in gaming environments, in partnership with industry leaders.\n\n\n\nCompleted Grants\n\nState Department (2020-2022): Counter-Narratives in Digital Spaces - $450,000 (PI)\nMicrosoft Research (2023-2024): AI Safety and Political Misinformation - $75,000 (Co-PI)\nMeta Research (2022): Cross-Platform Information Operations - $50,000 (Co-PI)"
+    "section": "Current Research Projects",
+    "text": "Current Research Projects\n\nDissertation Research\n“Measuring Online-Offline Relationships in Political Violence”\nDeveloping computational frameworks to understand how digital engagement translates into offline political action. Uses machine learning, natural language processing, social network analysis, and time-series causal inference to examine extremist community dynamics.\n\nCommittee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel\nExternal Advisor: Brian Keegan (Information Science)\nExpected Completion: May 2027\n\n\n\nCOVID-19 Media Framing Study\n“Partisan Visual Politics During a Pandemic” (with Andrew Q. Philips and Komal P. Kaur)\nInvestigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets using computer vision and text analysis methods.\n\n\nGaming & Extremism Research\n“Multi-Platform Radicalization in Digital Gaming”\nComprehensive study of recruitment and radicalization processes within digital gaming environments, including direct partnerships with major gaming platforms for harm mitigation strategies.\n\n\nPolicy & Financial Markets\n“Political Messaging and Market Responses” (under review)\nAnalysis of how political communications affect financial market behavior and investor decision-making."
   },
   {
-    "objectID": "research.html#research-impact",
-    "href": "research.html#research-impact",
+    "objectID": "research.html#research-impact-media-coverage",
+    "href": "research.html#research-impact-media-coverage",
     "title": "Research",
-    "section": "Research Impact",
-    "text": "Research Impact\n\nPolicy Influence\nMy research has directly shaped national security and technology policy:\n\nCongressional Testimony: Briefed House January 6th Committee on online extremism\nFederal Policy: Research cited in 15+ DHS and State Department policy documents\nPlatform Governance: Influenced content policies affecting 100M+ users at major tech companies\nLaw Enforcement Training: Developed extremism indicators used by FBI and local agencies\n\n\n\nMedia & Public Engagement\nResearch Featured In: - Washington Post (front page) - New York Times - NPR Morning Edition - BBC World Service - Wired Magazine - Politico\nPublic Scholarship Metrics: - 275,000+ article views - 150+ academic citations - 50+ media appearances - 25+ policy briefs\n\n\nIndustry Partnerships\nI collaborate with technology companies to implement research findings:\n\nRoblox: Developing AI-powered content moderation for 200M+ users\nSony Interactive: Privacy-preserving methods for detecting harmful behavior\nSpectrum Labs: Real-time extremism detection across gaming platforms\nDiscord/Telegram: Cross-platform coordination analysis"
+    "section": "Research Impact & Media Coverage",
+    "text": "Research Impact & Media Coverage\n\nAcademic Recognition\n\nResearch extensively cited in terrorism studies literature\nWork featured in CTC Sentinel, premier counterterrorism publication\nPublications in top-tier psychology and computer science venues\n\n\n\nPolicy & Industry Impact\n\nJanuary 6th Committee: Investigative consultant providing expertise on extremist movements\nTechnology Partnerships: Direct collaboration with gaming companies (Roblox, Spectrum Labs)\nFederal Funding: $1.38M in grants as Principal Investigator\n\n\n\nMedia & Public Engagement\nMajor Media Features: Washington Post • New York Times • NPR (Morning Edition, All Things Considered) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now\nHigh-Impact Articles: - Parler analysis: 241,000 views - January 6th prediction: 35,400 views\nExpert Commentary Topics: - AI safety and misuse potential - Gaming platform moderation - Extremist recruitment strategies\n- Social media radicalization - Technology policy implications"
   },
   {
-    "objectID": "research.html#methods-data",
-    "href": "research.html#methods-data",
+    "objectID": "research.html#funding-grants",
+    "href": "research.html#funding-grants",
     "title": "Research",
-    "section": "Methods & Data",
-    "text": "Methods & Data\n\nComputational Toolkit\nMachine Learning & AI - Transformer models (BERT, GPT) for extremist language detection - Graph neural networks for influence propagation - Computer vision for visual extremist symbol recognition\nCausal Inference - Synthetic control methods for platform intervention effects - Regression discontinuity for trigger event analysis - Instrumental variables using platform algorithm changes\nData Infrastructure - 50M+ social media posts across 8 platforms - Real-time streaming data pipeline - Privacy-preserving analysis protocols - Open-source tools available on GitHub\n\n\nEthical Considerations\nAll research involving extremist content follows strict ethical guidelines: - IRB approved protocols for sensitive data - Privacy-preserving methods to protect subjects - Collaboration with platforms on responsible disclosure - No amplification of harmful content"
+    "section": "Funding & Grants",
+    "text": "Funding & Grants\n\nAs Principal Investigator\n\nDepartment of Homeland Security (2022-2024): Gaming and extremism research - $350,000\nMultiple Federal Grants (2019-2024): Extremism and technology studies - $1.38M total\n\n\n\nAs Co-Investigator\n\nLogically Partnership (2022): Social media data infrastructure for extremism research\nVarious Industry Partnerships: Gaming platform safety research"
   },
   {
     "objectID": "research.html#future-research-directions",
     "href": "research.html#future-research-directions",
     "title": "Research",
     "section": "Future Research Directions",
-    "text": "Future Research Directions\n\nUpcoming Projects\n\nAI-Generated Extremism: How synthetic media shapes radicalization pathways\nClimate Violence Nexus: Environmental triggers for political violence\nDeplatforming Effects: Long-term consequences of content moderation\nInternational Comparative: Cross-national analysis of online-offline violence\n\n\n\nCollaborations Welcome\nI actively seek collaborators in: - Computational social science - Causal inference methods - Platform governance - International extremism studies\nPlease contact me to discuss potential projects.\n\nFor replication materials, please visit my GitHub or Dataverse page."
+    "text": "Future Research Directions\nEmerging Technologies & Political Violence - AI-generated disinformation and radicalization - Virtual/augmented reality environments as political spaces - Blockchain and decentralized platform governance\nComparative Extremism Studies\n- Cross-national analysis of digital radicalization patterns - Comparative platform governance approaches - International cooperation in countering online extremism\nMethodological Innovation - Advanced causal inference methods for social media data - Multi-modal analysis combining text, visual, and network data - Real-time detection and intervention systems\n\nFor collaboration inquiries, media requests, or access to datasets, contact alex.newhouse@colorado.edu.\nGoogle Scholar: Alex Newhouse • ORCID: Available upon request"
   },
   {
     "objectID": "tutorial1.html",
