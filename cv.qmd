@@ -82,8 +82,8 @@ format:
 ## 🎓 EDUCATION {.section-header}
 
 ::: {.edu-block}
-**University of Colorado Boulder, Boulder, CO** {.institution}  
-*Doctor of Philosophy, Political Science* {.degree-title} <span class="date-range">Anticipated: May 2027</span>
+[**University of Colorado Boulder, Boulder, CO**]{.institution}  
+[*Doctor of Philosophy, Political Science*]{.degree-title} <span class="date-range">Anticipated: May 2027</span>
 
 • Research focus: Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference  
 • Comparative Politics and Political Methodology subfields  
@@ -92,22 +92,22 @@ format:
 :::
 
 ::: {.edu-block}
-**Georgia Institute of Technology, Atlanta, GA (Remote Student)** {.institution}  
-*Master of Science, Analytics* {.degree-title} <span class="date-range">Fall 2021</span>
+[**Georgia Institute of Technology, Atlanta, GA (Remote Student)**]{.institution}  
+[*Master of Science, Analytics*]{.degree-title} <span class="date-range">Fall 2021</span>
 
 • Coursework in Python, R, JavaScript, Deep and Machine Learning, and Data Visualization
 :::
 
 ::: {.edu-block}
-**Middlebury Institute of International Studies (MIIS), Monterey, CA** {.institution}  
-*Master of Arts, Nonproliferation and Terrorism Studies* {.degree-title} <span class="date-range">Dec. 2018</span>
+[**Middlebury Institute of International Studies (MIIS), Monterey, CA**]{.institution}  
+[*Master of Arts, Nonproliferation and Terrorism Studies*]{.degree-title} <span class="date-range">Dec. 2018</span>
 
 • Financial Crimes Management Specialization; Foreign Language of Study: Russian
 :::
 
 ::: {.edu-block}
-**Middlebury College, Middlebury, VT** {.institution}  
-*Bachelor of Arts, Political Science and English Literature, Russian Minor* {.degree-title} <span class="date-range">May 2017</span>
+[**Middlebury College, Middlebury, VT**]{.institution}  
+[*Bachelor of Arts, Political Science and English Literature, Russian Minor*]{.degree-title} <span class="date-range">May 2017</span>
 
 • **Graduated Summa cum Laude**, departmental honors in English
 :::
@@ -332,11 +332,11 @@ Kowert, R., Kilmer, E., and **Newhouse, A.** <span class="publication-title">"Cu
 
 ## 📚 BOOK CHAPTERS {.section-header}
 
-**Newhouse, A.** and Kowert, R. <span class="publication-title">"Recruitment and mobilization in digital gaming spaces."</span> *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel). *Forthcoming*.
+[**Newhouse, A.**]{.position-title} and Kowert, R. [*"Recruitment and mobilization in digital gaming spaces."*]{.publication-title} *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel). *Forthcoming*.
 
-Kowert, R. and **Newhouse, A.** <span class="publication-title">"Digital games as cultural assets of influence."</span> *The Sociology of Violent Extremism* (ed. Suraj Lakhani and Amarnath Amarasingam). May 2025.
+Kowert, R. and [**Newhouse, A.**]{.position-title} [*"Digital games as cultural assets of influence."*]{.publication-title} *The Sociology of Violent Extremism* (ed. Suraj Lakhani and Amarnath Amarasingam). May 2025.
 
-**Newhouse, A.** and Kowert, R. <span class="publication-title">"Digital games as vehicles for extremist recruitment and mobilization."</span> *Gaming and Extremism: The Radicalization of Digital Playgrounds* (ed. Linda Schlegel and Rachel Kowert). March 2024.
+[**Newhouse, A.**]{.position-title} and Kowert, R. [*"Digital games as vehicles for extremist recruitment and mobilization."*]{.publication-title} *Gaming and Extremism: The Radicalization of Digital Playgrounds* (ed. Linda Schlegel and Rachel Kowert). March 2024.
 
 ## 📄 PRE-PRINTS AND OTHER RESEARCH PUBLICATIONS {.section-header}
 
