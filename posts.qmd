@@ -1,0 +1,20 @@
+---
+title: "Blog Posts"
+subtitle: "Thoughts on Research, Technology, and Academia"
+format:
+  html
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, date, title, author, reading-time, description, categories]
+  feed: true
+page-layout: full
+---
+
+Welcome to my blog, where I share thoughts on computational social science, extremism research, technology policy, and academic life.
+
+*Subscribe to the RSS feed to stay updated on new posts.*
