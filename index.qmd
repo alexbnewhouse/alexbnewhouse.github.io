@@ -15,7 +15,7 @@ about:
       href: https://linkedin.com/in/alexbnewhouse
     - icon: bluesky
       text: Bluesky
-      href: https://bluesky.app/alexbnewhouse.bsky
+      href: https://bsky.app/profile/alexbnewhouse.bsky.social
     - icon: github
       text: GitHub
       href: https://github.com/alexbnewhouse
