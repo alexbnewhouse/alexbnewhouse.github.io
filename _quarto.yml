@@ -21,7 +21,7 @@ website:
 
 format:
   html:
-    theme: journal
+    theme: lumen
     css: styles.css
     toc: true
 
