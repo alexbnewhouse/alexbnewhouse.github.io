@@ -1,399 +1,328 @@
 ---
 title: "Alex Newhouse"
-subtitle: "Curriculum Vitae"
+subtitle: "Political Scientist & Data Scientist"
 format: 
   html:
     toc: true
     toc-location: right
-    toc-title: "Navigation"
-    theme: cosmo
+    toc-title: "Contents"
+    theme: flatly
     css: |
-      .contact-info {
+      body {
+        font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      .contact-bar {
         text-align: center;
         font-size: 1.1em;
         margin-bottom: 2em;
-        padding: 1em;
-        background-color: #f8f9fa;
-        border-radius: 8px;
+        padding: 1.5em;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 10px;
       }
-      .section-header {
-        border-bottom: 2px solid #0d6efd;
-        padding-bottom: 0.3em;
-        margin-top: 2em;
-        color: #0d6efd;
+      .contact-bar a {
+        color: #fff;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(255,255,255,0.5);
       }
-      .institution {
-        font-weight: bold;
-        color: #495057;
-        font-size: 1.05em;
-      }
-      .degree-title {
-        font-style: italic;
-        color: #6c757d;
-      }
-      .date-range {
-        float: right;
-        font-weight: normal;
-        color: #6c757d;
-        font-size: 0.9em;
-      }
-      .position-title {
-        font-weight: bold;
-        color: #495057;
-      }
-      .grant-amount {
-        font-weight: bold;
-        color: #198754;
-      }
-      .publication-title {
-        font-style: italic;
-      }
-      .venue {
-        font-weight: bold;
-        color: #6f42c1;
-      }
-      .media-stats {
-        font-size: 0.9em;
-        color: #dc3545;
-        font-weight: bold;
+      .contact-bar a:hover {
+        border-bottom: 1px solid #fff;
       }
       h2 {
+        color: #2c3e50;
+        border-bottom: 3px solid #3498db;
+        padding-bottom: 0.5em;
         margin-top: 2.5em;
+        font-weight: 600;
       }
-      .job-block, .edu-block, .grant-block {
-        margin-bottom: 1.5em;
+      .degree-block, .position-block {
+        background: #f8f9fa;
+        border-left: 5px solid #3498db;
+        padding: 1.5em;
+        margin: 1.5em 0;
+        border-radius: 0 8px 8px 0;
+      }
+      .institution {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #2c3e50;
+        margin-bottom: 0.3em;
+      }
+      .degree, .position-title {
+        font-size: 1.1em;
+        color: #34495e;
+        font-weight: 600;
+        margin-bottom: 0.5em;
+      }
+      .date {
+        background: #ecf0f1;
+        color: #7f8c8d;
+        padding: 0.3em 0.8em;
+        border-radius: 15px;
+        font-size: 0.9em;
+        font-weight: 500;
+        display: inline-block;
+        margin-bottom: 0.5em;
+      }
+      .highlight-stat {
+        background: #e8f5e8;
+        color: #27ae60;
+        padding: 0.3em 0.8em;
+        border-radius: 15px;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0.2em 0;
+      }
+      .publication {
+        margin: 1em 0;
         padding: 1em;
-        border-left: 4px solid #e9ecef;
-        background-color: #fdfdfd;
+        border-radius: 6px;
+        background: #fdfdfe;
+        border: 1px solid #e1e8ed;
       }
-      .highlight-box {
-        background-color: #fff3cd;
-        border: 1px solid #ffeaa7;
+      .pub-title {
+        font-weight: 600;
+        color: #2c3e50;
+        font-size: 1.05em;
+      }
+      .pub-venue {
+        color: #8e44ad;
+        font-weight: 600;
+      }
+      .my-name {
+        font-weight: 700;
+        color: #2c3e50;
+      }
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1em;
+        margin: 1em 0;
+      }
+      .skill-category {
+        background: #f1f2f6;
+        padding: 1em;
+        border-radius: 8px;
+        border-left: 4px solid #3498db;
+      }
+      .skill-category h4 {
+        margin-top: 0;
+        color: #2c3e50;
+      }
+      .media-impact {
+        background: #fff5f5;
+        border: 1px solid #fed7d7;
         border-radius: 6px;
         padding: 1em;
         margin: 1em 0;
       }
+      .impact-number {
+        font-size: 1.2em;
+        font-weight: 700;
+        color: #e53e3e;
+      }
 ---
 
-::: {.contact-info}
-📧 alex.newhouse@colorado.edu | 📍 Boulder, CO | 💼 [linkedin.com/in/alexbnewhouse](https://linkedin.com/in/alexbnewhouse)
+::: {.contact-bar}
+📧 alex.newhouse@colorado.edu • 📍 Boulder, CO • 💼 [linkedin.com/in/alexbnewhouse](https://linkedin.com/in/alexbnewhouse)
 :::
 
-## 🎓 EDUCATION {.section-header}
+## Education
 
-::: {.edu-block}
-[**University of Colorado Boulder, Boulder, CO**]{.institution}  
-[*Doctor of Philosophy, Political Science*]{.degree-title} <span class="date-range">Anticipated: May 2027</span>
-
-• Research focus: Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference  
-• Comparative Politics and Political Methodology subfields  
-• PSCI committee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel  
-• Other advisor: Brian Keegan (Information Science, CU Boulder)
+::: {.degree-block}
+::: {.institution}
+University of Colorado Boulder
+:::
+::: {.degree}
+PhD in Political Science
+:::
+::: {.date}
+Expected May 2027
 :::
 
-::: {.edu-block}
-[**Georgia Institute of Technology, Atlanta, GA (Remote Student)**]{.institution}  
-[*Master of Science, Analytics*]{.degree-title} <span class="date-range">Fall 2021</span>
+**Dissertation Focus:** Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference
 
-• Coursework in Python, R, JavaScript, Deep and Machine Learning, and Data Visualization
+**Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel  
+**External Advisor:** Brian Keegan (Information Science)
 :::
 
-::: {.edu-block}
-[**Middlebury Institute of International Studies (MIIS), Monterey, CA**]{.institution}  
-[*Master of Arts, Nonproliferation and Terrorism Studies*]{.degree-title} <span class="date-range">Dec. 2018</span>
-
-• Financial Crimes Management Specialization; Foreign Language of Study: Russian
+::: {.degree-block}
+::: {.institution}
+Georgia Institute of Technology
+:::
+::: {.degree}
+MS in Analytics
+:::
+::: {.date}
+2021
 :::
 
-::: {.edu-block}
-[**Middlebury College, Middlebury, VT**]{.institution}  
-[*Bachelor of Arts, Political Science and English Literature, Russian Minor*]{.degree-title} <span class="date-range">May 2017</span>
-
-• **Graduated Summa cum Laude**, departmental honors in English
+Advanced coursework in Python, R, JavaScript, Deep Learning, Machine Learning, and Data Visualization
 :::
 
-## 🔬 RESEARCH ASSISTANCESHIPS AND LABS {.section-header}
-
-### 🏆 Fellowships
-**Senior Non-Resident Fellow**, MIIS <span class="date-range">Mar. 2025 – Present</span>
-
-### 🧪 Labs
-**Graduate Affiliate**, Institute for Behavioral Science <span class="date-range">2023 – Present</span>  
-**Lab Member**, Colorado Laboratory on Users, Media, and Networks <span class="date-range">2023 – Present</span>  
-**Lab Member**, American Politics Research Lab <span class="date-range">2024 - Present</span>
-
-### 💼 Paid Research Positions
-
-::: {.job-block}
-**Graduate Research Assistant**, CU Boulder <span class="date-range">2025 – Present</span>
-
-• Exploratory quantitative and qualitative analysis for Jennifer Fitzgerald and Jeffrey Nonmacher's work on global perceptions of inequality
+::: {.degree-block}
+::: {.institution}
+Middlebury Institute of International Studies
+:::
+::: {.degree}
+MA in Nonproliferation and Terrorism Studies
+:::
+::: {.date}
+2018
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, CU Boulder <span class="date-range">2025 – Present</span>
-
-• Qualitative and quantitative support for Alexandra Siegel's book project on the interactions between online influencers and political regimes
+Financial Crimes Management Specialization • Russian Language Focus
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, CU Boulder <span class="date-range">2024 – Present</span>
-
-• "'Mind the Gap!' Policy Dissonance and Financial Markets", supervised by Andrew Q. Philips and in collaboration with Allyson L. Benton
+::: {.degree-block}
+::: {.institution}
+Middlebury College
+:::
+::: {.degree}
+BA in Political Science and English Literature
+:::
+::: {.date}
+2017
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, CU Boulder <span class="date-range">2023 – Present</span>
-
-• "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media", supervised by Andrew Q. Philips and in collaboration with Komal P. Kaur
+::: {.highlight-stat}
+Summa Cum Laude
+:::
+Russian Minor • Departmental Honors in English
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, CU Boulder <span class="date-range">Summer 2024</span>
+## Professional Experience
 
-• Data analysis and synthesis of original survey data on Australian attitudes around Voice to Parliament referendum, supervised by Carew Boulding
+::: {.position-block}
+::: {.institution}
+US House of Representatives - January 6th Select Committee
+:::
+::: {.position-title}
+Investigative Consultant
+:::
+::: {.date}
+Feb 2022 - Oct 2022
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, MIIS <span class="date-range">Fall 2018</span>
-
-• Assisted with launch of the Center on Terrorism, Extremism, and Counterterrorism, and built first project to secure funding from technology industry partner, supervised by Jason Blazakis
+• Designed cross-platform investigations into online communities' role in January 6th attack  
+• Provided extremism expertise on Oath Keepers, Proud Boys, QAnon, Three Percenters  
+• Drafted sections of public hearings and contributed to Committee's final report  
+• Briefed Members of Congress and investigative staff on online radicalization patterns
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, MIIS <span class="date-range">Fall 2018</span>
-
-• UNIDIR-funded project collecting data on global cybersecurity projects, supervised by Elaine Korzak
+::: {.position-block}
+::: {.institution}
+Middlebury Institute - Center on Terrorism, Extremism & Counterterrorism
+:::
+::: {.position-title}
+Deputy Director & Senior Research Fellow
+:::
+::: {.date}
+2019 - 2024
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, MIIS <span class="date-range">Feb. 2018 – Dec. 2018</span>
-
-• Contributed to META Lab research and education projects, supervised by Philip Murphy
+• **Managed research operations** for leading academic counterterrorism center  
+• **Principal Investigator** on ::: {.highlight-stat}
+$1.38M in federal grants
+:::  
+• **Built data science capabilities** using AI, ML, NLP, and network analysis  
+• **Supervised 30+ student researchers** on industry partnership projects  
+• **Led partnerships** with major tech companies (Roblox, Spectrum Labs, social media platforms)
 :::
 
-::: {.job-block}
-**Graduate Research Assistant**, MIIS and Naval Postgraduate School <span class="date-range">Feb. 2018 – Aug. 2018</span>
-
-• Lead data analyst on processing and analysis of Islamic State primary-source documents, supervised by Craig Whiteside
+::: {.position-block}
+::: {.institution}
+Sony Interactive Entertainment
+:::
+::: {.position-title}
+Data Governance Analyst
+:::
+::: {.date}
+2019 - 2020
 :::
 
-::: {.job-block}
-**Undergraduate Research Assistant**, Middlebury <span class="date-range">Aug. 2016 – May 2017</span>
-
-• Data analysis and background research on intervention, civil conflict, and the CNN Effect, supervised by Orion Lewis
+• Managed PlayStation's global data-sharing processes and privacy compliance  
+• Implemented GDPR and CCPA compliance frameworks  
+• Developed privacy-by-design protocols for user data protection
 :::
 
-::: {.job-block}
-**Undergraduate Research Assistant**, MIIS <span class="date-range">Feb. 2016 – May 2016</span>
+## Research Impact
 
-• Contributed to various research and analysis projects at the James Martin Center for Nonproliferation Studies
+### Peer-Reviewed Publications
+
+::: {.publication}
+Kowert, R., Kilmer, E., and [**Newhouse, A.**]{.my-name} "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." [*Frontiers in Psychology*]{.pub-venue}, August 2024.
 :::
 
-## 🎯 TEACHING EXPERIENCE {.section-header}
-
-### 📚 As Teaching Assistant
-
-• **Introduction to Western Political Thought**, CU Boulder, Spring 2025  
-• **Introduction to Comparative Politics**, CU Boulder, Fall 2024  
-• **Quantitative Research Methods**, CU Boulder, Spring 2024  
-• **Introduction to International Relations**, CU Boulder, Fall 2023
-
-### 👨‍🏫 As Adjunct Professor
-
-• **Digital Extremism**, Middlebury Institute of International Studies, Spring 2023 *(self-designed)*  
-• **Online Extremism**, Middlebury College, Jan. 2021 *(self-designed)*
-
-## 🌟 MENTORSHIP AND SUPERVISION {.section-header}
-
-::: {.highlight-box}
-**Managed a total of 30 Middlebury undergraduate and graduate research assistants** between 2019-2023
+::: {.publication}
+[**Newhouse, A.**]{.my-name} "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." [*CTC Sentinel*]{.pub-venue}, June 2021.
 :::
 
-**Sample projects:**
-• Partnership with **Roblox** to detect and mitigate violent and hateful networks of users  
-• Partnership with **Spectrum Labs** to develop datasets of online toxicity, white supremacy, and violent behavior in **7 languages**  
-• Long-term research and policy support for a video social media platform's policy enforcement team
-
-**Supervised independent projects** for **15 Middlebury undergraduate interns** and **4 graduate fellows**. Sample projects supervised:
-
-• *"Italian Neofascism and the Years of Lead: A Closer Look at the Nuclei Armati Rivoluzionari"*  
-• *"Archeofuturism and Its Parallels to Militant Accelerationism"*  
-• *"The French Far-Right on Telegram: Laundering Extremism Through Support For Political Activism"*  
-• *"Christian Identity's New Role on the Extreme Right"*  
-• *"The AI Revolution and Its Implications on Domestic Counterterrorism"*
-
-## 💰 GRANTS AND FUNDRAISING {.section-header}
-
-::: {.grant-block}
-**Middlebury Conflict Transformation Grant**, FY 2022 - <span class="grant-amount">$50,000</span>, *Principal Investigator*
+::: {.publication}
+McGuffie, K. and [**Newhouse, A.**]{.my-name} "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." [*arXiv preprint*]{.pub-venue}, September 2020.
 :::
 
-::: {.grant-block}
-**DHS Terrorism and Targeted Violence Prevention Grant**, FY 2022 - <span class="grant-amount">$700,000</span>, *Principal Investigator*
+### Public Impact
+
+::: {.media-impact}
+**Media Reach:** Research featured in major outlets including *Washington Post*, *New York Times*, *NPR*, *BBC*, *Politico*, *Wired*
+
+**High-Impact Publications:**  
+• "Parler analysis" article: ::: {.impact-number}
+241,000 views
+:::  
+• "January 6th prediction" article: ::: {.impact-number}
+35,400 views
+:::
 :::
 
-::: {.grant-block}
-**DHS Terrorism and Targeted Violence Prevention Grant**, FY 2021 – <span class="grant-amount">$630,000</span>, *Principal Investigator*
+## Technical Skills
+
+::: {.skills-grid}
+::: {.skill-category}
+**Programming & Analysis**  
+Python • R • MATLAB • Stata • SQL • JavaScript
 :::
 
-## 💼 EMPLOYMENT {.section-header}
-
-::: {.job-block}
-**Middlebury Institute of International Studies, Monterey, CA**
-
-*Senior Research Fellow – Emerging Tech, CTEC* <span class="date-range">June 2023-August 2024</span>
-
-• Supervised CTEC's portfolio of projects that engage with the video game industry  
-• Led cutting-edge research into the influence of emerging technologies like AI on worldwide extremism and terrorism trends  
-• Assisted with CTEC's relationships with the tech industry  
-• Engaged with media, published research, and served as a leading voice at CTEC on various extremism-related issues  
-• Coordinated CTEC's data science projects and analyst resources
+::: {.skill-category}
+**Machine Learning**  
+PyTorch • Scikit-Learn • Hugging Face Transformers • Deep Learning
 :::
 
-::: {.job-block}
-*Deputy Director, CTEC* <span class="date-range">April 2021-May 2023</span>
-
-• Oversaw CTEC's research, operations, and development  
-• Hired and managed a team of full-time, part-time, and student researchers  
-• Directly supervised external relationships with technology companies, government agencies, academia, and nonprofits  
-• Served as Principal Investigator on several research projects, including two funded by grants from the Department of Homeland Security  
-• Built CTEC's Data Science functions, including overseeing development of innovative tools using AI, machine learning, NLP, and social network analysis
+::: {.skill-category}
+**Specialized Methods**  
+Social Network Analysis (igraph, statnet) • NLP • Time-Series Analysis • Causal Inference
 :::
 
-::: {.job-block}
-*Data Analyst and Research Lead, CTEC* <span class="date-range">Jan. 2019-April 2021</span>
-
-• Built and delivered an end-to-end data analysis and visualization platform for understanding trends in hate and violence on social video platforms at scale  
-• Led development of glossary of right-wing terminology, slang, and images  
-• Raised money to expand CTEC by developing client relationships in the tech industry
+::: {.skill-category}
+**Data & Platforms**  
+Splunk • Large-scale social media data • Survey analysis • Text-as-data
+:::
 :::
 
-::: {.job-block}
-**United States House of Representatives, Washington, DC**
+## Current Research Projects
 
-*Investigative Consultant, Select Committee to Investigate the January 6th Attack* <span class="date-range">Feb. 2022-Oct. 2022</span>
+**Dissertation Research:** Computational analysis of online extremist networks and their translation to offline political violence
 
-• Designed and executed cross-platform investigations on how online communities contributed to the January 6th attack on the U.S. Capitol  
-• Provided expertise in online extremism, including the activities of Oath Keepers, Proud Boys, QAnon, Three Percenters, and neo-fascists, to investigators and Members of Congress  
-• Drafted sections of public hearings conducted by Members of Congress in June-July 2022  
-• Delivered written material included in the Committee's final report
-:::
+**COVID-19 Media Framing:** Investigating partisan differences in visual and textual pandemic coverage (with Andrew Q. Philips)
 
-::: {.job-block}
-**Sony Interactive Entertainment, San Mateo, CA**
+**Gaming & Extremism:** Multi-platform study of recruitment and radicalization in digital gaming environments
 
-*Data Governance Analyst* <span class="date-range">Jan. 2019-Jan. 2020</span>
+**Policy & Markets:** Analysis of how political messaging affects financial market responses (under review)
 
-• Managed and coordinated PlayStation's data-sharing process  
-• Assisted with creation and implementation of privacy policies and standards  
-• Operationalized SIE's privacy-by-design goals so that users have safety, security, control, and transparency over their own data  
-• Collaborated closely with privacy lawyers to develop a shared language that allows for understanding of and compliance with privacy legislation, like the GDPR and CCPA
-:::
+## Teaching & Mentorship
 
-::: {.job-block}
-**Sony Interactive Entertainment, San Diego, CA**
+**Teaching Assistant** - CU Boulder (2023-2025)  
+Courses: Quantitative Methods, Comparative Politics, International Relations, Political Theory
 
-*Global Fraud Monitoring Analyst Intern* <span class="date-range">Summer 2018</span>
+**Adjunct Professor** - MIIS & Middlebury College (2021, 2023)  
+Self-designed courses on Digital Extremism and Online Radicalization
 
-• Worked on fraud monitoring and development of fraud prevention rules for PlayStation Network  
-• Led project streamlining cooperation between Customer Service and Global Fraud Management  
-• Assisted Holiday Season 2018 planning by creating Splunk dashboards, revising runbooks, and laying out on-call procedures
-:::
+**Research Mentorship:** Supervised ::: {.highlight-stat}
+45+ undergraduate and graduate researchers
+::: across multiple institutions on projects ranging from platform policy to AI safety
 
-::: {.job-block}
-**Uber, San Francisco, CA**
+## Languages & Certifications
 
-*Crisis Management Intern* <span class="date-range">Fall 2017</span>
-
-• Worked with the Crisis Management/Business Continuity Team to develop business continuity plans for all divisions within Uber  
-• Developed set of metrics using SQL for assessing crisis response and impact, which the Crisis Management Team incorporated into its performance reports and incident database  
-• Cooperated with a variety of stakeholders to help develop a global Crisis Management Playbook  
-• Assisted Protective Intelligence team with research for a city launch geopolitical risk assessment
-:::
-
-::: {.job-block}
-**GameSpot – CBS Interactive, San Francisco, CA**
-
-*Editorial Intern* <span class="date-range">Summers 2014, 2015, 2016</span>
-:::
-
-## 📝 PEER-REVIEWED PUBLICATIONS {.section-header}
-
-Benton, A., **Newhouse, A.**, and Philips, A. <span class="publication-title">"Mind the Gap! Policy Dissonance and Financial Markets."</span> May 2025 *(under review)*.
-
-**Newhouse, A.** and Kowert, R. <span class="publication-title">"Extremist Identity Creation Through Performative Infighting on Steam."</span> <span class="venue">Frontiers in Psychology</span> *(forthcoming)*.
-
-Kowert, R., Kilmer, E., and **Newhouse, A.** <span class="publication-title">"Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games."</span> <span class="venue">Frontiers in Psychology</span>. August 2024.
-
-Kowert, R., Kilmer, E., and **Newhouse, A.** <span class="publication-title">"Culturally Justified Hate: Prevalence and Mental Health Impact of Dark Participation in Games."</span> <span class="venue">Proceedings of the 57th Hawaii International Conference on System Sciences</span>. January 2024.
-
-**Newhouse, A.** <span class="publication-title">"The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism."</span> <span class="venue">CTC Sentinel</span>. June 2021.
-
-## 📚 BOOK CHAPTERS {.section-header}
-
-[**Newhouse, A.**]{.position-title} and Kowert, R. [*"Recruitment and mobilization in digital gaming spaces."*]{.publication-title} *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel). *Forthcoming*.
-
-Kowert, R. and [**Newhouse, A.**]{.position-title} [*"Digital games as cultural assets of influence."*]{.publication-title} *The Sociology of Violent Extremism* (ed. Suraj Lakhani and Amarnath Amarasingam). May 2025.
-
-[**Newhouse, A.**]{.position-title} and Kowert, R. [*"Digital games as vehicles for extremist recruitment and mobilization."*]{.publication-title} *Gaming and Extremism: The Radicalization of Digital Playgrounds* (ed. Linda Schlegel and Rachel Kowert). March 2024.
-
-## 📄 PRE-PRINTS AND OTHER RESEARCH PUBLICATIONS {.section-header}
-
-Kriner, M., Conroy, M., **Newhouse, A.**, and Lewis, J. <span class="publication-title">"Understanding Accelerationist Narratives: The Great Replacement Theory."</span> *Global Network on Extremism and Technology*. May 2022.
-
-Kowert, R., Botehlo, A., and **Newhouse, A.** <span class="publication-title">"Breaking the Building Blocks of Hate: A Case Study of Minecraft Servers."</span> *Anti-Defamation League*. July 2022.
-
-Shadnia, D., **Newhouse, A.**, Kriner, M., and Bradley, A. <span class="publication-title">"Militant Accelerationism Coalitions: A Case-Study in Neo-Fascist Accelerationist Coalition-Building Online."</span> *Center on Terrorism, Extremism, and Counterterrorism*. June 2022.
-
-**Newhouse, A.** and Gunesch, N. <span class="publication-title">"The Boogaloo Movement Wants to Be Seen as Anti-Racist, But It Has a White Supremacist Fringe."</span> *Center on Terrorism, Extremism, and Counterterrorism*. May 2021.
-
-McGuffie, K. and **Newhouse, A.** <span class="publication-title">"The Radicalization Risks of GPT-3 and Advanced Neural Language Models."</span> *Arxiv pre-print*. September 2020.
-
-[Author list truncated] <span class="publication-title">"Release Strategies and the Social Impacts of Language Models."</span> *Arxiv pre-print*. August 2019.
-
-**Newhouse, A.** <span class="publication-title">"From classifieds to crypto: how white supremacist groups have embraced crowdfunding."</span> *Center on Terrorism, Extremism, and Counterterrorism*. 2019.
-
-## ✍️ EDITORIALS {.section-header}
-
-Jackson, D., Conroy, M., and **Newhouse, A.** <span class="publication-title">"Insiders' View of the January 6th Committee's Social Media Investigation."</span> <span class="venue">Just Security</span>. January 2023.
-
-**Newhouse, A.** <span class="publication-title">"Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol."</span> <span class="venue">The Conversation</span>. January 2021. <span class="media-stats">(35,400 views)</span>
-
-**Newhouse, A.** <span class="publication-title">"Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters."</span> <span class="venue">The Conversation</span>. November 2020, updated January 2021. <span class="media-stats">(241,000 views)</span>
-
-## 🎤 PUBLIC SPEAKING AND CONFERENCES {.section-header}
-
-<span class="publication-title">"Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media."</span> Paper Presentation. <span class="venue">Midwest Political Science Association Annual Meeting</span>. April 2025.
-
-<span class="publication-title">"Elite Influence in an Online Neo-Fascist Forum."</span> Paper Presentation. <span class="venue">Midwest Political Science Association Annual Meeting</span>. April 2025.
-
-<span class="publication-title">"Media Bias in COVID-19 Coverage."</span> Paper Presentation. <span class="venue">Midwest Political Science Association Annual Meeting</span>. April 2024.
-
-<span class="publication-title">"Manifesting a Coup: Cross-Website Toxicity and Extremism on the Dot Win Network Prior to January 6, 2021."</span> Poster Session. <span class="venue">New Frontiers in Text as Data</span>. November 2023.
-
-<span class="publication-title">"Mitigating Harm in Design."</span> <span class="venue">Game Developers Conference</span>. March 2023.
-
-<span class="publication-title">"Accelerationism Research in Practice."</span> <span class="venue">Terrorism and Social Media Conference</span>. June 2022.
-
-<span class="publication-title">"The Landscape of Extremist Behavior in Games."</span> <span class="venue">Game Developers Conference</span>. March 2022.
-
-<span class="publication-title">"The Aesthetics of Acceleration."</span> <span class="venue">Reactionary Digital Politics: Ideologies, Rhetorics, Aesthetics</span>. June 2021.
-
-## 📺 MEDIA APPEARANCES {.section-header}
-
-**Radio/Podcast:** Bloomberg, BBC, NPR's Morning Edition, All Things Considered, and On Point
-
-**Written:** Washington Post, New York Times, Vice, Axios, Politico, FiveThirtyEight, Wired, ProPublica
-
-**Video:** Meet the Press Now, Denver7
-
-## ⚙️ SKILLS {.section-header}
-
-**Programming languages:** R, Python, MATLAB, Stata
-
-**Machine learning frameworks:** PyTorch, Scikit-Learn, Caret, Hugging Face Transformers
-
-**Social Network Analysis:** igraph, statnet
-
-**Query languages:** SQL, Splunk
+**Languages:** English (native), Russian (intermediate)  
+**Security:** Completed background investigations for federal consulting work
