@@ -62,12 +62,8 @@ I believe in making complex political science concepts accessible through hands-
 
 ### Quantitative Methods Materials
 
-[**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
-[**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)
-
-Comprehensive introduction to mathematical notation in political science, designed to reduce barriers for students intimidated by quantitative methods. Includes interactive R code examples and practical applications.
-
-**Custom R Tutorials:** Developed series of hands-on coding exercises covering data visualization, regression analysis, and causal inference specifically tailored to political science applications.
+* [**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
+* [**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)
 
 ------------------------------------------------------------------------
 

@@ -284,7 +284,7 @@
     "href": "teaching.html#teaching-resources",
     "title": "Teaching & Mentorship",
     "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nQuantitative Methods Materials\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats Tutorial 2: An Introduction to R’s pipe operator\nComprehensive introduction to mathematical notation in political science, designed to reduce barriers for students intimidated by quantitative methods. Includes interactive R code examples and practical applications.\nCustom R Tutorials: Developed series of hands-on coding exercises covering data visualization, regression analysis, and causal inference specifically tailored to political science applications."
+    "text": "Teaching Resources\n\nQuantitative Methods Materials\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\nTutorial 2: An Introduction to R’s pipe operator"
   },
   {
     "objectID": "teaching.html#student-research-mentorship",
