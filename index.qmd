@@ -29,38 +29,36 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 
 **Key Experience:**
 
-- **Investigative Consultant** to the House Select Committee on January 6th  
-- **Deputy Director** of the Center on Terrorism, Extremism & Counterterrorism
-- **Principal Investigator** on $1.38M in federal research grants
-- **Research partnerships** with major technology companies
+-   **Investigative Consultant** to the House Select Committee on January 6th\
+-   **Deputy Director** of the Center on Terrorism, Extremism & Counterterrorism
+-   **Principal Investigator** on \$1.38M in federal research grants
+-   **Research partnerships** with major technology companies
 
----
+------------------------------------------------------------------------
 
 ## Research Expertise
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
 **Methods:**
 
-- Machine Learning & NLP
-- Social Network Analysis  
-- Causal Inference
-- Data Science & Visualization
+-   Machine Learning & NLP
+-   Social Network Analysis\
+-   Causal Inference
+-   Data Science & Visualization
 :::
 
 ::: {.column width="50%"}
 **Substantive Areas:**
 
-- Political Violence & Extremism
-- Digital Platform Research
-- Technology & Society
-- Computational Social Science
+-   Political Violence & Extremism
+-   Digital Platform Research
+-   Technology & Society
+-   Computational Social Science
 :::
+:::::
 
-::::
-
----
+------------------------------------------------------------------------
 
 ## Featured Publications
 
@@ -70,19 +68,19 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 
 **McGuffie, K. and Newhouse, A.** "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *arXiv*, 2020.
 
----
+------------------------------------------------------------------------
 
 ## Research Impact
 
-**$1.38M** in grant funding (Principal Investigator) | **45+** students mentored | **276K** article views | Featured in **8** major media outlets
+**\$1.38M** in grant funding (Principal Investigator) \| **45+** students mentored \| **276K** article views \| Featured in **8** major media outlets
 
----
+------------------------------------------------------------------------
 
 ## Media Recognition
 
 Research and expertise featured in: **Washington Post** • **New York Times** • **NPR** • **BBC** • **Politico** • **Wired** • **Bloomberg** • **Meet the Press**
 
----
+------------------------------------------------------------------------
 
 ## Current Projects
 
@@ -92,16 +90,6 @@ Research and expertise featured in: **Washington Post** • **New York Times** �
 
 **Gaming & Extremism:** Multi-platform investigation of recruitment and radicalization in digital gaming environments
 
----
+------------------------------------------------------------------------
 
-## Recent Updates
-
-- **August 2024:** New publication in *Frontiers in Psychology* on extremism in gaming
-- **Spring 2024:** Expert commentary on NPR's *Morning Edition* 
-- **Fall 2023:** Presenting dissertation research at APSA and MPSA
-
----
-
-**Seeking academic and industry positions** that leverage computational social science methods to address pressing societal challenges.
-
-*Contact: alex.newhouse@colorado.edu*
+*Contact: alex.newhouse\@colorado.edu*
