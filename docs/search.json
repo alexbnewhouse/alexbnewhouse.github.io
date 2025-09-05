@@ -105,60 +105,88 @@
     "text": "Welcome to my blog, where I share thoughts on computational social science, extremism research, technology policy, and academic life.\nSubscribe to the RSS feed to stay updated on new posts.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFirst post\n\n\n\nresearch\n\ntechnology\n\nacademia\n\n\n\nBrief description of your post\n\n\n\n\n\nDec 15, 2024\n\n\nAlex Newhouse\n\n1 min\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/2025-09-04-first-post/index.html",
-    "href": "posts/2025-09-04-first-post/index.html",
-    "title": "First post",
+    "objectID": "tutorial2-pipe.html",
+    "href": "tutorial2-pipe.html",
+    "title": "The R Pipe Operator: Making Your Code Flow",
     "section": "",
-    "text": "Testing blog!"
+    "text": "When you first start learning R, your code might look something like this:\n\nresult &lt;- function3(function2(function1(data, arg1), arg2), arg3)\n\nThis nested approach works, but it’s hard to read and understand. What if there was a way to make your code read more like a sentence, flowing from left to right? Enter the pipe operator.\nThe pipe operator allows you to chain functions together in a way that’s intuitive and readable. Instead of nesting functions inside each other, you can “pipe” the output of one function directly into the next function as input."
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching & Mentorship",
+    "objectID": "tutorial2-pipe.html#introduction",
+    "href": "tutorial2-pipe.html#introduction",
+    "title": "The R Pipe Operator: Making Your Code Flow",
     "section": "",
-    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+    "text": "When you first start learning R, your code might look something like this:\n\nresult &lt;- function3(function2(function1(data, arg1), arg2), arg3)\n\nThis nested approach works, but it’s hard to read and understand. What if there was a way to make your code read more like a sentence, flowing from left to right? Enter the pipe operator.\nThe pipe operator allows you to chain functions together in a way that’s intuitive and readable. Instead of nesting functions inside each other, you can “pipe” the output of one function directly into the next function as input."
   },
   {
-    "objectID": "teaching.html#teaching-philosophy",
-    "href": "teaching.html#teaching-philosophy",
-    "title": "Teaching & Mentorship",
-    "section": "",
-    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+    "objectID": "tutorial2-pipe.html#what-is-the-pipe-operator",
+    "href": "tutorial2-pipe.html#what-is-the-pipe-operator",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "What is the Pipe Operator?",
+    "text": "What is the Pipe Operator?\nThe pipe operator takes the result from the expression on its left side and passes it as the first argument to the function on its right side. Think of it like a literal pipe in plumbing—data flows through it from one function to the next.\nIn R, there are two main pipe operators you’ll encounter:\n\nNative pipe |&gt; (introduced in R 4.1.0, 2021)\nMagrittr pipe %&gt;% (from the magrittr package, popularized by tidyverse)"
   },
   {
-    "objectID": "teaching.html#teaching-impact",
-    "href": "teaching.html#teaching-impact",
-    "title": "Teaching & Mentorship",
-    "section": "Teaching Impact",
-    "text": "Teaching Impact\n45+ students mentored | 15 independent projects supervised | 7 courses taught | 3 institutions"
+    "objectID": "tutorial2-pipe.html#the-native-pipe",
+    "href": "tutorial2-pipe.html#the-native-pipe",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "The Native Pipe |>",
+    "text": "The Native Pipe |&gt;\nThe native pipe |&gt; is built directly into R (no packages required). Here’s how it works:\n\nBasic Syntax\n\ndata |&gt; function1() |&gt; function2() |&gt; function3()\n\nThis is equivalent to:\n\nfunction3(function2(function1(data)))\n\n\n\nSimple Example\nLet’s say you want to: 1. Take a vector of numbers 2. Calculate the square root of each 3. Round to 2 decimal places 4. Calculate the mean\nWithout pipes:\n\nnumbers &lt;- c(4, 9, 16, 25, 36)\nresult &lt;- mean(round(sqrt(numbers), 2))\nresult\n\n[1] 4\n\n\nWith the native pipe:\n\nnumbers &lt;- c(4, 9, 16, 25, 36)\nresult &lt;- numbers |&gt; \n  sqrt() |&gt; \n  round(2) |&gt; \n  mean()\nresult\n\n[1] 4\n\n\nMuch more readable! You can follow the data flow from left to right, top to bottom."
   },
   {
-    "objectID": "teaching.html#courses-taught",
-    "href": "teaching.html#courses-taught",
-    "title": "Teaching & Mentorship",
-    "section": "Courses Taught",
-    "text": "Courses Taught\n\nUniversity of Colorado Boulder\nTeaching Assistant\n\nPSCI 2075: Quantitative Methods (Fall 2025, Spring 2024)\n\nComprehensive introduction to statistical analysis in political science, covering descriptive statistics, hypothesis testing, regression analysis, and research design. Emphasized practical application using R and real political datasets.\n\nPSCI 1101: Introduction to Western Political Thought (Spring 2025)\n\nSurvey of foundational political philosophy from ancient Greece through Enlightenment thinkers, connecting classical ideas to contemporary political challenges.\n\nPSCI 2223: Introduction to Comparative Politics (Fall 2024)\n\nExploration of political systems, institutions, and processes across different countries and regions, with emphasis on democratization, authoritarianism, and political development.\n\nPSCI 1824: Introduction to International Relations (Fall 2023)\n\nComprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.\n\n\n\n\nMiddlebury Institute of International Studies\nAdjunct Professor\n\nDigital Extremism (Spring 2023)\n\nSelf-designed course examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.\n\n\n\n\nMiddlebury College\nAdjunct Professor\n\nOnline Extremism (January 2021)\n\nIntensive winter term course on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis."
+    "objectID": "tutorial2-pipe.html#the-magrittr-pipe",
+    "href": "tutorial2-pipe.html#the-magrittr-pipe",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "The Magrittr Pipe %>%",
+    "text": "The Magrittr Pipe %&gt;%\nThe %&gt;% pipe comes from the magrittr package and is widely used in the tidyverse ecosystem (dplyr, ggplot2, etc.). It works very similarly to the native pipe but has some additional features.\n\nLoading the Package\n\nlibrary(magrittr)  # For standalone use\n# OR\nlibrary(dplyr)     # Automatically loads %&gt;%\n# OR  \nlibrary(tidyverse) # Loads entire tidyverse, including %&gt;%\n\n\n\nBasic Usage\nThe same example with %&gt;%:\n\nlibrary(magrittr)\nnumbers &lt;- c(4, 9, 16, 25, 36)\nresult &lt;- numbers %&gt;% \n  sqrt() %&gt;% \n  round(2) %&gt;% \n  mean()\nresult"
   },
   {
-    "objectID": "teaching.html#teaching-resources",
-    "href": "teaching.html#teaching-resources",
-    "title": "Teaching & Mentorship",
-    "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nQuantitative Methods Materials\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\nComprehensive introduction to mathematical notation in political science, designed to reduce barriers for students intimidated by quantitative methods. Includes interactive R code examples and practical applications.\nCustom R Tutorials: Developed series of hands-on coding exercises covering data visualization, regression analysis, and causal inference specifically tailored to political science applications."
+    "objectID": "tutorial2-pipe.html#practical-data-analysis-examples",
+    "href": "tutorial2-pipe.html#practical-data-analysis-examples",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "Practical Data Analysis Examples",
+    "text": "Practical Data Analysis Examples\nLet’s look at more realistic examples using a dataset. We’ll use the built-in mtcars dataset.\n\nExample 1: Data Summarization\nTask: Find the average miles per gallon (mpg) for cars with more than 4 cylinders, rounded to 1 decimal place.\nWithout pipes:\n\nresult &lt;- round(mean(mtcars[mtcars$cyl &gt; 4, \"mpg\"]), 1)\nresult\n\n[1] 16.6\n\n\nWith native pipe:\n\nresult &lt;- mtcars |&gt; \n  subset(cyl &gt; 4) |&gt; \n  subset(select = mpg) |&gt; \n  unlist() |&gt; \n  mean() |&gt; \n  round(1)\nresult\n\n[1] 16.6\n\n\n\n\nExample 2: Using with dplyr\nIf you’re using dplyr (part of tidyverse), pipes become even more powerful:\n\nlibrary(dplyr)\n\n# Find the 3 most fuel-efficient cars by transmission type\nmtcars |&gt; \n  group_by(am) |&gt; \n  arrange(desc(mpg)) |&gt; \n  slice_head(n = 3) |&gt; \n  select(mpg, am, cyl)"
   },
   {
-    "objectID": "teaching.html#student-research-mentorship",
-    "href": "teaching.html#student-research-mentorship",
-    "title": "Teaching & Mentorship",
-    "section": "Student Research Mentorship",
-    "text": "Student Research Mentorship\nI have supervised 45 undergraduate and graduate research assistants and 15 independent projects since 2019. My mentorship philosophy emphasizes methodological rigor, ethical research practices, and practical skill development.\n\nCurrent Projects\n\nApocalyptic Language Analysis: Four undergraduate RAs working on qualitative coding for social media research\n\n\n\nPast Student Projects\n\n\n\nItalian Neofascism & Political Violence\nMilitant Accelerationism & Coalition-Building\n\nFrench Far-Right on Encrypted Platforms\n\n\n\nAI Implications for Domestic Counterterrorism\nChristian Identity Movements\nGaming Platform Radicalization"
+    "objectID": "tutorial2-pipe.html#key-differences-between-and",
+    "href": "tutorial2-pipe.html#key-differences-between-and",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "Key Differences Between |> and %>%",
+    "text": "Key Differences Between |&gt; and %&gt;%\nWhile both pipes work similarly for basic operations, there are some important differences:\n\n1. Availability\n\n|&gt; is built into R 4.1.0+ (no packages needed)\n%&gt;% requires the magrittr package or tidyverse\n\n\n\n2. Placeholder Usage\nMagrittr pipe %&gt;% with placeholder:\n\n# When you need the piped value in a position other than first argument\ndata %&gt;% \n  lm(y ~ x, data = .)  # The dot (.) represents the piped data\n\nNative pipe |&gt; with placeholder:\n\n# R 4.2.0+ syntax\ndata |&gt; \n  lm(y ~ x, data = _)  # Underscore (_) as placeholder\n\n# Alternative for all R 4.1.0+ versions\ndata |&gt; \n  (\\(x) lm(y ~ z, data = x))()  # Anonymous function\n\n\n\n3. Performance\nThe native pipe |&gt; is slightly faster since it’s built into R’s core."
   },
   {
-    "objectID": "teaching.html#research-teaching-integration",
-    "href": "teaching.html#research-teaching-integration",
-    "title": "Teaching & Mentorship",
-    "section": "Research-Teaching Integration",
-    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to real political phenomena using Python, R, and specialized software\nCritically evaluate digital media, online communities, and algorithmic systems\n\nNavigate ethical challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis through hands-on projects\nDevelop professional skills in data visualization, statistical analysis, and research communication\n\nSignature Approach: Each course includes substantial research components where students collect and analyze original data, preparing them for graduate study or professional research roles.\n\nInterested in collaboration or guest lectures? Contact alex.newhouse@colorado.edu"
+    "objectID": "tutorial2-pipe.html#when-to-use-which-pipe",
+    "href": "tutorial2-pipe.html#when-to-use-which-pipe",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "When to Use Which Pipe?",
+    "text": "When to Use Which Pipe?\nUse the native pipe |&gt; when:\n\nYou’re using R 4.1.0 or later\nYou want to minimize package dependencies\nYou’re doing straightforward piping (most common case)\nPerformance is critical\n\nUse the magrittr pipe %&gt;% when:\n\nYou’re working with tidyverse packages\nYou need advanced features like the dot placeholder\nYou’re working with legacy code that uses %&gt;%\nYou’re collaborating with others who use tidyverse"
+  },
+  {
+    "objectID": "tutorial2-pipe.html#best-practices",
+    "href": "tutorial2-pipe.html#best-practices",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "Best Practices",
+    "text": "Best Practices\n\n1. Format for Readability\n\n# Good: One function per line, properly indented\ndata |&gt; \n  filter(condition) |&gt; \n  group_by(variable) |&gt; \n  summarise(mean_value = mean(value))\n\n# Avoid: Everything on one line (hard to read)\ndata |&gt; filter(condition) |&gt; group_by(variable) |&gt; summarise(mean_value = mean(value))\n\n\n\n2. Don’t Overuse Pipes\n\n# Sometimes simple assignment is clearer\nx &lt;- mean(data$variable)\n\n# Instead of\nx &lt;- data |&gt; pull(variable) |&gt; mean()\n\n\n\n3. Break Long Chains\nIf your pipe chain gets very long (&gt;10 steps), consider breaking it into smaller chunks with intermediate variables."
+  },
+  {
+    "objectID": "tutorial2-pipe.html#common-errors-and-solutions",
+    "href": "tutorial2-pipe.html#common-errors-and-solutions",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "Common Errors and Solutions",
+    "text": "Common Errors and Solutions\n\nError: Object not found\n\n# This won't work - data isn't defined\ndata |&gt; mean()\n\n# Solution: Make sure your starting object exists\nmy_data &lt;- c(1, 2, 3, 4, 5)\nmy_data |&gt; mean()"
+  },
+  {
+    "objectID": "tutorial2-pipe.html#conclusion",
+    "href": "tutorial2-pipe.html#conclusion",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "Conclusion",
+    "text": "Conclusion\nThe pipe operator is a powerful tool that makes R code more readable and intuitive. Whether you use the native pipe |&gt; or the magrittr pipe %&gt;%, the key is consistency within your projects.\nStart incorporating pipes into your workflow gradually—begin with simple chains and work your way up to more complex data manipulation tasks. Your future self (and your collaborators) will thank you for the cleaner, more readable code!"
+  },
+  {
+    "objectID": "tutorial2-pipe.html#additional-resources",
+    "href": "tutorial2-pipe.html#additional-resources",
+    "title": "The R Pipe Operator: Making Your Code Flow",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nR for Data Science - Pipes chapter\nmagrittr documentation\nR 4.1.0 release notes"
   },
   {
     "objectID": "research.html",
@@ -222,6 +250,62 @@
     "title": "Research",
     "section": "Future Research Directions",
     "text": "Future Research Directions\nEmerging Technologies & Political Violence\n\nAI-generated disinformation and radicalization\nVirtual/augmented reality environments as political spaces\nBlockchain and decentralized platform governance\n\nComparative Extremism Studies\n\nCross-national analysis of digital radicalization patterns\nComparative platform governance approaches\nInternational cooperation in countering online extremism\n\nMethodological Innovation\n\nAdvanced causal inference methods for social media data\nMulti-modal analysis combining text, visual, and network data\nReal-time detection and intervention systems\n\n\nFor collaboration inquiries, media requests, or access to datasets, contact alex.newhouse@colorado.edu.\nGoogle Scholar: Alex Newhouse • ORCID: Available upon request"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching & Mentorship",
+    "section": "",
+    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+  },
+  {
+    "objectID": "teaching.html#teaching-philosophy",
+    "href": "teaching.html#teaching-philosophy",
+    "title": "Teaching & Mentorship",
+    "section": "",
+    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+  },
+  {
+    "objectID": "teaching.html#teaching-impact",
+    "href": "teaching.html#teaching-impact",
+    "title": "Teaching & Mentorship",
+    "section": "Teaching Impact",
+    "text": "Teaching Impact\n45+ students mentored | 15 independent projects supervised | 7 courses taught | 3 institutions"
+  },
+  {
+    "objectID": "teaching.html#courses-taught",
+    "href": "teaching.html#courses-taught",
+    "title": "Teaching & Mentorship",
+    "section": "Courses Taught",
+    "text": "Courses Taught\n\nUniversity of Colorado Boulder\nTeaching Assistant\n\nPSCI 2075: Quantitative Methods (Fall 2025, Spring 2024)\n\nComprehensive introduction to statistical analysis in political science, covering descriptive statistics, hypothesis testing, regression analysis, and research design. Emphasized practical application using R and real political datasets.\n\nPSCI 1101: Introduction to Western Political Thought (Spring 2025)\n\nSurvey of foundational political philosophy from ancient Greece through Enlightenment thinkers, connecting classical ideas to contemporary political challenges.\n\nPSCI 2223: Introduction to Comparative Politics (Fall 2024)\n\nExploration of political systems, institutions, and processes across different countries and regions, with emphasis on democratization, authoritarianism, and political development.\n\nPSCI 1824: Introduction to International Relations (Fall 2023)\n\nComprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.\n\n\n\n\nMiddlebury Institute of International Studies\nAdjunct Professor\n\nDigital Extremism (Spring 2023)\n\nSelf-designed course examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.\n\n\n\n\nMiddlebury College\nAdjunct Professor\n\nOnline Extremism (January 2021)\n\nIntensive winter term course on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis."
+  },
+  {
+    "objectID": "teaching.html#teaching-resources",
+    "href": "teaching.html#teaching-resources",
+    "title": "Teaching & Mentorship",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nQuantitative Methods Materials\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats Tutorial 2: An Introduction to R’s pipe operator\nComprehensive introduction to mathematical notation in political science, designed to reduce barriers for students intimidated by quantitative methods. Includes interactive R code examples and practical applications.\nCustom R Tutorials: Developed series of hands-on coding exercises covering data visualization, regression analysis, and causal inference specifically tailored to political science applications."
+  },
+  {
+    "objectID": "teaching.html#student-research-mentorship",
+    "href": "teaching.html#student-research-mentorship",
+    "title": "Teaching & Mentorship",
+    "section": "Student Research Mentorship",
+    "text": "Student Research Mentorship\nI have supervised 45 undergraduate and graduate research assistants and 15 independent projects since 2019. My mentorship philosophy emphasizes methodological rigor, ethical research practices, and practical skill development.\n\nCurrent Projects\n\nApocalyptic Language Analysis: Four undergraduate RAs working on qualitative coding for social media research\n\n\n\nPast Student Projects\n\n\n\nItalian Neofascism & Political Violence\nMilitant Accelerationism & Coalition-Building\n\nFrench Far-Right on Encrypted Platforms\n\n\n\nAI Implications for Domestic Counterterrorism\nChristian Identity Movements\nGaming Platform Radicalization"
+  },
+  {
+    "objectID": "teaching.html#research-teaching-integration",
+    "href": "teaching.html#research-teaching-integration",
+    "title": "Teaching & Mentorship",
+    "section": "Research-Teaching Integration",
+    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to real political phenomena using Python, R, and specialized software\nCritically evaluate digital media, online communities, and algorithmic systems\n\nNavigate ethical challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis through hands-on projects\nDevelop professional skills in data visualization, statistical analysis, and research communication\n\nSignature Approach: Each course includes substantial research components where students collect and analyze original data, preparing them for graduate study or professional research roles.\n\nInterested in collaboration or guest lectures? Contact alex.newhouse@colorado.edu"
+  },
+  {
+    "objectID": "posts/2025-09-04-first-post/index.html",
+    "href": "posts/2025-09-04-first-post/index.html",
+    "title": "First post",
+    "section": "",
+    "text": "Testing blog!"
   },
   {
     "objectID": "index.html",
