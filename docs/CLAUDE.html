@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Research – Alex Bradley Newhouse</title>
+<title>claude – Alex Bradley Newhouse</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -105,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research.html" aria-current="page"> 
+    <a class="nav-link" href="./research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
@@ -128,275 +163,70 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#research-overview" id="toc-research-overview" class="nav-link active" data-scroll-target="#research-overview">Research Overview</a></li>
-  <li><a href="#citation-metrics" id="toc-citation-metrics" class="nav-link" data-scroll-target="#citation-metrics">Citation Metrics</a></li>
-  <li><a href="#featured-publications" id="toc-featured-publications" class="nav-link" data-scroll-target="#featured-publications">Featured Publications</a>
+  <li><a href="#claude.md" id="toc-claude.md" class="nav-link active" data-scroll-target="#claude.md">CLAUDE.md</a>
   <ul class="collapse">
-  <li><a href="#peer-reviewed-articles" id="toc-peer-reviewed-articles" class="nav-link" data-scroll-target="#peer-reviewed-articles">Peer-Reviewed Articles</a></li>
-  <li><a href="#other-major-publications" id="toc-other-major-publications" class="nav-link" data-scroll-target="#other-major-publications">Other Major Publications</a></li>
+  <li><a href="#project-overview" id="toc-project-overview" class="nav-link" data-scroll-target="#project-overview">Project Overview</a></li>
+  <li><a href="#architecture" id="toc-architecture" class="nav-link" data-scroll-target="#architecture">Architecture</a></li>
+  <li><a href="#development-commands" id="toc-development-commands" class="nav-link" data-scroll-target="#development-commands">Development Commands</a></li>
+  <li><a href="#content-guidelines" id="toc-content-guidelines" class="nav-link" data-scroll-target="#content-guidelines">Content Guidelines</a></li>
+  <li><a href="#file-naming" id="toc-file-naming" class="nav-link" data-scroll-target="#file-naming">File Naming</a></li>
+  <li><a href="#website-features" id="toc-website-features" class="nav-link" data-scroll-target="#website-features">Website Features</a></li>
   </ul></li>
-  <li><a href="#research-areas-methods" id="toc-research-areas-methods" class="nav-link" data-scroll-target="#research-areas-methods">Research Areas &amp; Methods</a>
-  <ul class="collapse">
-  <li><a href="#substantive-focus-areas" id="toc-substantive-focus-areas" class="nav-link" data-scroll-target="#substantive-focus-areas">Substantive Focus Areas</a></li>
-  <li><a href="#methodological-expertise" id="toc-methodological-expertise" class="nav-link" data-scroll-target="#methodological-expertise">Methodological Expertise</a></li>
-  </ul></li>
-  <li><a href="#current-research-projects" id="toc-current-research-projects" class="nav-link" data-scroll-target="#current-research-projects">Current Research Projects</a>
-  <ul class="collapse">
-  <li><a href="#dissertation-research" id="toc-dissertation-research" class="nav-link" data-scroll-target="#dissertation-research">Dissertation Research</a></li>
-  <li><a href="#covid-19-media-framing-study" id="toc-covid-19-media-framing-study" class="nav-link" data-scroll-target="#covid-19-media-framing-study">COVID-19 Media Framing Study</a></li>
-  <li><a href="#gaming-extremism-research" id="toc-gaming-extremism-research" class="nav-link" data-scroll-target="#gaming-extremism-research">Gaming &amp; Extremism Research</a></li>
-  <li><a href="#policy-financial-markets" id="toc-policy-financial-markets" class="nav-link" data-scroll-target="#policy-financial-markets">Policy &amp; Financial Markets</a></li>
-  </ul></li>
-  <li><a href="#research-impact-media-coverage" id="toc-research-impact-media-coverage" class="nav-link" data-scroll-target="#research-impact-media-coverage">Research Impact &amp; Media Coverage</a>
-  <ul class="collapse">
-  <li><a href="#academic-recognition" id="toc-academic-recognition" class="nav-link" data-scroll-target="#academic-recognition">Academic Recognition</a></li>
-  <li><a href="#policy-industry-impact" id="toc-policy-industry-impact" class="nav-link" data-scroll-target="#policy-industry-impact">Policy &amp; Industry Impact</a></li>
-  <li><a href="#media-public-engagement" id="toc-media-public-engagement" class="nav-link" data-scroll-target="#media-public-engagement">Media &amp; Public Engagement</a></li>
-  </ul></li>
-  <li><a href="#funding-grants" id="toc-funding-grants" class="nav-link" data-scroll-target="#funding-grants">Funding &amp; Grants</a>
-  <ul class="collapse">
-  <li><a href="#as-principal-investigator" id="toc-as-principal-investigator" class="nav-link" data-scroll-target="#as-principal-investigator">As Principal Investigator</a></li>
-  <li><a href="#as-co-investigator" id="toc-as-co-investigator" class="nav-link" data-scroll-target="#as-co-investigator">As Co-Investigator</a></li>
-  </ul></li>
-  <li><a href="#future-research-directions" id="toc-future-research-directions" class="nav-link" data-scroll-target="#future-research-directions">Future Research Directions</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Research</h1>
-<p class="subtitle lead">Computational Political Science &amp; Extremism Studies</p>
-</div>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
-<div class="quarto-title-meta">
 
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="research-overview" class="level2">
-<h2 class="anchored" data-anchor-id="research-overview">Research Overview</h2>
-<p>My research program sits at the intersection of <strong>computational social science</strong>, <strong>political violence</strong>, and <strong>technology studies</strong>. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.</p>
-<p><strong>Core Questions:</strong></p>
-<ul>
-<li>How do digital platforms facilitate political radicalization and mobilization?</li>
-<li>What role do emerging technologies play in extremist recruitment and organization?<br>
-</li>
-<li>How can computational methods help us understand and counter political violence?</li>
-</ul>
-<hr>
+<section id="claude.md" class="level1">
+<h1>CLAUDE.md</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<section id="project-overview" class="level2">
+<h2 class="anchored" data-anchor-id="project-overview">Project Overview</h2>
+<p>This is a personal academic website built with <strong>Quarto</strong>, a scientific publishing system. The site belongs to Alex Newhouse, a PhD candidate in Political Science specializing in computational analysis of political violence and extremism.</p>
 </section>
-<section id="citation-metrics" class="level2">
-<h2 class="anchored" data-anchor-id="citation-metrics">Citation Metrics</h2>
-<p><strong>Google Scholar Profile:</strong> 1,093 total citations | <strong>Research Areas:</strong> collective behavior, online communities, extremism, conspiracy theories, video games</p>
-<p><strong>Impact Highlights:</strong></p>
-<ul>
-<li>Featured in 8+ major media outlets</li>
-<li>276K+ total article views</li>
-<li>Research cited in policy reports and academic literature</li>
-</ul>
-<hr>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Architecture</h2>
+<p><strong>Quarto Website Structure:</strong> - <code>_quarto.yml</code> - Main configuration file defining website structure, theme (lumen), and navbar - <code>*.qmd</code> - Quarto markdown files that generate the website pages - <code>docs/</code> - Output directory where rendered HTML files are published (GitHub Pages) - <code>posts/</code> - Directory containing blog post subdirectories - <code>profpic.jpeg</code> - Profile image used on the main page</p>
+<p><strong>Key Pages:</strong> - <code>index.qmd</code> - Homepage with personal bio and research overview - <code>cv.qmd</code> - Academic CV - <code>research.qmd</code> - Research projects and publications - <code>teaching.qmd</code> - Teaching experience and tutorial links - <code>posts.qmd</code> - Blog listing page - <code>tutorial*.qmd</code> - Educational content for quantitative methods</p>
 </section>
-<section id="featured-publications" class="level2">
-<h2 class="anchored" data-anchor-id="featured-publications">Featured Publications</h2>
-<section id="peer-reviewed-articles" class="level3">
-<h3 class="anchored" data-anchor-id="peer-reviewed-articles">Peer-Reviewed Articles</h3>
-<p><strong>Kowert, R., Kilmer, E., and Newhouse, A.</strong> (2024). “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1410620/full"><em>Frontiers in Psychology</em></a>, 15:1410620.</p>
-<p>This study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.</p>
+<section id="development-commands" class="level2">
+<h2 class="anchored" data-anchor-id="development-commands">Development Commands</h2>
+<p><strong>Build and Preview:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render          <span class="co"># Build the entire website to docs/</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> preview         <span class="co"># Live preview with auto-reload during development</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render <span class="op">&lt;</span>file<span class="op">&gt;</span>   <span class="co"># Render specific file</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><strong>Publishing:</strong> The site automatically publishes from the <code>docs/</code> directory to GitHub Pages when changes are pushed to the main branch.</p>
+</section>
+<section id="content-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="content-guidelines">Content Guidelines</h2>
+<p><strong>Academic Focus:</strong> Content should maintain an academic tone appropriate for a PhD candidate’s professional website. The site showcases research on political violence, extremism, and computational social science.</p>
+<p><strong>Teaching Materials:</strong> Tutorial files (tutorial1.qmd, tutorial2-pipe.qmd, etc.) contain educational content for quantitative methods courses. These should be pedagogically sound and accessible to undergraduate students.</p>
+<p><strong>Blog Posts:</strong> Located in <code>posts/</code> subdirectories, focused on research, technology, and academia.</p>
+</section>
+<section id="file-naming" class="level2">
+<h2 class="anchored" data-anchor-id="file-naming">File Naming</h2>
 <ul>
-<li><strong>Funded by:</strong> Department of Homeland Security (DHS # EMW-2022-GR-00036)</li>
-<li><strong>Key Finding:</strong> More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized</li>
-</ul>
-<p><strong>Newhouse, A.</strong> (2021). “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” <a href="https://ctc.westpoint.edu/the-threat-is-the-network-the-multi-node-structure-of-neo-fascist-accelerationism/"><em>CTC Sentinel</em></a>, 14(5).</p>
-<p>Since 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.</p>
-<ul>
-<li><strong>Innovation:</strong> Novel network-based framework for understanding extremist movements</li>
-<li><strong>Policy Impact:</strong> Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue</li>
-<li><strong>Citations:</strong> Extensively cited in terrorism studies and cited in recent <em>Studies in Conflict &amp; Terrorism</em> article</li>
-</ul>
-<p><strong>McGuffie, K. and Newhouse, A.</strong> (2020). “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” <a href="https://arxiv.org/abs/2009.06807"><em>arXiv preprint</em></a>, 2009.06807.</p>
-<p>We show GPT-3’s strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI’s preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.</p>
-<ul>
-<li><strong>Impact:</strong> 28 citations and featured in major tech policy discussions</li>
-<li><strong>Media Coverage:</strong> Extensive coverage in <em>The Register</em>, <em>Vice</em>, and other tech outlets</li>
-<li><strong>Policy Influence:</strong> Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment</li>
+<li>Use lowercase with hyphens for multi-word filenames</li>
+<li>Tutorial files: <code>tutorial[number]-[topic].qmd</code></li>
+<li>Blog posts: <code>posts/YYYY-MM-DD-[title]/index.qmd</code></li>
 </ul>
 </section>
-<section id="other-major-publications" class="level3">
-<h3 class="anchored" data-anchor-id="other-major-publications">Other Major Publications</h3>
-<p><strong>Newhouse, A.</strong> (2020). “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” <em>The Conversation</em>.</p>
-<p><strong>Newhouse, A.</strong> (2020). “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” <em>The Conversation</em>.</p>
+<section id="website-features" class="level2">
+<h2 class="anchored" data-anchor-id="website-features">Website Features</h2>
 <ul>
-<li><strong>Impact:</strong> 241,000 views for Parler analysis</li>
+<li>Search functionality enabled</li>
+<li>RSS feed for blog posts</li>
+<li>Responsive design with trestles template on homepage</li>
+<li>Social media links (LinkedIn, Bluesky, GitHub, Email)</li>
+<li>Category filtering and sorting for blog posts</li>
 </ul>
-<p><strong>Multiple GNET Research Reports</strong> (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement.</p>
-<hr>
-</section>
-</section>
-<section id="research-areas-methods" class="level2">
-<h2 class="anchored" data-anchor-id="research-areas-methods">Research Areas &amp; Methods</h2>
-<section id="substantive-focus-areas" class="level3">
-<h3 class="anchored" data-anchor-id="substantive-focus-areas">Substantive Focus Areas</h3>
-<p><strong>Political Violence &amp; Extremism</strong></p>
-<ul>
-<li>Neo-fascist accelerationism and network structures</li>
-<li>Online-offline radicalization pathways<br>
-</li>
-<li>Gaming platforms as extremist recruitment venues</li>
-<li>AI and synthetic media threats</li>
-</ul>
-<p><strong>Technology &amp; Society</strong></p>
-<ul>
-<li>Digital platform governance and content moderation</li>
-<li>AI safety and misuse potential</li>
-<li>Social media data analysis and behavioral patterns</li>
-<li>Gaming culture and political socialization</li>
-</ul>
-</section>
-<section id="methodological-expertise" class="level3">
-<h3 class="anchored" data-anchor-id="methodological-expertise">Methodological Expertise</h3>
-<p><strong>Computational Methods</strong></p>
-<ul>
-<li>Machine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers)</li>
-<li>Natural Language Processing and text-as-data approaches</li>
-<li>Social Network Analysis (igraph, statnet)</li>
-<li>Time-series analysis and causal inference</li>
-</ul>
-<p><strong>Featured Technical Work:</strong></p>
-<ul>
-<li><a href="political-text-classification.html"><strong>DistilBERT for Political Text Classification</strong></a> - Automated detection of extremist content using transformer models (94% F1-score)</li>
-</ul>
-<p><strong>Data &amp; Platforms</strong></p>
-<ul>
-<li>Large-scale social media data collection and analysis</li>
-<li>Gaming platform research and mixed-methods approaches</li>
-<li>Survey research and experimental design</li>
-<li>Qualitative coding and content analysis</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="current-research-projects" class="level2">
-<h2 class="anchored" data-anchor-id="current-research-projects">Current Research Projects</h2>
-<section id="dissertation-research" class="level3">
-<h3 class="anchored" data-anchor-id="dissertation-research">Dissertation Research</h3>
-<p><strong>“Measuring Online-Offline Relationships in Political Violence”</strong></p>
-<p>Developing computational frameworks to understand how digital engagement translates into offline political action. Uses machine learning, natural language processing, social network analysis, and time-series causal inference to examine extremist community dynamics.</p>
-<ul>
-<li><strong>Committee:</strong> Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel</li>
-<li><strong>External Advisor:</strong> Brian Keegan (Information Science)</li>
-<li><strong>Expected Completion:</strong> May 2027</li>
-</ul>
-</section>
-<section id="covid-19-media-framing-study" class="level3">
-<h3 class="anchored" data-anchor-id="covid-19-media-framing-study">COVID-19 Media Framing Study</h3>
-<p><strong>“Partisan Visual Politics During a Pandemic”</strong> (with Andrew Q. Philips and Komal P. Kaur)</p>
-<p>Investigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets using computer vision and text analysis methods.</p>
-</section>
-<section id="gaming-extremism-research" class="level3">
-<h3 class="anchored" data-anchor-id="gaming-extremism-research">Gaming &amp; Extremism Research</h3>
-<p><strong>“Multi-Platform Radicalization in Digital Gaming”</strong></p>
-<p>Comprehensive study of recruitment and radicalization processes within digital gaming environments, including direct partnerships with major gaming platforms for harm mitigation strategies.</p>
-</section>
-<section id="policy-financial-markets" class="level3">
-<h3 class="anchored" data-anchor-id="policy-financial-markets">Policy &amp; Financial Markets</h3>
-<p><strong>“Political Messaging and Market Responses”</strong> (under review)</p>
-<p>Analysis of how political communications affect financial market behavior and investor decision-making.</p>
-<hr>
-</section>
-</section>
-<section id="research-impact-media-coverage" class="level2">
-<h2 class="anchored" data-anchor-id="research-impact-media-coverage">Research Impact &amp; Media Coverage</h2>
-<section id="academic-recognition" class="level3">
-<h3 class="anchored" data-anchor-id="academic-recognition">Academic Recognition</h3>
-<ul>
-<li>Research extensively cited in terrorism studies literature</li>
-<li>Work featured in <em>CTC Sentinel</em>, premier counterterrorism publication</li>
-<li>Publications in top-tier psychology and computer science venues</li>
-</ul>
-</section>
-<section id="policy-industry-impact" class="level3">
-<h3 class="anchored" data-anchor-id="policy-industry-impact">Policy &amp; Industry Impact</h3>
-<ul>
-<li><strong>January 6th Committee:</strong> Investigative consultant providing expertise on extremist movements</li>
-<li><strong>Technology Partnerships:</strong> Direct collaboration with gaming companies (Roblox, Spectrum Labs)</li>
-<li><strong>Federal Funding:</strong> $1.38M in grants as Principal Investigator</li>
-</ul>
-</section>
-<section id="media-public-engagement" class="level3">
-<h3 class="anchored" data-anchor-id="media-public-engagement">Media &amp; Public Engagement</h3>
-<p><strong>Major Media Features:</strong> Washington Post • New York Times • NPR (<em>Morning Edition</em>, <em>All Things Considered</em>) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now</p>
-<p><strong>High-Impact Articles:</strong></p>
-<ul>
-<li>Parler analysis: <strong>241,000 views</strong></li>
-<li>January 6th prediction: <strong>35,400 views</strong></li>
-</ul>
-<p><strong>Expert Commentary Topics:</strong></p>
-<ul>
-<li>AI safety and misuse potential</li>
-<li>Gaming platform moderation</li>
-<li>Extremist recruitment strategies<br>
-</li>
-<li>Social media radicalization</li>
-<li>Technology policy implications</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="funding-grants" class="level2">
-<h2 class="anchored" data-anchor-id="funding-grants">Funding &amp; Grants</h2>
-<section id="as-principal-investigator" class="level3">
-<h3 class="anchored" data-anchor-id="as-principal-investigator">As Principal Investigator</h3>
-<ul>
-<li><strong>Department of Homeland Security</strong> (2022-2024): Gaming and extremism research - $350,000</li>
-<li><strong>Multiple Federal Grants</strong> (2019-2024): Extremism and technology studies - <strong>$1.38M total</strong></li>
-</ul>
-</section>
-<section id="as-co-investigator" class="level3">
-<h3 class="anchored" data-anchor-id="as-co-investigator">As Co-Investigator</h3>
-<ul>
-<li><strong>Logically Partnership</strong> (2022): Social media data infrastructure for extremism research</li>
-<li><strong>Various Industry Partnerships</strong>: Gaming platform safety research</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="future-research-directions" class="level2">
-<h2 class="anchored" data-anchor-id="future-research-directions">Future Research Directions</h2>
-<p><strong>Emerging Technologies &amp; Political Violence</strong></p>
-<ul>
-<li>AI-generated disinformation and radicalization</li>
-<li>Virtual/augmented reality environments as political spaces</li>
-<li>Blockchain and decentralized platform governance</li>
-</ul>
-<p><strong>Comparative Extremism Studies</strong></p>
-<ul>
-<li>Cross-national analysis of digital radicalization patterns</li>
-<li>Comparative platform governance approaches</li>
-<li>International cooperation in countering online extremism</li>
-</ul>
-<p><strong>Methodological Innovation</strong></p>
-<ul>
-<li>Advanced causal inference methods for social media data</li>
-<li>Multi-modal analysis combining text, visual, and network data</li>
-<li>Real-time detection and intervention systems</li>
-</ul>
-<hr>
-<p><em>For collaboration inquiries, media requests, or access to datasets, contact <a href="mailto:alex.newhouse@colorado.edu">alex.newhouse@colorado.edu</a>.</em></p>
-<p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=NLXqzpoAAAAJ&amp;hl=en">Alex Newhouse</a> • <strong>ORCID:</strong> Available upon request</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
