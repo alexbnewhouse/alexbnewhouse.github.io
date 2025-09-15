@@ -65,6 +65,7 @@ I believe in making complex political science concepts accessible through hands-
 * [**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
 * [**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)
 * [**Tutorial 4: Variable Transformations in R**](tutorial4.html) - Understanding distributions, log transforms, and data recoding
+* [**Tutorial 5: Using AI Chatbots to Learn R Programming**](tutorial5.html) - Effective strategies for LLM-assisted coding and learning
 
 ------------------------------------------------------------------------
 

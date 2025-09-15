@@ -252,6 +252,174 @@
     "text": "Conclusion\nVariable transformations are fundamental tools in political science research. Key takeaways:\n\nUnderstand your data first - Always visualize distributions before transforming\nLog transformations are powerful for right-skewed economic/demographic variables\nThoughtful recoding can simplify analysis and improve interpretation\nDocument everything - Future you will thank present you\nKeep originals - Preserve untransformed variables for robustness checks\n\n\nNext Steps\nIn future tutorials, we’ll explore:\n\nAdvanced transformation techniques (Box-Cox, inverse hyperbolic sine)\nMultiple imputation for missing data\nRobust regression methods for outlier-prone data\nInteraction terms and polynomial transformations\n\n\n\nPractice Exercises\n\nTry log-transforming the population variable and compare the distribution\nCreate a three-category democracy variable (Low/Medium/High) using quantile cuts\nIdentify and investigate the countries with the highest democracy scores\nCreate a scatter plot matrix comparing original and transformed variables"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alex Newhouse",
+    "section": "",
+    "text": "I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
+  },
+  {
+    "objectID": "index.html#about",
+    "href": "index.html#about",
+    "title": "Alex Newhouse",
+    "section": "",
+    "text": "I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
+  },
+  {
+    "objectID": "index.html#research-expertise",
+    "href": "index.html#research-expertise",
+    "title": "Alex Newhouse",
+    "section": "Research Expertise",
+    "text": "Research Expertise\n\n\nMethods:\n\nMachine Learning & NLP\nSocial Network Analysis\n\nCausal Inference\nData Science & Visualization\n\n\nSubstantive Areas:\n\nPolitical Violence & Extremism\nDigital Platform Research\nTechnology & Society\nComputational Social Science"
+  },
+  {
+    "objectID": "index.html#featured-publications",
+    "href": "index.html#featured-publications",
+    "title": "Alex Newhouse",
+    "section": "Featured Publications",
+    "text": "Featured Publications\nKowert, R., Kilmer, E., and Newhouse, A. “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 2024.\nNewhouse, A. “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 2021.\nMcGuffie, K. and Newhouse, A. “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv, 2020."
+  },
+  {
+    "objectID": "index.html#research-impact",
+    "href": "index.html#research-impact",
+    "title": "Alex Newhouse",
+    "section": "Research Impact",
+    "text": "Research Impact\n$1.38M in grant funding (Principal Investigator) | 45+ students mentored | 276K article views | Featured in 8 major media outlets"
+  },
+  {
+    "objectID": "index.html#media-recognition",
+    "href": "index.html#media-recognition",
+    "title": "Alex Newhouse",
+    "section": "Media Recognition",
+    "text": "Media Recognition\nResearch and expertise featured in: Washington Post • New York Times • NPR • BBC • Politico • Wired • Bloomberg • Meet the Press"
+  },
+  {
+    "objectID": "index.html#current-projects",
+    "href": "index.html#current-projects",
+    "title": "Alex Newhouse",
+    "section": "Current Projects",
+    "text": "Current Projects\nDissertation Research: Developing computational frameworks to measure online-offline relationships in political violence\nCOVID-19 Visual Politics: Analyzing partisan differences in pandemic media coverage using computer vision and text analysis\nGaming & Extremism: Multi-platform investigation of recruitment and radicalization in digital gaming environments\n\nContact: alex.newhouse@colorado.edu"
+  },
+  {
+    "objectID": "posts/2025-09-04-first-post/index.html",
+    "href": "posts/2025-09-04-first-post/index.html",
+    "title": "First post",
+    "section": "",
+    "text": "Testing blog!"
+  },
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching & Mentorship",
+    "section": "",
+    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+  },
+  {
+    "objectID": "teaching.html#teaching-philosophy",
+    "href": "teaching.html#teaching-philosophy",
+    "title": "Teaching & Mentorship",
+    "section": "",
+    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+  },
+  {
+    "objectID": "teaching.html#teaching-impact",
+    "href": "teaching.html#teaching-impact",
+    "title": "Teaching & Mentorship",
+    "section": "Teaching Impact",
+    "text": "Teaching Impact\n45+ students mentored | 15 independent projects supervised | 7 courses taught | 3 institutions"
+  },
+  {
+    "objectID": "teaching.html#courses-taught",
+    "href": "teaching.html#courses-taught",
+    "title": "Teaching & Mentorship",
+    "section": "Courses Taught",
+    "text": "Courses Taught\n\nUniversity of Colorado Boulder\nTeaching Assistant\n\nPSCI 2075: Quantitative Methods (Fall 2025, Spring 2024)\n\nComprehensive introduction to statistical analysis in political science, covering descriptive statistics, hypothesis testing, regression analysis, and research design. Emphasized practical application using R and real political datasets.\n\nPSCI 1101: Introduction to Western Political Thought (Spring 2025)\n\nSurvey of foundational political philosophy from ancient Greece through Enlightenment thinkers, connecting classical ideas to contemporary political challenges.\n\nPSCI 2223: Introduction to Comparative Politics (Fall 2024)\n\nExploration of political systems, institutions, and processes across different countries and regions, with emphasis on democratization, authoritarianism, and political development.\n\nPSCI 1824: Introduction to International Relations (Fall 2023)\n\nComprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.\n\n\n\n\nMiddlebury Institute of International Studies\nAdjunct Professor\n\nDigital Extremism (Spring 2023)\n\nSelf-designed course examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.\n\n\n\n\nMiddlebury College\nAdjunct Professor\n\nOnline Extremism (January 2021)\n\nIntensive winter term course on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis."
+  },
+  {
+    "objectID": "teaching.html#teaching-resources",
+    "href": "teaching.html#teaching-resources",
+    "title": "Teaching & Mentorship",
+    "section": "Teaching Resources",
+    "text": "Teaching Resources\n\nQuantitative Methods Materials\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\nTutorial 2: An Introduction to R’s pipe operator\nTutorial 4: Variable Transformations in R - Understanding distributions, log transforms, and data recoding\nTutorial 5: Using AI Chatbots to Learn R Programming - Effective strategies for LLM-assisted coding and learning"
+  },
+  {
+    "objectID": "teaching.html#student-research-mentorship",
+    "href": "teaching.html#student-research-mentorship",
+    "title": "Teaching & Mentorship",
+    "section": "Student Research Mentorship",
+    "text": "Student Research Mentorship\nI have supervised 45 undergraduate and graduate research assistants and 15 independent projects since 2019. My mentorship philosophy emphasizes methodological rigor, ethical research practices, and practical skill development.\n\nCurrent Projects\n\nApocalyptic Language Analysis: Four undergraduate RAs working on qualitative coding for social media research\n\n\n\nPast Student Projects\n\n\n\nItalian Neofascism & Political Violence\nMilitant Accelerationism & Coalition-Building\n\nFrench Far-Right on Encrypted Platforms\n\n\n\nAI Implications for Domestic Counterterrorism\nChristian Identity Movements\nGaming Platform Radicalization"
+  },
+  {
+    "objectID": "teaching.html#research-teaching-integration",
+    "href": "teaching.html#research-teaching-integration",
+    "title": "Teaching & Mentorship",
+    "section": "Research-Teaching Integration",
+    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to real political phenomena using Python, R, and specialized software\nCritically evaluate digital media, online communities, and algorithmic systems\n\nNavigate ethical challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis through hands-on projects\nDevelop professional skills in data visualization, statistical analysis, and research communication\n\nSignature Approach: Each course includes substantial research components where students collect and analyze original data, preparing them for graduate study or professional research roles.\n\nInterested in collaboration or guest lectures? Contact alex.newhouse@colorado.edu"
+  },
+  {
+    "objectID": "research.html",
+    "href": "research.html",
+    "title": "Research",
+    "section": "",
+    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions:\n\nHow do digital platforms facilitate political radicalization and mobilization?\nWhat role do emerging technologies play in extremist recruitment and organization?\n\nHow can computational methods help us understand and counter political violence?"
+  },
+  {
+    "objectID": "research.html#research-overview",
+    "href": "research.html#research-overview",
+    "title": "Research",
+    "section": "",
+    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions:\n\nHow do digital platforms facilitate political radicalization and mobilization?\nWhat role do emerging technologies play in extremist recruitment and organization?\n\nHow can computational methods help us understand and counter political violence?"
+  },
+  {
+    "objectID": "research.html#citation-metrics",
+    "href": "research.html#citation-metrics",
+    "title": "Research",
+    "section": "Citation Metrics",
+    "text": "Citation Metrics\nGoogle Scholar Profile: 1,093 total citations | Research Areas: collective behavior, online communities, extremism, conspiracy theories, video games\nImpact Highlights:\n\nFeatured in 8+ major media outlets\n276K+ total article views\nResearch cited in policy reports and academic literature"
+  },
+  {
+    "objectID": "research.html#featured-publications",
+    "href": "research.html#featured-publications",
+    "title": "Research",
+    "section": "Featured Publications",
+    "text": "Featured Publications\n\nPeer-Reviewed Articles\nKowert, R., Kilmer, E., and Newhouse, A. (2024). “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 15:1410620.\nThis study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.\n\nFunded by: Department of Homeland Security (DHS # EMW-2022-GR-00036)\nKey Finding: More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized\n\nNewhouse, A. (2021). “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 14(5).\nSince 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.\n\nInnovation: Novel network-based framework for understanding extremist movements\nPolicy Impact: Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue\nCitations: Extensively cited in terrorism studies and cited in recent Studies in Conflict & Terrorism article\n\nMcGuffie, K. and Newhouse, A. (2020). “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv preprint, 2009.06807.\nWe show GPT-3’s strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI’s preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.\n\nImpact: 28 citations and featured in major tech policy discussions\nMedia Coverage: Extensive coverage in The Register, Vice, and other tech outlets\nPolicy Influence: Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment\n\n\n\nOther Major Publications\nNewhouse, A. (2020). “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” The Conversation.\nNewhouse, A. (2020). “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” The Conversation.\n\nImpact: 241,000 views for Parler analysis\n\nMultiple GNET Research Reports (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement."
+  },
+  {
+    "objectID": "research.html#research-areas-methods",
+    "href": "research.html#research-areas-methods",
+    "title": "Research",
+    "section": "Research Areas & Methods",
+    "text": "Research Areas & Methods\n\nSubstantive Focus Areas\nPolitical Violence & Extremism\n\nNeo-fascist accelerationism and network structures\nOnline-offline radicalization pathways\n\nGaming platforms as extremist recruitment venues\nAI and synthetic media threats\n\nTechnology & Society\n\nDigital platform governance and content moderation\nAI safety and misuse potential\nSocial media data analysis and behavioral patterns\nGaming culture and political socialization\n\n\n\nMethodological Expertise\nComputational Methods\n\nMachine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers)\nNatural Language Processing and text-as-data approaches\nSocial Network Analysis (igraph, statnet)\nTime-series analysis and causal inference\n\nFeatured Technical Work:\n\nDistilBERT for Political Text Classification - Automated detection of extremist content using transformer models (94% F1-score)\n\nData & Platforms\n\nLarge-scale social media data collection and analysis\nGaming platform research and mixed-methods approaches\nSurvey research and experimental design\nQualitative coding and content analysis"
+  },
+  {
+    "objectID": "research.html#current-research-projects",
+    "href": "research.html#current-research-projects",
+    "title": "Research",
+    "section": "Current Research Projects",
+    "text": "Current Research Projects\n\nDissertation Research\n“Measuring Online-Offline Relationships in Political Violence”\nDeveloping computational frameworks to understand how digital engagement translates into offline political action. Uses machine learning, natural language processing, social network analysis, and time-series causal inference to examine extremist community dynamics.\n\nCommittee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel\nExternal Advisor: Brian Keegan (Information Science)\nExpected Completion: May 2027\n\n\n\nCOVID-19 Media Framing Study\n“Partisan Visual Politics During a Pandemic” (with Andrew Q. Philips and Komal P. Kaur)\nInvestigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets using computer vision and text analysis methods.\n\n\nGaming & Extremism Research\n“Multi-Platform Radicalization in Digital Gaming”\nComprehensive study of recruitment and radicalization processes within digital gaming environments, including direct partnerships with major gaming platforms for harm mitigation strategies.\n\n\nPolicy & Financial Markets\n“Political Messaging and Market Responses” (under review)\nAnalysis of how political communications affect financial market behavior and investor decision-making."
+  },
+  {
+    "objectID": "research.html#research-impact-media-coverage",
+    "href": "research.html#research-impact-media-coverage",
+    "title": "Research",
+    "section": "Research Impact & Media Coverage",
+    "text": "Research Impact & Media Coverage\n\nAcademic Recognition\n\nResearch extensively cited in terrorism studies literature\nWork featured in CTC Sentinel, premier counterterrorism publication\nPublications in top-tier psychology and computer science venues\n\n\n\nPolicy & Industry Impact\n\nJanuary 6th Committee: Investigative consultant providing expertise on extremist movements\nTechnology Partnerships: Direct collaboration with gaming companies (Roblox, Spectrum Labs)\nFederal Funding: $1.38M in grants as Principal Investigator\n\n\n\nMedia & Public Engagement\nMajor Media Features: Washington Post • New York Times • NPR (Morning Edition, All Things Considered) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now\nHigh-Impact Articles:\n\nParler analysis: 241,000 views\nJanuary 6th prediction: 35,400 views\n\nExpert Commentary Topics:\n\nAI safety and misuse potential\nGaming platform moderation\nExtremist recruitment strategies\n\nSocial media radicalization\nTechnology policy implications"
+  },
+  {
+    "objectID": "research.html#funding-grants",
+    "href": "research.html#funding-grants",
+    "title": "Research",
+    "section": "Funding & Grants",
+    "text": "Funding & Grants\n\nAs Principal Investigator\n\nDepartment of Homeland Security (2022-2024): Gaming and extremism research - $350,000\nMultiple Federal Grants (2019-2024): Extremism and technology studies - $1.38M total\n\n\n\nAs Co-Investigator\n\nLogically Partnership (2022): Social media data infrastructure for extremism research\nVarious Industry Partnerships: Gaming platform safety research"
+  },
+  {
+    "objectID": "research.html#future-research-directions",
+    "href": "research.html#future-research-directions",
+    "title": "Research",
+    "section": "Future Research Directions",
+    "text": "Future Research Directions\nEmerging Technologies & Political Violence\n\nAI-generated disinformation and radicalization\nVirtual/augmented reality environments as political spaces\nBlockchain and decentralized platform governance\n\nComparative Extremism Studies\n\nCross-national analysis of digital radicalization patterns\nComparative platform governance approaches\nInternational cooperation in countering online extremism\n\nMethodological Innovation\n\nAdvanced causal inference methods for social media data\nMulti-modal analysis combining text, visual, and network data\nReal-time detection and intervention systems\n\n\nFor collaboration inquiries, media requests, or access to datasets, contact alex.newhouse@colorado.edu.\nGoogle Scholar: Alex Newhouse • ORCID: Available upon request"
+  },
+  {
     "objectID": "tutorial2-pipe.html",
     "href": "tutorial2-pipe.html",
     "title": "The R Pipe Operator: Making Your Code Flow",
@@ -336,172 +504,109 @@
     "text": "Additional Resources\n\nR for Data Science - Pipes chapter\nmagrittr documentation\nR 4.1.0 release notes"
   },
   {
-    "objectID": "research.html",
-    "href": "research.html",
-    "title": "Research",
+    "objectID": "tutorial5.html",
+    "href": "tutorial5.html",
+    "title": "Using AI Chatbots to Learn R Programming",
     "section": "",
-    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions:\n\nHow do digital platforms facilitate political radicalization and mobilization?\nWhat role do emerging technologies play in extremist recruitment and organization?\n\nHow can computational methods help us understand and counter political violence?"
+    "text": "Large Language Models (LLMs) like ChatGPT, Claude, and others have revolutionized how we approach coding and data analysis. When used properly, these tools can be powerful learning aids that help you understand R programming concepts, debug code, and solve analytical problems. However, blindly copying and pasting code without understanding will not help you learn and may lead to incorrect analyses.\nThis tutorial will teach you how to effectively collaborate with AI chatbots to enhance your learning while maintaining academic integrity and developing genuine programming skills."
   },
   {
-    "objectID": "research.html#research-overview",
-    "href": "research.html#research-overview",
-    "title": "Research",
+    "objectID": "tutorial5.html#introduction",
+    "href": "tutorial5.html#introduction",
+    "title": "Using AI Chatbots to Learn R Programming",
     "section": "",
-    "text": "My research program sits at the intersection of computational social science, political violence, and technology studies. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nCore Questions:\n\nHow do digital platforms facilitate political radicalization and mobilization?\nWhat role do emerging technologies play in extremist recruitment and organization?\n\nHow can computational methods help us understand and counter political violence?"
+    "text": "Large Language Models (LLMs) like ChatGPT, Claude, and others have revolutionized how we approach coding and data analysis. When used properly, these tools can be powerful learning aids that help you understand R programming concepts, debug code, and solve analytical problems. However, blindly copying and pasting code without understanding will not help you learn and may lead to incorrect analyses.\nThis tutorial will teach you how to effectively collaborate with AI chatbots to enhance your learning while maintaining academic integrity and developing genuine programming skills."
   },
   {
-    "objectID": "research.html#citation-metrics",
-    "href": "research.html#citation-metrics",
-    "title": "Research",
-    "section": "Citation Metrics",
-    "text": "Citation Metrics\nGoogle Scholar Profile: 1,093 total citations | Research Areas: collective behavior, online communities, extremism, conspiracy theories, video games\nImpact Highlights:\n\nFeatured in 8+ major media outlets\n276K+ total article views\nResearch cited in policy reports and academic literature"
+    "objectID": "tutorial5.html#learning-objectives",
+    "href": "tutorial5.html#learning-objectives",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBy the end of this tutorial, you’ll be able to:\n\nFormulate effective prompts that get you helpful, educational responses\nCritically evaluate AI-generated code before using it\nLearn from AI explanations rather than just copying code\nDebug and modify AI-generated solutions\nRecognize when AI advice is wrong and how to verify it"
   },
   {
-    "objectID": "research.html#featured-publications",
-    "href": "research.html#featured-publications",
-    "title": "Research",
-    "section": "Featured Publications",
-    "text": "Featured Publications\n\nPeer-Reviewed Articles\nKowert, R., Kilmer, E., and Newhouse, A. (2024). “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 15:1410620.\nThis study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.\n\nFunded by: Department of Homeland Security (DHS # EMW-2022-GR-00036)\nKey Finding: More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized\n\nNewhouse, A. (2021). “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 14(5).\nSince 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.\n\nInnovation: Novel network-based framework for understanding extremist movements\nPolicy Impact: Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue\nCitations: Extensively cited in terrorism studies and cited in recent Studies in Conflict & Terrorism article\n\nMcGuffie, K. and Newhouse, A. (2020). “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv preprint, 2009.06807.\nWe show GPT-3’s strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI’s preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.\n\nImpact: 28 citations and featured in major tech policy discussions\nMedia Coverage: Extensive coverage in The Register, Vice, and other tech outlets\nPolicy Influence: Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment\n\n\n\nOther Major Publications\nNewhouse, A. (2020). “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” The Conversation.\nNewhouse, A. (2020). “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” The Conversation.\n\nImpact: 241,000 views for Parler analysis\n\nMultiple GNET Research Reports (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement."
+    "objectID": "tutorial5.html#understanding-what-llms-can-and-cannot-do",
+    "href": "tutorial5.html#understanding-what-llms-can-and-cannot-do",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Understanding What LLMs Can and Cannot Do",
+    "text": "Understanding What LLMs Can and Cannot Do\n\nWhat LLMs Excel At\n✅ Code Explanation - Breaking down complex R syntax - Explaining what specific functions do - Clarifying statistical concepts\n✅ Debugging Help - Identifying syntax errors - Suggesting fixes for common problems - Explaining error messages\n✅ Alternative Approaches - Showing different ways to solve the same problem - Suggesting more efficient code - Introducing new functions or packages\n✅ Learning Support - Providing step-by-step explanations - Creating practice examples - Answering conceptual questions\n\n\nWhat LLMs Struggle With\n❌ Domain-Specific Context - Understanding your specific assignment requirements - Knowing your dataset’s unique characteristics - Applying course-specific conventions\n❌ Current Information - Latest R package updates - Recent statistical methods - Current best practices (beyond training data)\n❌ Complex Statistical Reasoning - Choosing appropriate statistical tests - Interpreting results in context - Making methodological decisions\n❌ Academic Integrity - Understanding your course’s specific policies - Knowing what constitutes your own work - Balancing assistance with independent learning"
   },
   {
-    "objectID": "research.html#research-areas-methods",
-    "href": "research.html#research-areas-methods",
-    "title": "Research",
-    "section": "Research Areas & Methods",
-    "text": "Research Areas & Methods\n\nSubstantive Focus Areas\nPolitical Violence & Extremism\n\nNeo-fascist accelerationism and network structures\nOnline-offline radicalization pathways\n\nGaming platforms as extremist recruitment venues\nAI and synthetic media threats\n\nTechnology & Society\n\nDigital platform governance and content moderation\nAI safety and misuse potential\nSocial media data analysis and behavioral patterns\nGaming culture and political socialization\n\n\n\nMethodological Expertise\nComputational Methods\n\nMachine Learning (PyTorch, Scikit-Learn, Hugging Face Transformers)\nNatural Language Processing and text-as-data approaches\nSocial Network Analysis (igraph, statnet)\nTime-series analysis and causal inference\n\nFeatured Technical Work:\n\nDistilBERT for Political Text Classification - Automated detection of extremist content using transformer models (94% F1-score)\n\nData & Platforms\n\nLarge-scale social media data collection and analysis\nGaming platform research and mixed-methods approaches\nSurvey research and experimental design\nQualitative coding and content analysis"
+    "objectID": "tutorial5.html#crafting-effective-prompts",
+    "href": "tutorial5.html#crafting-effective-prompts",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Crafting Effective Prompts",
+    "text": "Crafting Effective Prompts\n\nThe CLEAR Framework\nUse this framework to structure your prompts:\nContext - Provide relevant background Level - Specify your experience level Example - Include sample data or code Action - Be specific about what you want Restriction - Set boundaries on the response\n\n\nExample: Poor vs. Good Prompts\n❌ Poor Prompt:\n\"Help me with regression in R\"\n✅ Good Prompt:\n\"I'm an undergraduate student learning linear regression in R. I have a dataset with variables for GDP per capita (gdp_pc) and democracy scores (democracy) for 50 countries, and I need to run a regression to see if GDP predicts democracy levels.\n\nHere's a sample of my data:\ncountry | gdp_pc | democracy\n--------|--------|----------\nUSA     | 65000  | 8.5\nGermany | 48000  | 9.1\n\nCan you show me how to:\n1. Run a linear regression with democracy as the outcome variable\n2. Interpret the coefficients\n3. Check model assumptions\n\nPlease explain each step so I can understand the logic, and use comments in the code.\""
   },
   {
-    "objectID": "research.html#current-research-projects",
-    "href": "research.html#current-research-projects",
-    "title": "Research",
-    "section": "Current Research Projects",
-    "text": "Current Research Projects\n\nDissertation Research\n“Measuring Online-Offline Relationships in Political Violence”\nDeveloping computational frameworks to understand how digital engagement translates into offline political action. Uses machine learning, natural language processing, social network analysis, and time-series causal inference to examine extremist community dynamics.\n\nCommittee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel\nExternal Advisor: Brian Keegan (Information Science)\nExpected Completion: May 2027\n\n\n\nCOVID-19 Media Framing Study\n“Partisan Visual Politics During a Pandemic” (with Andrew Q. Philips and Komal P. Kaur)\nInvestigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets using computer vision and text analysis methods.\n\n\nGaming & Extremism Research\n“Multi-Platform Radicalization in Digital Gaming”\nComprehensive study of recruitment and radicalization processes within digital gaming environments, including direct partnerships with major gaming platforms for harm mitigation strategies.\n\n\nPolicy & Financial Markets\n“Political Messaging and Market Responses” (under review)\nAnalysis of how political communications affect financial market behavior and investor decision-making."
+    "objectID": "tutorial5.html#working-through-a-complete-example",
+    "href": "tutorial5.html#working-through-a-complete-example",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Working Through a Complete Example",
+    "text": "Working Through a Complete Example\nLet’s walk through a realistic scenario where you need AI help with a data analysis assignment.\n\nScenario: Analyzing Election Turnout\nAssignment: You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.\n\n\nStep 1: Initial Problem Setup\nYour Prompt:\nI'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:\n- turnout: whether someone voted (1 = yes, 0 = no)\n- income: household income in thousands\n- education: years of education\n- age: respondent age\n\nI need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.\nAI Response Analysis:\n\n\nCode\n# Load necessary library\nlibrary(dplyr)\n\n# Run logistic regression\nmodel &lt;- glm(turnout ~ income + education + age,\n             data = voter_data,\n             family = binomial)\n\n# View results\nsummary(model)\n\n\n✅ Good AI Response Elements: - Provides commented code - Uses appropriate function (glm with family = binomial) - Shows how to view results\n🤔 What to Verify: - Is the syntax correct for your version of R? - Do the variable names match your actual dataset? - Are there additional steps you might need?\n\n\nStep 2: Follow-Up Questions\nDon’t just copy the code! Ask follow-up questions to deepen your understanding:\nYour Follow-Up Prompts:\n1. \"Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?\"\n\n2. \"How do I interpret the coefficients in logistic regression? They seem different from regular regression.\"\n\n3. \"What should I look for in the summary output to determine if my model is good?\"\n\n\nStep 3: Adapting and Debugging\nWhen you try to run the AI’s code, you might encounter errors. Here’s how to handle them:\nYour Error Message:\nError in glm.fit: object 'voter_data' not found\nYour Debugging Prompt:\nI'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?"
   },
   {
-    "objectID": "research.html#research-impact-media-coverage",
-    "href": "research.html#research-impact-media-coverage",
-    "title": "Research",
-    "section": "Research Impact & Media Coverage",
-    "text": "Research Impact & Media Coverage\n\nAcademic Recognition\n\nResearch extensively cited in terrorism studies literature\nWork featured in CTC Sentinel, premier counterterrorism publication\nPublications in top-tier psychology and computer science venues\n\n\n\nPolicy & Industry Impact\n\nJanuary 6th Committee: Investigative consultant providing expertise on extremist movements\nTechnology Partnerships: Direct collaboration with gaming companies (Roblox, Spectrum Labs)\nFederal Funding: $1.38M in grants as Principal Investigator\n\n\n\nMedia & Public Engagement\nMajor Media Features: Washington Post • New York Times • NPR (Morning Edition, All Things Considered) • BBC • Politico • Wired • Bloomberg Radio • Meet the Press Now\nHigh-Impact Articles:\n\nParler analysis: 241,000 views\nJanuary 6th prediction: 35,400 views\n\nExpert Commentary Topics:\n\nAI safety and misuse potential\nGaming platform moderation\nExtremist recruitment strategies\n\nSocial media radicalization\nTechnology policy implications"
+    "objectID": "tutorial5.html#critical-evaluation-of-ai-code",
+    "href": "tutorial5.html#critical-evaluation-of-ai-code",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Critical Evaluation of AI Code",
+    "text": "Critical Evaluation of AI Code\n\nAlways Ask Yourself These Questions\n\nDoes this code make sense for my problem?\n\nAre the variable names correct?\nIs the statistical method appropriate?\nDo the steps follow a logical order?\n\nCan I explain what each line does?\n\nIf not, ask the AI to explain further\nTest your understanding by modifying small parts\n\nDoes this follow best practices?\n\nAre there proper comments?\nIs the code readable and well-structured?\nAre packages loaded appropriately?\n\n\n\n\nExample: Spotting Problems\nAI-Generated Code:\n\n\nCode\n# This code has several issues - can you spot them?\nresult &lt;- lm(turnout ~ income + education, data = voter_data)\nplot(result)\nsummary(result)\n\n\nProblems to Identify: 1. Wrong function: Uses lm() instead of glm() for binary outcome 2. Missing family argument: No specification for logistic regression 3. Incomplete model: Missing the age variable from original request 4. Poor plotting: plot() on logistic regression isn’t very informative\nHow to Address:\n\"I notice this code uses lm() instead of glm(). Since my outcome variable is binary (0/1), shouldn't I be using logistic regression? Also, the original model was supposed to include age as a predictor. Can you correct this and explain the difference between linear and logistic regression for binary outcomes?\""
   },
   {
-    "objectID": "research.html#funding-grants",
-    "href": "research.html#funding-grants",
-    "title": "Research",
-    "section": "Funding & Grants",
-    "text": "Funding & Grants\n\nAs Principal Investigator\n\nDepartment of Homeland Security (2022-2024): Gaming and extremism research - $350,000\nMultiple Federal Grants (2019-2024): Extremism and technology studies - $1.38M total\n\n\n\nAs Co-Investigator\n\nLogically Partnership (2022): Social media data infrastructure for extremism research\nVarious Industry Partnerships: Gaming platform safety research"
+    "objectID": "tutorial5.html#learning-focused-interaction-strategies",
+    "href": "tutorial5.html#learning-focused-interaction-strategies",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Learning-Focused Interaction Strategies",
+    "text": "Learning-Focused Interaction Strategies\n\nStrategy 1: Request Step-by-Step Explanations\nInstead of just asking for code, ask for the reasoning:\n\"Before showing me the code, can you explain the logic of why we use logistic regression for binary outcomes? Then show me the code with comments explaining how each part implements that logic.\"\n\n\nStrategy 2: Ask for Alternative Approaches\n\"You showed me one way to check model assumptions for logistic regression. Are there other methods I could use? What are the pros and cons of each approach?\"\n\n\nStrategy 3: Request Practice Problems\n\"Can you create a similar but simpler example with made-up data so I can practice the concepts before applying them to my real dataset?\"\n\n\nStrategy 4: Seek Conceptual Clarification\n\"I understand the code, but I'm confused about interpreting odds ratios. Can you explain what an odds ratio of 1.5 means in practical terms for my voter turnout study?\""
   },
   {
-    "objectID": "research.html#future-research-directions",
-    "href": "research.html#future-research-directions",
-    "title": "Research",
-    "section": "Future Research Directions",
-    "text": "Future Research Directions\nEmerging Technologies & Political Violence\n\nAI-generated disinformation and radicalization\nVirtual/augmented reality environments as political spaces\nBlockchain and decentralized platform governance\n\nComparative Extremism Studies\n\nCross-national analysis of digital radicalization patterns\nComparative platform governance approaches\nInternational cooperation in countering online extremism\n\nMethodological Innovation\n\nAdvanced causal inference methods for social media data\nMulti-modal analysis combining text, visual, and network data\nReal-time detection and intervention systems\n\n\nFor collaboration inquiries, media requests, or access to datasets, contact alex.newhouse@colorado.edu.\nGoogle Scholar: Alex Newhouse • ORCID: Available upon request"
+    "objectID": "tutorial5.html#common-pitfalls-and-how-to-avoid-them",
+    "href": "tutorial5.html#common-pitfalls-and-how-to-avoid-them",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Common Pitfalls and How to Avoid Them",
+    "text": "Common Pitfalls and How to Avoid Them\n\nPitfall 1: The Copy-Paste Trap\nProblem: Copying code without understanding leads to: - Inability to modify code for your specific needs - Poor performance on exams or future assignments - Incorrect analyses when assumptions don’t hold\nSolution: Always ask “why” and “how” questions\n\"Why do we use this specific function instead of alternatives?\"\n\"How would I modify this code if my variable names were different?\"\n\"What would happen if I changed this parameter?\"\n\n\nPitfall 2: Assuming AI is Always Right\nProblem: LLMs can make mistakes, especially with: - Recent R package updates - Domain-specific best practices - Complex statistical procedures\nSolution: Always verify important claims\n\"Can you provide documentation or references for this approach?\"\n\"How can I verify that this method is appropriate for my data?\"\n\"What are the limitations or assumptions of this technique?\"\n\n\nPitfall 3: Over-Reliance on AI\nProblem: Using AI for every small problem prevents skill development\nSolution: Try first, then ask for help\n# Your workflow should be:\n1. Attempt the problem yourself\n2. Identify specific stuck points\n3. Ask targeted questions about those points\n4. Try to implement and understand the solution\n5. Ask follow-up questions if needed"
   },
   {
-    "objectID": "teaching.html",
-    "href": "teaching.html",
-    "title": "Teaching & Mentorship",
-    "section": "",
-    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+    "objectID": "tutorial5.html#academic-integrity-guidelines",
+    "href": "tutorial5.html#academic-integrity-guidelines",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Academic Integrity Guidelines",
+    "text": "Academic Integrity Guidelines\n\nWhat’s Generally Acceptable\n✅ Using AI to: - Explain error messages - Clarify concepts from lectures or readings - Suggest debugging approaches - Provide general coding guidance - Create practice examples for learning\n\n\nWhat’s Usually Not Acceptable\n❌ Using AI to: - Write entire assignment solutions - Complete take-home exams - Generate answers you can’t explain - Bypass learning objectives - Submit work without understanding\n\n\nWhen in Doubt, Ask Your Instructor\nEvery course has different policies. Always check with your instructor about: - What level of AI assistance is permitted - Whether you need to cite AI use - How to balance AI help with independent work - Course-specific expectations"
   },
   {
-    "objectID": "teaching.html#teaching-philosophy",
-    "href": "teaching.html#teaching-philosophy",
-    "title": "Teaching & Mentorship",
-    "section": "",
-    "text": "My approach centers on active learning, methodological rigor, and practical application—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.\nI believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics."
+    "objectID": "tutorial5.html#practical-workflow-example",
+    "href": "tutorial5.html#practical-workflow-example",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Practical Workflow Example",
+    "text": "Practical Workflow Example\nHere’s a step-by-step workflow for using AI help effectively:\n\nStep 1: Try It Yourself First\n\n\nCode\n# Your initial attempt\nvoter_model &lt;- glm(turnout ~ income + education + age,\n                   data = voter_data)\n# Error: could not find function \"glm\"\n\n\n\n\nStep 2: Ask Targeted Questions\n\"I'm trying to run a logistic regression in R but getting 'could not find function glm'. Do I need to load a specific package first?\"\n\n\nStep 3: Implement and Test\n\n\nCode\n# AI suggested adding family argument\nvoter_model &lt;- glm(turnout ~ income + education + age,\n                   data = voter_data,\n                   family = binomial)\nsummary(voter_model)\n\n\n\n\nStep 4: Seek Understanding\n\"The summary shows coefficients like 0.023 for income. How do I interpret this coefficient in terms of the effect on probability of voting?\"\n\n\nStep 5: Verify and Extend\n\"How can I check whether this model fits the data well? What diagnostic plots or tests should I look at?\""
   },
   {
-    "objectID": "teaching.html#teaching-impact",
-    "href": "teaching.html#teaching-impact",
-    "title": "Teaching & Mentorship",
-    "section": "Teaching Impact",
-    "text": "Teaching Impact\n45+ students mentored | 15 independent projects supervised | 7 courses taught | 3 institutions"
+    "objectID": "tutorial5.html#advanced-tips-for-better-learning",
+    "href": "tutorial5.html#advanced-tips-for-better-learning",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Advanced Tips for Better Learning",
+    "text": "Advanced Tips for Better Learning\n\nTip 1: Ask for Multiple Solutions\n\"Show me three different ways to visualize the relationship between income and voting probability, and explain when each approach is most useful.\"\n\n\nTip 2: Request Error Handling\n\"What are common errors students make when running logistic regression, and how can I avoid or fix them?\"\n\n\nTip 3: Seek Connections to Theory\n\"How does this statistical analysis connect to political science theories about voter participation?\"\n\n\nTip 4: Practice Explanation\n\"If I had to explain these results to someone who doesn't know statistics, how would I describe what the model tells us about voter behavior?\""
   },
   {
-    "objectID": "teaching.html#courses-taught",
-    "href": "teaching.html#courses-taught",
-    "title": "Teaching & Mentorship",
-    "section": "Courses Taught",
-    "text": "Courses Taught\n\nUniversity of Colorado Boulder\nTeaching Assistant\n\nPSCI 2075: Quantitative Methods (Fall 2025, Spring 2024)\n\nComprehensive introduction to statistical analysis in political science, covering descriptive statistics, hypothesis testing, regression analysis, and research design. Emphasized practical application using R and real political datasets.\n\nPSCI 1101: Introduction to Western Political Thought (Spring 2025)\n\nSurvey of foundational political philosophy from ancient Greece through Enlightenment thinkers, connecting classical ideas to contemporary political challenges.\n\nPSCI 2223: Introduction to Comparative Politics (Fall 2024)\n\nExploration of political systems, institutions, and processes across different countries and regions, with emphasis on democratization, authoritarianism, and political development.\n\nPSCI 1824: Introduction to International Relations (Fall 2023)\n\nComprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.\n\n\n\n\nMiddlebury Institute of International Studies\nAdjunct Professor\n\nDigital Extremism (Spring 2023)\n\nSelf-designed course examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.\n\n\n\n\nMiddlebury College\nAdjunct Professor\n\nOnline Extremism (January 2021)\n\nIntensive winter term course on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis."
+    "objectID": "tutorial5.html#building-your-programming-intuition",
+    "href": "tutorial5.html#building-your-programming-intuition",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Building Your Programming Intuition",
+    "text": "Building Your Programming Intuition\nThe goal isn’t to become dependent on AI, but to use it as a learning accelerator. Here’s how:\n\nDevelop Pattern Recognition\n\nNotice common code structures AI suggests\nLearn to recognize when similar patterns apply\nBuild your own library of template solutions\n\n\n\nBuild Debugging Skills\n\nAsk AI to explain error messages\nLearn common debugging strategies\nPractice identifying problems independently\n\n\n\nUnderstand the “Why” Behind the Code\n\nAlways ask for explanations of approach choices\nRequest information about alternatives\nLearn the reasoning behind coding decisions"
   },
   {
-    "objectID": "teaching.html#teaching-resources",
-    "href": "teaching.html#teaching-resources",
-    "title": "Teaching & Mentorship",
-    "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nQuantitative Methods Materials\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\nTutorial 2: An Introduction to R’s pipe operator\nTutorial 4: Variable Transformations in R - Understanding distributions, log transforms, and data recoding"
+    "objectID": "tutorial5.html#conclusion",
+    "href": "tutorial5.html#conclusion",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Conclusion",
+    "text": "Conclusion\nAI chatbots can be powerful allies in learning R and statistics, but they work best when you approach them as teaching assistants rather than homework completion services. The key principles are:\n\nStart with your own effort - Try first, then ask for help\nAsk for understanding - Don’t just request code\nVerify and test - AI can make mistakes\nLearn actively - Engage with explanations and ask follow-ups\nMaintain integrity - Follow your course policies\n\nRemember: The goal is to become a competent data analyst who can think critically about statistical problems. AI should enhance your learning journey, not replace the learning process itself."
   },
   {
-    "objectID": "teaching.html#student-research-mentorship",
-    "href": "teaching.html#student-research-mentorship",
-    "title": "Teaching & Mentorship",
-    "section": "Student Research Mentorship",
-    "text": "Student Research Mentorship\nI have supervised 45 undergraduate and graduate research assistants and 15 independent projects since 2019. My mentorship philosophy emphasizes methodological rigor, ethical research practices, and practical skill development.\n\nCurrent Projects\n\nApocalyptic Language Analysis: Four undergraduate RAs working on qualitative coding for social media research\n\n\n\nPast Student Projects\n\n\n\nItalian Neofascism & Political Violence\nMilitant Accelerationism & Coalition-Building\n\nFrench Far-Right on Encrypted Platforms\n\n\n\nAI Implications for Domestic Counterterrorism\nChristian Identity Movements\nGaming Platform Radicalization"
-  },
-  {
-    "objectID": "teaching.html#research-teaching-integration",
-    "href": "teaching.html#research-teaching-integration",
-    "title": "Teaching & Mentorship",
-    "section": "Research-Teaching Integration",
-    "text": "Research-Teaching Integration\nMy courses integrate cutting-edge research methods with substantive political science questions. Students learn to:\n\nApply computational methods to real political phenomena using Python, R, and specialized software\nCritically evaluate digital media, online communities, and algorithmic systems\n\nNavigate ethical challenges of studying sensitive political topics\nConnect theoretical frameworks to empirical analysis through hands-on projects\nDevelop professional skills in data visualization, statistical analysis, and research communication\n\nSignature Approach: Each course includes substantial research components where students collect and analyze original data, preparing them for graduate study or professional research roles.\n\nInterested in collaboration or guest lectures? Contact alex.newhouse@colorado.edu"
-  },
-  {
-    "objectID": "posts/2025-09-04-first-post/index.html",
-    "href": "posts/2025-09-04-first-post/index.html",
-    "title": "First post",
-    "section": "",
-    "text": "Testing blog!"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Alex Newhouse",
-    "section": "",
-    "text": "I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
-  },
-  {
-    "objectID": "index.html#about",
-    "href": "index.html#about",
-    "title": "Alex Newhouse",
-    "section": "",
-    "text": "I am a PhD candidate in Political Science at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.\nKey Experience:\n\nInvestigative Consultant to the House Select Committee on January 6th\n\nDeputy Director of the Center on Terrorism, Extremism & Counterterrorism\nPrincipal Investigator on $1.38M in federal research grants\nResearch partnerships with major technology companies"
-  },
-  {
-    "objectID": "index.html#research-expertise",
-    "href": "index.html#research-expertise",
-    "title": "Alex Newhouse",
-    "section": "Research Expertise",
-    "text": "Research Expertise\n\n\nMethods:\n\nMachine Learning & NLP\nSocial Network Analysis\n\nCausal Inference\nData Science & Visualization\n\n\nSubstantive Areas:\n\nPolitical Violence & Extremism\nDigital Platform Research\nTechnology & Society\nComputational Social Science"
-  },
-  {
-    "objectID": "index.html#featured-publications",
-    "href": "index.html#featured-publications",
-    "title": "Alex Newhouse",
-    "section": "Featured Publications",
-    "text": "Featured Publications\nKowert, R., Kilmer, E., and Newhouse, A. “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 2024.\nNewhouse, A. “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 2021.\nMcGuffie, K. and Newhouse, A. “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv, 2020."
-  },
-  {
-    "objectID": "index.html#research-impact",
-    "href": "index.html#research-impact",
-    "title": "Alex Newhouse",
-    "section": "Research Impact",
-    "text": "Research Impact\n$1.38M in grant funding (Principal Investigator) | 45+ students mentored | 276K article views | Featured in 8 major media outlets"
-  },
-  {
-    "objectID": "index.html#media-recognition",
-    "href": "index.html#media-recognition",
-    "title": "Alex Newhouse",
-    "section": "Media Recognition",
-    "text": "Media Recognition\nResearch and expertise featured in: Washington Post • New York Times • NPR • BBC • Politico • Wired • Bloomberg • Meet the Press"
-  },
-  {
-    "objectID": "index.html#current-projects",
-    "href": "index.html#current-projects",
-    "title": "Alex Newhouse",
-    "section": "Current Projects",
-    "text": "Current Projects\nDissertation Research: Developing computational frameworks to measure online-offline relationships in political violence\nCOVID-19 Visual Politics: Analyzing partisan differences in pandemic media coverage using computer vision and text analysis\nGaming & Extremism: Multi-platform investigation of recruitment and radicalization in digital gaming environments\n\nContact: alex.newhouse@colorado.edu"
+    "objectID": "tutorial5.html#quick-reference-effective-prompt-templates",
+    "href": "tutorial5.html#quick-reference-effective-prompt-templates",
+    "title": "Using AI Chatbots to Learn R Programming",
+    "section": "Quick Reference: Effective Prompt Templates",
+    "text": "Quick Reference: Effective Prompt Templates\n\nFor Debugging\n\"I'm getting this error: [paste error]. Here's my code: [paste code]. I'm trying to [describe goal]. Can you help me understand what's wrong and how to fix it?\"\n\n\nFor Learning Concepts\n\"I'm learning about [concept] in my political science methods class. Can you explain [specific aspect] in simple terms and show how it applies to [your domain example]?\"\n\n\nFor Code Review\n\"Here's my code for [task]: [paste code]. Does this look correct? Are there ways I could improve it or make it more readable?\"\n\n\nFor Alternative Approaches\n\"I solved [problem] using [current approach]. Are there other ways to do this? What are the trade-offs between different methods?\"\n\nRemember: The best programmers aren’t those who never need help—they’re those who know how to find good help and learn from it effectively."
   },
   {
     "objectID": "tutorial3.html",

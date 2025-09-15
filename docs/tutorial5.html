@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Using AI Chatbots to Learn R Programming – Alex Bradley Newhouse</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f8cda9a82ef72c2077e8c122e04fabf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Alex Bradley Newhouse</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./notes.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#understanding-what-llms-can-and-cannot-do" id="toc-understanding-what-llms-can-and-cannot-do" class="nav-link" data-scroll-target="#understanding-what-llms-can-and-cannot-do">Understanding What LLMs Can and Cannot Do</a>
+  <ul class="collapse">
+  <li><a href="#what-llms-excel-at" id="toc-what-llms-excel-at" class="nav-link" data-scroll-target="#what-llms-excel-at">What LLMs Excel At</a></li>
+  <li><a href="#what-llms-struggle-with" id="toc-what-llms-struggle-with" class="nav-link" data-scroll-target="#what-llms-struggle-with">What LLMs Struggle With</a></li>
+  </ul></li>
+  <li><a href="#crafting-effective-prompts" id="toc-crafting-effective-prompts" class="nav-link" data-scroll-target="#crafting-effective-prompts">Crafting Effective Prompts</a>
+  <ul class="collapse">
+  <li><a href="#the-clear-framework" id="toc-the-clear-framework" class="nav-link" data-scroll-target="#the-clear-framework">The CLEAR Framework</a></li>
+  <li><a href="#example-poor-vs.-good-prompts" id="toc-example-poor-vs.-good-prompts" class="nav-link" data-scroll-target="#example-poor-vs.-good-prompts">Example: Poor vs.&nbsp;Good Prompts</a></li>
+  </ul></li>
+  <li><a href="#working-through-a-complete-example" id="toc-working-through-a-complete-example" class="nav-link" data-scroll-target="#working-through-a-complete-example">Working Through a Complete Example</a>
+  <ul class="collapse">
+  <li><a href="#scenario-analyzing-election-turnout" id="toc-scenario-analyzing-election-turnout" class="nav-link" data-scroll-target="#scenario-analyzing-election-turnout">Scenario: Analyzing Election Turnout</a></li>
+  <li><a href="#step-1-initial-problem-setup" id="toc-step-1-initial-problem-setup" class="nav-link" data-scroll-target="#step-1-initial-problem-setup">Step 1: Initial Problem Setup</a></li>
+  <li><a href="#step-2-follow-up-questions" id="toc-step-2-follow-up-questions" class="nav-link" data-scroll-target="#step-2-follow-up-questions">Step 2: Follow-Up Questions</a></li>
+  <li><a href="#step-3-adapting-and-debugging" id="toc-step-3-adapting-and-debugging" class="nav-link" data-scroll-target="#step-3-adapting-and-debugging">Step 3: Adapting and Debugging</a></li>
+  </ul></li>
+  <li><a href="#critical-evaluation-of-ai-code" id="toc-critical-evaluation-of-ai-code" class="nav-link" data-scroll-target="#critical-evaluation-of-ai-code">Critical Evaluation of AI Code</a>
+  <ul class="collapse">
+  <li><a href="#always-ask-yourself-these-questions" id="toc-always-ask-yourself-these-questions" class="nav-link" data-scroll-target="#always-ask-yourself-these-questions">Always Ask Yourself These Questions</a></li>
+  <li><a href="#example-spotting-problems" id="toc-example-spotting-problems" class="nav-link" data-scroll-target="#example-spotting-problems">Example: Spotting Problems</a></li>
+  </ul></li>
+  <li><a href="#learning-focused-interaction-strategies" id="toc-learning-focused-interaction-strategies" class="nav-link" data-scroll-target="#learning-focused-interaction-strategies">Learning-Focused Interaction Strategies</a>
+  <ul class="collapse">
+  <li><a href="#strategy-1-request-step-by-step-explanations" id="toc-strategy-1-request-step-by-step-explanations" class="nav-link" data-scroll-target="#strategy-1-request-step-by-step-explanations">Strategy 1: Request Step-by-Step Explanations</a></li>
+  <li><a href="#strategy-2-ask-for-alternative-approaches" id="toc-strategy-2-ask-for-alternative-approaches" class="nav-link" data-scroll-target="#strategy-2-ask-for-alternative-approaches">Strategy 2: Ask for Alternative Approaches</a></li>
+  <li><a href="#strategy-3-request-practice-problems" id="toc-strategy-3-request-practice-problems" class="nav-link" data-scroll-target="#strategy-3-request-practice-problems">Strategy 3: Request Practice Problems</a></li>
+  <li><a href="#strategy-4-seek-conceptual-clarification" id="toc-strategy-4-seek-conceptual-clarification" class="nav-link" data-scroll-target="#strategy-4-seek-conceptual-clarification">Strategy 4: Seek Conceptual Clarification</a></li>
+  </ul></li>
+  <li><a href="#common-pitfalls-and-how-to-avoid-them" id="toc-common-pitfalls-and-how-to-avoid-them" class="nav-link" data-scroll-target="#common-pitfalls-and-how-to-avoid-them">Common Pitfalls and How to Avoid Them</a>
+  <ul class="collapse">
+  <li><a href="#pitfall-1-the-copy-paste-trap" id="toc-pitfall-1-the-copy-paste-trap" class="nav-link" data-scroll-target="#pitfall-1-the-copy-paste-trap">Pitfall 1: The Copy-Paste Trap</a></li>
+  <li><a href="#pitfall-2-assuming-ai-is-always-right" id="toc-pitfall-2-assuming-ai-is-always-right" class="nav-link" data-scroll-target="#pitfall-2-assuming-ai-is-always-right">Pitfall 2: Assuming AI is Always Right</a></li>
+  <li><a href="#pitfall-3-over-reliance-on-ai" id="toc-pitfall-3-over-reliance-on-ai" class="nav-link" data-scroll-target="#pitfall-3-over-reliance-on-ai">Pitfall 3: Over-Reliance on AI</a></li>
+  </ul></li>
+  <li><a href="#academic-integrity-guidelines" id="toc-academic-integrity-guidelines" class="nav-link" data-scroll-target="#academic-integrity-guidelines">Academic Integrity Guidelines</a>
+  <ul class="collapse">
+  <li><a href="#whats-generally-acceptable" id="toc-whats-generally-acceptable" class="nav-link" data-scroll-target="#whats-generally-acceptable">What’s Generally Acceptable</a></li>
+  <li><a href="#whats-usually-not-acceptable" id="toc-whats-usually-not-acceptable" class="nav-link" data-scroll-target="#whats-usually-not-acceptable">What’s Usually Not Acceptable</a></li>
+  <li><a href="#when-in-doubt-ask-your-instructor" id="toc-when-in-doubt-ask-your-instructor" class="nav-link" data-scroll-target="#when-in-doubt-ask-your-instructor">When in Doubt, Ask Your Instructor</a></li>
+  </ul></li>
+  <li><a href="#practical-workflow-example" id="toc-practical-workflow-example" class="nav-link" data-scroll-target="#practical-workflow-example">Practical Workflow Example</a>
+  <ul class="collapse">
+  <li><a href="#step-1-try-it-yourself-first" id="toc-step-1-try-it-yourself-first" class="nav-link" data-scroll-target="#step-1-try-it-yourself-first">Step 1: Try It Yourself First</a></li>
+  <li><a href="#step-2-ask-targeted-questions" id="toc-step-2-ask-targeted-questions" class="nav-link" data-scroll-target="#step-2-ask-targeted-questions">Step 2: Ask Targeted Questions</a></li>
+  <li><a href="#step-3-implement-and-test" id="toc-step-3-implement-and-test" class="nav-link" data-scroll-target="#step-3-implement-and-test">Step 3: Implement and Test</a></li>
+  <li><a href="#step-4-seek-understanding" id="toc-step-4-seek-understanding" class="nav-link" data-scroll-target="#step-4-seek-understanding">Step 4: Seek Understanding</a></li>
+  <li><a href="#step-5-verify-and-extend" id="toc-step-5-verify-and-extend" class="nav-link" data-scroll-target="#step-5-verify-and-extend">Step 5: Verify and Extend</a></li>
+  </ul></li>
+  <li><a href="#advanced-tips-for-better-learning" id="toc-advanced-tips-for-better-learning" class="nav-link" data-scroll-target="#advanced-tips-for-better-learning">Advanced Tips for Better Learning</a>
+  <ul class="collapse">
+  <li><a href="#tip-1-ask-for-multiple-solutions" id="toc-tip-1-ask-for-multiple-solutions" class="nav-link" data-scroll-target="#tip-1-ask-for-multiple-solutions">Tip 1: Ask for Multiple Solutions</a></li>
+  <li><a href="#tip-2-request-error-handling" id="toc-tip-2-request-error-handling" class="nav-link" data-scroll-target="#tip-2-request-error-handling">Tip 2: Request Error Handling</a></li>
+  <li><a href="#tip-3-seek-connections-to-theory" id="toc-tip-3-seek-connections-to-theory" class="nav-link" data-scroll-target="#tip-3-seek-connections-to-theory">Tip 3: Seek Connections to Theory</a></li>
+  <li><a href="#tip-4-practice-explanation" id="toc-tip-4-practice-explanation" class="nav-link" data-scroll-target="#tip-4-practice-explanation">Tip 4: Practice Explanation</a></li>
+  </ul></li>
+  <li><a href="#building-your-programming-intuition" id="toc-building-your-programming-intuition" class="nav-link" data-scroll-target="#building-your-programming-intuition">Building Your Programming Intuition</a>
+  <ul class="collapse">
+  <li><a href="#develop-pattern-recognition" id="toc-develop-pattern-recognition" class="nav-link" data-scroll-target="#develop-pattern-recognition">Develop Pattern Recognition</a></li>
+  <li><a href="#build-debugging-skills" id="toc-build-debugging-skills" class="nav-link" data-scroll-target="#build-debugging-skills">Build Debugging Skills</a></li>
+  <li><a href="#understand-the-why-behind-the-code" id="toc-understand-the-why-behind-the-code" class="nav-link" data-scroll-target="#understand-the-why-behind-the-code">Understand the “Why” Behind the Code</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#quick-reference-effective-prompt-templates" id="toc-quick-reference-effective-prompt-templates" class="nav-link" data-scroll-target="#quick-reference-effective-prompt-templates">Quick Reference: Effective Prompt Templates</a>
+  <ul class="collapse">
+  <li><a href="#for-debugging" id="toc-for-debugging" class="nav-link" data-scroll-target="#for-debugging">For Debugging</a></li>
+  <li><a href="#for-learning-concepts" id="toc-for-learning-concepts" class="nav-link" data-scroll-target="#for-learning-concepts">For Learning Concepts</a></li>
+  <li><a href="#for-code-review" id="toc-for-code-review" class="nav-link" data-scroll-target="#for-code-review">For Code Review</a></li>
+  <li><a href="#for-alternative-approaches" id="toc-for-alternative-approaches" class="nav-link" data-scroll-target="#for-alternative-approaches">For Alternative Approaches</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Using AI Chatbots to Learn R Programming</h1>
+<p class="subtitle lead">A Guide to Effective LLM Assistance for Quantitative Methods</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Large Language Models (LLMs) like ChatGPT, Claude, and others have revolutionized how we approach coding and data analysis. When used properly, these tools can be powerful learning aids that help you understand R programming concepts, debug code, and solve analytical problems. However, <strong>blindly copying and pasting code without understanding</strong> will not help you learn and may lead to incorrect analyses.</p>
+<p>This tutorial will teach you how to effectively collaborate with AI chatbots to enhance your learning while maintaining academic integrity and developing genuine programming skills.</p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this tutorial, you’ll be able to:</p>
+<ul>
+<li><strong>Formulate effective prompts</strong> that get you helpful, educational responses</li>
+<li><strong>Critically evaluate</strong> AI-generated code before using it</li>
+<li><strong>Learn from AI explanations</strong> rather than just copying code</li>
+<li><strong>Debug and modify</strong> AI-generated solutions</li>
+<li><strong>Recognize when AI advice is wrong</strong> and how to verify it</li>
+</ul>
+</section>
+<section id="understanding-what-llms-can-and-cannot-do" class="level2">
+<h2 class="anchored" data-anchor-id="understanding-what-llms-can-and-cannot-do">Understanding What LLMs Can and Cannot Do</h2>
+<section id="what-llms-excel-at" class="level3">
+<h3 class="anchored" data-anchor-id="what-llms-excel-at">What LLMs Excel At</h3>
+<p><strong>✅ Code Explanation</strong> - Breaking down complex R syntax - Explaining what specific functions do - Clarifying statistical concepts</p>
+<p><strong>✅ Debugging Help</strong> - Identifying syntax errors - Suggesting fixes for common problems - Explaining error messages</p>
+<p><strong>✅ Alternative Approaches</strong> - Showing different ways to solve the same problem - Suggesting more efficient code - Introducing new functions or packages</p>
+<p><strong>✅ Learning Support</strong> - Providing step-by-step explanations - Creating practice examples - Answering conceptual questions</p>
+</section>
+<section id="what-llms-struggle-with" class="level3">
+<h3 class="anchored" data-anchor-id="what-llms-struggle-with">What LLMs Struggle With</h3>
+<p><strong>❌ Domain-Specific Context</strong> - Understanding your specific assignment requirements - Knowing your dataset’s unique characteristics - Applying course-specific conventions</p>
+<p><strong>❌ Current Information</strong> - Latest R package updates - Recent statistical methods - Current best practices (beyond training data)</p>
+<p><strong>❌ Complex Statistical Reasoning</strong> - Choosing appropriate statistical tests - Interpreting results in context - Making methodological decisions</p>
+<p><strong>❌ Academic Integrity</strong> - Understanding your course’s specific policies - Knowing what constitutes your own work - Balancing assistance with independent learning</p>
+</section>
+</section>
+<section id="crafting-effective-prompts" class="level2">
+<h2 class="anchored" data-anchor-id="crafting-effective-prompts">Crafting Effective Prompts</h2>
+<section id="the-clear-framework" class="level3">
+<h3 class="anchored" data-anchor-id="the-clear-framework">The CLEAR Framework</h3>
+<p>Use this framework to structure your prompts:</p>
+<p><strong>C</strong>ontext - Provide relevant background <strong>L</strong>evel - Specify your experience level <strong>E</strong>xample - Include sample data or code <strong>A</strong>ction - Be specific about what you want <strong>R</strong>estriction - Set boundaries on the response</p>
+</section>
+<section id="example-poor-vs.-good-prompts" class="level3">
+<h3 class="anchored" data-anchor-id="example-poor-vs.-good-prompts">Example: Poor vs.&nbsp;Good Prompts</h3>
+<p><strong>❌ Poor Prompt:</strong></p>
+<pre><code>"Help me with regression in R"</code></pre>
+<p><strong>✅ Good Prompt:</strong></p>
+<pre><code>"I'm an undergraduate student learning linear regression in R. I have a dataset with variables for GDP per capita (gdp_pc) and democracy scores (democracy) for 50 countries, and I need to run a regression to see if GDP predicts democracy levels.
+
+Here's a sample of my data:
+country | gdp_pc | democracy
+--------|--------|----------
+USA     | 65000  | 8.5
+Germany | 48000  | 9.1
+
+Can you show me how to:
+1. Run a linear regression with democracy as the outcome variable
+2. Interpret the coefficients
+3. Check model assumptions
+
+Please explain each step so I can understand the logic, and use comments in the code."</code></pre>
+</section>
+</section>
+<section id="working-through-a-complete-example" class="level2">
+<h2 class="anchored" data-anchor-id="working-through-a-complete-example">Working Through a Complete Example</h2>
+<p>Let’s walk through a realistic scenario where you need AI help with a data analysis assignment.</p>
+<section id="scenario-analyzing-election-turnout" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-analyzing-election-turnout">Scenario: Analyzing Election Turnout</h3>
+<p><strong>Assignment:</strong> You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.</p>
+</section>
+<section id="step-1-initial-problem-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-initial-problem-setup">Step 1: Initial Problem Setup</h3>
+<p><strong>Your Prompt:</strong></p>
+<pre><code>I'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:
+- turnout: whether someone voted (1 = yes, 0 = no)
+- income: household income in thousands
+- education: years of education
+- age: respondent age
+
+I need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.</code></pre>
+<p><strong>AI Response Analysis:</strong></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run logistic regression</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> voter_data,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> binomial)</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># View results</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>✅ Good AI Response Elements:</strong> - Provides commented code - Uses appropriate function (<code>glm</code> with <code>family = binomial</code>) - Shows how to view results</p>
+<p><strong>🤔 What to Verify:</strong> - Is the syntax correct for your version of R? - Do the variable names match your actual dataset? - Are there additional steps you might need?</p>
+</section>
+<section id="step-2-follow-up-questions" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-follow-up-questions">Step 2: Follow-Up Questions</h3>
+<p><strong>Don’t just copy the code!</strong> Ask follow-up questions to deepen your understanding:</p>
+<p><strong>Your Follow-Up Prompts:</strong></p>
+<pre><code>1. "Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?"
+
+2. "How do I interpret the coefficients in logistic regression? They seem different from regular regression."
+
+3. "What should I look for in the summary output to determine if my model is good?"</code></pre>
+</section>
+<section id="step-3-adapting-and-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-adapting-and-debugging">Step 3: Adapting and Debugging</h3>
+<p>When you try to run the AI’s code, you might encounter errors. Here’s how to handle them:</p>
+<p><strong>Your Error Message:</strong></p>
+<pre><code>Error in glm.fit: object 'voter_data' not found</code></pre>
+<p><strong>Your Debugging Prompt:</strong></p>
+<pre><code>I'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?</code></pre>
+</section>
+</section>
+<section id="critical-evaluation-of-ai-code" class="level2">
+<h2 class="anchored" data-anchor-id="critical-evaluation-of-ai-code">Critical Evaluation of AI Code</h2>
+<section id="always-ask-yourself-these-questions" class="level3">
+<h3 class="anchored" data-anchor-id="always-ask-yourself-these-questions">Always Ask Yourself These Questions</h3>
+<ol type="1">
+<li><strong>Does this code make sense for my problem?</strong>
+<ul>
+<li>Are the variable names correct?</li>
+<li>Is the statistical method appropriate?</li>
+<li>Do the steps follow a logical order?</li>
+</ul></li>
+<li><strong>Can I explain what each line does?</strong>
+<ul>
+<li>If not, ask the AI to explain further</li>
+<li>Test your understanding by modifying small parts</li>
+</ul></li>
+<li><strong>Does this follow best practices?</strong>
+<ul>
+<li>Are there proper comments?</li>
+<li>Is the code readable and well-structured?</li>
+<li>Are packages loaded appropriately?</li>
+</ul></li>
+</ol>
+</section>
+<section id="example-spotting-problems" class="level3">
+<h3 class="anchored" data-anchor-id="example-spotting-problems">Example: Spotting Problems</h3>
+<p><strong>AI-Generated Code:</strong></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This code has several issues - can you spot them?</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">lm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education, <span class="at">data =</span> voter_data)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(result)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>Problems to Identify:</strong> 1. <strong>Wrong function:</strong> Uses <code>lm()</code> instead of <code>glm()</code> for binary outcome 2. <strong>Missing family argument:</strong> No specification for logistic regression 3. <strong>Incomplete model:</strong> Missing the age variable from original request 4. <strong>Poor plotting:</strong> <code>plot()</code> on logistic regression isn’t very informative</p>
+<p><strong>How to Address:</strong></p>
+<pre><code>"I notice this code uses lm() instead of glm(). Since my outcome variable is binary (0/1), shouldn't I be using logistic regression? Also, the original model was supposed to include age as a predictor. Can you correct this and explain the difference between linear and logistic regression for binary outcomes?"</code></pre>
+</section>
+</section>
+<section id="learning-focused-interaction-strategies" class="level2">
+<h2 class="anchored" data-anchor-id="learning-focused-interaction-strategies">Learning-Focused Interaction Strategies</h2>
+<section id="strategy-1-request-step-by-step-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="strategy-1-request-step-by-step-explanations">Strategy 1: Request Step-by-Step Explanations</h3>
+<p>Instead of just asking for code, ask for the reasoning:</p>
+<pre><code>"Before showing me the code, can you explain the logic of why we use logistic regression for binary outcomes? Then show me the code with comments explaining how each part implements that logic."</code></pre>
+</section>
+<section id="strategy-2-ask-for-alternative-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="strategy-2-ask-for-alternative-approaches">Strategy 2: Ask for Alternative Approaches</h3>
+<pre><code>"You showed me one way to check model assumptions for logistic regression. Are there other methods I could use? What are the pros and cons of each approach?"</code></pre>
+</section>
+<section id="strategy-3-request-practice-problems" class="level3">
+<h3 class="anchored" data-anchor-id="strategy-3-request-practice-problems">Strategy 3: Request Practice Problems</h3>
+<pre><code>"Can you create a similar but simpler example with made-up data so I can practice the concepts before applying them to my real dataset?"</code></pre>
+</section>
+<section id="strategy-4-seek-conceptual-clarification" class="level3">
+<h3 class="anchored" data-anchor-id="strategy-4-seek-conceptual-clarification">Strategy 4: Seek Conceptual Clarification</h3>
+<pre><code>"I understand the code, but I'm confused about interpreting odds ratios. Can you explain what an odds ratio of 1.5 means in practical terms for my voter turnout study?"</code></pre>
+</section>
+</section>
+<section id="common-pitfalls-and-how-to-avoid-them" class="level2">
+<h2 class="anchored" data-anchor-id="common-pitfalls-and-how-to-avoid-them">Common Pitfalls and How to Avoid Them</h2>
+<section id="pitfall-1-the-copy-paste-trap" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-1-the-copy-paste-trap">Pitfall 1: The Copy-Paste Trap</h3>
+<p><strong>Problem:</strong> Copying code without understanding leads to: - Inability to modify code for your specific needs - Poor performance on exams or future assignments - Incorrect analyses when assumptions don’t hold</p>
+<p><strong>Solution:</strong> Always ask “why” and “how” questions</p>
+<pre><code>"Why do we use this specific function instead of alternatives?"
+"How would I modify this code if my variable names were different?"
+"What would happen if I changed this parameter?"</code></pre>
+</section>
+<section id="pitfall-2-assuming-ai-is-always-right" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-2-assuming-ai-is-always-right">Pitfall 2: Assuming AI is Always Right</h3>
+<p><strong>Problem:</strong> LLMs can make mistakes, especially with: - Recent R package updates - Domain-specific best practices - Complex statistical procedures</p>
+<p><strong>Solution:</strong> Always verify important claims</p>
+<pre><code>"Can you provide documentation or references for this approach?"
+"How can I verify that this method is appropriate for my data?"
+"What are the limitations or assumptions of this technique?"</code></pre>
+</section>
+<section id="pitfall-3-over-reliance-on-ai" class="level3">
+<h3 class="anchored" data-anchor-id="pitfall-3-over-reliance-on-ai">Pitfall 3: Over-Reliance on AI</h3>
+<p><strong>Problem:</strong> Using AI for every small problem prevents skill development</p>
+<p><strong>Solution:</strong> Try first, then ask for help</p>
+<pre><code># Your workflow should be:
+1. Attempt the problem yourself
+2. Identify specific stuck points
+3. Ask targeted questions about those points
+4. Try to implement and understand the solution
+5. Ask follow-up questions if needed</code></pre>
+</section>
+</section>
+<section id="academic-integrity-guidelines" class="level2">
+<h2 class="anchored" data-anchor-id="academic-integrity-guidelines">Academic Integrity Guidelines</h2>
+<section id="whats-generally-acceptable" class="level3">
+<h3 class="anchored" data-anchor-id="whats-generally-acceptable">What’s Generally Acceptable</h3>
+<p><strong>✅ Using AI to:</strong> - Explain error messages - Clarify concepts from lectures or readings - Suggest debugging approaches - Provide general coding guidance - Create practice examples for learning</p>
+</section>
+<section id="whats-usually-not-acceptable" class="level3">
+<h3 class="anchored" data-anchor-id="whats-usually-not-acceptable">What’s Usually Not Acceptable</h3>
+<p><strong>❌ Using AI to:</strong> - Write entire assignment solutions - Complete take-home exams - Generate answers you can’t explain - Bypass learning objectives - Submit work without understanding</p>
+</section>
+<section id="when-in-doubt-ask-your-instructor" class="level3">
+<h3 class="anchored" data-anchor-id="when-in-doubt-ask-your-instructor">When in Doubt, Ask Your Instructor</h3>
+<p>Every course has different policies. Always check with your instructor about: - What level of AI assistance is permitted - Whether you need to cite AI use - How to balance AI help with independent work - Course-specific expectations</p>
+</section>
+</section>
+<section id="practical-workflow-example" class="level2">
+<h2 class="anchored" data-anchor-id="practical-workflow-example">Practical Workflow Example</h2>
+<p>Here’s a step-by-step workflow for using AI help effectively:</p>
+<section id="step-1-try-it-yourself-first" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-try-it-yourself-first">Step 1: Try It Yourself First</h3>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your initial attempt</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>voter_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> voter_data)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Error: could not find function "glm"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="step-2-ask-targeted-questions" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-ask-targeted-questions">Step 2: Ask Targeted Questions</h3>
+<pre><code>"I'm trying to run a logistic regression in R but getting 'could not find function glm'. Do I need to load a specific package first?"</code></pre>
+</section>
+<section id="step-3-implement-and-test" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-implement-and-test">Step 3: Implement and Test</h3>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AI suggested adding family argument</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>voter_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> voter_data,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">family =</span> binomial)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(voter_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="step-4-seek-understanding" class="level3">
+<h3 class="anchored" data-anchor-id="step-4-seek-understanding">Step 4: Seek Understanding</h3>
+<pre><code>"The summary shows coefficients like 0.023 for income. How do I interpret this coefficient in terms of the effect on probability of voting?"</code></pre>
+</section>
+<section id="step-5-verify-and-extend" class="level3">
+<h3 class="anchored" data-anchor-id="step-5-verify-and-extend">Step 5: Verify and Extend</h3>
+<pre><code>"How can I check whether this model fits the data well? What diagnostic plots or tests should I look at?"</code></pre>
+</section>
+</section>
+<section id="advanced-tips-for-better-learning" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-tips-for-better-learning">Advanced Tips for Better Learning</h2>
+<section id="tip-1-ask-for-multiple-solutions" class="level3">
+<h3 class="anchored" data-anchor-id="tip-1-ask-for-multiple-solutions">Tip 1: Ask for Multiple Solutions</h3>
+<pre><code>"Show me three different ways to visualize the relationship between income and voting probability, and explain when each approach is most useful."</code></pre>
+</section>
+<section id="tip-2-request-error-handling" class="level3">
+<h3 class="anchored" data-anchor-id="tip-2-request-error-handling">Tip 2: Request Error Handling</h3>
+<pre><code>"What are common errors students make when running logistic regression, and how can I avoid or fix them?"</code></pre>
+</section>
+<section id="tip-3-seek-connections-to-theory" class="level3">
+<h3 class="anchored" data-anchor-id="tip-3-seek-connections-to-theory">Tip 3: Seek Connections to Theory</h3>
+<pre><code>"How does this statistical analysis connect to political science theories about voter participation?"</code></pre>
+</section>
+<section id="tip-4-practice-explanation" class="level3">
+<h3 class="anchored" data-anchor-id="tip-4-practice-explanation">Tip 4: Practice Explanation</h3>
+<pre><code>"If I had to explain these results to someone who doesn't know statistics, how would I describe what the model tells us about voter behavior?"</code></pre>
+</section>
+</section>
+<section id="building-your-programming-intuition" class="level2">
+<h2 class="anchored" data-anchor-id="building-your-programming-intuition">Building Your Programming Intuition</h2>
+<p>The goal isn’t to become dependent on AI, but to use it as a learning accelerator. Here’s how:</p>
+<section id="develop-pattern-recognition" class="level3">
+<h3 class="anchored" data-anchor-id="develop-pattern-recognition">Develop Pattern Recognition</h3>
+<ul>
+<li>Notice common code structures AI suggests</li>
+<li>Learn to recognize when similar patterns apply</li>
+<li>Build your own library of template solutions</li>
+</ul>
+</section>
+<section id="build-debugging-skills" class="level3">
+<h3 class="anchored" data-anchor-id="build-debugging-skills">Build Debugging Skills</h3>
+<ul>
+<li>Ask AI to explain error messages</li>
+<li>Learn common debugging strategies</li>
+<li>Practice identifying problems independently</li>
+</ul>
+</section>
+<section id="understand-the-why-behind-the-code" class="level3">
+<h3 class="anchored" data-anchor-id="understand-the-why-behind-the-code">Understand the “Why” Behind the Code</h3>
+<ul>
+<li>Always ask for explanations of approach choices</li>
+<li>Request information about alternatives</li>
+<li>Learn the reasoning behind coding decisions</li>
+</ul>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>AI chatbots can be powerful allies in learning R and statistics, but they work best when you approach them as teaching assistants rather than homework completion services. The key principles are:</p>
+<ol type="1">
+<li><strong>Start with your own effort</strong> - Try first, then ask for help</li>
+<li><strong>Ask for understanding</strong> - Don’t just request code</li>
+<li><strong>Verify and test</strong> - AI can make mistakes</li>
+<li><strong>Learn actively</strong> - Engage with explanations and ask follow-ups</li>
+<li><strong>Maintain integrity</strong> - Follow your course policies</li>
+</ol>
+<p>Remember: The goal is to become a competent data analyst who can think critically about statistical problems. AI should enhance your learning journey, not replace the learning process itself.</p>
+</section>
+<section id="quick-reference-effective-prompt-templates" class="level2">
+<h2 class="anchored" data-anchor-id="quick-reference-effective-prompt-templates">Quick Reference: Effective Prompt Templates</h2>
+<section id="for-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="for-debugging">For Debugging</h3>
+<pre><code>"I'm getting this error: [paste error]. Here's my code: [paste code]. I'm trying to [describe goal]. Can you help me understand what's wrong and how to fix it?"</code></pre>
+</section>
+<section id="for-learning-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="for-learning-concepts">For Learning Concepts</h3>
+<pre><code>"I'm learning about [concept] in my political science methods class. Can you explain [specific aspect] in simple terms and show how it applies to [your domain example]?"</code></pre>
+</section>
+<section id="for-code-review" class="level3">
+<h3 class="anchored" data-anchor-id="for-code-review">For Code Review</h3>
+<pre><code>"Here's my code for [task]: [paste code]. Does this look correct? Are there ways I could improve it or make it more readable?"</code></pre>
+</section>
+<section id="for-alternative-approaches" class="level3">
+<h3 class="anchored" data-anchor-id="for-alternative-approaches">For Alternative Approaches</h3>
+<pre><code>"I solved [problem] using [current approach]. Are there other ways to do this? What are the trade-offs between different methods?"</code></pre>
+<hr>
+<p><em>Remember: The best programmers aren’t those who never need help—they’re those who know how to find good help and learn from it effectively.</em></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
