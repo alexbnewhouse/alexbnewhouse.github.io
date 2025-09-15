@@ -1,0 +1,362 @@
+---
+title: "Variable Transformations in R: Understanding Distributions and Data Cleaning"
+format: html
+editor: visual
+---
+
+## Introduction
+
+Political science data rarely comes in perfect, analysis-ready form. Before running any statistical analyses, you'll often need to transform your variables to make them more suitable for modeling or to better understand their underlying patterns. This tutorial will walk you through essential variable transformation techniques, focusing on **why** these transformations matter for political science research.
+
+By the end of this tutorial, you'll understand:
+
+-   How to identify and interpret different types of distributions
+-   When and why to apply logarithmic transformations
+-   Essential techniques for recoding categorical variables
+-   Best practices for handling missing data and outliers
+
+## Setting Up: Loading Libraries and Data
+
+```{r}
+library(tidyverse)
+library(scales)
+set.seed(1234)  # For reproducible examples
+```
+
+For this tutorial, we'll work with both simulated data and a real-world example using country-level political and economic indicators.
+
+```{r}
+# Create sample data that mimics real political science variables
+countries <- data.frame(
+  country = paste("Country", 1:100),
+  gdp_per_capita = rlnorm(100, meanlog = 8, sdlog = 1.5),  # Log-normal distribution
+  population = rlnorm(100, meanlog = 15, sdlog = 2),       # Highly skewed
+  democracy_score = rbeta(100, 2, 2) * 10,                # Bounded 0-10
+  election_turnout = rnorm(100, 65, 15),                   # Normal-ish
+  regime_type = sample(c("Democracy", "Hybrid", "Autocracy"), 100,
+                      prob = c(0.4, 0.3, 0.3), replace = TRUE)
+)
+
+head(countries)
+```
+
+## Part 1: Understanding Distributions
+
+### What Do Distributions Tell Us?
+
+The **distribution** of a variable shows us how values are spread across the range of possible outcomes. In political science, understanding distributions helps us:
+
+-   Choose appropriate statistical methods
+-   Identify unusual cases or outliers
+-   Make valid comparisons across groups
+-   Communicate findings effectively
+
+### Visualizing Distributions
+
+Let's examine the distribution of GDP per capita in our sample:
+
+```{r}
+# Basic histogram
+countries %>%
+  ggplot(aes(x = gdp_per_capita)) +
+  geom_histogram(bins = 20, fill = "steelblue", alpha = 0.7) +
+  labs(title = "Distribution of GDP per Capita",
+       x = "GDP per Capita (USD)",
+       y = "Count") +
+  theme_minimal()
+```
+
+**What do you notice?** The distribution is heavily **right-skewed**—most countries cluster at lower GDP levels, with a few very wealthy countries creating a long right tail.
+
+### Types of Distributions in Political Science
+
+**Normal Distribution:** Symmetric, bell-shaped curve. Many statistical tests assume normality.
+
+```{r}
+# Election turnout - closer to normal
+countries %>%
+  ggplot(aes(x = election_turnout)) +
+  geom_histogram(bins = 15, fill = "darkgreen", alpha = 0.7) +
+  labs(title = "Distribution of Election Turnout",
+       x = "Turnout (%)",
+       y = "Count")
+```
+
+**Skewed Distributions:** Common with economic variables, population sizes, conflict casualties.
+
+```{r}
+# Population - highly right-skewed
+countries %>%
+  ggplot(aes(x = population)) +
+  geom_histogram(bins = 20, fill = "coral", alpha = 0.7) +
+  labs(title = "Distribution of Population",
+       x = "Population",
+       y = "Count") +
+  scale_x_continuous(labels = label_scientific())
+```
+
+## Part 2: The Power of Logarithmic Transformations
+
+### Why Log Transformations Matter
+
+Logarithmic transformations are **crucial** in political science because they:
+
+1.  **Reduce skewness** in right-skewed distributions
+2.  **Stabilize variance** across different scales
+3.  **Make relationships linear** that are otherwise exponential
+4.  **Allow meaningful interpretation** of percentage changes
+
+### When to Use Log Transformations
+
+Use log transformations when:
+
+-   Variables span several orders of magnitude (GDP, population, military spending)
+-   You observe exponential relationships
+-   You want to interpret effects as percentage changes
+-   The variable has a long right tail
+
+### Applying Log Transformations
+
+```{r}
+# Add log-transformed variables
+countries <- countries %>%
+  mutate(
+    log_gdp = log(gdp_per_capita),
+    log_population = log(population)
+  )
+```
+
+### Comparing Original vs. Log-Transformed
+
+```{r}
+# Create side-by-side comparison
+p1 <- countries %>%
+  ggplot(aes(x = gdp_per_capita)) +
+  geom_histogram(bins = 20, fill = "steelblue", alpha = 0.7) +
+  labs(title = "Original GDP per Capita", x = "GDP per Capita") +
+  theme_minimal()
+
+p2 <- countries %>%
+  ggplot(aes(x = log_gdp)) +
+  geom_histogram(bins = 20, fill = "steelblue", alpha = 0.7) +
+  labs(title = "Log GDP per Capita", x = "Log(GDP per Capita)") +
+  theme_minimal()
+
+# Display plots side by side (you might need gridExtra package)
+# grid.arrange(p1, p2, ncol = 2)
+```
+
+**Key Insight:** The log transformation converts the right-skewed distribution into something much closer to normal!
+
+### Interpreting Log-Transformed Variables
+
+When you use log-transformed variables in regression:
+
+-   A 1-unit change in log(X) represents a **100% increase** in X
+-   A 0.1-unit change in log(X) represents approximately a **10% increase** in X
+-   This makes economic interpretations much more intuitive
+
+```{r}
+# Example: How does log GDP relate to democracy scores?
+countries %>%
+  ggplot(aes(x = log_gdp, y = democracy_score)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", color = "red") +
+  labs(title = "Relationship between Log GDP and Democracy",
+       x = "Log(GDP per Capita)",
+       y = "Democracy Score") +
+  theme_minimal()
+```
+
+## Part 3: Recoding Variables
+
+### Why Recode Variables?
+
+Recoding involves changing how variables are categorized or valued. Common reasons:
+
+-   **Simplifying analysis:** Converting continuous variables to categories
+-   **Fixing data problems:** Standardizing inconsistent coding
+-   **Creating meaningful groups:** Collapsing small categories
+-   **Handling missing data:** Deciding how to treat different types of missingness
+
+### Creating Categorical Variables from Continuous Ones
+
+```{r}
+# Create GDP categories
+countries <- countries %>%
+  mutate(
+    gdp_category = case_when(
+      gdp_per_capita < 5000 ~ "Low Income",
+      gdp_per_capita < 20000 ~ "Middle Income",
+      gdp_per_capita >= 20000 ~ "High Income"
+    ),
+    # Alternative using quantiles
+    gdp_tertile = case_when(
+      gdp_per_capita <= quantile(gdp_per_capita, 0.33) ~ "Bottom Third",
+      gdp_per_capita <= quantile(gdp_per_capita, 0.67) ~ "Middle Third",
+      TRUE ~ "Top Third"
+    )
+  )
+
+# Check the distribution
+table(countries$gdp_category)
+```
+
+### Recoding Categorical Variables
+
+```{r}
+# Sometimes you need to collapse categories
+countries <- countries %>%
+  mutate(
+    simple_regime = case_when(
+      regime_type == "Democracy" ~ "Democratic",
+      regime_type %in% c("Hybrid", "Autocracy") ~ "Non-Democratic"
+    )
+  )
+
+table(countries$simple_regime)
+```
+
+### Creating Dummy Variables
+
+For regression analysis, you often need to convert categorical variables into numeric dummy variables:
+
+```{r}
+# Create dummy variables for regime types
+countries <- countries %>%
+  mutate(
+    is_democracy = ifelse(regime_type == "Democracy", 1, 0),
+    is_hybrid = ifelse(regime_type == "Hybrid", 1, 0),
+    is_autocracy = ifelse(regime_type == "Autocracy", 1, 0)
+  )
+
+# Check correlations (should be negative - if one is 1, others are 0)
+cor(countries[c("is_democracy", "is_hybrid", "is_autocracy")])
+```
+
+## Part 4: Handling Missing Data and Outliers
+
+### Identifying Missing Data Patterns
+
+```{r}
+# Introduce some missing data for demonstration
+countries_with_missing <- countries %>%
+  mutate(
+    # Randomly assign some missing values
+    democracy_score = ifelse(runif(n()) < 0.1, NA, democracy_score),
+    election_turnout = ifelse(runif(n()) < 0.05, NA, election_turnout)
+  )
+
+# Check missing data patterns
+summary(countries_with_missing)
+```
+
+### Identifying Outliers
+
+```{r}
+# Box plot to identify outliers
+countries %>%
+  ggplot(aes(y = gdp_per_capita)) +
+  geom_boxplot() +
+  labs(title = "GDP per Capita - Identifying Outliers",
+       y = "GDP per Capita") +
+  theme_minimal()
+
+# Statistical approach: values beyond 1.5 * IQR
+outlier_threshold <- quantile(countries$gdp_per_capita, 0.75) +
+                     1.5 * IQR(countries$gdp_per_capita)
+
+countries %>%
+  filter(gdp_per_capita > outlier_threshold) %>%
+  select(country, gdp_per_capita)
+```
+
+### Handling Outliers
+
+```{r}
+# Option 1: Remove outliers (use cautiously!)
+countries_no_outliers <- countries %>%
+  filter(gdp_per_capita <= outlier_threshold)
+
+# Option 2: Winsorize (cap at certain percentiles)
+countries_winsorized <- countries %>%
+  mutate(
+    gdp_winsorized = case_when(
+      gdp_per_capita > quantile(gdp_per_capita, 0.95) ~ quantile(gdp_per_capita, 0.95),
+      gdp_per_capita < quantile(gdp_per_capita, 0.05) ~ quantile(gdp_per_capita, 0.05),
+      TRUE ~ gdp_per_capita
+    )
+  )
+```
+
+## Part 5: Best Practices and Common Pitfalls
+
+### Documentation is Key
+
+```{r}
+# Always document your transformations
+countries_final <- countries %>%
+  mutate(
+    # Log transformation for skewed economic variables
+    log_gdp_pc = log(gdp_per_capita),  # Natural log of GDP per capita
+    log_pop = log(population),         # Natural log of population
+
+    # Standardized democracy score (0-1 scale)
+    democracy_01 = democracy_score / 10,
+
+    # Binary regime classification
+    democratic = ifelse(regime_type == "Democracy", 1, 0)
+  ) %>%
+  # Keep original variables for comparison
+  select(country, gdp_per_capita, log_gdp_pc, democracy_score, democracy_01,
+         regime_type, democratic, everything())
+```
+
+### Common Mistakes to Avoid
+
+1.  **Taking logs of zero or negative values** - Add a small constant if necessary
+2.  **Over-transforming** - Not every skewed variable needs transformation
+3.  **Losing track of original scales** - Keep both versions when possible
+4.  **Mechanical outlier removal** - Investigate outliers before removing them
+
+### Checking Your Work
+
+```{r}
+# Always examine your transformations
+summary(countries_final[c("gdp_per_capita", "log_gdp_pc", "democracy_score", "democracy_01")])
+
+# Visualize relationships
+countries_final %>%
+  ggplot(aes(x = log_gdp_pc, y = democracy_01)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm") +
+  labs(title = "Log GDP vs. Standardized Democracy Score",
+       x = "Log(GDP per Capita)",
+       y = "Democracy Score (0-1 scale)")
+```
+
+## Conclusion
+
+Variable transformations are fundamental tools in political science research. Key takeaways:
+
+-   **Understand your data first** - Always visualize distributions before transforming
+-   **Log transformations** are powerful for right-skewed economic/demographic variables
+-   **Thoughtful recoding** can simplify analysis and improve interpretation
+-   **Document everything** - Future you will thank present you
+-   **Keep originals** - Preserve untransformed variables for robustness checks
+
+### Next Steps
+
+In future tutorials, we'll explore:
+
+-   Advanced transformation techniques (Box-Cox, inverse hyperbolic sine)
+-   Multiple imputation for missing data
+-   Robust regression methods for outlier-prone data
+-   Interaction terms and polynomial transformations
+
+### Practice Exercises
+
+1.  Try log-transforming the population variable and compare the distribution
+2.  Create a three-category democracy variable (Low/Medium/High) using quantile cuts
+3.  Identify and investigate the countries with the highest democracy scores
+4.  Create a scatter plot matrix comparing original and transformed variables

@@ -97,6 +97,10 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 - Social Network Analysis (igraph, statnet)
 - Time-series analysis and causal inference
 
+**Featured Technical Work:**
+
+- [**DistilBERT for Political Text Classification**](political-text-classification.html) - Automated detection of extremist content using transformer models (94% F1-score)
+
 **Data & Platforms**
 
 - Large-scale social media data collection and analysis
