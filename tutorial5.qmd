@@ -107,78 +107,169 @@ Can you show me how to:
 Please explain each step so I can understand the logic, and use comments in the code."
 ```
 
-## Working Through a Complete Example
+## Working Through Simple Examples
 
-Let's walk through a realistic scenario where you need AI help with a data analysis assignment.
+Let's start with basic data analysis tasks that are common in undergraduate coursework. We'll build complexity gradually.
 
-### Scenario: Analyzing Election Turnout
+### Example 1: Getting Basic Statistics
 
-**Assignment:** You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.
-
-### Step 1: Initial Problem Setup
+**Scenario:** You have a dataset of country information and need to calculate descriptive statistics.
 
 **Your Prompt:**
 ```
-I'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:
-- turnout: whether someone voted (1 = yes, 0 = no)
-- income: household income in thousands
-- education: years of education
-- age: respondent age
-
-I need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.
+I'm new to R and have a dataset called 'countries' with variables for population, GDP, and region. I need to calculate the mean, median, and standard deviation for population. Can you show me how to do this step by step with explanations?
 ```
 
-**AI Response Analysis:**
+**Good AI Response:**
 ```{r}
 #| eval: false
 
-# Load necessary library
+# Calculate basic statistics for population
+mean(countries$population)          # Average population
+median(countries$population)        # Middle value when sorted
+sd(countries$population)           # Standard deviation (spread)
+
+# Get all statistics at once
+summary(countries$population)      # Shows min, max, quartiles, mean
+```
+
+**✅ What Makes This Good:**
+- Simple, clear code
+- Comments explain what each function does
+- Shows both individual functions and summary approach
+
+**🤔 Follow-Up Questions to Ask:**
+```
+1. "What does standard deviation tell me about the data?"
+2. "Why might median be different from mean?"
+3. "What if my data has missing values?"
+```
+
+### Example 2: Data Filtering and Grouping
+
+**Your Prompt:**
+```
+I want to find the average GDP for European countries only. My dataset has a 'region' column with values like "Europe", "Asia", etc. How do I filter the data and then calculate the mean? Please explain each step.
+```
+
+**Good AI Response:**
+```{r}
+#| eval: false
+
+library(dplyr)  # Load the dplyr package for data manipulation
+
+# Method 1: Filter then calculate mean
+european_countries <- countries %>%
+  filter(region == "Europe")        # Keep only European countries
+
+mean(european_countries$gdp)        # Calculate mean GDP
+
+# Method 2: Do it all in one step
+europe_avg_gdp <- countries %>%
+  filter(region == "Europe") %>%    # Filter to Europe
+  summarize(avg_gdp = mean(gdp))    # Calculate mean
+
+# Method 3: Compare all regions
+countries %>%
+  group_by(region) %>%              # Group by region
+  summarize(avg_gdp = mean(gdp))    # Calculate mean for each group
+```
+
+**✅ Learning Opportunities:**
+- Shows multiple approaches (good for learning!)
+- Introduces the pipe operator `%>%`
+- Demonstrates filtering and grouping concepts
+
+**🤔 Questions to Deepen Understanding:**
+```
+1. "What's the difference between filter() and select()?"
+2. "Can you explain how the pipe operator (%>%) works?"
+3. "How would I filter for multiple conditions?"
+```
+
+### Example 3: Creating New Variables
+
+**Your Prompt:**
+```
+I need to create a new variable that categorizes countries as "High", "Medium", or "Low" GDP based on their GDP values. How do I create this new column? I'm a beginner so please explain the logic.
+```
+
+**Good AI Response:**
+```{r}
+#| eval: false
+
 library(dplyr)
 
-# Run logistic regression
-model <- glm(turnout ~ income + education + age,
-             data = voter_data,
-             family = binomial)
+# Method 1: Using ifelse for simple categories
+countries <- countries %>%
+  mutate(gdp_category = ifelse(gdp > 50000, "High",
+                        ifelse(gdp > 20000, "Medium", "Low")))
 
-# View results
-summary(model)
+# Method 2: Using case_when (cleaner for multiple categories)
+countries <- countries %>%
+  mutate(gdp_category = case_when(
+    gdp > 50000 ~ "High",
+    gdp > 20000 ~ "Medium",
+    TRUE ~ "Low"                    # Everything else gets "Low"
+  ))
+
+# Check your work
+table(countries$gdp_category)       # Count how many in each category
 ```
 
-**✅ Good AI Response Elements:**
-- Provides commented code
-- Uses appropriate function (`glm` with `family = binomial`)
-- Shows how to view results
+**✅ Good Teaching Elements:**
+- Shows two methods for comparison
+- Explains the logic of nested conditions
+- Includes verification step
 
-**🤔 What to Verify:**
-- Is the syntax correct for your version of R?
-- Do the variable names match your actual dataset?
-- Are there additional steps you might need?
-
-### Step 2: Follow-Up Questions
-
-**Don't just copy the code!** Ask follow-up questions to deepen your understanding:
-
-**Your Follow-Up Prompts:**
+**🤔 Learning Questions:**
 ```
-1. "Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?"
-
-2. "How do I interpret the coefficients in logistic regression? They seem different from regular regression."
-
-3. "What should I look for in the summary output to determine if my model is good?"
+1. "What does the TRUE in case_when() do?"
+2. "How do I choose the cutoff values for categories?"
+3. "What if I want to base categories on percentiles instead?"
 ```
 
-### Step 3: Adapting and Debugging
+### Example 4: Simple Data Visualization
 
-When you try to run the AI's code, you might encounter errors. Here's how to handle them:
-
-**Your Error Message:**
+**Your Prompt:**
 ```
-Error in glm.fit: object 'voter_data' not found
+I want to create a histogram of GDP values to see the distribution. I'm using ggplot2 but I'm not sure about the syntax. Can you show me how and explain what each part does?
 ```
 
-**Your Debugging Prompt:**
+**Good AI Response:**
+```{r}
+#| eval: false
+
+library(ggplot2)
+
+# Basic histogram
+ggplot(countries, aes(x = gdp)) +    # Set up plot with GDP on x-axis
+  geom_histogram() +                 # Add histogram layer
+  labs(title = "Distribution of GDP", # Add labels
+       x = "GDP per Capita",
+       y = "Number of Countries")
+
+# Improved version with better formatting
+ggplot(countries, aes(x = gdp)) +
+  geom_histogram(bins = 20,          # Set number of bins
+                 fill = "steelblue",  # Color the bars
+                 alpha = 0.7) +       # Make bars semi-transparent
+  labs(title = "Distribution of GDP per Capita",
+       x = "GDP per Capita (USD)",
+       y = "Number of Countries") +
+  theme_minimal()                    # Clean theme
 ```
-I'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?
+
+**✅ Educational Value:**
+- Starts simple, then adds complexity
+- Explains each argument
+- Shows how to improve basic plots
+
+**🤔 Extension Questions:**
+```
+1. "How do I add a vertical line showing the mean?"
+2. "What if I want separate histograms for each region?"
+3. "How do I save this plot as an image file?"
 ```
 
 ## Critical Evaluation of AI Code
@@ -324,42 +415,42 @@ Every course has different policies. Always check with your instructor about:
 
 ## Practical Workflow Example
 
-Here's a step-by-step workflow for using AI help effectively:
+Here's a step-by-step workflow for using AI help effectively with a simple data task:
 
 ### Step 1: Try It Yourself First
 ```{r}
 #| eval: false
 
-# Your initial attempt
-voter_model <- glm(turnout ~ income + education + age,
-                   data = voter_data)
-# Error: could not find function "glm"
+# Your initial attempt to calculate mean by group
+countries %>%
+  group_by(region)
+  mean(gdp)
+# Error: unexpected symbol
 ```
 
 ### Step 2: Ask Targeted Questions
 ```
-"I'm trying to run a logistic regression in R but getting 'could not find function glm'. Do I need to load a specific package first?"
+"I'm trying to calculate the mean GDP for each region in my dataset but getting 'unexpected symbol' error. Here's my code: [paste code]. What am I doing wrong?"
 ```
 
 ### Step 3: Implement and Test
 ```{r}
 #| eval: false
 
-# AI suggested adding family argument
-voter_model <- glm(turnout ~ income + education + age,
-                   data = voter_data,
-                   family = binomial)
-summary(voter_model)
+# AI suggested the correct syntax
+countries %>%
+  group_by(region) %>%           # Added missing %>%
+  summarize(mean_gdp = mean(gdp)) # Use summarize function
 ```
 
 ### Step 4: Seek Understanding
 ```
-"The summary shows coefficients like 0.023 for income. How do I interpret this coefficient in terms of the effect on probability of voting?"
+"Why do I need summarize() here? What's the difference between group_by() and summarize()?"
 ```
 
 ### Step 5: Verify and Extend
 ```
-"How can I check whether this model fits the data well? What diagnostic plots or tests should I look at?"
+"How can I also calculate the median and count of countries for each region in the same command?"
 ```
 
 ## Advanced Tips for Better Learning
@@ -402,6 +493,80 @@ The goal isn't to become dependent on AI, but to use it as a learning accelerato
 - Always ask for explanations of approach choices
 - Request information about alternatives
 - Learn the reasoning behind coding decisions
+
+## Advanced Example: Regression Analysis
+
+Once you're comfortable with basic data manipulation, you might encounter more complex statistical tasks. Here's how to approach regression analysis with AI help:
+
+### Scenario: Analyzing Election Turnout
+
+**Assignment:** You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.
+
+### Step 1: Initial Problem Setup
+
+**Your Prompt:**
+```
+I'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:
+- turnout: whether someone voted (1 = yes, 0 = no)
+- income: household income in thousands
+- education: years of education
+- age: respondent age
+
+I need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.
+```
+
+**AI Response Analysis:**
+```{r}
+#| eval: false
+
+# Load necessary library
+library(dplyr)
+
+# Run logistic regression
+model <- glm(turnout ~ income + education + age,
+             data = voter_data,
+             family = binomial)
+
+# View results
+summary(model)
+```
+
+**✅ Good AI Response Elements:**
+- Provides commented code
+- Uses appropriate function (`glm` with `family = binomial`)
+- Shows how to view results
+
+**🤔 What to Verify:**
+- Is the syntax correct for your version of R?
+- Do the variable names match your actual dataset?
+- Are there additional steps you might need?
+
+### Step 2: Follow-Up Questions
+
+**Don't just copy the code!** Ask follow-up questions to deepen your understanding:
+
+**Your Follow-Up Prompts:**
+```
+1. "Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?"
+
+2. "How do I interpret the coefficients in logistic regression? They seem different from regular regression."
+
+3. "What should I look for in the summary output to determine if my model is good?"
+```
+
+### Step 3: Adapting and Debugging
+
+When you try to run the AI's code, you might encounter errors. Here's how to handle them:
+
+**Your Error Message:**
+```
+Error in glm.fit: object 'voter_data' not found
+```
+
+**Your Debugging Prompt:**
+```
+I'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?
+```
 
 ## Conclusion
 

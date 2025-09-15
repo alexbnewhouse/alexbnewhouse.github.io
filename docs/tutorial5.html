@@ -175,12 +175,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-clear-framework" id="toc-the-clear-framework" class="nav-link" data-scroll-target="#the-clear-framework">The CLEAR Framework</a></li>
   <li><a href="#example-poor-vs.-good-prompts" id="toc-example-poor-vs.-good-prompts" class="nav-link" data-scroll-target="#example-poor-vs.-good-prompts">Example: Poor vs.&nbsp;Good Prompts</a></li>
   </ul></li>
-  <li><a href="#working-through-a-complete-example" id="toc-working-through-a-complete-example" class="nav-link" data-scroll-target="#working-through-a-complete-example">Working Through a Complete Example</a>
+  <li><a href="#working-through-simple-examples" id="toc-working-through-simple-examples" class="nav-link" data-scroll-target="#working-through-simple-examples">Working Through Simple Examples</a>
   <ul class="collapse">
-  <li><a href="#scenario-analyzing-election-turnout" id="toc-scenario-analyzing-election-turnout" class="nav-link" data-scroll-target="#scenario-analyzing-election-turnout">Scenario: Analyzing Election Turnout</a></li>
-  <li><a href="#step-1-initial-problem-setup" id="toc-step-1-initial-problem-setup" class="nav-link" data-scroll-target="#step-1-initial-problem-setup">Step 1: Initial Problem Setup</a></li>
-  <li><a href="#step-2-follow-up-questions" id="toc-step-2-follow-up-questions" class="nav-link" data-scroll-target="#step-2-follow-up-questions">Step 2: Follow-Up Questions</a></li>
-  <li><a href="#step-3-adapting-and-debugging" id="toc-step-3-adapting-and-debugging" class="nav-link" data-scroll-target="#step-3-adapting-and-debugging">Step 3: Adapting and Debugging</a></li>
+  <li><a href="#example-1-getting-basic-statistics" id="toc-example-1-getting-basic-statistics" class="nav-link" data-scroll-target="#example-1-getting-basic-statistics">Example 1: Getting Basic Statistics</a></li>
+  <li><a href="#example-2-data-filtering-and-grouping" id="toc-example-2-data-filtering-and-grouping" class="nav-link" data-scroll-target="#example-2-data-filtering-and-grouping">Example 2: Data Filtering and Grouping</a></li>
+  <li><a href="#example-3-creating-new-variables" id="toc-example-3-creating-new-variables" class="nav-link" data-scroll-target="#example-3-creating-new-variables">Example 3: Creating New Variables</a></li>
+  <li><a href="#example-4-simple-data-visualization" id="toc-example-4-simple-data-visualization" class="nav-link" data-scroll-target="#example-4-simple-data-visualization">Example 4: Simple Data Visualization</a></li>
   </ul></li>
   <li><a href="#critical-evaluation-of-ai-code" id="toc-critical-evaluation-of-ai-code" class="nav-link" data-scroll-target="#critical-evaluation-of-ai-code">Critical Evaluation of AI Code</a>
   <ul class="collapse">
@@ -226,6 +226,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#develop-pattern-recognition" id="toc-develop-pattern-recognition" class="nav-link" data-scroll-target="#develop-pattern-recognition">Develop Pattern Recognition</a></li>
   <li><a href="#build-debugging-skills" id="toc-build-debugging-skills" class="nav-link" data-scroll-target="#build-debugging-skills">Build Debugging Skills</a></li>
   <li><a href="#understand-the-why-behind-the-code" id="toc-understand-the-why-behind-the-code" class="nav-link" data-scroll-target="#understand-the-why-behind-the-code">Understand the “Why” Behind the Code</a></li>
+  </ul></li>
+  <li><a href="#advanced-example-regression-analysis" id="toc-advanced-example-regression-analysis" class="nav-link" data-scroll-target="#advanced-example-regression-analysis">Advanced Example: Regression Analysis</a>
+  <ul class="collapse">
+  <li><a href="#scenario-analyzing-election-turnout" id="toc-scenario-analyzing-election-turnout" class="nav-link" data-scroll-target="#scenario-analyzing-election-turnout">Scenario: Analyzing Election Turnout</a></li>
+  <li><a href="#step-1-initial-problem-setup" id="toc-step-1-initial-problem-setup" class="nav-link" data-scroll-target="#step-1-initial-problem-setup">Step 1: Initial Problem Setup</a></li>
+  <li><a href="#step-2-follow-up-questions" id="toc-step-2-follow-up-questions" class="nav-link" data-scroll-target="#step-2-follow-up-questions">Step 2: Follow-Up Questions</a></li>
+  <li><a href="#step-3-adapting-and-debugging" id="toc-step-3-adapting-and-debugging" class="nav-link" data-scroll-target="#step-3-adapting-and-debugging">Step 3: Adapting and Debugging</a></li>
   </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#quick-reference-effective-prompt-templates" id="toc-quick-reference-effective-prompt-templates" class="nav-link" data-scroll-target="#quick-reference-effective-prompt-templates">Quick Reference: Effective Prompt Templates</a>
@@ -322,59 +329,132 @@ Can you show me how to:
 Please explain each step so I can understand the logic, and use comments in the code."</code></pre>
 </section>
 </section>
-<section id="working-through-a-complete-example" class="level2">
-<h2 class="anchored" data-anchor-id="working-through-a-complete-example">Working Through a Complete Example</h2>
-<p>Let’s walk through a realistic scenario where you need AI help with a data analysis assignment.</p>
-<section id="scenario-analyzing-election-turnout" class="level3">
-<h3 class="anchored" data-anchor-id="scenario-analyzing-election-turnout">Scenario: Analyzing Election Turnout</h3>
-<p><strong>Assignment:</strong> You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.</p>
-</section>
-<section id="step-1-initial-problem-setup" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-initial-problem-setup">Step 1: Initial Problem Setup</h3>
+<section id="working-through-simple-examples" class="level2">
+<h2 class="anchored" data-anchor-id="working-through-simple-examples">Working Through Simple Examples</h2>
+<p>Let’s start with basic data analysis tasks that are common in undergraduate coursework. We’ll build complexity gradually.</p>
+<section id="example-1-getting-basic-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="example-1-getting-basic-statistics">Example 1: Getting Basic Statistics</h3>
+<p><strong>Scenario:</strong> You have a dataset of country information and need to calculate descriptive statistics.</p>
 <p><strong>Your Prompt:</strong></p>
-<pre><code>I'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:
-- turnout: whether someone voted (1 = yes, 0 = no)
-- income: household income in thousands
-- education: years of education
-- age: respondent age
-
-I need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.</code></pre>
-<p><strong>AI Response Analysis:</strong></p>
+<pre><code>I'm new to R and have a dataset called 'countries' with variables for population, GDP, and region. I need to calculate the mean, median, and standard deviation for population. Can you show me how to do this step by step with explanations?</code></pre>
+<p><strong>Good AI Response:</strong></p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run logistic regression</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> voter_data,</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> binomial)</span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># View results</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate basic statistics for population</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(countries<span class="sc">$</span>population)          <span class="co"># Average population</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(countries<span class="sc">$</span>population)        <span class="co"># Middle value when sorted</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(countries<span class="sc">$</span>population)           <span class="co"># Standard deviation (spread)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Get all statistics at once</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(countries<span class="sc">$</span>population)      <span class="co"># Shows min, max, quartiles, mean</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p><strong>✅ Good AI Response Elements:</strong> - Provides commented code - Uses appropriate function (<code>glm</code> with <code>family = binomial</code>) - Shows how to view results</p>
-<p><strong>🤔 What to Verify:</strong> - Is the syntax correct for your version of R? - Do the variable names match your actual dataset? - Are there additional steps you might need?</p>
+<p><strong>✅ What Makes This Good:</strong> - Simple, clear code - Comments explain what each function does - Shows both individual functions and summary approach</p>
+<p><strong>🤔 Follow-Up Questions to Ask:</strong></p>
+<pre><code>1. "What does standard deviation tell me about the data?"
+2. "Why might median be different from mean?"
+3. "What if my data has missing values?"</code></pre>
 </section>
-<section id="step-2-follow-up-questions" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-follow-up-questions">Step 2: Follow-Up Questions</h3>
-<p><strong>Don’t just copy the code!</strong> Ask follow-up questions to deepen your understanding:</p>
-<p><strong>Your Follow-Up Prompts:</strong></p>
-<pre><code>1. "Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?"
-
-2. "How do I interpret the coefficients in logistic regression? They seem different from regular regression."
-
-3. "What should I look for in the summary output to determine if my model is good?"</code></pre>
+<section id="example-2-data-filtering-and-grouping" class="level3">
+<h3 class="anchored" data-anchor-id="example-2-data-filtering-and-grouping">Example 2: Data Filtering and Grouping</h3>
+<p><strong>Your Prompt:</strong></p>
+<pre><code>I want to find the average GDP for European countries only. My dataset has a 'region' column with values like "Europe", "Asia", etc. How do I filter the data and then calculate the mean? Please explain each step.</code></pre>
+<p><strong>Good AI Response:</strong></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)  <span class="co"># Load the dplyr package for data manipulation</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Filter then calculate mean</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>european_countries <span class="ot">&lt;-</span> countries <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Europe"</span>)        <span class="co"># Keep only European countries</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(european_countries<span class="sc">$</span>gdp)        <span class="co"># Calculate mean GDP</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: Do it all in one step</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>europe_avg_gdp <span class="ot">&lt;-</span> countries <span class="sc">%&gt;%</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(region <span class="sc">==</span> <span class="st">"Europe"</span>) <span class="sc">%&gt;%</span>    <span class="co"># Filter to Europe</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg_gdp =</span> <span class="fu">mean</span>(gdp))    <span class="co"># Calculate mean</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 3: Compare all regions</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>countries <span class="sc">%&gt;%</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span>              <span class="co"># Group by region</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">avg_gdp =</span> <span class="fu">mean</span>(gdp))    <span class="co"># Calculate mean for each group</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>✅ Learning Opportunities:</strong> - Shows multiple approaches (good for learning!) - Introduces the pipe operator <code>%&gt;%</code> - Demonstrates filtering and grouping concepts</p>
+<p><strong>🤔 Questions to Deepen Understanding:</strong></p>
+<pre><code>1. "What's the difference between filter() and select()?"
+2. "Can you explain how the pipe operator (%&gt;%) works?"
+3. "How would I filter for multiple conditions?"</code></pre>
 </section>
-<section id="step-3-adapting-and-debugging" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-adapting-and-debugging">Step 3: Adapting and Debugging</h3>
-<p>When you try to run the AI’s code, you might encounter errors. Here’s how to handle them:</p>
-<p><strong>Your Error Message:</strong></p>
-<pre><code>Error in glm.fit: object 'voter_data' not found</code></pre>
-<p><strong>Your Debugging Prompt:</strong></p>
-<pre><code>I'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?</code></pre>
+<section id="example-3-creating-new-variables" class="level3">
+<h3 class="anchored" data-anchor-id="example-3-creating-new-variables">Example 3: Creating New Variables</h3>
+<p><strong>Your Prompt:</strong></p>
+<pre><code>I need to create a new variable that categorizes countries as "High", "Medium", or "Low" GDP based on their GDP values. How do I create this new column? I'm a beginner so please explain the logic.</code></pre>
+<p><strong>Good AI Response:</strong></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 1: Using ifelse for simple categories</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>countries <span class="ot">&lt;-</span> countries <span class="sc">%&gt;%</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gdp_category =</span> <span class="fu">ifelse</span>(gdp <span class="sc">&gt;</span> <span class="dv">50000</span>, <span class="st">"High"</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>                        <span class="fu">ifelse</span>(gdp <span class="sc">&gt;</span> <span class="dv">20000</span>, <span class="st">"Medium"</span>, <span class="st">"Low"</span>)))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Method 2: Using case_when (cleaner for multiple categories)</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>countries <span class="ot">&lt;-</span> countries <span class="sc">%&gt;%</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">gdp_category =</span> <span class="fu">case_when</span>(</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    gdp <span class="sc">&gt;</span> <span class="dv">50000</span> <span class="sc">~</span> <span class="st">"High"</span>,</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    gdp <span class="sc">&gt;</span> <span class="dv">20000</span> <span class="sc">~</span> <span class="st">"Medium"</span>,</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="st">"Low"</span>                    <span class="co"># Everything else gets "Low"</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Check your work</span></span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(countries<span class="sc">$</span>gdp_category)       <span class="co"># Count how many in each category</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>✅ Good Teaching Elements:</strong> - Shows two methods for comparison - Explains the logic of nested conditions - Includes verification step</p>
+<p><strong>🤔 Learning Questions:</strong></p>
+<pre><code>1. "What does the TRUE in case_when() do?"
+2. "How do I choose the cutoff values for categories?"
+3. "What if I want to base categories on percentiles instead?"</code></pre>
+</section>
+<section id="example-4-simple-data-visualization" class="level3">
+<h3 class="anchored" data-anchor-id="example-4-simple-data-visualization">Example 4: Simple Data Visualization</h3>
+<p><strong>Your Prompt:</strong></p>
+<pre><code>I want to create a histogram of GDP values to see the distribution. I'm using ggplot2 but I'm not sure about the syntax. Can you show me how and explain what each part does?</code></pre>
+<p><strong>Good AI Response:</strong></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Basic histogram</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(countries, <span class="fu">aes</span>(<span class="at">x =</span> gdp)) <span class="sc">+</span>    <span class="co"># Set up plot with GDP on x-axis</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span>                 <span class="co"># Add histogram layer</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of GDP"</span>, <span class="co"># Add labels</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"GDP per Capita"</span>,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of Countries"</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Improved version with better formatting</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(countries, <span class="fu">aes</span>(<span class="at">x =</span> gdp)) <span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span> <span class="dv">20</span>,          <span class="co"># Set number of bins</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">fill =</span> <span class="st">"steelblue"</span>,  <span class="co"># Color the bars</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                 <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span>       <span class="co"># Make bars semi-transparent</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Distribution of GDP per Capita"</span>,</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"GDP per Capita (USD)"</span>,</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Number of Countries"</span>) <span class="sc">+</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()                    <span class="co"># Clean theme</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>✅ Educational Value:</strong> - Starts simple, then adds complexity - Explains each argument - Shows how to improve basic plots</p>
+<p><strong>🤔 Extension Questions:</strong></p>
+<pre><code>1. "How do I add a vertical line showing the mean?"
+2. "What if I want separate histograms for each region?"
+3. "How do I save this plot as an image file?"</code></pre>
 </section>
 </section>
 <section id="critical-evaluation-of-ai-code" class="level2">
@@ -407,10 +487,10 @@ I need to run a logistic regression since turnout is binary. Can you show me the
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This code has several issues - can you spot them?</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">lm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education, <span class="at">data =</span> voter_data)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(result)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This code has several issues - can you spot them?</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>result <span class="ot">&lt;-</span> <span class="fu">lm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education, <span class="at">data =</span> voter_data)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(result)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(result)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p><strong>Problems to Identify:</strong> 1. <strong>Wrong function:</strong> Uses <code>lm()</code> instead of <code>glm()</code> for binary outcome 2. <strong>Missing family argument:</strong> No specification for logistic regression 3. <strong>Incomplete model:</strong> Missing the age variable from original request 4. <strong>Poor plotting:</strong> <code>plot()</code> on logistic regression isn’t very informative</p>
@@ -485,43 +565,43 @@ I need to run a logistic regression since turnout is binary. Can you show me the
 </section>
 <section id="practical-workflow-example" class="level2">
 <h2 class="anchored" data-anchor-id="practical-workflow-example">Practical Workflow Example</h2>
-<p>Here’s a step-by-step workflow for using AI help effectively:</p>
+<p>Here’s a step-by-step workflow for using AI help effectively with a simple data task:</p>
 <section id="step-1-try-it-yourself-first" class="level3">
 <h3 class="anchored" data-anchor-id="step-1-try-it-yourself-first">Step 1: Try It Yourself First</h3>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your initial attempt</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>voter_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> voter_data)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Error: could not find function "glm"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your initial attempt to calculate mean by group</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>countries <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mean</span>(gdp)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Error: unexpected symbol</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="step-2-ask-targeted-questions" class="level3">
 <h3 class="anchored" data-anchor-id="step-2-ask-targeted-questions">Step 2: Ask Targeted Questions</h3>
-<pre><code>"I'm trying to run a logistic regression in R but getting 'could not find function glm'. Do I need to load a specific package first?"</code></pre>
+<pre><code>"I'm trying to calculate the mean GDP for each region in my dataset but getting 'unexpected symbol' error. Here's my code: [paste code]. What am I doing wrong?"</code></pre>
 </section>
 <section id="step-3-implement-and-test" class="level3">
 <h3 class="anchored" data-anchor-id="step-3-implement-and-test">Step 3: Implement and Test</h3>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AI suggested adding family argument</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>voter_model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                   <span class="at">data =</span> voter_data,</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                   <span class="at">family =</span> binomial)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(voter_model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># AI suggested the correct syntax</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>countries <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(region) <span class="sc">%&gt;%</span>           <span class="co"># Added missing %&gt;%</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_gdp =</span> <span class="fu">mean</span>(gdp)) <span class="co"># Use summarize function</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>
 <section id="step-4-seek-understanding" class="level3">
 <h3 class="anchored" data-anchor-id="step-4-seek-understanding">Step 4: Seek Understanding</h3>
-<pre><code>"The summary shows coefficients like 0.023 for income. How do I interpret this coefficient in terms of the effect on probability of voting?"</code></pre>
+<pre><code>"Why do I need summarize() here? What's the difference between group_by() and summarize()?"</code></pre>
 </section>
 <section id="step-5-verify-and-extend" class="level3">
 <h3 class="anchored" data-anchor-id="step-5-verify-and-extend">Step 5: Verify and Extend</h3>
-<pre><code>"How can I check whether this model fits the data well? What diagnostic plots or tests should I look at?"</code></pre>
+<pre><code>"How can I also calculate the median and count of countries for each region in the same command?"</code></pre>
 </section>
 </section>
 <section id="advanced-tips-for-better-learning" class="level2">
@@ -569,6 +649,61 @@ I need to run a logistic regression since turnout is binary. Can you show me the
 <li>Request information about alternatives</li>
 <li>Learn the reasoning behind coding decisions</li>
 </ul>
+</section>
+</section>
+<section id="advanced-example-regression-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-example-regression-analysis">Advanced Example: Regression Analysis</h2>
+<p>Once you’re comfortable with basic data manipulation, you might encounter more complex statistical tasks. Here’s how to approach regression analysis with AI help:</p>
+<section id="scenario-analyzing-election-turnout" class="level3">
+<h3 class="anchored" data-anchor-id="scenario-analyzing-election-turnout">Scenario: Analyzing Election Turnout</h3>
+<p><strong>Assignment:</strong> You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.</p>
+</section>
+<section id="step-1-initial-problem-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-initial-problem-setup">Step 1: Initial Problem Setup</h3>
+<p><strong>Your Prompt:</strong></p>
+<pre><code>I'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:
+- turnout: whether someone voted (1 = yes, 0 = no)
+- income: household income in thousands
+- education: years of education
+- age: respondent age
+
+I need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.</code></pre>
+<p><strong>AI Response Analysis:</strong></p>
+<div class="cell">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load necessary library</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Run logistic regression</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">glm</span>(turnout <span class="sc">~</span> income <span class="sc">+</span> education <span class="sc">+</span> age,</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> voter_data,</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> binomial)</span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="co"># View results</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<p><strong>✅ Good AI Response Elements:</strong> - Provides commented code - Uses appropriate function (<code>glm</code> with <code>family = binomial</code>) - Shows how to view results</p>
+<p><strong>🤔 What to Verify:</strong> - Is the syntax correct for your version of R? - Do the variable names match your actual dataset? - Are there additional steps you might need?</p>
+</section>
+<section id="step-2-follow-up-questions" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-follow-up-questions">Step 2: Follow-Up Questions</h3>
+<p><strong>Don’t just copy the code!</strong> Ask follow-up questions to deepen your understanding:</p>
+<p><strong>Your Follow-Up Prompts:</strong></p>
+<pre><code>1. "Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?"
+
+2. "How do I interpret the coefficients in logistic regression? They seem different from regular regression."
+
+3. "What should I look for in the summary output to determine if my model is good?"</code></pre>
+</section>
+<section id="step-3-adapting-and-debugging" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-adapting-and-debugging">Step 3: Adapting and Debugging</h3>
+<p>When you try to run the AI’s code, you might encounter errors. Here’s how to handle them:</p>
+<p><strong>Your Error Message:</strong></p>
+<pre><code>Error in glm.fit: object 'voter_data' not found</code></pre>
+<p><strong>Your Debugging Prompt:</strong></p>
+<pre><code>I'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?</code></pre>
 </section>
 </section>
 <section id="conclusion" class="level2">
