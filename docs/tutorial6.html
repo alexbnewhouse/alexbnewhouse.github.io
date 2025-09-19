@@ -193,6 +193,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#loading-data-with-relative-paths" id="toc-loading-data-with-relative-paths" class="nav-link" data-scroll-target="#loading-data-with-relative-paths">Loading data with relative paths</a></li>
   <li><a href="#checking-if-files-exist" id="toc-checking-if-files-exist" class="nav-link" data-scroll-target="#checking-if-files-exist">Checking if files exist</a></li>
   </ul></li>
+  <li><a href="#r-markdown-knitting-and-file-paths-a-common-source-of-confusion" id="toc-r-markdown-knitting-and-file-paths-a-common-source-of-confusion" class="nav-link" data-scroll-target="#r-markdown-knitting-and-file-paths-a-common-source-of-confusion">R Markdown, Knitting, and File Paths: A Common Source of Confusion</a>
+  <ul class="collapse">
+  <li><a href="#the-big-difference-interactive-r-vs.-knitting" id="toc-the-big-difference-interactive-r-vs.-knitting" class="nav-link" data-scroll-target="#the-big-difference-interactive-r-vs.-knitting">The Big Difference: Interactive R vs.&nbsp;Knitting</a></li>
+  <li><a href="#why-this-causes-problems" id="toc-why-this-causes-problems" class="nav-link" data-scroll-target="#why-this-causes-problems">Why This Causes Problems</a></li>
+  <li><a href="#solutions-for-r-markdown-success" id="toc-solutions-for-r-markdown-success" class="nav-link" data-scroll-target="#solutions-for-r-markdown-success">Solutions for R Markdown Success</a></li>
+  <li><a href="#common-r-markdown-assignment-workflow" id="toc-common-r-markdown-assignment-workflow" class="nav-link" data-scroll-target="#common-r-markdown-assignment-workflow">Common R Markdown Assignment Workflow</a></li>
+  <li><a href="#testing-your-assignment-before-submission" id="toc-testing-your-assignment-before-submission" class="nav-link" data-scroll-target="#testing-your-assignment-before-submission">Testing Your Assignment Before Submission</a></li>
+  <li><a href="#troubleshooting-r-markdown-file-path-issues" id="toc-troubleshooting-r-markdown-file-path-issues" class="nav-link" data-scroll-target="#troubleshooting-r-markdown-file-path-issues">Troubleshooting R Markdown File Path Issues</a></li>
+  <li><a href="#why-this-matters-for-your-grades" id="toc-why-this-matters-for-your-grades" class="nav-link" data-scroll-target="#why-this-matters-for-your-grades">Why This Matters for Your Grades</a></li>
+  </ul></li>
   <li><a href="#practical-example-setting-up-a-research-project" id="toc-practical-example-setting-up-a-research-project" class="nav-link" data-scroll-target="#practical-example-setting-up-a-research-project">Practical example: Setting up a research project</a>
   <ul class="collapse">
   <li><a href="#step-1-create-your-project-structure" id="toc-step-1-create-your-project-structure" class="nav-link" data-scroll-target="#step-1-create-your-project-structure">Step 1: Create your project structure</a></li>
@@ -486,6 +496,153 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
+<section id="r-markdown-knitting-and-file-paths-a-common-source-of-confusion" class="level2">
+<h2 class="anchored" data-anchor-id="r-markdown-knitting-and-file-paths-a-common-source-of-confusion">R Markdown, Knitting, and File Paths: A Common Source of Confusion</h2>
+<p>One of the biggest sources of confusion for students is understanding how R Markdown (.Rmd) files handle file paths differently when you’re working interactively versus when you knit the document. This is <strong>critically important</strong> for completing assignments!</p>
+<section id="the-big-difference-interactive-r-vs.-knitting" class="level3">
+<h3 class="anchored" data-anchor-id="the-big-difference-interactive-r-vs.-knitting">The Big Difference: Interactive R vs.&nbsp;Knitting</h3>
+<p>When you run code chunks interactively in RStudio (clicking the green arrow or pressing Ctrl/Cmd+Enter), R uses your current working directory. But when you <strong>knit</strong> your R Markdown document, R temporarily changes the working directory to wherever your .Rmd file is saved.</p>
+<p>This means:</p>
+<ul>
+<li><strong>Running chunks interactively</strong>: Uses <code>getwd()</code> (your current working directory)</li>
+<li><strong>Knitting the document</strong>: Uses the folder where your .Rmd file is located as the working directory</li>
+</ul>
+</section>
+<section id="why-this-causes-problems" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-causes-problems">Why This Causes Problems</h3>
+<p>Here’s a typical scenario that trips up students:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your project structure:</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>POLS101<span class="sc">/</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  ├── homework1.Rmd          <span class="co"># Your assignment file</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  ├── data<span class="sc">/</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  │   └── survey_data.csv    <span class="co"># Your data file</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  └── scripts<span class="sc">/</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      └── analysis.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>The Problem:</strong> - Your working directory is set to <code>POLS101/</code> - You run this code in a chunk and it works fine:</p>
+<p>::: {.cell}</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_data.csv"</span>)  <span class="co"># Works when running interactively</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>:::</p>
+<ul>
+<li>But when you knit, you get “file not found” errors!</li>
+</ul>
+<p><strong>What’s happening:</strong> When you knit, R looks for <code>data/survey_data.csv</code> starting from where <code>homework1.Rmd</code> is located (which is <code>POLS101/</code>), so it actually looks for <code>POLS101/data/survey_data.csv</code> - which is correct! But if your working directory was set to something else when running interactively, the paths might not match.</p>
+</section>
+<section id="solutions-for-r-markdown-success" class="level3">
+<h3 class="anchored" data-anchor-id="solutions-for-r-markdown-success">Solutions for R Markdown Success</h3>
+<section id="solution-1-keep-your-.rmd-file-in-your-project-root" class="level4">
+<h4 class="anchored" data-anchor-id="solution-1-keep-your-.rmd-file-in-your-project-root">Solution 1: Keep your .Rmd file in your project root</h4>
+<p>The easiest solution is to save your .Rmd file in the main project folder:</p>
+<pre><code>POLS101/                   # &lt;- Your project folder
+  ├── homework1.Rmd        # &lt;- Save your .Rmd here
+  ├── data/
+  │   └── survey_data.csv
+  └── output/
+      └── plots/</code></pre>
+<p>Then use relative paths from your project root:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This will work both interactively AND when knitting</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_data.csv"</span>)</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> age)) <span class="sc">+</span> <span class="fu">geom_histogram</span>()</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"output/plots/age_histogram.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="solution-2-use-the-here-package-highly-recommended" class="level4">
+<h4 class="anchored" data-anchor-id="solution-2-use-the-here-package-highly-recommended">Solution 2: Use the <code>here</code> package (highly recommended!)</h4>
+<p>The <code>here</code> package solves this problem elegantly:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install and load the here package</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Use here() to build file paths that work everywhere</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"survey_data.csv"</span>))</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="fu">here</span>(<span class="st">"output"</span>, <span class="st">"plots"</span>, <span class="st">"age_histogram.png"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The <code>here()</code> function automatically finds your project root (where your .Rproj file is, or other indicators) and builds paths from there.</p>
+</section>
+<section id="solution-3-check-your-working-directory-in-your-.rmd-file" class="level4">
+<h4 class="anchored" data-anchor-id="solution-3-check-your-working-directory-in-your-.rmd-file">Solution 3: Check your working directory in your .Rmd file</h4>
+<p>Add this to the top of your R Markdown document to see where knitting thinks it is:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check working directory when knitting</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># List files to see what's available</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>()</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if your data file exists from this location</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">file.exists</span>(<span class="st">"data/survey_data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="common-r-markdown-assignment-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="common-r-markdown-assignment-workflow">Common R Markdown Assignment Workflow</h3>
+<p>Here’s a workflow that works reliably for assignments:</p>
+<ol type="1">
+<li><strong>Create an RStudio Project</strong> for your assignment</li>
+<li><strong>Save your .Rmd file</strong> in the project root folder</li>
+<li><strong>Create subfolders</strong> for data, output, etc.</li>
+<li><strong>Use relative paths</strong> or the <code>here</code> package in your .Rmd file</li>
+<li><strong>Test by knitting early and often</strong> - don’t wait until the last minute!</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example assignment .Rmd structure:</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This should work both interactively and when knitting</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)  <span class="co"># Recommended!</span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data (works both ways)</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"assignment_data.csv"</span>))</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Do your analysis</span></span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>summary_stats <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span> </span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean_age =</span> <span class="fu">mean</span>(age),</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">mean_income =</span> <span class="fu">mean</span>(income))</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Save your plot (works both ways) </span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> income)) <span class="sc">+</span> </span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="fu">here</span>(<span class="st">"output"</span>, <span class="st">"scatter_plot.png"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="testing-your-assignment-before-submission" class="level3">
+<h3 class="anchored" data-anchor-id="testing-your-assignment-before-submission">Testing Your Assignment Before Submission</h3>
+<p>Before submitting your assignment, always:</p>
+<ol type="1">
+<li><strong>Knit your document</strong> - don’t just run the chunks!</li>
+<li><strong>Check that the HTML file contains all your plots and output</strong></li>
+<li><strong>Verify that any saved files (plots, tables) were created where you expected</strong></li>
+</ol>
+</section>
+<section id="troubleshooting-r-markdown-file-path-issues" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting-r-markdown-file-path-issues">Troubleshooting R Markdown File Path Issues</h3>
+<p>If your .Rmd file won’t knit due to file path errors:</p>
+<p><strong>Step 1:</strong> Add this diagnostic chunk at the top of your .Rmd:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Diagnostic information</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Current working directory:"</span>, <span class="fu">getwd</span>(), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Files in current directory:"</span>, <span class="fu">paste</span>(<span class="fu">list.files</span>(), <span class="at">collapse =</span> <span class="st">", "</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Does data folder exist?"</span>, <span class="fu">file.exists</span>(<span class="st">"data"</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Files in data folder:"</span>, <span class="fu">paste</span>(<span class="fu">list.files</span>(<span class="st">"data"</span>), <span class="at">collapse =</span> <span class="st">", "</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Step 2:</strong> Compare the output when you: - Run the chunk interactively - Knit the document</p>
+<p><strong>Step 3:</strong> Adjust your file paths based on what you see. If knitting shows you’re in a different location than you expected, adjust your paths accordingly.</p>
+</section>
+<section id="why-this-matters-for-your-grades" class="level3">
+<h3 class="anchored" data-anchor-id="why-this-matters-for-your-grades">Why This Matters for Your Grades</h3>
+<p>Many students lose points on assignments because:</p>
+<ul>
+<li>Their code runs fine in RStudio but the .Rmd won’t knit</li>
+<li>Their knitted HTML is missing plots because the save paths were wrong</li>
+<li>They submit .Rmd files that professors can’t knit because of path issues</li>
+</ul>
+<p>Understanding this concept will save you time and frustration, and help ensure your assignments are complete when you submit them!</p>
+</section>
+</section>
 <section id="practical-example-setting-up-a-research-project" class="level2">
 <h2 class="anchored" data-anchor-id="practical-example-setting-up-a-research-project">Practical example: Setting up a research project</h2>
 <p>Let’s walk through setting up a complete research project:</p>
@@ -526,34 +683,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="step-3-test-your-setup">Step 3: Test your setup</h3>
 <p>Create a new R script and try this code:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check where you are</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create some sample data</span></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>sample_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Save it to your data folder</span></span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(sample_data, <span class="st">"data/sample_data.csv"</span>)</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Load it back (to test that it works)</span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>loaded_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/sample_data.csv"</span>)</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(loaded_data)</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple plot and save it</span></span>
-<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>loaded_data <span class="sc">%&gt;%</span> </span>
-<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> id, <span class="at">y =</span> score)) <span class="sc">+</span> </span>
-<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Sample Data Plot"</span>,</span>
-<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"ID"</span>,</span>
-<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Score"</span>) <span class="sc">+</span></span>
-<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="st">"output/sample_plot.png"</span>)</span>
-<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Success! Your project structure is working correctly."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check where you are</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create some sample data</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>sample_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Save it to your data folder</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(sample_data, <span class="st">"data/sample_data.csv"</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Load it back (to test that it works)</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>loaded_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/sample_data.csv"</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(loaded_data)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple plot and save it</span></span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>loaded_data <span class="sc">%&gt;%</span> </span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> id, <span class="at">y =</span> score)) <span class="sc">+</span> </span>
+<span id="cb25-21"><a href="#cb25-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb25-22"><a href="#cb25-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb25-23"><a href="#cb25-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Sample Data Plot"</span>,</span>
+<span id="cb25-24"><a href="#cb25-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"ID"</span>,</span>
+<span id="cb25-25"><a href="#cb25-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Score"</span>) <span class="sc">+</span></span>
+<span id="cb25-26"><a href="#cb25-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="st">"output/sample_plot.png"</span>)</span>
+<span id="cb25-27"><a href="#cb25-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-28"><a href="#cb25-28" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Success! Your project structure is working correctly."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -610,8 +767,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Check your actual file locations</strong> - Use <code>getwd()</code> in R to see where you really are, and <code>list.files()</code> to see what’s actually in your working directory.</p></li>
 <li><p><strong>Use the full OneDrive path</strong> - If your files are in OneDrive, use the full path:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If your files are in OneDrive, you might need:</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/YourName/OneDrive/Documents/POLS101/data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># If your files are in OneDrive, you might need:</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"C:/Users/YourName/OneDrive/Documents/POLS101/data.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></li>
 <li><p><strong>Move your project outside OneDrive</strong> - Create your R projects in a folder that’s NOT managed by OneDrive:</p>
 <pre><code>C:\Users\YourName\R_Projects\POLS101\</code></pre></li>
@@ -630,11 +787,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="paths-with-spaces-or-special-characters">Paths with spaces or special characters</h3>
 <p>If your folders or files have spaces in their names, you need to put quotes around the entire path:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct way to handle spaces in file names</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey results 2024.csv"</span>)</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use underscores instead of spaces (recommended)</span></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_results_2024.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct way to handle spaces in file names</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey results 2024.csv"</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use underscores instead of spaces (recommended)</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_results_2024.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
@@ -644,29 +801,29 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="using-the-here-package">Using the <code>here</code> package</h3>
 <p>The <code>here</code> package is fantastic for making your code work across different computers and operating systems:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install if you don't have it</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The here() function automatically finds your project root</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"survey_results.csv"</span>))</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This works the same on Windows, Mac, and Linux!</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="fu">here</span>(<span class="st">"output"</span>, <span class="st">"my_plot.png"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install if you don't have it</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The here() function automatically finds your project root</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"survey_results.csv"</span>))</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This works the same on Windows, Mac, and Linux!</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="fu">here</span>(<span class="st">"output"</span>, <span class="st">"my_plot.png"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="environment-variables-and-shortcuts" class="level3">
 <h3 class="anchored" data-anchor-id="environment-variables-and-shortcuts">Environment variables and shortcuts</h3>
 <p>R has some built-in shortcuts for common locations:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your home directory</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">path.expand</span>(<span class="st">"~"</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Desktop (usually)</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="fu">file.path</span>(<span class="fu">path.expand</span>(<span class="st">"~"</span>), <span class="st">"Desktop"</span>)</span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check all your environment variables</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your home directory</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">path.expand</span>(<span class="st">"~"</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Desktop (usually)</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">file.path</span>(<span class="fu">path.expand</span>(<span class="st">"~"</span>), <span class="st">"Desktop"</span>)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check all your environment variables</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>

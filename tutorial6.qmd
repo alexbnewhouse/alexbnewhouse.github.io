@@ -286,6 +286,166 @@ list.files("data/")
 list.files("data/", pattern = "*.csv")
 ```
 
+## R Markdown, Knitting, and File Paths: A Common Source of Confusion
+
+One of the biggest sources of confusion for students is understanding how R Markdown (.Rmd) files handle file paths differently when you're working interactively versus when you knit the document. This is **critically important** for completing assignments!
+
+### The Big Difference: Interactive R vs. Knitting
+
+When you run code chunks interactively in RStudio (clicking the green arrow or pressing Ctrl/Cmd+Enter), R uses your current working directory. But when you **knit** your R Markdown document, R temporarily changes the working directory to wherever your .Rmd file is saved.
+
+This means:
+
+- **Running chunks interactively**: Uses `getwd()` (your current working directory)
+- **Knitting the document**: Uses the folder where your .Rmd file is located as the working directory
+
+### Why This Causes Problems
+
+Here's a typical scenario that trips up students:
+
+```{r eval=FALSE}
+# Your project structure:
+POLS101/
+  ├── homework1.Rmd          # Your assignment file
+  ├── data/
+  │   └── survey_data.csv    # Your data file
+  └── scripts/
+      └── analysis.R
+```
+
+**The Problem:**
+- Your working directory is set to `POLS101/` 
+- You run this code in a chunk and it works fine:
+  ```{r eval=FALSE}
+  data <- read_csv("data/survey_data.csv")  # Works when running interactively
+  ```
+- But when you knit, you get "file not found" errors!
+
+**What's happening:** When you knit, R looks for `data/survey_data.csv` starting from where `homework1.Rmd` is located (which is `POLS101/`), so it actually looks for `POLS101/data/survey_data.csv` - which is correct! But if your working directory was set to something else when running interactively, the paths might not match.
+
+### Solutions for R Markdown Success
+
+#### Solution 1: Keep your .Rmd file in your project root
+
+The easiest solution is to save your .Rmd file in the main project folder:
+
+```
+POLS101/                   # <- Your project folder
+  ├── homework1.Rmd        # <- Save your .Rmd here
+  ├── data/
+  │   └── survey_data.csv
+  └── output/
+      └── plots/
+```
+
+Then use relative paths from your project root:
+```{r eval=FALSE}
+# This will work both interactively AND when knitting
+data <- read_csv("data/survey_data.csv")
+ggplot(data, aes(x = age)) + geom_histogram()
+ggsave("output/plots/age_histogram.png")
+```
+
+#### Solution 2: Use the `here` package (highly recommended!)
+
+The `here` package solves this problem elegantly:
+
+```{r eval=FALSE}
+# Install and load the here package
+install.packages("here")
+library(here)
+
+# Use here() to build file paths that work everywhere
+data <- read_csv(here("data", "survey_data.csv"))
+ggsave(here("output", "plots", "age_histogram.png"))
+```
+
+The `here()` function automatically finds your project root (where your .Rproj file is, or other indicators) and builds paths from there.
+
+#### Solution 3: Check your working directory in your .Rmd file
+
+Add this to the top of your R Markdown document to see where knitting thinks it is:
+
+```{r eval=FALSE}
+# Check working directory when knitting
+getwd()
+
+# List files to see what's available
+list.files()
+
+# Check if your data file exists from this location
+file.exists("data/survey_data.csv")
+```
+
+### Common R Markdown Assignment Workflow
+
+Here's a workflow that works reliably for assignments:
+
+1. **Create an RStudio Project** for your assignment
+2. **Save your .Rmd file** in the project root folder
+3. **Create subfolders** for data, output, etc.
+4. **Use relative paths** or the `here` package in your .Rmd file
+5. **Test by knitting early and often** - don't wait until the last minute!
+
+```{r eval=FALSE}
+# Example assignment .Rmd structure:
+# This should work both interactively and when knitting
+
+library(tidyverse)
+library(here)  # Recommended!
+
+# Load data (works both ways)
+data <- read_csv(here("data", "assignment_data.csv"))
+
+# Do your analysis
+summary_stats <- data %>% 
+  summarize(mean_age = mean(age),
+            mean_income = mean(income))
+
+# Save your plot (works both ways) 
+data %>% 
+  ggplot(aes(x = age, y = income)) + 
+  geom_point() + 
+  ggsave(here("output", "scatter_plot.png"))
+```
+
+### Testing Your Assignment Before Submission
+
+Before submitting your assignment, always:
+
+1. **Knit your document** - don't just run the chunks!
+2. **Check that the HTML file contains all your plots and output**
+3. **Verify that any saved files (plots, tables) were created where you expected**
+
+### Troubleshooting R Markdown File Path Issues
+
+If your .Rmd file won't knit due to file path errors:
+
+**Step 1:** Add this diagnostic chunk at the top of your .Rmd:
+```{r eval=FALSE}
+# Diagnostic information
+cat("Current working directory:", getwd(), "\n")
+cat("Files in current directory:", paste(list.files(), collapse = ", "), "\n")
+cat("Does data folder exist?", file.exists("data"), "\n")
+cat("Files in data folder:", paste(list.files("data"), collapse = ", "), "\n")
+```
+
+**Step 2:** Compare the output when you:
+- Run the chunk interactively 
+- Knit the document
+
+**Step 3:** Adjust your file paths based on what you see. If knitting shows you're in a different location than you expected, adjust your paths accordingly.
+
+### Why This Matters for Your Grades
+
+Many students lose points on assignments because:
+
+- Their code runs fine in RStudio but the .Rmd won't knit
+- Their knitted HTML is missing plots because the save paths were wrong
+- They submit .Rmd files that professors can't knit because of path issues
+
+Understanding this concept will save you time and frustration, and help ensure your assignments are complete when you submit them!
+
 ## Practical example: Setting up a research project
 
 Let's walk through setting up a complete research project:
