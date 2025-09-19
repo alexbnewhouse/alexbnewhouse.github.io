@@ -1,0 +1,393 @@
+---
+title: "Understanding File Systems and Working Directories in R and RStudio"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    code-fold: false
+---
+
+## Why do I need to understand file systems?
+
+If you've ever found yourself confused about why R can't find your data file, or why your script works on your computer but not your classmate's, or why you keep getting "file not found" errors even though you *know* the file is there—this tutorial is for you! 
+
+Understanding how your computer organizes files and how R navigates through them is absolutely crucial for doing data analysis. It's like learning to read a map before going on a road trip. Once you understand the basic concepts, you'll spend less time wrestling with technical issues and more time focusing on your actual research.
+
+## What is a file system?
+
+A file system is simply how your computer organizes and stores files. Think of it like a giant filing cabinet with folders inside folders inside folders. Every file on your computer has an "address" that tells you exactly where to find it.
+
+Let's start with some basics that apply to both Windows and Mac:
+
+- **Files** are individual documents (like `my_data.csv` or `homework.R`)
+- **Folders** (also called directories) are containers that hold files and other folders
+- **Paths** are the "addresses" that tell you exactly where a file or folder is located
+
+## Operating System Differences
+
+::: {.panel-tabset}
+
+## Windows
+
+On Windows, your file system starts with drive letters like `C:`, `D:`, etc. The main drive is usually `C:`. Folders are separated by backslashes (`\`).
+
+A typical Windows path might look like:
+```
+C:\Users\YourName\Documents\POLS101\homework1.R
+```
+
+This means:
+- Start at the C: drive
+- Go to the Users folder
+- Then to the folder with your username
+- Then to Documents
+- Then to POLS101
+- Finally, find the file homework1.R
+
+## Mac
+
+On Mac, the file system starts with a forward slash (`/`) and doesn't use drive letters. Folders are separated by forward slashes (`/`).
+
+A typical Mac path might look like:
+```
+/Users/YourName/Documents/POLS101/homework1.R
+```
+
+This means:
+- Start at the root directory (/)
+- Go to the Users folder
+- Then to the folder with your username
+- Then to Documents
+- Then to POLS101
+- Finally, find the file homework1.R
+
+:::
+
+## What is a working directory?
+
+Your **working directory** is like your current location in the file system. It's where R is "standing" right now. When you tell R to open a file, it looks for that file starting from your working directory.
+
+Think of it this way: if you're in a library and someone says "go get the book on the third shelf," you need to know which section of the library you're currently in to know which third shelf they mean!
+
+Let's see what your current working directory is:
+
+```{r}
+# This shows you where R is currently "standing"
+getwd()
+```
+
+When you first open RStudio, your working directory is usually set to your home folder. But this might not be where your data files are stored!
+
+## Common file system mistakes (and how to fix them)
+
+### Mistake #1: "But I can see the file!"
+
+**The Problem:** You can see your data file in your file explorer/finder, but R says it can't find it.
+
+**What's happening:** Just because you can see the file doesn't mean R knows where to look for it. R only looks in your current working directory (and its subdirectories) by default.
+
+**The Solution:** Either move your file to your working directory, or tell R exactly where to find your file.
+
+### Mistake #2: Hard-coding full paths
+
+**The Problem:** Your code works on your computer but breaks on your classmate's computer.
+
+```{r eval=FALSE}
+# This will only work on YOUR computer
+data <- read.csv("C:/Users/YourName/Documents/POLS101/data.csv")  # Windows
+data <- read.csv("/Users/YourName/Documents/POLS101/data.csv")   # Mac
+```
+
+**What's happening:** You've written the specific path that exists on your computer, but your classmate has a different username and maybe even a different folder structure.
+
+**The Solution:** Use relative paths (explained below) or set up your project properly.
+
+### Mistake #3: Not organizing your project files
+
+**The Problem:** Your files are scattered all over your computer, making it hard to keep track of what goes with what project.
+
+**The Solution:** Create a dedicated folder for each project and keep everything related to that project inside it.
+
+## Absolute vs. Relative Paths
+
+Understanding the difference between absolute and relative paths is crucial:
+
+### Absolute Paths
+An **absolute path** gives the complete address from the very top of your file system:
+
+::: {.panel-tabset}
+
+## Windows
+```
+C:\Users\YourName\Documents\POLS101\data\survey_results.csv
+```
+
+## Mac
+```
+/Users/YourName/Documents/POLS101/data/survey_results.csv
+```
+
+:::
+
+### Relative Paths
+A **relative path** gives directions from your current location (working directory):
+
+```
+data/survey_results.csv
+```
+
+This says: "from where I am now, go into the 'data' folder and find 'survey_results.csv'"
+
+## Best practices for organizing your R projects
+
+### 1. Create a project folder
+
+For each research project or class, create a dedicated folder:
+
+::: {.panel-tabset}
+
+## Windows
+```
+C:\Users\YourName\Documents\POLS101\
+```
+
+## Mac
+```
+/Users/YourName/Documents/POLS101/
+```
+
+:::
+
+### 2. Use a consistent folder structure
+
+Inside your project folder, create subfolders like:
+```
+POLS101/
+  ├── data/           # Store your datasets here
+  ├── scripts/        # Store your R code here
+  ├── output/         # Store graphs, tables, etc. here
+  └── documents/      # Store papers, notes, etc. here
+```
+
+### 3. Use RStudio Projects
+
+RStudio has a fantastic feature called "Projects" that makes file management much easier. When you create an RStudio Project, it automatically sets your working directory to the project folder.
+
+Here's how to create a new project:
+
+::: {.panel-tabset}
+
+## Windows
+1. In RStudio, go to File → New Project
+2. Choose "New Directory"
+3. Choose "New Project"
+4. Give it a name (like "POLS101")
+5. Choose where to put it (like `C:\Users\YourName\Documents\`)
+6. Click "Create Project"
+
+## Mac
+1. In RStudio, go to File → New Project
+2. Choose "New Directory"
+3. Choose "New Project"
+4. Give it a name (like "POLS101")
+5. Choose where to put it (like `/Users/YourName/Documents/`)
+6. Click "Create Project"
+
+:::
+
+## Working with files in R
+
+Now let's look at how to actually work with files in your R code:
+
+### Setting your working directory
+
+If you're not using RStudio Projects, you might need to set your working directory manually:
+
+```{r eval=FALSE}
+# Set working directory (adjust the path for your computer)
+setwd("/Users/YourName/Documents/POLS101")  # Mac
+setwd("C:/Users/YourName/Documents/POLS101")  # Windows (note: forward slashes work in R even on Windows!)
+```
+
+**Pro tip:** Notice that even on Windows, you can use forward slashes (`/`) in R code. This makes your code more portable between operating systems!
+
+### Loading data with relative paths
+
+Once your working directory is set correctly, you can use relative paths:
+
+```{r eval=FALSE}
+# This will work for anyone who has the same folder structure
+library(tidyverse)
+
+# Load data from the 'data' subfolder
+survey_data <- read_csv("data/survey_results.csv")
+
+# Create a plot and save it to the 'output' subfolder
+survey_data %>% 
+  ggplot(aes(x = age, y = income)) + 
+  geom_point() + 
+  ggsave("output/age_income_plot.png")
+```
+
+### Checking if files exist
+
+Before trying to load a file, you can check if R can find it:
+
+```{r eval=FALSE}
+# Check if a file exists
+file.exists("data/survey_results.csv")
+
+# List all files in a directory
+list.files("data/")
+
+# List all CSV files in a directory
+list.files("data/", pattern = "*.csv")
+```
+
+## Practical example: Setting up a research project
+
+Let's walk through setting up a complete research project:
+
+### Step 1: Create your project structure
+
+::: {.panel-tabset}
+
+## Windows
+Using File Explorer:
+1. Navigate to `C:\Users\YourName\Documents\`
+2. Create a new folder called "Research_Project"
+3. Inside that folder, create subfolders: `data`, `scripts`, `output`, `documents`
+
+## Mac
+Using Finder:
+1. Navigate to `/Users/YourName/Documents/`
+2. Create a new folder called "Research_Project"
+3. Inside that folder, create subfolders: `data`, `scripts`, `output`, `documents`
+
+:::
+
+### Step 2: Create an RStudio Project
+1. Open RStudio
+2. File → New Project → Existing Directory
+3. Browse to your "Research_Project" folder
+4. Click "Create Project"
+
+### Step 3: Test your setup
+
+Create a new R script and try this code:
+
+```{r eval=FALSE}
+# Check where you are
+getwd()
+
+# Create some sample data
+library(tidyverse)
+sample_data <- data.frame(
+  id = 1:10,
+  score = rnorm(10, mean = 75, sd = 10)
+)
+
+# Save it to your data folder
+write_csv(sample_data, "data/sample_data.csv")
+
+# Load it back (to test that it works)
+loaded_data <- read_csv("data/sample_data.csv")
+print(loaded_data)
+
+# Create a simple plot and save it
+loaded_data %>% 
+  ggplot(aes(x = id, y = score)) + 
+  geom_point() + 
+  geom_line() +
+  labs(title = "Sample Data Plot",
+       x = "ID",
+       y = "Score") +
+  ggsave("output/sample_plot.png")
+
+print("Success! Your project structure is working correctly.")
+```
+
+## Troubleshooting common issues
+
+### "Cannot open file 'filename': No such file or directory"
+
+**Solutions:**
+1. Check your working directory: `getwd()`
+2. Check if the file exists: `file.exists("your_filename")`
+3. List files in your directory: `list.files()`
+4. Make sure the file name is spelled correctly (including the extension!)
+
+### "Permission denied" errors
+
+::: {.panel-tabset}
+
+## Windows
+- Make sure the file isn't open in Excel or another program
+- Check that you have write permissions to the folder
+- Try running RStudio as administrator (right-click → "Run as administrator")
+
+## Mac
+- Make sure the file isn't open in Excel or another program
+- Check the file permissions in Finder (right-click → Get Info)
+- You might need to change the folder permissions
+
+:::
+
+### Paths with spaces or special characters
+
+If your folders or files have spaces in their names, you need to put quotes around the entire path:
+
+```{r eval=FALSE}
+# Correct way to handle spaces in file names
+data <- read_csv("data/survey results 2024.csv")
+
+# Or use underscores instead of spaces (recommended)
+data <- read_csv("data/survey_results_2024.csv")
+```
+
+## Advanced tips
+
+### Using the `here` package
+
+The `here` package is fantastic for making your code work across different computers and operating systems:
+
+```{r eval=FALSE}
+# Install if you don't have it
+install.packages("here")
+library(here)
+
+# The here() function automatically finds your project root
+data <- read_csv(here("data", "survey_results.csv"))
+
+# This works the same on Windows, Mac, and Linux!
+ggsave(here("output", "my_plot.png"))
+```
+
+### Environment variables and shortcuts
+
+R has some built-in shortcuts for common locations:
+
+```{r eval=FALSE}
+# Your home directory
+path.expand("~")
+
+# Desktop (usually)
+file.path(path.expand("~"), "Desktop")
+
+# Check all your environment variables
+Sys.getenv()
+```
+
+## Summary and key takeaways
+
+1. **Your computer's file system is like a filing cabinet** - everything has a specific location
+2. **Working directory is where R is currently "standing"** - check it with `getwd()`
+3. **Use RStudio Projects** - they make file management much easier
+4. **Organize your projects** - create dedicated folders with consistent structure
+5. **Use relative paths** - they make your code work on different computers
+6. **Forward slashes work everywhere** - even on Windows, use `/` in your R code
+7. **Check if files exist** - use `file.exists()` and `list.files()` to debug issues
+
+The most important thing is to be intentional about where you put your files and consistent in how you organize your projects. A little bit of organization at the beginning will save you hours of frustration later!
+
+Remember: everyone struggles with file paths and working directories when they're learning R. Don't get discouraged—with practice, it becomes second nature. And when in doubt, ask for help!

@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.23">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Understanding File Systems and Working Directories in R and RStudio – Alex Bradley Newhouse</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-1fe81d0376b2c50856e68e651e390326.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-f8cda9a82ef72c2077e8c122e04fabf0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Alex Bradley Newhouse</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./cv.html"> 
+<span class="menu-text">CV</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">Teaching</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./research.html"> 
+<span class="menu-text">Research</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./notes.html"> 
+<span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#why-do-i-need-to-understand-file-systems" id="toc-why-do-i-need-to-understand-file-systems" class="nav-link active" data-scroll-target="#why-do-i-need-to-understand-file-systems">Why do I need to understand file systems?</a></li>
+  <li><a href="#what-is-a-file-system" id="toc-what-is-a-file-system" class="nav-link" data-scroll-target="#what-is-a-file-system">What is a file system?</a></li>
+  <li><a href="#operating-system-differences" id="toc-operating-system-differences" class="nav-link" data-scroll-target="#operating-system-differences">Operating System Differences</a></li>
+  <li><a href="#what-is-a-working-directory" id="toc-what-is-a-working-directory" class="nav-link" data-scroll-target="#what-is-a-working-directory">What is a working directory?</a></li>
+  <li><a href="#common-file-system-mistakes-and-how-to-fix-them" id="toc-common-file-system-mistakes-and-how-to-fix-them" class="nav-link" data-scroll-target="#common-file-system-mistakes-and-how-to-fix-them">Common file system mistakes (and how to fix them)</a>
+  <ul class="collapse">
+  <li><a href="#mistake-1-but-i-can-see-the-file" id="toc-mistake-1-but-i-can-see-the-file" class="nav-link" data-scroll-target="#mistake-1-but-i-can-see-the-file">Mistake #1: “But I can see the file!”</a></li>
+  <li><a href="#mistake-2-hard-coding-full-paths" id="toc-mistake-2-hard-coding-full-paths" class="nav-link" data-scroll-target="#mistake-2-hard-coding-full-paths">Mistake #2: Hard-coding full paths</a></li>
+  <li><a href="#mistake-3-not-organizing-your-project-files" id="toc-mistake-3-not-organizing-your-project-files" class="nav-link" data-scroll-target="#mistake-3-not-organizing-your-project-files">Mistake #3: Not organizing your project files</a></li>
+  </ul></li>
+  <li><a href="#absolute-vs.-relative-paths" id="toc-absolute-vs.-relative-paths" class="nav-link" data-scroll-target="#absolute-vs.-relative-paths">Absolute vs.&nbsp;Relative Paths</a>
+  <ul class="collapse">
+  <li><a href="#absolute-paths" id="toc-absolute-paths" class="nav-link" data-scroll-target="#absolute-paths">Absolute Paths</a></li>
+  <li><a href="#relative-paths" id="toc-relative-paths" class="nav-link" data-scroll-target="#relative-paths">Relative Paths</a></li>
+  </ul></li>
+  <li><a href="#best-practices-for-organizing-your-r-projects" id="toc-best-practices-for-organizing-your-r-projects" class="nav-link" data-scroll-target="#best-practices-for-organizing-your-r-projects">Best practices for organizing your R projects</a>
+  <ul class="collapse">
+  <li><a href="#create-a-project-folder" id="toc-create-a-project-folder" class="nav-link" data-scroll-target="#create-a-project-folder">1. Create a project folder</a></li>
+  <li><a href="#use-a-consistent-folder-structure" id="toc-use-a-consistent-folder-structure" class="nav-link" data-scroll-target="#use-a-consistent-folder-structure">2. Use a consistent folder structure</a></li>
+  <li><a href="#use-rstudio-projects" id="toc-use-rstudio-projects" class="nav-link" data-scroll-target="#use-rstudio-projects">3. Use RStudio Projects</a></li>
+  </ul></li>
+  <li><a href="#working-with-files-in-r" id="toc-working-with-files-in-r" class="nav-link" data-scroll-target="#working-with-files-in-r">Working with files in R</a>
+  <ul class="collapse">
+  <li><a href="#setting-your-working-directory" id="toc-setting-your-working-directory" class="nav-link" data-scroll-target="#setting-your-working-directory">Setting your working directory</a></li>
+  <li><a href="#loading-data-with-relative-paths" id="toc-loading-data-with-relative-paths" class="nav-link" data-scroll-target="#loading-data-with-relative-paths">Loading data with relative paths</a></li>
+  <li><a href="#checking-if-files-exist" id="toc-checking-if-files-exist" class="nav-link" data-scroll-target="#checking-if-files-exist">Checking if files exist</a></li>
+  </ul></li>
+  <li><a href="#practical-example-setting-up-a-research-project" id="toc-practical-example-setting-up-a-research-project" class="nav-link" data-scroll-target="#practical-example-setting-up-a-research-project">Practical example: Setting up a research project</a>
+  <ul class="collapse">
+  <li><a href="#step-1-create-your-project-structure" id="toc-step-1-create-your-project-structure" class="nav-link" data-scroll-target="#step-1-create-your-project-structure">Step 1: Create your project structure</a></li>
+  <li><a href="#step-2-create-an-rstudio-project" id="toc-step-2-create-an-rstudio-project" class="nav-link" data-scroll-target="#step-2-create-an-rstudio-project">Step 2: Create an RStudio Project</a></li>
+  <li><a href="#step-3-test-your-setup" id="toc-step-3-test-your-setup" class="nav-link" data-scroll-target="#step-3-test-your-setup">Step 3: Test your setup</a></li>
+  </ul></li>
+  <li><a href="#troubleshooting-common-issues" id="toc-troubleshooting-common-issues" class="nav-link" data-scroll-target="#troubleshooting-common-issues">Troubleshooting common issues</a>
+  <ul class="collapse">
+  <li><a href="#cannot-open-file-filename-no-such-file-or-directory" id="toc-cannot-open-file-filename-no-such-file-or-directory" class="nav-link" data-scroll-target="#cannot-open-file-filename-no-such-file-or-directory">“Cannot open file ‘filename’: No such file or directory”</a></li>
+  <li><a href="#permission-denied-errors" id="toc-permission-denied-errors" class="nav-link" data-scroll-target="#permission-denied-errors">“Permission denied” errors</a></li>
+  <li><a href="#paths-with-spaces-or-special-characters" id="toc-paths-with-spaces-or-special-characters" class="nav-link" data-scroll-target="#paths-with-spaces-or-special-characters">Paths with spaces or special characters</a></li>
+  </ul></li>
+  <li><a href="#advanced-tips" id="toc-advanced-tips" class="nav-link" data-scroll-target="#advanced-tips">Advanced tips</a>
+  <ul class="collapse">
+  <li><a href="#using-the-here-package" id="toc-using-the-here-package" class="nav-link" data-scroll-target="#using-the-here-package">Using the <code>here</code> package</a></li>
+  <li><a href="#environment-variables-and-shortcuts" id="toc-environment-variables-and-shortcuts" class="nav-link" data-scroll-target="#environment-variables-and-shortcuts">Environment variables and shortcuts</a></li>
+  </ul></li>
+  <li><a href="#summary-and-key-takeaways" id="toc-summary-and-key-takeaways" class="nav-link" data-scroll-target="#summary-and-key-takeaways">Summary and key takeaways</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Understanding File Systems and Working Directories in R and RStudio</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="why-do-i-need-to-understand-file-systems" class="level2">
+<h2 class="anchored" data-anchor-id="why-do-i-need-to-understand-file-systems">Why do I need to understand file systems?</h2>
+<p>If you’ve ever found yourself confused about why R can’t find your data file, or why your script works on your computer but not your classmate’s, or why you keep getting “file not found” errors even though you <em>know</em> the file is there—this tutorial is for you!</p>
+<p>Understanding how your computer organizes files and how R navigates through them is absolutely crucial for doing data analysis. It’s like learning to read a map before going on a road trip. Once you understand the basic concepts, you’ll spend less time wrestling with technical issues and more time focusing on your actual research.</p>
+</section>
+<section id="what-is-a-file-system" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-file-system">What is a file system?</h2>
+<p>A file system is simply how your computer organizes and stores files. Think of it like a giant filing cabinet with folders inside folders inside folders. Every file on your computer has an “address” that tells you exactly where to find it.</p>
+<p>Let’s start with some basics that apply to both Windows and Mac:</p>
+<ul>
+<li><strong>Files</strong> are individual documents (like <code>my_data.csv</code> or <code>homework.R</code>)</li>
+<li><strong>Folders</strong> (also called directories) are containers that hold files and other folders</li>
+<li><strong>Paths</strong> are the “addresses” that tell you exactly where a file or folder is located</li>
+</ul>
+</section>
+<section id="operating-system-differences" class="level2">
+<h2 class="anchored" data-anchor-id="operating-system-differences">Operating System Differences</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>On Windows, your file system starts with drive letters like <code>C:</code>, <code>D:</code>, etc. The main drive is usually <code>C:</code>. Folders are separated by backslashes (<code>\</code>).</p>
+<p>A typical Windows path might look like:</p>
+<pre><code>C:\Users\YourName\Documents\POLS101\homework1.R</code></pre>
+<p>This means: - Start at the C: drive - Go to the Users folder - Then to the folder with your username - Then to Documents - Then to POLS101 - Finally, find the file homework1.R</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>On Mac, the file system starts with a forward slash (<code>/</code>) and doesn’t use drive letters. Folders are separated by forward slashes (<code>/</code>).</p>
+<p>A typical Mac path might look like:</p>
+<pre><code>/Users/YourName/Documents/POLS101/homework1.R</code></pre>
+<p>This means: - Start at the root directory (/) - Go to the Users folder - Then to the folder with your username - Then to Documents - Then to POLS101 - Finally, find the file homework1.R</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-a-working-directory" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-a-working-directory">What is a working directory?</h2>
+<p>Your <strong>working directory</strong> is like your current location in the file system. It’s where R is “standing” right now. When you tell R to open a file, it looks for that file starting from your working directory.</p>
+<p>Think of it this way: if you’re in a library and someone says “go get the book on the third shelf,” you need to know which section of the library you’re currently in to know which third shelf they mean!</p>
+<p>Let’s see what your current working directory is:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This shows you where R is currently "standing"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "/Users/alexnewhouse/alexbnewhouse.github.io"</code></pre>
+</div>
+</div>
+<p>When you first open RStudio, your working directory is usually set to your home folder. But this might not be where your data files are stored!</p>
+</section>
+<section id="common-file-system-mistakes-and-how-to-fix-them" class="level2">
+<h2 class="anchored" data-anchor-id="common-file-system-mistakes-and-how-to-fix-them">Common file system mistakes (and how to fix them)</h2>
+<section id="mistake-1-but-i-can-see-the-file" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-1-but-i-can-see-the-file">Mistake #1: “But I can see the file!”</h3>
+<p><strong>The Problem:</strong> You can see your data file in your file explorer/finder, but R says it can’t find it.</p>
+<p><strong>What’s happening:</strong> Just because you can see the file doesn’t mean R knows where to look for it. R only looks in your current working directory (and its subdirectories) by default.</p>
+<p><strong>The Solution:</strong> Either move your file to your working directory, or tell R exactly where to find your file.</p>
+</section>
+<section id="mistake-2-hard-coding-full-paths" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-2-hard-coding-full-paths">Mistake #2: Hard-coding full paths</h3>
+<p><strong>The Problem:</strong> Your code works on your computer but breaks on your classmate’s computer.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This will only work on YOUR computer</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:/Users/YourName/Documents/POLS101/data.csv"</span>)  <span class="co"># Windows</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"/Users/YourName/Documents/POLS101/data.csv"</span>)   <span class="co"># Mac</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>What’s happening:</strong> You’ve written the specific path that exists on your computer, but your classmate has a different username and maybe even a different folder structure.</p>
+<p><strong>The Solution:</strong> Use relative paths (explained below) or set up your project properly.</p>
+</section>
+<section id="mistake-3-not-organizing-your-project-files" class="level3">
+<h3 class="anchored" data-anchor-id="mistake-3-not-organizing-your-project-files">Mistake #3: Not organizing your project files</h3>
+<p><strong>The Problem:</strong> Your files are scattered all over your computer, making it hard to keep track of what goes with what project.</p>
+<p><strong>The Solution:</strong> Create a dedicated folder for each project and keep everything related to that project inside it.</p>
+</section>
+</section>
+<section id="absolute-vs.-relative-paths" class="level2">
+<h2 class="anchored" data-anchor-id="absolute-vs.-relative-paths">Absolute vs.&nbsp;Relative Paths</h2>
+<p>Understanding the difference between absolute and relative paths is crucial:</p>
+<section id="absolute-paths" class="level3">
+<h3 class="anchored" data-anchor-id="absolute-paths">Absolute Paths</h3>
+<p>An <strong>absolute path</strong> gives the complete address from the very top of your file system:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<pre><code>C:\Users\YourName\Documents\POLS101\data\survey_results.csv</code></pre>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<pre><code>/Users/YourName/Documents/POLS101/data/survey_results.csv</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="relative-paths" class="level3">
+<h3 class="anchored" data-anchor-id="relative-paths">Relative Paths</h3>
+<p>A <strong>relative path</strong> gives directions from your current location (working directory):</p>
+<pre><code>data/survey_results.csv</code></pre>
+<p>This says: “from where I am now, go into the ‘data’ folder and find ‘survey_results.csv’”</p>
+</section>
+</section>
+<section id="best-practices-for-organizing-your-r-projects" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices-for-organizing-your-r-projects">Best practices for organizing your R projects</h2>
+<section id="create-a-project-folder" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-project-folder">1. Create a project folder</h3>
+<p>For each research project or class, create a dedicated folder:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<pre><code>C:\Users\YourName\Documents\POLS101\</code></pre>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<pre><code>/Users/YourName/Documents/POLS101/</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="use-a-consistent-folder-structure" class="level3">
+<h3 class="anchored" data-anchor-id="use-a-consistent-folder-structure">2. Use a consistent folder structure</h3>
+<p>Inside your project folder, create subfolders like:</p>
+<pre><code>POLS101/
+  ├── data/           # Store your datasets here
+  ├── scripts/        # Store your R code here
+  ├── output/         # Store graphs, tables, etc. here
+  └── documents/      # Store papers, notes, etc. here</code></pre>
+</section>
+<section id="use-rstudio-projects" class="level3">
+<h3 class="anchored" data-anchor-id="use-rstudio-projects">3. Use RStudio Projects</h3>
+<p>RStudio has a fantastic feature called “Projects” that makes file management much easier. When you create an RStudio Project, it automatically sets your working directory to the project folder.</p>
+<p>Here’s how to create a new project:</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<ol type="1">
+<li>In RStudio, go to File → New Project</li>
+<li>Choose “New Directory”</li>
+<li>Choose “New Project”</li>
+<li>Give it a name (like “POLS101”)</li>
+<li>Choose where to put it (like <code>C:\Users\YourName\Documents\</code>)</li>
+<li>Click “Create Project”</li>
+</ol>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<ol type="1">
+<li>In RStudio, go to File → New Project</li>
+<li>Choose “New Directory”</li>
+<li>Choose “New Project”</li>
+<li>Give it a name (like “POLS101”)</li>
+<li>Choose where to put it (like <code>/Users/YourName/Documents/</code>)</li>
+<li>Click “Create Project”</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="working-with-files-in-r" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-files-in-r">Working with files in R</h2>
+<p>Now let’s look at how to actually work with files in your R code:</p>
+<section id="setting-your-working-directory" class="level3">
+<h3 class="anchored" data-anchor-id="setting-your-working-directory">Setting your working directory</h3>
+<p>If you’re not using RStudio Projects, you might need to set your working directory manually:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set working directory (adjust the path for your computer)</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"/Users/YourName/Documents/POLS101"</span>)  <span class="co"># Mac</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">setwd</span>(<span class="st">"C:/Users/YourName/Documents/POLS101"</span>)  <span class="co"># Windows (note: forward slashes work in R even on Windows!)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Pro tip:</strong> Notice that even on Windows, you can use forward slashes (<code>/</code>) in R code. This makes your code more portable between operating systems!</p>
+</section>
+<section id="loading-data-with-relative-paths" class="level3">
+<h3 class="anchored" data-anchor-id="loading-data-with-relative-paths">Loading data with relative paths</h3>
+<p>Once your working directory is set correctly, you can use relative paths:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This will work for anyone who has the same folder structure</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Load data from the 'data' subfolder</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>survey_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_results.csv"</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a plot and save it to the 'output' subfolder</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>survey_data <span class="sc">%&gt;%</span> </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> age, <span class="at">y =</span> income)) <span class="sc">+</span> </span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="st">"output/age_income_plot.png"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="checking-if-files-exist" class="level3">
+<h3 class="anchored" data-anchor-id="checking-if-files-exist">Checking if files exist</h3>
+<p>Before trying to load a file, you can check if R can find it:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if a file exists</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">file.exists</span>(<span class="st">"data/survey_results.csv"</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># List all files in a directory</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="st">"data/"</span>)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># List all CSV files in a directory</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="fu">list.files</span>(<span class="st">"data/"</span>, <span class="at">pattern =</span> <span class="st">"*.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="practical-example-setting-up-a-research-project" class="level2">
+<h2 class="anchored" data-anchor-id="practical-example-setting-up-a-research-project">Practical example: Setting up a research project</h2>
+<p>Let’s walk through setting up a complete research project:</p>
+<section id="step-1-create-your-project-structure" class="level3">
+<h3 class="anchored" data-anchor-id="step-1-create-your-project-structure">Step 1: Create your project structure</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Using File Explorer: 1. Navigate to <code>C:\Users\YourName\Documents\</code> 2. Create a new folder called “Research_Project” 3. Inside that folder, create subfolders: <code>data</code>, <code>scripts</code>, <code>output</code>, <code>documents</code></p>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p>Using Finder: 1. Navigate to <code>/Users/YourName/Documents/</code> 2. Create a new folder called “Research_Project” 3. Inside that folder, create subfolders: <code>data</code>, <code>scripts</code>, <code>output</code>, <code>documents</code></p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-create-an-rstudio-project" class="level3">
+<h3 class="anchored" data-anchor-id="step-2-create-an-rstudio-project">Step 2: Create an RStudio Project</h3>
+<ol type="1">
+<li>Open RStudio</li>
+<li>File → New Project → Existing Directory</li>
+<li>Browse to your “Research_Project” folder</li>
+<li>Click “Create Project”</li>
+</ol>
+</section>
+<section id="step-3-test-your-setup" class="level3">
+<h3 class="anchored" data-anchor-id="step-3-test-your-setup">Step 3: Test your setup</h3>
+<p>Create a new R script and try this code:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check where you are</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">getwd</span>()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Create some sample data</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>sample_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">score =</span> <span class="fu">rnorm</span>(<span class="dv">10</span>, <span class="at">mean =</span> <span class="dv">75</span>, <span class="at">sd =</span> <span class="dv">10</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Save it to your data folder</span></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(sample_data, <span class="st">"data/sample_data.csv"</span>)</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Load it back (to test that it works)</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>loaded_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/sample_data.csv"</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(loaded_data)</span>
+<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a simple plot and save it</span></span>
+<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>loaded_data <span class="sc">%&gt;%</span> </span>
+<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> id, <span class="at">y =</span> score)) <span class="sc">+</span> </span>
+<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
+<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Sample Data Plot"</span>,</span>
+<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"ID"</span>,</span>
+<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Score"</span>) <span class="sc">+</span></span>
+<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggsave</span>(<span class="st">"output/sample_plot.png"</span>)</span>
+<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Success! Your project structure is working correctly."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="troubleshooting-common-issues" class="level2">
+<h2 class="anchored" data-anchor-id="troubleshooting-common-issues">Troubleshooting common issues</h2>
+<section id="cannot-open-file-filename-no-such-file-or-directory" class="level3">
+<h3 class="anchored" data-anchor-id="cannot-open-file-filename-no-such-file-or-directory">“Cannot open file ‘filename’: No such file or directory”</h3>
+<p><strong>Solutions:</strong> 1. Check your working directory: <code>getwd()</code> 2. Check if the file exists: <code>file.exists("your_filename")</code> 3. List files in your directory: <code>list.files()</code> 4. Make sure the file name is spelled correctly (including the extension!)</p>
+</section>
+<section id="permission-denied-errors" class="level3">
+<h3 class="anchored" data-anchor-id="permission-denied-errors">“Permission denied” errors</h3>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-6-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-1" role="tab" aria-controls="tabset-6-1" aria-selected="true" href="">Windows</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-6-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-6-2" role="tab" aria-controls="tabset-6-2" aria-selected="false" href="">Mac</a></li></ul>
+<div class="tab-content">
+<div id="tabset-6-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-6-1-tab">
+<ul>
+<li>Make sure the file isn’t open in Excel or another program</li>
+<li>Check that you have write permissions to the folder</li>
+<li>Try running RStudio as administrator (right-click → “Run as administrator”)</li>
+</ul>
+</div>
+<div id="tabset-6-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-6-2-tab">
+<ul>
+<li>Make sure the file isn’t open in Excel or another program</li>
+<li>Check the file permissions in Finder (right-click → Get Info)</li>
+<li>You might need to change the folder permissions</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="paths-with-spaces-or-special-characters" class="level3">
+<h3 class="anchored" data-anchor-id="paths-with-spaces-or-special-characters">Paths with spaces or special characters</h3>
+<p>If your folders or files have spaces in their names, you need to put quotes around the entire path:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Correct way to handle spaces in file names</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey results 2024.csv"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or use underscores instead of spaces (recommended)</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_results_2024.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="advanced-tips" class="level2">
+<h2 class="anchored" data-anchor-id="advanced-tips">Advanced tips</h2>
+<section id="using-the-here-package" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-here-package">Using the <code>here</code> package</h3>
+<p>The <code>here</code> package is fantastic for making your code work across different computers and operating systems:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install if you don't have it</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"here"</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># The here() function automatically finds your project root</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"data"</span>, <span class="st">"survey_results.csv"</span>))</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="co"># This works the same on Windows, Mac, and Linux!</span></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="fu">here</span>(<span class="st">"output"</span>, <span class="st">"my_plot.png"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="environment-variables-and-shortcuts" class="level3">
+<h3 class="anchored" data-anchor-id="environment-variables-and-shortcuts">Environment variables and shortcuts</h3>
+<p>R has some built-in shortcuts for common locations:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your home directory</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">path.expand</span>(<span class="st">"~"</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Desktop (usually)</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">file.path</span>(<span class="fu">path.expand</span>(<span class="st">"~"</span>), <span class="st">"Desktop"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check all your environment variables</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="summary-and-key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="summary-and-key-takeaways">Summary and key takeaways</h2>
+<ol type="1">
+<li><strong>Your computer’s file system is like a filing cabinet</strong> - everything has a specific location</li>
+<li><strong>Working directory is where R is currently “standing”</strong> - check it with <code>getwd()</code></li>
+<li><strong>Use RStudio Projects</strong> - they make file management much easier</li>
+<li><strong>Organize your projects</strong> - create dedicated folders with consistent structure</li>
+<li><strong>Use relative paths</strong> - they make your code work on different computers</li>
+<li><strong>Forward slashes work everywhere</strong> - even on Windows, use <code>/</code> in your R code</li>
+<li><strong>Check if files exist</strong> - use <code>file.exists()</code> and <code>list.files()</code> to debug issues</li>
+</ol>
+<p>The most important thing is to be intentional about where you put your files and consistent in how you organize your projects. A little bit of organization at the beginning will save you hours of frustration later!</p>
+<p>Remember: everyone struggles with file paths and working directories when they’re learning R. Don’t get discouraged—with practice, it becomes second nature. And when in doubt, ask for help!</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
