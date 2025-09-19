@@ -31,13 +31,13 @@ alexnewhouse/
   ├── Documents/
   │   ├── personalfolder
   │   ├── resumes
-  |   ├── projects
-  |   └── otherstuff
+  │   ├── projects
+  │   └── otherstuff
   └── Dropbox/
-      └── PSCI2075_2025/
-          └── data/
-              └── PSCI_2075_v2.1.RData
-          └── assignment-1.Rmd
+  │   └── PSCI2075_2025/
+  │       ├──  data/
+  │           └── PSCI_2075_v2.1.RData
+  │       └── assignment-1.Rmd
   ...
 ```
 
