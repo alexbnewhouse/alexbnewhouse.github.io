@@ -37,6 +37,7 @@ C:\Users\YourName\Documents\POLS101\homework1.R
 ```
 
 This means:
+
 - Start at the C: drive
 - Go to the Users folder
 - Then to the folder with your username
@@ -54,6 +55,7 @@ A typical Mac path might look like:
 ```
 
 This means:
+
 - Start at the root directory (/)
 - Go to the Users folder
 - Then to the folder with your username
@@ -178,6 +180,7 @@ Here's how to create a new project:
 ::: {.panel-tabset}
 
 ## Windows
+
 1. In RStudio, go to File → New Project
 2. Choose "New Directory"
 3. Choose "New Project"
@@ -186,6 +189,7 @@ Here's how to create a new project:
 6. Click "Create Project"
 
 ## Mac
+
 1. In RStudio, go to File → New Project
 2. Choose "New Directory"
 3. Choose "New Project"
@@ -254,12 +258,14 @@ Let's walk through setting up a complete research project:
 
 ## Windows
 Using File Explorer:
+
 1. Navigate to `C:\Users\YourName\Documents\`
 2. Create a new folder called "Research_Project"
 3. Inside that folder, create subfolders: `data`, `scripts`, `output`, `documents`
 
 ## Mac
 Using Finder:
+
 1. Navigate to `/Users/YourName/Documents/`
 2. Create a new folder called "Research_Project"
 3. Inside that folder, create subfolders: `data`, `scripts`, `output`, `documents`
@@ -267,6 +273,7 @@ Using Finder:
 :::
 
 ### Step 2: Create an RStudio Project
+
 1. Open RStudio
 2. File → New Project → Existing Directory
 3. Browse to your "Research_Project" folder
@@ -312,6 +319,7 @@ print("Success! Your project structure is working correctly.")
 ### "Cannot open file 'filename': No such file or directory"
 
 **Solutions:**
+
 1. Check your working directory: `getwd()`
 2. Check if the file exists: `file.exists("your_filename")`
 3. List files in your directory: `list.files()`
@@ -322,11 +330,13 @@ print("Success! Your project structure is working correctly.")
 ::: {.panel-tabset}
 
 ## Windows
+
 - Make sure the file isn't open in Excel or another program
 - Check that you have write permissions to the folder
 - Try running RStudio as administrator (right-click → "Run as administrator")
 
 ## Mac
+
 - Make sure the file isn't open in Excel or another program
 - Check the file permissions in Finder (right-click → Get Info)
 - You might need to change the folder permissions
