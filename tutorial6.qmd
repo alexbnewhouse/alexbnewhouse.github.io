@@ -23,6 +23,44 @@ Let's start with some basics that apply to both Windows and Mac:
 - **Folders** (also called directories) are containers that hold files and other folders
 - **Paths** are the "addresses" that tell you exactly where a file or folder is located
 
+### Understanding Your Home Directory
+
+Your **home directory** is a special folder that belongs just to you. It's like your personal office space on the computer. This is where your operating system stores your personal files like Documents, Downloads, Desktop, etc.
+
+::: {.panel-tabset}
+
+## Windows
+
+On Windows, your home directory is typically:
+```
+C:\Users\YourName\
+```
+
+Inside your home directory, you'll find familiar folders like:
+
+- `Documents\` - where many programs save files by default
+- `Desktop\` - the files you see on your desktop
+- `Downloads\` - where your web browser saves downloaded files
+- `Pictures\`, `Music\`, `Videos\` - for media files
+
+## Mac
+
+On Mac, your home directory is typically:
+```
+/Users/YourName/
+```
+
+Inside your home directory, you'll find familiar folders like:
+
+- `Documents/` - where many programs save files by default
+- `Desktop/` - the files you see on your desktop
+- `Downloads/` - where your web browser saves downloaded files
+- `Pictures/`, `Music/`, `Movies/` - for media files
+
+:::
+
+**Why does this matter for R?** When you first open RStudio, it usually sets your working directory to your home directory. Understanding this helps you navigate to where your files actually are!
+
 ## Operating System Differences
 
 ::: {.panel-tabset}
@@ -342,6 +380,51 @@ print("Success! Your project structure is working correctly.")
 - You might need to change the folder permissions
 
 :::
+
+### OneDrive and cloud storage complications (Windows users especially!)
+
+**The Problem:** OneDrive automatically takes over your Documents, Desktop, and Pictures folders on Windows, moving them to the cloud. This can cause major confusion because your file paths might look like:
+```
+C:\Users\YourName\OneDrive\Documents\POLS101\data.csv
+```
+instead of the expected:
+```
+C:\Users\YourName\Documents\POLS101\data.csv
+```
+
+**What's happening:** Microsoft OneDrive "hijacks" your default folders to sync them to the cloud. While this can be useful for backup, it changes where your files are actually stored and can make file paths unpredictable.
+
+**Common signs you have OneDrive issues:**
+
+- Your Documents folder has a cloud icon next to it
+- File paths include "OneDrive" in them
+- Files sometimes can't be found even though you can see them in File Explorer
+- You get "sync pending" or "file not available" errors
+
+**Solutions:**
+
+1. **Check your actual file locations** - Use `getwd()` in R to see where you really are, and `list.files()` to see what's actually in your working directory.
+
+2. **Use the full OneDrive path** - If your files are in OneDrive, use the full path:
+   ```{r eval=FALSE}
+   # If your files are in OneDrive, you might need:
+   data <- read_csv("C:/Users/YourName/OneDrive/Documents/POLS101/data.csv")
+   ```
+
+3. **Move your project outside OneDrive** - Create your R projects in a folder that's NOT managed by OneDrive:
+   ```
+   C:\Users\YourName\R_Projects\POLS101\
+   ```
+
+4. **Turn off OneDrive folder redirection** (advanced):
+   - Right-click OneDrive icon in system tray → Settings
+   - Go to "Backup" tab → "Manage backup"
+   - Turn off backup for Documents, Pictures, Desktop folders
+   - **Warning:** This will move your files back to local folders
+
+5. **Use RStudio Projects** - They help manage paths automatically, regardless of where your project folder is located.
+
+**Pro tip:** If you're unsure whether OneDrive is affecting your files, open File Explorer and look at the address bar when you navigate to Documents. If it shows "OneDrive" in the path, then OneDrive is managing that folder.
 
 ### Paths with spaces or special characters
 
