@@ -303,7 +303,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="preprocessing-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="preprocessing-pipeline">Preprocessing Pipeline</h3>
-<div id="35e37b75" class="cell" data-execution_count="1">
+<div id="2b29e63f" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -363,7 +363,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-augmentation-strategy" class="level3">
 <h3 class="anchored" data-anchor-id="data-augmentation-strategy">Data Augmentation Strategy</h3>
 <p>To address limited training data, we employ contextual word embedding augmentation:</p>
-<div id="7bacad90" class="cell" data-execution_count="2">
+<div id="2aebe5a1" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nlpaug.augmenter.word <span class="im">as</span> naw</span>
@@ -393,7 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="model-architecture">Model Architecture</h2>
 <section id="distilbert-configuration" class="level3">
 <h3 class="anchored" data-anchor-id="distilbert-configuration">DistilBERT Configuration</h3>
-<div id="f5e002c9" class="cell" data-execution_count="3">
+<div id="81ab0704" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Model hyperparameters</span></span>
@@ -413,7 +413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="custom-dataset-classes" class="level3">
 <h3 class="anchored" data-anchor-id="custom-dataset-classes">Custom Dataset Classes</h3>
-<div id="32fe42ec" class="cell" data-execution_count="4">
+<div id="f2b582cb" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> PoliticalTextDataset(Dataset):</span>
@@ -451,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="model-architecture-1" class="level3">
 <h3 class="anchored" data-anchor-id="model-architecture-1">Model Architecture</h3>
-<div id="8852e5c3" class="cell" data-execution_count="5">
+<div id="b9468e6d" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DistilBERTClassifier(torch.nn.Module):</span>
@@ -490,7 +490,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="training-process">Training Process</h2>
 <section id="data-splitting-and-loading" class="level3">
 <h3 class="anchored" data-anchor-id="data-splitting-and-loading">Data Splitting and Loading</h3>
-<div id="1afa8b21" class="cell" data-execution_count="6">
+<div id="da6cc623" class="cell" data-execution_count="6">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Split data</span></span>
@@ -512,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="training-loop" class="level3">
 <h3 class="anchored" data-anchor-id="training-loop">Training Loop</h3>
-<div id="ec2f9d9b" class="cell" data-execution_count="7">
+<div id="ea4ae048" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train_model(model, train_loader, valid_loader, epochs):</span>
@@ -638,7 +638,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="model-performance-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="model-performance-analysis">Model Performance Analysis</h3>
-<div id="bcf24a8a" class="cell" data-execution_count="8">
+<div id="cedb25fe" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> classification_report, confusion_matrix</span>
@@ -694,7 +694,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="real-world-application">Real-World Application</h2>
 <section id="inference-pipeline" class="level3">
 <h3 class="anchored" data-anchor-id="inference-pipeline">Inference Pipeline</h3>
-<div id="ee884b63" class="cell" data-execution_count="9">
+<div id="aea113d1" class="cell" data-execution_count="9">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict_extremist_content(text, model, tokenizer):</span>
@@ -780,7 +780,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="technical-implementation">Technical Implementation</h2>
 <section id="model-deployment" class="level3">
 <h3 class="anchored" data-anchor-id="model-deployment">Model Deployment</h3>
-<div id="6bb15de2" class="cell" data-execution_count="10">
+<div id="734971f7" class="cell" data-execution_count="10">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save complete model for deployment</span></span>
