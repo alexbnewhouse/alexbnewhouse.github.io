@@ -19,26 +19,26 @@ This project demonstrates the application of transformer-based natural language 
 
 Online political discourse increasingly shapes real-world political outcomes, with extremist content posing particular challenges for platform governance and democratic stability. This project applies state-of-the-art NLP techniques to automatically identify extremist political content, supporting:
 
-- **Content moderation** at scale for social media platforms
-- **Academic research** on political radicalization processes
-- **Policy development** for online platform governance
-- **Early warning systems** for potential offline violence
+-   **Content moderation** at scale for social media platforms
+-   **Academic research** on political radicalization processes
+-   **Policy development** for online platform governance
+-   **Early warning systems** for potential offline violence
 
 ### Research Questions
 
-1. How effectively can transformer models identify extremist content in political text?
-2. What performance gains do modern NLP approaches offer over traditional machine learning?
-3. How can data augmentation improve model performance on limited labeled data?
+1.  How effectively can transformer models identify extremist content in political text?
+2.  What performance gains do modern NLP approaches offer over traditional machine learning?
+3.  How can data augmentation improve model performance on limited labeled data?
 
 ## Methodology
 
 Our approach employs **DistilBERT**, a distilled version of BERT that retains 97% of BERT's performance while being 60% smaller and faster. The methodology includes:
 
-1. **Text preprocessing** and cleaning for social media data
-2. **Data augmentation** using contextual word embeddings
-3. **Transfer learning** from pre-trained language models
-4. **Comparative evaluation** against traditional ML baselines
-5. **Real-world application** to unlabeled political forum data
+1.  **Text preprocessing** and cleaning for social media data
+2.  **Data augmentation** using contextual word embeddings
+3.  **Transfer learning** from pre-trained language models
+4.  **Comparative evaluation** against traditional ML baselines
+5.  **Real-world application** to unlabeled political forum data
 
 ## Data Collection & Preprocessing
 
@@ -46,10 +46,10 @@ Our approach employs **DistilBERT**, a distilled version of BERT that retains 97
 
 Our labeled dataset consists of political forum posts manually annotated for extremist content:
 
-- **Size:** 1,438 posts (after augmentation)
-- **Sources:** Political discussion forums and social media
-- **Labels:** Binary classification (extremist/non-extremist)
-- **Domain:** Contemporary political discourse
+-   **Size:** 1,438 posts (after augmentation)
+-   **Sources:** Political discussion forums and social media
+-   **Labels:** Binary classification (extremist/non-extremist)
+-   **Domain:** Contemporary political discourse
 
 ### Preprocessing Pipeline
 
@@ -335,13 +335,13 @@ history = train_model(model, train_loader, valid_loader, EPOCHS)
 
 Our DistilBERT model significantly outperforms traditional machine learning approaches:
 
-| Model | F1-Score | Balanced Accuracy | Training Time |
-|-------|----------|-------------------|---------------|
-| Random Baseline | 0.384 | 0.480 | - |
-| Logistic Regression | 0.637 | 0.812 | 2 minutes |
-| Random Forest | 0.498 | 0.927 | 5 minutes |
-| Gradient Boosting | 0.670 | 0.947 | 8 minutes |
-| **DistilBERT** | **0.940** | **0.935** | 45 minutes |
+| Model               | F1-Score  | Balanced Accuracy | Training Time |
+|---------------------|-----------|-------------------|---------------|
+| Random Baseline     | 0.384     | 0.480             | \-            |
+| Logistic Regression | 0.637     | 0.812             | 2 minutes     |
+| Random Forest       | 0.498     | 0.927             | 5 minutes     |
+| Gradient Boosting   | 0.670     | 0.947             | 8 minutes     |
+| **DistilBERT**      | **0.940** | **0.935**         | 45 minutes    |
 
 ### Model Performance Analysis
 
@@ -388,10 +388,10 @@ plt.show()
 
 ### Key Findings
 
-1. **Superior Performance:** DistilBERT achieves 94% F1-score, representing a 27% improvement over the best traditional ML approach
-2. **Robust Classification:** High precision and recall for both classes indicate reliable extremist content detection
-3. **Efficient Architecture:** DistilBERT provides near-BERT performance with significantly reduced computational requirements
-4. **Data Augmentation Benefits:** Contextual augmentation improved performance by ~8% over the baseline
+1.  **Superior Performance:** DistilBERT achieves 94% F1-score, representing a 27% improvement over the best traditional ML approach
+2.  **Robust Classification:** High precision and recall for both classes indicate reliable extremist content detection
+3.  **Efficient Architecture:** DistilBERT provides near-BERT performance with significantly reduced computational requirements
+4.  **Data Augmentation Benefits:** Contextual augmentation improved performance by \~8% over the baseline
 
 ## Real-World Application
 
@@ -450,26 +450,26 @@ for text in sample_texts:
 
 Applied to a large corpus of political forum posts (N=50,000), our model identified:
 
-- **8,481 posts** (17%) flagged as potentially extremist
-- **High-confidence predictions** (>0.9) for 3,247 posts
-- **Temporal patterns** showing increased extremist content around election periods
-- **Topic clustering** revealing common themes in flagged content
+-   **8,481 posts** (17%) flagged as potentially extremist
+-   **High-confidence predictions** (\>0.9) for 3,247 posts
+-   **Temporal patterns** showing increased extremist content around election periods
+-   **Topic clustering** revealing common themes in flagged content
 
 ## Limitations & Future Work
 
 ### Current Limitations
 
-1. **Domain Specificity:** Model trained on specific political forums may not generalize to all platforms
-2. **Contextual Challenges:** Sarcasm and irony remain difficult to detect accurately
-3. **Temporal Drift:** Political language evolves rapidly, requiring model updates
-4. **Bias Concerns:** Training data may reflect annotator biases
+1.  **Domain Specificity:** Model trained on specific political forums may not generalize to all platforms
+2.  **Contextual Challenges:** Sarcasm and irony remain difficult to detect accurately
+3.  **Temporal Drift:** Political language evolves rapidly, requiring model updates
+4.  **Bias Concerns:** Training data may reflect annotator biases
 
 ### Future Directions
 
-1. **Multi-domain Training:** Expand to diverse political platforms and languages
-2. **Temporal Robustness:** Implement continuous learning strategies
-3. **Explainability:** Add attention visualization for model interpretability
-4. **Ethical Framework:** Develop guidelines for responsible deployment
+1.  **Multi-domain Training:** Expand to diverse political platforms and languages
+2.  **Temporal Robustness:** Implement continuous learning strategies
+3.  **Explainability:** Add attention visualization for model interpretability
+4.  **Ethical Framework:** Develop guidelines for responsible deployment
 
 ## Technical Implementation
 
@@ -505,20 +505,17 @@ def load_trained_model(model_path):
 
 This project demonstrates the effectiveness of transformer-based models for automated detection of extremist political content. Key contributions include:
 
-1. **Methodological Innovation:** Successfully adapted DistilBERT for political text classification with 94% F1-score
-2. **Practical Application:** Developed scalable pipeline for real-world content moderation
-3. **Comparative Analysis:** Demonstrated significant advantages over traditional ML approaches
-4. **Research Impact:** Provided tools for studying online political radicalization
+1.  **Methodological Innovation:** Successfully adapted DistilBERT for political text classification with 94% F1-score
+2.  **Practical Application:** Developed scalable pipeline for real-world content moderation
+3.  **Comparative Analysis:** Demonstrated significant advantages over traditional ML approaches
+4.  **Research Impact:** Provided tools for studying online political radicalization
 
-The results have implications for:
-- **Platform Governance:** Automated content moderation systems
-- **Academic Research:** Large-scale analysis of political discourse
-- **Policy Development:** Evidence-based approaches to online extremism
+The results have implications for: - **Platform Governance:** Automated content moderation systems - **Academic Research:** Large-scale analysis of political discourse - **Policy Development:** Evidence-based approaches to online extremism
 
 ### Reproducibility
 
 All code and documentation are available for replication. The model architecture and training procedures follow established best practices for transformer-based text classification.
 
----
+------------------------------------------------------------------------
 
 *This research contributes to computational approaches for understanding and mitigating online political extremism, supporting both academic inquiry and practical applications in digital platform governance.*

@@ -1,0 +1,60 @@
+# Coding Tutorial: Grouping, Filtering, Mutating, Selecting, and Plotting
+
+```{r}
+load("~/Dropbox/PSCI2075_2025/PSCI_2075_v2.1.RData")
+library(tidyverse)
+```
+
+```{r}
+nes |> 
+    summary()
+```
+
+```{r}
+nes |> 
+    summarize(mean_ftobama = mean(ftobama))
+```
+
+```{r}
+nes |> 
+    group_by(vote12) |>
+    summarize(mean_ftobama = mean(ftobama))
+```
+
+```{r}
+nes |> 
+    filter(vote12 == "Barack Obama") |>
+    summarize(mean_ftobama = mean(ftobama))
+```
+
+```{r}
+nes |> 
+    mutate(new_var = "this is a new variable") |> 
+    glimpse()
+```
+
+```{r}
+nes |> 
+    mutate(ftobama_cat = case_when(ftobama >= 50 ~ "Generally Positive",
+                                    ftobama < 50 ~ "Generally Negative")) |> 
+    glimpse()
+```
+
+```{r}
+nes <- nes |> 
+    mutate(ftobama_cat = case_when(ftobama >= 50 ~ "Generally Positive",
+                                    ftobama < 50 ~ "Generally Negative"))
+
+g <- nes |> 
+    ggplot(aes(x = ftobama_cat)) + 
+    geom_bar() 
+
+g + 
+    theme_minimal() + 
+    labs(
+        x = "Feelings toward Obama (Categorical)",
+        y = "Frequency", 
+        title = "Frequency of NES respondents who are generally negative\n vs. generally positive toward Obama"
+    )
+```
+
