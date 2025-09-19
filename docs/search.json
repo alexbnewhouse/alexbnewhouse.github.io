@@ -571,7 +571,7 @@
     "href": "teaching.html#teaching-resources",
     "title": "Teaching & Mentorship",
     "section": "Teaching Resources",
-    "text": "Teaching Resources\n\nQuantitative Methods Materials\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\nTutorial 2: An Introduction to R’s pipe operator\nTutorial 4: Variable Transformations in R - Understanding distributions, log transforms, and data recoding\nTutorial 5: Using AI Chatbots to Learn R Programming - Effective strategies for LLM-assisted coding and learning # ##Tutorial 6: Understanding File Systems and Working Directories in R and RStudio**"
+    "text": "Teaching Resources\n\nQuantitative Methods Materials\n\nTutorial 1: Getting Started with Greek Notation and Descriptive Stats\nTutorial 2: An Introduction to R’s pipe operator\nTutorial 4: Variable Transformations in R - Understanding distributions, log transforms, and data recoding\nTutorial 5: Using AI Chatbots to Learn R Programming - Effective strategies for LLM-assisted coding and learning\nTutorial 6: Understanding File Systems and Working Directories in R and RStudio"
   },
   {
     "objectID": "teaching.html#student-research-mentorship",
