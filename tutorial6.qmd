@@ -314,11 +314,14 @@ POLS101/
 ```
 
 **The Problem:**
+
 - Your working directory is set to `POLS101/` 
 - You run this code in a chunk and it works fine:
+
   ```{r eval=FALSE}
   data <- read_csv("data/survey_data.csv")  # Works when running interactively
   ```
+  
 - But when you knit, you get "file not found" errors!
 
 **What's happening:** When you knit, R looks for `data/survey_data.csv` starting from where `homework1.Rmd` is located (which is `POLS101/`), so it actually looks for `POLS101/data/survey_data.csv` - which is correct! But if your working directory was set to something else when running interactively, the paths might not match.

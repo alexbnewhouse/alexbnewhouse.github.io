@@ -520,12 +520,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  └── scripts<span class="sc">/</span></span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>      └── analysis.R</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>The Problem:</strong> - Your working directory is set to <code>POLS101/</code> - You run this code in a chunk and it works fine:</p>
-<p>::: {.cell}</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_data.csv"</span>)  <span class="co"># Works when running interactively</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>:::</p>
+<p><strong>The Problem:</strong></p>
 <ul>
-<li>But when you knit, you get “file not found” errors!</li>
+<li><p>Your working directory is set to <code>POLS101/</code></p></li>
+<li><p>You run this code in a chunk and it works fine:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/survey_data.csv"</span>)  <span class="co"># Works when running interactively</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div></li>
+<li><p>But when you knit, you get “file not found” errors!</p></li>
 </ul>
 <p><strong>What’s happening:</strong> When you knit, R looks for <code>data/survey_data.csv</code> starting from where <code>homework1.Rmd</code> is located (which is <code>POLS101/</code>), so it actually looks for <code>POLS101/data/survey_data.csv</code> - which is correct! But if your working directory was set to something else when running interactively, the paths might not match.</p>
 </section>
