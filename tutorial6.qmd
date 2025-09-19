@@ -9,9 +9,9 @@ format:
 
 ## Why do I need to understand file systems?
 
-If you've ever found yourself confused about why R can't find your data file, or why your script works on your computer but not your classmate's, or why you keep getting "file not found" errors even though you *know* the file is there—this tutorial is for you! 
+If you've ever found yourself confused about why R can't find your data file, or why your script works on your computer but not your classmate's, or why you keep getting "file not found" errors even though you *know* the file is there, it's probably because of the the behavior of file systems!
 
-Understanding how your computer organizes files and how R navigates through them is absolutely crucial for doing data analysis. It's like learning to read a map before going on a road trip. Once you understand the basic concepts, you'll spend less time wrestling with technical issues and more time focusing on your actual research.
+Your computer has a whole internal structure for organizing files, folders, and programs, and this structure can sometimes be opaque, complex, and frustrating. However, understanding how your computer organizes files and how R navigates through them is a fundamental part of doing data analysis. Once you understand the basic concepts, you'll spend less time wrestling with technical issues and more time focusing on your actual research.
 
 ## What is a file system?
 
@@ -19,95 +19,124 @@ A file system is simply how your computer organizes and stores files. Think of i
 
 Let's start with some basics that apply to both Windows and Mac:
 
-- **Files** are individual documents (like `my_data.csv` or `homework.R`)
-- **Folders** (also called directories) are containers that hold files and other folders
-- **Paths** are the "addresses" that tell you exactly where a file or folder is located
+-   **Files** are individual documents (like `my_data.csv` or `homework.R`)
+-   **Folders** (also called directories) are containers that hold files and other folders
+-   **Paths** are the "addresses" that tell you exactly where a file or folder is located
+
+We often depict this digital file system as if it was literally a physical filing cabinet. For example, my personal Mac is organized like this:
+
+```         
+alexnewhouse/                   
+  ├── Downloads     
+  ├── Documents/
+  │   ├── personalfolder
+  │   ├── resumes
+  |   ├── projects
+  |   └── otherstuff
+  └── Dropbox/
+      └── PSCI2075_2025/
+          └── data/
+              └── PSCI_2075_v2.1.RData
+          └── assignment-1.Rmd
+  ...
+```
+
+That top folder, called `alexnewhouse`, is my **home directory**. Every file on my computer is organized inside it, from the PDFs I download from Canvas to the R scripts I write for my projects. Even Dropbox and OneDrive, which are their own file systems, are nested inside my home directory. 
 
 ### Understanding Your Home Directory
 
-Your **home directory** is a special folder that belongs just to you. It's like your personal office space on the computer. This is where your operating system stores your personal files like Documents, Downloads, Desktop, etc.
+Your **home directory** is a special folder that, for all intents and purposes, marks the top level of your computer's hierarchy. It's like your personal office space on the computer. This is where your operating system stores your personal files like Documents, Downloads, Desktop, etc.
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Windows
 
 On Windows, your home directory is typically:
-```
+
+```         
 C:\Users\YourName\
 ```
 
 Inside your home directory, you'll find familiar folders like:
 
-- `Documents\` - where many programs save files by default
-- `Desktop\` - the files you see on your desktop
-- `Downloads\` - where your web browser saves downloaded files
-- `Pictures\`, `Music\`, `Videos\` - for media files
+-   `Documents\` - where many programs save files by default
+-   `Desktop\` - the files you see on your desktop
+-   `Downloads\` - where your web browser saves downloaded files
+-   `Pictures\`, `Music\`, `Videos\` - for media files
 
 ## Mac
 
 On Mac, your home directory is typically:
-```
+
+```         
 /Users/YourName/
 ```
 
 Inside your home directory, you'll find familiar folders like:
 
-- `Documents/` - where many programs save files by default
-- `Desktop/` - the files you see on your desktop
-- `Downloads/` - where your web browser saves downloaded files
-- `Pictures/`, `Music/`, `Movies/` - for media files
-
+-   `Documents/` - where many programs save files by default
+-   `Desktop/` - the files you see on your desktop
+-   `Downloads/` - where your web browser saves downloaded files
+-   `Pictures/`, `Music/`, `Movies/` - for media files
 :::
 
-**Why does this matter for R?** When you first open RStudio, it usually sets your working directory to your home directory. Understanding this helps you navigate to where your files actually are!
+**Why does this matter for R?** When you first open RStudio, it might set your working directory to your home directory. Understanding this helps you navigate to where your files actually are!
 
 ## Operating System Differences
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Windows
 
 On Windows, your file system starts with drive letters like `C:`, `D:`, etc. The main drive is usually `C:`. Folders are separated by backslashes (`\`).
 
 A typical Windows path might look like:
-```
-C:\Users\YourName\Documents\POLS101\homework1.R
+
+```         
+C:\Users\YourName\Documents\PSCI2075\assignment-1.Rmd
 ```
 
 This means:
 
-- Start at the C: drive
-- Go to the Users folder
-- Then to the folder with your username
-- Then to Documents
-- Then to POLS101
-- Finally, find the file homework1.R
+-   Start at the C: drive
+-   Go to the Users folder
+-   Then to the folder with your username
+-   Then to Documents
+-   Then to PSCI2075
+-   Finally, find the file assignment-1.Rmd
 
 ## Mac
 
 On Mac, the file system starts with a forward slash (`/`) and doesn't use drive letters. Folders are separated by forward slashes (`/`).
 
 A typical Mac path might look like:
-```
-/Users/YourName/Documents/POLS101/homework1.R
+
+```         
+/Users/YourName/Documents/PSCI2075/assignment-1.Rmd
 ```
 
 This means:
 
-- Start at the root directory (/)
-- Go to the Users folder
-- Then to the folder with your username
-- Then to Documents
-- Then to POLS101
-- Finally, find the file homework1.R
+-   Start at the root directory (/)
+-   Go to the Users folder
+-   Then to the folder with your username
+-   Then to Documents
+-   Then to PSCI2075
+-   Finally, find the file homework1.R
+
+This is synonymous with:
+
+```
+~/Documents/PSCI2075/assignment-1.Rmd
+```
+
+The tilde (`~`) is a shortcut that always refers to your home directory, no matter what your username is.
 
 :::
 
 ## What is a working directory?
 
-Your **working directory** is like your current location in the file system. It's where R is "standing" right now. When you tell R to open a file, it looks for that file starting from your working directory.
+Your **working directory** is like your current location in the file system. It's where R is "focused" right now. When you tell R to load a file, it looks for that file starting from your working directory and looking "down" into its subfolders.
 
-Think of it this way: if you're in a library and someone says "go get the book on the third shelf," you need to know which section of the library you're currently in to know which third shelf they mean!
+Think of it this way: if you're in a library and someone says "go get the book on the third shelf," you need to know which section of the library you're currently in to know which third shelf they mean. This "section" is your working directory.
 
 Let's see what your current working directory is:
 
@@ -134,11 +163,11 @@ When you first open RStudio, your working directory is usually set to your home 
 
 ```{r eval=FALSE}
 # This will only work on YOUR computer
-data <- read.csv("C:/Users/YourName/Documents/POLS101/data.csv")  # Windows
-data <- read.csv("/Users/YourName/Documents/POLS101/data.csv")   # Mac
+data <- read.csv("C:/Users/YourName/Documents/PSCI2075/assignment-1.Rmd")  # Windows
+data <- read.csv("/Users/YourName/Documents/POLS101/assignment-1.Rmd")   # Mac
 ```
 
-**What's happening:** You've written the specific path that exists on your computer, but your classmate has a different username and maybe even a different folder structure.
+**What's happening:** You've written the specific path that exists on your computer, but other people have different usernames, folder structures, or operating systems. Absolute paths tend to be "brittle", in that they are specific to indvidual computers.
 
 **The Solution:** Use relative paths (explained below) or set up your project properly.
 
@@ -146,33 +175,37 @@ data <- read.csv("/Users/YourName/Documents/POLS101/data.csv")   # Mac
 
 **The Problem:** Your files are scattered all over your computer, making it hard to keep track of what goes with what project.
 
-**The Solution:** Create a dedicated folder for each project and keep everything related to that project inside it.
+**The Solution:** Create a dedicated folder for each project and keep everything related to that project inside it. We've already worked on creating a folder for this course--called something like "PSCI2075"--and it's worth making sure that all of your assignment .Rmd files and data files are stored inside this folder. 
+
+An easy way to make sure everything stays organized is to either directly download files from our course Canvas into your project folder, or move them there from your Downloads folder immediately after downloading.
 
 ## Absolute vs. Relative Paths
 
-Understanding the difference between absolute and relative paths is crucial:
+Understanding the difference between absolute and relative paths will help you avoid many common pitfalls:
 
 ### Absolute Paths
+
 An **absolute path** gives the complete address from the very top of your file system:
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Windows
-```
+
+```         
 C:\Users\YourName\Documents\POLS101\data\survey_results.csv
 ```
 
 ## Mac
-```
+
+```         
 /Users/YourName/Documents/POLS101/data/survey_results.csv
 ```
-
 :::
 
 ### Relative Paths
+
 A **relative path** gives directions from your current location (working directory):
 
-```
+```         
 data/survey_results.csv
 ```
 
@@ -184,58 +217,30 @@ This says: "from where I am now, go into the 'data' folder and find 'survey_resu
 
 For each research project or class, create a dedicated folder:
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Windows
-```
+
+```         
 C:\Users\YourName\Documents\POLS101\
 ```
 
 ## Mac
-```
-/Users/YourName/Documents/POLS101/
-```
 
+```         
+/Users/YourName/Documents/PSCI2075/
+```
 :::
 
 ### 2. Use a consistent folder structure
 
-Inside your project folder, create subfolders like:
-```
-POLS101/
+Inside your project folder, you can either keep everything at the same level, or you can set up subfolders like:
+
+```         
+PSCI2075/
   ├── data/           # Store your datasets here
-  ├── scripts/        # Store your R code here
   ├── output/         # Store graphs, tables, etc. here
-  └── documents/      # Store papers, notes, etc. here
+  └── documents/      # Store codebooks, notes, etc. here
 ```
-
-### 3. Use RStudio Projects
-
-RStudio has a fantastic feature called "Projects" that makes file management much easier. When you create an RStudio Project, it automatically sets your working directory to the project folder.
-
-Here's how to create a new project:
-
-::: {.panel-tabset}
-
-## Windows
-
-1. In RStudio, go to File → New Project
-2. Choose "New Directory"
-3. Choose "New Project"
-4. Give it a name (like "POLS101")
-5. Choose where to put it (like `C:\Users\YourName\Documents\`)
-6. Click "Create Project"
-
-## Mac
-
-1. In RStudio, go to File → New Project
-2. Choose "New Directory"
-3. Choose "New Project"
-4. Give it a name (like "POLS101")
-5. Choose where to put it (like `/Users/YourName/Documents/`)
-6. Click "Create Project"
-
-:::
 
 ## Working with files in R
 
@@ -243,15 +248,15 @@ Now let's look at how to actually work with files in your R code:
 
 ### Setting your working directory
 
-If you're not using RStudio Projects, you might need to set your working directory manually:
+You should always make sure to set your working directory manually, **every time you open RStudio**. This ensures that R knows where to look for your files:
 
 ```{r eval=FALSE}
 # Set working directory (adjust the path for your computer)
-setwd("/Users/YourName/Documents/POLS101")  # Mac
-setwd("C:/Users/YourName/Documents/POLS101")  # Windows (note: forward slashes work in R even on Windows!)
+setwd("/Users/YourName/Documents/PSCI2075")  # Mac
+setwd("C:/Users/YourName/Documents/PSCI2075")  # Windows (note: forward slashes work in R even on Windows!)
 ```
 
-**Pro tip:** Notice that even on Windows, you can use forward slashes (`/`) in R code. This makes your code more portable between operating systems!
+**Pro Tip:** Notice that even on Windows, you can use forward slashes (`/`) in R code. This makes your code more portable between operating systems!
 
 ### Loading data with relative paths
 
@@ -288,7 +293,7 @@ list.files("data/", pattern = "*.csv")
 
 ## R Markdown, Knitting, and File Paths: A Common Source of Confusion
 
-One of the biggest sources of confusion for students is understanding how R Markdown (.Rmd) files handle file paths differently when you're working interactively versus when you knit the document. This is **critically important** for completing assignments!
+One of the biggest sources of confusion for students is understanding how R Markdown (.Rmd) files handle file paths differently when you're working interactively versus when you knit the document. This is **important** for completing assignments!
 
 ### The Big Difference: Interactive R vs. Knitting
 
@@ -296,8 +301,8 @@ When you run code chunks interactively in RStudio (clicking the green arrow or p
 
 This means:
 
-- **Running chunks interactively**: Uses `getwd()` (your current working directory)
-- **Knitting the document**: Uses the folder where your .Rmd file is located as the working directory
+-   **Running chunks interactively**: Uses `getwd()` (your current working directory)
+-   **Knitting the document**: Uses the folder where your .Rmd file is located as the working directory
 
 ### Why This Causes Problems
 
@@ -305,67 +310,50 @@ Here's a typical scenario that trips up students:
 
 ```{r eval=FALSE}
 # Your project structure:
-POLS101/
-  ├── homework1.Rmd          # Your assignment file
+PSCI2075/
   ├── data/
-  │   └── survey_data.csv    # Your data file
-  └── scripts/
-      └── analysis.R
+  │   └── PSCI_2075_v2.1.RData    # Your data file
+Downloads/
+  └── assignment-1.Rmd             # Your R Markdown file
 ```
 
 **The Problem:**
 
-- Your working directory is set to `POLS101/` 
-- You run this code in a chunk and it works fine:
+-   Your working directory is set to `PSCI2075/`
 
-  ```{r eval=FALSE}
-  data <- read_csv("data/survey_data.csv")  # Works when running interactively
-  ```
-  
-- But when you knit, you get "file not found" errors!
+-   You run this code in a chunk and it works fine:
 
-**What's happening:** When you knit, R looks for `data/survey_data.csv` starting from where `homework1.Rmd` is located (which is `POLS101/`), so it actually looks for `POLS101/data/survey_data.csv` - which is correct! But if your working directory was set to something else when running interactively, the paths might not match.
+    ```{r eval=FALSE}
+    load("data/PSCI_2075_v2.1.RData")  # Works when running interactively
+    ```
+
+-   But when you knit, you get "file not found" errors!
+
+**What's happening:** When you knit, R looks for `data/PSCI_2075_v2.1.RData` starting from where `assignment-1.Rmd` is located (which is `Downloads/`), so it actually looks for `Downloads/data/PSCI_2075_v2.1.RData` - which is not correct! If your working directory was set to something else when running interactively, the paths will not match.
 
 ### Solutions for R Markdown Success
 
-#### Solution 1: Keep your .Rmd file in your project root
+#### Solution: Keep your .Rmd file in your project root
 
 The easiest solution is to save your .Rmd file in the main project folder:
 
-```
-POLS101/                   # <- Your project folder
-  ├── homework1.Rmd        # <- Save your .Rmd here
+```         
+PSCI2075/                   # <- Your project folder
+  ├── assignment-1.Rmd        # <- Save your .Rmd here
   ├── data/
-  │   └── survey_data.csv
-  └── output/
-      └── plots/
+  │   └── PSCI_2075_v2.1.RData # <- a data subfolder is optional, but can help keep things organized
 ```
 
 Then use relative paths from your project root:
+
 ```{r eval=FALSE}
 # This will work both interactively AND when knitting
-data <- read_csv("data/survey_data.csv")
-ggplot(data, aes(x = age)) + geom_histogram()
-ggsave("output/plots/age_histogram.png")
+load("data/PSCI_2075_v2.1.RData")
+
 ```
 
-#### Solution 2: Use the `here` package (highly recommended!)
 
-The `here` package solves this problem elegantly:
-
-```{r eval=FALSE}
-# Install and load the here package
-install.packages("here")
-library(here)
-
-# Use here() to build file paths that work everywhere
-data <- read_csv(here("data", "survey_data.csv"))
-ggsave(here("output", "plots", "age_histogram.png"))
-```
-
-The `here()` function automatically finds your project root (where your .Rproj file is, or other indicators) and builds paths from there.
-
-#### Solution 3: Check your working directory in your .Rmd file
+#### Solution 2: Check your working directory in your .Rmd file
 
 Add this to the top of your R Markdown document to see where knitting thinks it is:
 
@@ -377,54 +365,32 @@ getwd()
 list.files()
 
 # Check if your data file exists from this location
-file.exists("data/survey_data.csv")
+file.exists("data/PSCI_2075_v2.1.RData")
 ```
 
 ### Common R Markdown Assignment Workflow
 
 Here's a workflow that works reliably for assignments:
 
-1. **Create an RStudio Project** for your assignment
-2. **Save your .Rmd file** in the project root folder
-3. **Create subfolders** for data, output, etc.
-4. **Use relative paths** or the `here` package in your .Rmd file
-5. **Test by knitting early and often** - don't wait until the last minute!
-
-```{r eval=FALSE}
-# Example assignment .Rmd structure:
-# This should work both interactively and when knitting
-
-library(tidyverse)
-library(here)  # Recommended!
-
-# Load data (works both ways)
-data <- read_csv(here("data", "assignment_data.csv"))
-
-# Do your analysis
-summary_stats <- data %>% 
-  summarize(mean_age = mean(age),
-            mean_income = mean(income))
-
-# Save your plot (works both ways) 
-data %>% 
-  ggplot(aes(x = age, y = income)) + 
-  geom_point() + 
-  ggsave(here("output", "scatter_plot.png"))
-```
+1.  **Save your .Rmd file** in the course folder
+3.  **Create subfolders** for data, output, etc.
+4.  **Use relative paths** in your .Rmd file
+5.  **Test by knitting early and often** - don't wait until the last minute!
 
 ### Testing Your Assignment Before Submission
 
 Before submitting your assignment, always:
 
-1. **Knit your document** - don't just run the chunks!
-2. **Check that the HTML file contains all your plots and output**
-3. **Verify that any saved files (plots, tables) were created where you expected**
+1.  **Knit your document** - don't just run the chunks!
+2.  **Check that the HTML file contains all your plots and output**
+3.  **Verify that any saved files (plots, tables) were created where you expected**
 
 ### Troubleshooting R Markdown File Path Issues
 
 If your .Rmd file won't knit due to file path errors:
 
 **Step 1:** Add this diagnostic chunk at the top of your .Rmd:
+
 ```{r eval=FALSE}
 # Diagnostic information
 cat("Current working directory:", getwd(), "\n")
@@ -433,7 +399,8 @@ cat("Does data folder exist?", file.exists("data"), "\n")
 cat("Files in data folder:", paste(list.files("data"), collapse = ", "), "\n")
 ```
 
-**Step 2:** Compare the output when you:
+**Step 2:** Compare the output when you: 
+
 - Run the chunk interactively 
 - Knit the document
 
@@ -441,79 +408,13 @@ cat("Files in data folder:", paste(list.files("data"), collapse = ", "), "\n")
 
 ### Why This Matters for Your Grades
 
-Many students lose points on assignments because:
+Many students run into issues finishing assignments because:
 
-- Their code runs fine in RStudio but the .Rmd won't knit
-- Their knitted HTML is missing plots because the save paths were wrong
-- They submit .Rmd files that professors can't knit because of path issues
+-   Their code runs fine in RStudio but the .Rmd won't knit
+-   Their knitted HTML is missing plots because the save paths were wrong
+-   They submit .Rmd files that professors can't knit because of path issues
 
 Understanding this concept will save you time and frustration, and help ensure your assignments are complete when you submit them!
-
-## Practical example: Setting up a research project
-
-Let's walk through setting up a complete research project:
-
-### Step 1: Create your project structure
-
-::: {.panel-tabset}
-
-## Windows
-Using File Explorer:
-
-1. Navigate to `C:\Users\YourName\Documents\`
-2. Create a new folder called "Research_Project"
-3. Inside that folder, create subfolders: `data`, `scripts`, `output`, `documents`
-
-## Mac
-Using Finder:
-
-1. Navigate to `/Users/YourName/Documents/`
-2. Create a new folder called "Research_Project"
-3. Inside that folder, create subfolders: `data`, `scripts`, `output`, `documents`
-
-:::
-
-### Step 2: Create an RStudio Project
-
-1. Open RStudio
-2. File → New Project → Existing Directory
-3. Browse to your "Research_Project" folder
-4. Click "Create Project"
-
-### Step 3: Test your setup
-
-Create a new R script and try this code:
-
-```{r eval=FALSE}
-# Check where you are
-getwd()
-
-# Create some sample data
-library(tidyverse)
-sample_data <- data.frame(
-  id = 1:10,
-  score = rnorm(10, mean = 75, sd = 10)
-)
-
-# Save it to your data folder
-write_csv(sample_data, "data/sample_data.csv")
-
-# Load it back (to test that it works)
-loaded_data <- read_csv("data/sample_data.csv")
-print(loaded_data)
-
-# Create a simple plot and save it
-loaded_data %>% 
-  ggplot(aes(x = id, y = score)) + 
-  geom_point() + 
-  geom_line() +
-  labs(title = "Sample Data Plot",
-       x = "ID",
-       y = "Score") +
-  ggsave("output/sample_plot.png")
-
-print("Success! Your project structure is working correctly.")
-```
 
 ## Troubleshooting common issues
 
@@ -521,85 +422,75 @@ print("Success! Your project structure is working correctly.")
 
 **Solutions:**
 
-1. Check your working directory: `getwd()`
-2. Check if the file exists: `file.exists("your_filename")`
-3. List files in your directory: `list.files()`
-4. Make sure the file name is spelled correctly (including the extension!)
+1.  Check your working directory: `getwd()`
+2.  Check if the file exists: `file.exists("your_filename")`
+3.  List files in your directory: `list.files()`
+4.  Make sure the file name is spelled correctly (including the extension!)
 
 ### "Permission denied" errors
 
-::: {.panel-tabset}
-
+::: panel-tabset
 ## Windows
 
-- Make sure the file isn't open in Excel or another program
-- Check that you have write permissions to the folder
-- Try running RStudio as administrator (right-click → "Run as administrator")
+-   Make sure the file isn't open in Excel or another program
+-   Check that you have write permissions to the folder
+-   Try running RStudio as administrator (right-click → "Run as administrator")
 
 ## Mac
 
-- Make sure the file isn't open in Excel or another program
-- Check the file permissions in Finder (right-click → Get Info)
-- You might need to change the folder permissions
-
+-   Make sure the file isn't open in Excel or another program
+-   Check the file permissions in Finder (right-click → Get Info)
+-   You might need to change the folder permissions
 :::
 
 ### OneDrive and cloud storage complications (Windows users especially!)
 
 **The Problem:** OneDrive automatically takes over your Documents, Desktop, and Pictures folders on Windows, moving them to the cloud. This can cause major confusion because your file paths might look like:
+
+```         
+C:\Users\YourName\OneDrive\Documents\PSCI2075\PSCI_2075_v2.1.RData
 ```
-C:\Users\YourName\OneDrive\Documents\POLS101\data.csv
-```
+
 instead of the expected:
-```
-C:\Users\YourName\Documents\POLS101\data.csv
+
+```         
+C:\Users\YourName\Documents\PSCI2075\PSCI_2075_v2.1.RData
 ```
 
 **What's happening:** Microsoft OneDrive "hijacks" your default folders to sync them to the cloud. While this can be useful for backup, it changes where your files are actually stored and can make file paths unpredictable.
 
 **Common signs you have OneDrive issues:**
 
-- Your Documents folder has a cloud icon next to it
-- File paths include "OneDrive" in them
-- Files sometimes can't be found even though you can see them in File Explorer
-- You get "sync pending" or "file not available" errors
+-   Your Documents folder has a cloud icon next to it
+-   File paths include "OneDrive" in them
+-   Files sometimes can't be found even though you can see them in File Explorer
+-   You get "sync pending" or "file not available" errors
 
 **Solutions:**
 
-1. **Check your actual file locations** - Use `getwd()` in R to see where you really are, and `list.files()` to see what's actually in your working directory.
+1.  **Check your actual file locations** - Use `getwd()` in R to see where you really are, and `list.files()` to see what's actually in your working directory.
 
-2. **Use the full OneDrive path** - If your files are in OneDrive, use the full path:
-   ```{r eval=FALSE}
-   # If your files are in OneDrive, you might need:
-   data <- read_csv("C:/Users/YourName/OneDrive/Documents/POLS101/data.csv")
-   ```
+2.  **Use the full OneDrive path** - If your files are in OneDrive, use the full path. This is an exception to the rule about avoiding absolute paths, but sometimes it's necessary:
 
-3. **Move your project outside OneDrive** - Create your R projects in a folder that's NOT managed by OneDrive:
-   ```
-   C:\Users\YourName\R_Projects\POLS101\
-   ```
+    ```{r eval=FALSE}
+    # If your files are in OneDrive, you might need:
+    load("C:/Users/YourName/OneDrive/Documents/PSCI2075/PSCI_2075_v2.1.RData")
+    ```
 
-4. **Turn off OneDrive folder redirection** (advanced):
-   - Right-click OneDrive icon in system tray → Settings
-   - Go to "Backup" tab → "Manage backup"
-   - Turn off backup for Documents, Pictures, Desktop folders
-   - **Warning:** This will move your files back to local folders
+3.  **Move your project outside OneDrive** - Create your R projects in a folder that's NOT managed by OneDrive:
 
-5. **Use RStudio Projects** - They help manage paths automatically, regardless of where your project folder is located.
+    ```         
+    C:\Users\YourName\Documents\PSCI2075\
+    ```
+
+4.  **Turn off OneDrive folder redirection** (advanced):
+
+    -   Right-click OneDrive icon in system tray → Settings
+    -   Go to "Backup" tab → "Manage backup"
+    -   Turn off backup for Documents, Pictures, Desktop folders
+    -   **Warning:** This will move your files back to local folders
 
 **Pro tip:** If you're unsure whether OneDrive is affecting your files, open File Explorer and look at the address bar when you navigate to Documents. If it shows "OneDrive" in the path, then OneDrive is managing that folder.
-
-### Paths with spaces or special characters
-
-If your folders or files have spaces in their names, you need to put quotes around the entire path:
-
-```{r eval=FALSE}
-# Correct way to handle spaces in file names
-data <- read_csv("data/survey results 2024.csv")
-
-# Or use underscores instead of spaces (recommended)
-data <- read_csv("data/survey_results_2024.csv")
-```
 
 ## Advanced tips
 
@@ -636,13 +527,12 @@ Sys.getenv()
 
 ## Summary and key takeaways
 
-1. **Your computer's file system is like a filing cabinet** - everything has a specific location
-2. **Working directory is where R is currently "standing"** - check it with `getwd()`
-3. **Use RStudio Projects** - they make file management much easier
-4. **Organize your projects** - create dedicated folders with consistent structure
-5. **Use relative paths** - they make your code work on different computers
-6. **Forward slashes work everywhere** - even on Windows, use `/` in your R code
-7. **Check if files exist** - use `file.exists()` and `list.files()` to debug issues
+1.  **Your computer's file system is like a filing cabinet** - everything has a specific location
+2.  **Working directory is where R is currently "standing"** - check it with `getwd()`
+4.  **Organize your projects** - create dedicated folders with consistent structure
+5.  **Use relative paths** - they make your code work on different computers
+6.  **Forward slashes work everywhere in R** - even on Windows, use `/` in your R code
+7.  **Check if files exist** - use `file.exists()` and `list.files()` to debug issues
 
 The most important thing is to be intentional about where you put your files and consistent in how you organize your projects. A little bit of organization at the beginning will save you hours of frustration later!
 
