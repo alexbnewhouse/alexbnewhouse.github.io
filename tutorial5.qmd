@@ -10,7 +10,7 @@ editor: visual
 
 ## Introduction
 
-Large Language Models (LLMs) like ChatGPT, Claude, and others have revolutionized how we approach coding and data analysis. When used properly, these tools can be powerful learning aids that help you understand R programming concepts, debug code, and solve analytical problems. However, **blindly copying and pasting code without understanding** will not help you learn and may lead to incorrect analyses.
+Large Language Models (LLMs) like ChatGPT, Claude, and others can be extremely useful for writing and implementing code. When used properly, they can also be powerful learning aids that can actually help you develop R skills and overall familiarity with programming. However, **blindly copying and pasting code without understanding** will not help you learn and will likely result in worse answers than not using AI at all.
 
 This tutorial will teach you how to effectively collaborate with AI chatbots to enhance your learning while maintaining academic integrity and developing genuine programming skills.
 
@@ -18,56 +18,63 @@ This tutorial will teach you how to effectively collaborate with AI chatbots to 
 
 By the end of this tutorial, you'll be able to:
 
-- **Formulate effective prompts** that get you helpful, educational responses
-- **Critically evaluate** AI-generated code before using it
-- **Learn from AI explanations** rather than just copying code
-- **Debug and modify** AI-generated solutions
-- **Recognize when AI advice is wrong** and how to verify it
+-   **Formulate effective prompts** that get you helpful, educational responses
+-   **Critically evaluate** AI-generated code before using it
+-   **Learn from AI explanations** rather than just copying code
+-   **Debug and modify** AI-generated solutions
+-   **Recognize when AI advice is wrong** and how to verify it
 
 ## Understanding What LLMs Can and Cannot Do
 
 ### What LLMs Excel At
 
-**✅ Code Explanation**
-- Breaking down complex R syntax
-- Explaining what specific functions do
+**✅ Code Explanation** 
+
+- Breaking down complex R syntax 
+- Explaining what specific functions do 
 - Clarifying statistical concepts
 
-**✅ Debugging Help**
-- Identifying syntax errors
-- Suggesting fixes for common problems
+**✅ Debugging Help** 
+
+- Identifying syntax errors 
+- Suggesting fixes for common problems 
 - Explaining error messages
 
-**✅ Alternative Approaches**
-- Showing different ways to solve the same problem
-- Suggesting more efficient code
+**✅ Alternative Approaches** 
+
+- Showing different ways to solve the same problem 
+- Suggesting more efficient code 
 - Introducing new functions or packages
 
-**✅ Learning Support**
-- Providing step-by-step explanations
-- Creating practice examples
+**✅ Learning Support** 
+
+- Providing step-by-step explanations 
+- Creating practice examples 
 - Answering conceptual questions
 
-### What LLMs Struggle With
+### What LLMs May Struggle With
 
-**❌ Domain-Specific Context**
-- Understanding your specific assignment requirements
-- Knowing your dataset's unique characteristics
+**❌ Domain-Specific Context** 
+
+- Understanding your specific assignment requirements 
+- Knowing your dataset's unique characteristics 
 - Applying course-specific conventions
 
-**❌ Current Information**
-- Latest R package updates
-- Recent statistical methods
-- Current best practices (beyond training data)
+**❌ Current Information** 
 
-**❌ Complex Statistical Reasoning**
-- Choosing appropriate statistical tests
-- Interpreting results in context
+- Latest R package updates 
+- Recent statistical methods - Current best practices (beyond training data)
+
+**❌ Complex Statistical Reasoning** 
+
+- Choosing appropriate statistical tests 
+- Interpreting results in context 
 - Making methodological decisions
 
-**❌ Academic Integrity**
-- Understanding your course's specific policies
-- Knowing what constitutes your own work
+**❌ Academic Integrity** 
+
+- Understanding your course's specific policies 
+- Knowing what constitutes your own work 
 - Balancing assistance with independent learning
 
 ## Crafting Effective Prompts
@@ -76,22 +83,38 @@ By the end of this tutorial, you'll be able to:
 
 Use this framework to structure your prompts:
 
-**C**ontext - Provide relevant background
-**L**evel - Specify your experience level
-**E**xample - Include sample data or code
-**A**ction - Be specific about what you want
-**R**estriction - Set boundaries on the response
+**C**ontext 
+
+- Provide relevant background 
+
+**L**evel 
+
+- Specify your experience level 
+
+**E**xample 
+
+- Include sample data or code 
+
+**A**ction 
+
+- Be specific about what you want 
+
+**R**estriction 
+
+- Set boundaries on the response
 
 ### Example: Poor vs. Good Prompts
 
 **❌ Poor Prompt:**
-```
-"Help me with regression in R"
+
+```         
+"Help me summarize a variable in R"
 ```
 
 **✅ Good Prompt:**
-```
-"I'm an undergraduate student learning linear regression in R. I have a dataset with variables for GDP per capita (gdp_pc) and democracy scores (democracy) for 50 countries, and I need to run a regression to see if GDP predicts democracy levels.
+
+```         
+"I'm an undergraduate political science student learning how to code in R. I have a dataset with variables for GDP per capita (gdp_pc) and democracy scores (democracy) for 50 countries, and I need to run descriptive statistics for one or more off the variables.
 
 Here's a sample of my data:
 country | gdp_pc | democracy
@@ -100,9 +123,9 @@ USA     | 65000  | 8.5
 Germany | 48000  | 9.1
 
 Can you show me how to:
-1. Run a linear regression with democracy as the outcome variable
-2. Interpret the coefficients
-3. Check model assumptions
+1. Summarize the variable?
+2. Create a histogram of the variable?
+3. Understand why we should use descriptive statistics?
 
 Please explain each step so I can understand the logic, and use comments in the code."
 ```
@@ -116,11 +139,13 @@ Let's start with basic data analysis tasks that are common in undergraduate cour
 **Scenario:** You have a dataset of country information and need to calculate descriptive statistics.
 
 **Your Prompt:**
-```
+
+```         
 I'm new to R and have a dataset called 'countries' with variables for population, GDP, and region. I need to calculate the mean, median, and standard deviation for population. Can you show me how to do this step by step with explanations?
 ```
 
 **Good AI Response:**
+
 ```{r}
 #| eval: false
 
@@ -133,13 +158,15 @@ sd(countries$population)           # Standard deviation (spread)
 summary(countries$population)      # Shows min, max, quartiles, mean
 ```
 
-**✅ What Makes This Good:**
-- Simple, clear code
-- Comments explain what each function does
+**✅ What Makes This Good:** 
+
+- Simple, clear code 
+- Comments explain what each function does 
 - Shows both individual functions and summary approach
 
 **🤔 Follow-Up Questions to Ask:**
-```
+
+```         
 1. "What does standard deviation tell me about the data?"
 2. "Why might median be different from mean?"
 3. "What if my data has missing values?"
@@ -148,11 +175,13 @@ summary(countries$population)      # Shows min, max, quartiles, mean
 ### Example 2: Data Filtering and Grouping
 
 **Your Prompt:**
-```
+
+```         
 I want to find the average GDP for European countries only. My dataset has a 'region' column with values like "Europe", "Asia", etc. How do I filter the data and then calculate the mean? Please explain each step.
 ```
 
 **Good AI Response:**
+
 ```{r}
 #| eval: false
 
@@ -175,13 +204,15 @@ countries %>%
   summarize(avg_gdp = mean(gdp))    # Calculate mean for each group
 ```
 
-**✅ Learning Opportunities:**
-- Shows multiple approaches (good for learning!)
-- Introduces the pipe operator `%>%`
+**✅ Learning Opportunities:** 
+
+- Shows multiple approaches (good for learning!) 
+- Introduces the pipe operator `%>%` 
 - Demonstrates filtering and grouping concepts
 
 **🤔 Questions to Deepen Understanding:**
-```
+
+```         
 1. "What's the difference between filter() and select()?"
 2. "Can you explain how the pipe operator (%>%) works?"
 3. "How would I filter for multiple conditions?"
@@ -190,11 +221,13 @@ countries %>%
 ### Example 3: Creating New Variables
 
 **Your Prompt:**
-```
+
+```         
 I need to create a new variable that categorizes countries as "High", "Medium", or "Low" GDP based on their GDP values. How do I create this new column? I'm a beginner so please explain the logic.
 ```
 
 **Good AI Response:**
+
 ```{r}
 #| eval: false
 
@@ -217,101 +250,40 @@ countries <- countries %>%
 table(countries$gdp_category)       # Count how many in each category
 ```
 
-**✅ Good Teaching Elements:**
-- Shows two methods for comparison
-- Explains the logic of nested conditions
+**✅ Good Teaching Elements:** 
+
+- Shows two methods for comparison 
+- Explains the logic of nested conditions 
 - Includes verification step
 
 **🤔 Learning Questions:**
-```
+
+```         
 1. "What does the TRUE in case_when() do?"
 2. "How do I choose the cutoff values for categories?"
 3. "What if I want to base categories on percentiles instead?"
-```
-
-### Example 4: Simple Data Visualization
-
-**Your Prompt:**
-```
-I want to create a histogram of GDP values to see the distribution. I'm using ggplot2 but I'm not sure about the syntax. Can you show me how and explain what each part does?
-```
-
-**Good AI Response:**
-```{r}
-#| eval: false
-
-library(ggplot2)
-
-# Basic histogram
-ggplot(countries, aes(x = gdp)) +    # Set up plot with GDP on x-axis
-  geom_histogram() +                 # Add histogram layer
-  labs(title = "Distribution of GDP", # Add labels
-       x = "GDP per Capita",
-       y = "Number of Countries")
-
-# Improved version with better formatting
-ggplot(countries, aes(x = gdp)) +
-  geom_histogram(bins = 20,          # Set number of bins
-                 fill = "steelblue",  # Color the bars
-                 alpha = 0.7) +       # Make bars semi-transparent
-  labs(title = "Distribution of GDP per Capita",
-       x = "GDP per Capita (USD)",
-       y = "Number of Countries") +
-  theme_minimal()                    # Clean theme
-```
-
-**✅ Educational Value:**
-- Starts simple, then adds complexity
-- Explains each argument
-- Shows how to improve basic plots
-
-**🤔 Extension Questions:**
-```
-1. "How do I add a vertical line showing the mean?"
-2. "What if I want separate histograms for each region?"
-3. "How do I save this plot as an image file?"
 ```
 
 ## Critical Evaluation of AI Code
 
 ### Always Ask Yourself These Questions
 
-1. **Does this code make sense for my problem?**
-   - Are the variable names correct?
-   - Is the statistical method appropriate?
-   - Do the steps follow a logical order?
+1.  **Does this code make sense for my problem?**
 
-2. **Can I explain what each line does?**
-   - If not, ask the AI to explain further
-   - Test your understanding by modifying small parts
+    -   Are the variable names correct?
+    -   Is the statistical method appropriate?
+    -   Do the steps follow a logical order?
+    
+2.  **Can I explain what each line does?**
 
-3. **Does this follow best practices?**
-   - Are there proper comments?
-   - Is the code readable and well-structured?
-   - Are packages loaded appropriately?
+    -   If not, ask the AI to explain further
+    -   Test your understanding by modifying small parts
 
-### Example: Spotting Problems
+3.  **Does this follow best practices?**
 
-**AI-Generated Code:**
-```{r}
-#| eval: false
-
-# This code has several issues - can you spot them?
-result <- lm(turnout ~ income + education, data = voter_data)
-plot(result)
-summary(result)
-```
-
-**Problems to Identify:**
-1. **Wrong function:** Uses `lm()` instead of `glm()` for binary outcome
-2. **Missing family argument:** No specification for logistic regression
-3. **Incomplete model:** Missing the age variable from original request
-4. **Poor plotting:** `plot()` on logistic regression isn't very informative
-
-**How to Address:**
-```
-"I notice this code uses lm() instead of glm(). Since my outcome variable is binary (0/1), shouldn't I be using logistic regression? Also, the original model was supposed to include age as a predictor. Can you correct this and explain the difference between linear and logistic regression for binary outcomes?"
-```
+    -   Are there proper comments?
+    -   Is the code readable and well-structured?
+    -   Are packages loaded appropriately?
 
 ## Learning-Focused Interaction Strategies
 
@@ -319,39 +291,41 @@ summary(result)
 
 Instead of just asking for code, ask for the reasoning:
 
-```
-"Before showing me the code, can you explain the logic of why we use logistic regression for binary outcomes? Then show me the code with comments explaining how each part implements that logic."
+```         
+"Before showing me the code, can you explain the logic of why we use a line of best fit in a bivariate scatter plot? Then show me the code with comments explaining how each part implements that logic."
 ```
 
 ### Strategy 2: Ask for Alternative Approaches
 
-```
-"You showed me one way to check model assumptions for logistic regression. Are there other methods I could use? What are the pros and cons of each approach?"
+```         
+"You showed me one way to generate a graph in R. Are there other methods I could use? What are the pros and cons of each approach?"
 ```
 
 ### Strategy 3: Request Practice Problems
 
-```
+```         
 "Can you create a similar but simpler example with made-up data so I can practice the concepts before applying them to my real dataset?"
 ```
 
 ### Strategy 4: Seek Conceptual Clarification
 
-```
-"I understand the code, but I'm confused about interpreting odds ratios. Can you explain what an odds ratio of 1.5 means in practical terms for my voter turnout study?"
+```         
+"I understand the code, but I'm confused about interpreting the line of best fit. Can you explain what I should take away from a scatter plot with a regression line in the context of political science research?"
 ```
 
 ## Common Pitfalls and How to Avoid Them
 
 ### Pitfall 1: The Copy-Paste Trap
 
-**Problem:** Copying code without understanding leads to:
-- Inability to modify code for your specific needs
-- Poor performance on exams or future assignments
+**Problem:** Copying code without understanding leads to: 
+
+- Inability to modify code for your specific needs 
+- Poor performance on exams or future assignments 
 - Incorrect analyses when assumptions don't hold
 
 **Solution:** Always ask "why" and "how" questions
-```
+
+```         
 "Why do we use this specific function instead of alternatives?"
 "How would I modify this code if my variable names were different?"
 "What would happen if I changed this parameter?"
@@ -359,13 +333,15 @@ Instead of just asking for code, ask for the reasoning:
 
 ### Pitfall 2: Assuming AI is Always Right
 
-**Problem:** LLMs can make mistakes, especially with:
-- Recent R package updates
-- Domain-specific best practices
+**Problem:** LLMs can make mistakes, especially with: 
+
+- Recent R package updates 
+- Domain-specific best practices 
 - Complex statistical procedures
 
 **Solution:** Always verify important claims
-```
+
+```         
 "Can you provide documentation or references for this approach?"
 "How can I verify that this method is appropriate for my data?"
 "What are the limitations or assumptions of this technique?"
@@ -376,7 +352,8 @@ Instead of just asking for code, ask for the reasoning:
 **Problem:** Using AI for every small problem prevents skill development
 
 **Solution:** Try first, then ask for help
-```
+
+```         
 # Your workflow should be:
 1. Attempt the problem yourself
 2. Identify specific stuck points
@@ -385,93 +362,29 @@ Instead of just asking for code, ask for the reasoning:
 5. Ask follow-up questions if needed
 ```
 
-## Academic Integrity Guidelines
-
-### What's Generally Acceptable
-
-**✅ Using AI to:**
-- Explain error messages
-- Clarify concepts from lectures or readings
-- Suggest debugging approaches
-- Provide general coding guidance
-- Create practice examples for learning
-
-### What's Usually Not Acceptable
-
-**❌ Using AI to:**
-- Write entire assignment solutions
-- Complete take-home exams
-- Generate answers you can't explain
-- Bypass learning objectives
-- Submit work without understanding
-
-### When in Doubt, Ask Your Instructor
-
-Every course has different policies. Always check with your instructor about:
-- What level of AI assistance is permitted
-- Whether you need to cite AI use
-- How to balance AI help with independent work
-- Course-specific expectations
-
-## Practical Workflow Example
-
-Here's a step-by-step workflow for using AI help effectively with a simple data task:
-
-### Step 1: Try It Yourself First
-```{r}
-#| eval: false
-
-# Your initial attempt to calculate mean by group
-countries %>%
-  group_by(region)
-  mean(gdp)
-# Error: unexpected symbol
-```
-
-### Step 2: Ask Targeted Questions
-```
-"I'm trying to calculate the mean GDP for each region in my dataset but getting 'unexpected symbol' error. Here's my code: [paste code]. What am I doing wrong?"
-```
-
-### Step 3: Implement and Test
-```{r}
-#| eval: false
-
-# AI suggested the correct syntax
-countries %>%
-  group_by(region) %>%           # Added missing %>%
-  summarize(mean_gdp = mean(gdp)) # Use summarize function
-```
-
-### Step 4: Seek Understanding
-```
-"Why do I need summarize() here? What's the difference between group_by() and summarize()?"
-```
-
-### Step 5: Verify and Extend
-```
-"How can I also calculate the median and count of countries for each region in the same command?"
-```
-
 ## Advanced Tips for Better Learning
 
 ### Tip 1: Ask for Multiple Solutions
-```
+
+```         
 "Show me three different ways to visualize the relationship between income and voting probability, and explain when each approach is most useful."
 ```
 
 ### Tip 2: Request Error Handling
-```
+
+```         
 "What are common errors students make when running logistic regression, and how can I avoid or fix them?"
 ```
 
 ### Tip 3: Seek Connections to Theory
-```
+
+```         
 "How does this statistical analysis connect to political science theories about voter participation?"
 ```
 
 ### Tip 4: Practice Explanation
-```
+
+```         
 "If I had to explain these results to someone who doesn't know statistics, how would I describe what the model tells us about voter behavior?"
 ```
 
@@ -480,128 +393,57 @@ countries %>%
 The goal isn't to become dependent on AI, but to use it as a learning accelerator. Here's how:
 
 ### Develop Pattern Recognition
-- Notice common code structures AI suggests
-- Learn to recognize when similar patterns apply
-- Build your own library of template solutions
+
+-   Notice common code structures AI suggests
+-   Learn to recognize when similar patterns apply
+-   Build your own library of template solutions
 
 ### Build Debugging Skills
-- Ask AI to explain error messages
-- Learn common debugging strategies
-- Practice identifying problems independently
+
+-   Ask AI to explain error messages
+-   Learn common debugging strategies
+-   Practice identifying problems independently
 
 ### Understand the "Why" Behind the Code
-- Always ask for explanations of approach choices
-- Request information about alternatives
-- Learn the reasoning behind coding decisions
 
-## Advanced Example: Regression Analysis
-
-Once you're comfortable with basic data manipulation, you might encounter more complex statistical tasks. Here's how to approach regression analysis with AI help:
-
-### Scenario: Analyzing Election Turnout
-
-**Assignment:** You need to analyze factors that predict voter turnout using a dataset with variables for income, education, and age.
-
-### Step 1: Initial Problem Setup
-
-**Your Prompt:**
-```
-I'm working on a political science assignment analyzing voter turnout. I have a dataset called 'voter_data' with these variables:
-- turnout: whether someone voted (1 = yes, 0 = no)
-- income: household income in thousands
-- education: years of education
-- age: respondent age
-
-I need to run a logistic regression since turnout is binary. Can you show me the basic code structure and explain why we use logistic regression for binary outcomes? Please include comments explaining each step.
-```
-
-**AI Response Analysis:**
-```{r}
-#| eval: false
-
-# Load necessary library
-library(dplyr)
-
-# Run logistic regression
-model <- glm(turnout ~ income + education + age,
-             data = voter_data,
-             family = binomial)
-
-# View results
-summary(model)
-```
-
-**✅ Good AI Response Elements:**
-- Provides commented code
-- Uses appropriate function (`glm` with `family = binomial`)
-- Shows how to view results
-
-**🤔 What to Verify:**
-- Is the syntax correct for your version of R?
-- Do the variable names match your actual dataset?
-- Are there additional steps you might need?
-
-### Step 2: Follow-Up Questions
-
-**Don't just copy the code!** Ask follow-up questions to deepen your understanding:
-
-**Your Follow-Up Prompts:**
-```
-1. "Can you explain what the 'family = binomial' argument does and why it's necessary for binary outcomes?"
-
-2. "How do I interpret the coefficients in logistic regression? They seem different from regular regression."
-
-3. "What should I look for in the summary output to determine if my model is good?"
-```
-
-### Step 3: Adapting and Debugging
-
-When you try to run the AI's code, you might encounter errors. Here's how to handle them:
-
-**Your Error Message:**
-```
-Error in glm.fit: object 'voter_data' not found
-```
-
-**Your Debugging Prompt:**
-```
-I'm getting this error when trying to run the logistic regression code you provided: [paste error message]. I think it might be because I haven't loaded my dataset properly. Can you show me how to load a CSV file and check that it loaded correctly before running the regression?
-```
+-   Always ask for explanations of approach choices
+-   Request information about alternatives
+-   Learn the reasoning behind coding decisions
 
 ## Conclusion
 
 AI chatbots can be powerful allies in learning R and statistics, but they work best when you approach them as teaching assistants rather than homework completion services. The key principles are:
 
-1. **Start with your own effort** - Try first, then ask for help
-2. **Ask for understanding** - Don't just request code
-3. **Verify and test** - AI can make mistakes
-4. **Learn actively** - Engage with explanations and ask follow-ups
-5. **Maintain integrity** - Follow your course policies
+1.  **Start with your own effort** - Try first, then ask for help
+2.  **Ask for understanding** - Don't just request code
+3.  **Verify and test** - AI can make mistakes
+4.  **Learn actively** - Engage with explanations and ask follow-ups
+5.  **Maintain integrity** - Follow your course policies
 
 Remember: The goal is to become a competent data analyst who can think critically about statistical problems. AI should enhance your learning journey, not replace the learning process itself.
 
 ## Quick Reference: Effective Prompt Templates
 
 ### For Debugging
-```
+
+```         
 "I'm getting this error: [paste error]. Here's my code: [paste code]. I'm trying to [describe goal]. Can you help me understand what's wrong and how to fix it?"
 ```
 
 ### For Learning Concepts
-```
+
+```         
 "I'm learning about [concept] in my political science methods class. Can you explain [specific aspect] in simple terms and show how it applies to [your domain example]?"
 ```
 
 ### For Code Review
-```
+
+```         
 "Here's my code for [task]: [paste code]. Does this look correct? Are there ways I could improve it or make it more readable?"
 ```
 
 ### For Alternative Approaches
-```
+
+```         
 "I solved [problem] using [current approach]. Are there other ways to do this? What are the trade-offs between different methods?"
 ```
-
----
-
-*Remember: The best programmers aren't those who never need help—they're those who know how to find good help and learn from it effectively.*

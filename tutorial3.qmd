@@ -57,4 +57,3 @@ g +
         title = "Frequency of NES respondents who are generally negative\n vs. generally positive toward Obama"
     )
 ```
-
