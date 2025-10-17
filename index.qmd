@@ -25,71 +25,59 @@ format:
 
 ## About
 
-I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.
+I am a **PhD candidate in Political Science** at the University of Colorado Boulder. I study how online extremist ecosystems translate into offline harm using computational methods, policy engagement, and collaborative field work.
 
-**Key Experience:**
+- Consulting scholar for the House Select Committee on January 6th
+- Deputy Director, Center on Terrorism, Extremism & Counterterrorism
+- PI or co-PI on $1.38M in federally funded research
+- Trusted research partner for major tech platforms and civil society groups
 
--   **Investigative Consultant** to the House Select Committee on January 6th\
--   **Deputy Director** of the Center on Terrorism, Extremism & Counterterrorism
--   **Principal Investigator** on \$1.38M in federal research grants
--   **Research partnerships** with major technology companies
+## Quick Links
 
-------------------------------------------------------------------------
+- [Current CV](cv.html)
+- [Research Portfolio](research.html)
+- [Teaching and Mentoring](teaching.html)
+- [Media and Public Scholarship](posts.html)
+- [Quantitative Methods Tutorials](tutorial1.html)
 
-## Research Expertise
+## Focus Areas
 
-::::: columns
+:::: columns
 ::: {.column width="50%"}
-**Methods:**
+**Methods**
 
--   Machine Learning & NLP
--   Social Network Analysis\
--   Causal Inference
--   Data Science & Visualization
+- Machine learning and NLP
+- Social network analysis
+- Causal inference and design-based strategies
+- Human-centered data science workflows
 :::
 
 ::: {.column width="50%"}
-**Substantive Areas:**
+**Substantive Areas**
 
--   Political Violence & Extremism
--   Digital Platform Research
--   Technology & Society
--   Computational Social Science
+- Political violence and extremism
+- Platform accountability and governance
+- Digital cultures and radicalization
+- Disinformation, gaming, and emerging technologies
 :::
-:::::
+::::
 
-------------------------------------------------------------------------
+## Recent Highlights
 
-## Featured Publications
+- Forthcoming article on extremist messaging in gaming spaces, *Frontiers in Psychology* (2024)
+- Co-led multi-platform investigation of accelerationist networks cited by the January 6th Committee
+- Building cross-institutional dataset on online-offline mobilization with 45+ mentored students
 
-**Kowert, R., Kilmer, E., and Newhouse, A.** "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*, 2024.
+## Teaching and Service
 
-**Newhouse, A.** "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*, 2021.
+- Lead instructor for undergraduate quantitative methods and graduate computational social science
+- DEI and student support facilitator for CU Boulder Political Science
+- Organizer of interdisciplinary workshops on ethical AI and extremism research
 
-**McGuffie, K. and Newhouse, A.** "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *arXiv*, 2020.
+## Metrics at a Glance
 
-------------------------------------------------------------------------
+- $1.38M research portfolio | 8 major media features | 276K article views | 45+ students mentored
 
-## Research Impact
+## Contact
 
-**\$1.38M** in grant funding (Principal Investigator) \| **45+** students mentored \| **276K** article views \| Featured in **8** major media outlets
-
-------------------------------------------------------------------------
-
-## Media Recognition
-
-Research and expertise featured in: **Washington Post** • **New York Times** • **NPR** • **BBC** • **Politico** • **Wired** • **Bloomberg** • **Meet the Press**
-
-------------------------------------------------------------------------
-
-## Current Projects
-
-**Dissertation Research:** Developing computational frameworks to measure online-offline relationships in political violence
-
-**COVID-19 Visual Politics:** Analyzing partisan differences in pandemic media coverage using computer vision and text analysis
-
-**Gaming & Extremism:** Multi-platform investigation of recruitment and radicalization in digital gaming environments
-
-------------------------------------------------------------------------
-
-*Contact: alex.newhouse\@colorado.edu*
+Reach out at [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu).
