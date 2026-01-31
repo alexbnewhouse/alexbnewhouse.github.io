@@ -1,0 +1,191 @@
+---
+title: "INTD 1027: The Study of Post-War Fascism"
+subtitle: "Winter Term 2026"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+
+## Instructor
+
+**Name:** Alex Newhouse  
+**Email:** anewhouse@middlebury.edu  
+**Office Hours:** 10:30AM - 11:30AM Wed and Thurs, location TBD
+
+## Class Information
+
+**Dates:** January 5 – January 30  
+**Time:** MTWR 8:15AM-10:15AM  
+**Classroom:** Axinn 103
+
+## Course Description
+
+In this course we investigate the transformation of fascism and fascist movements following World War II. Tracing the philosophical and political roots of post-war fascism, we will study fascist behavior, activism, and violence. We will survey work from history, political theory, sociology, social computing, and political science to understand the landscape of contemporary fascism, with particular emphasis on its variants in Italy, Russia, the United Kingdom, and the United States. We will discuss in-depth how fascist movements interact with broader far-right politics and how they choose to either embrace or reject electoral politics in democratic countries. Students will also learn about research ethics and best practices in fascism studies, and they produce their own original work researching a particular topic of interest.
+
+## Course Objectives
+
+At the end of this course, students will have built a foundation of understanding how and why to study post-WWII fascist movements as both connected to and distinct from their pre-war predecessors. Students will be able to discuss how different disciplines approach the study of contemporary fascism, and how media, art, film, and academia have each developed their own methods for processing (and sometimes explicitly resisting) fascist ideologies. Finally, students will also acquire experience with responsibly developing research designs for studying subjects related to fascism.
+
+## Assignments and Grades
+
+- **Participation: 40%** - Students are expected to show up to class on time and having read the material. This is a small seminar-style class, so I expect everyone to participate in every class meeting.
+
+- **Three response papers: 30%** - The reaction papers should be about 500 words. Students should briefly summarize the most important points in the readings and identify interesting questions and/or critiques of the materials. Students should aim to make an argument in your reaction paper. You may choose any 3 days in which to write these, except for the final day of term. Reaction papers can be uploaded on our course website.
+
+- **Outline of research design: 5%**
+
+- **Final research design: 25%** - Students will produce a research design that aims to address some question of interest related to post-war fascism. These research designs should essentially be everything but the data collection and analysis sections of a full paper: Abstract, introduction (with a clearly defined research question), literature review and theory that develop at least one testable, falsifiable hypothesis, a methods section, and a conclusion that explains what further steps would need to happen to fully finish the study. We will go over the expectations more in class, but this design will likely end up being around 10-15 pages in length and can encompass any type of methodology and discipline.
+
+## Reading Materials
+
+All reading materials will be posted on Canvas.
+
+## Technology and AI Policies
+
+Please only use computers in class to access readings and take notes. I strongly encourage taking notes in a physical notebook or on a tablet. AI should not be used for completing any of the assignments in this class.
+
+## Course Schedule
+
+*Readings listed below should be completed before that day's class.*
+
+### Week 1: Overviews and Origins
+
+**January 5: Introductions, and what is fascism, anyways?**
+
+- Umberto Eco, "Ur-Fascism", *The New York Review*, 1995.
+
+**January 6: Early Fascisms**
+
+- Adolf Hitler, speech given at Nazi rally (watch)
+- Benito Mussolini, speech given in 1922 (skim)
+- Nicolas Goodrick-Clarke, *The Occult Roots of Nazism*, ch. 1-2
+- Fascist propaganda and art gallery (explore)
+
+**January 7: Processing the end of World War II**
+
+- Walter Benjamin, "The Work of Art in the Age of Mechanical Reproduction"
+- Hannah Arendt, *Origins of Totalitarianism*, ch. 13
+- Theodor Adorno, "Wagner, Nietzsche, and Hitler"
+
+**January 8: Artistic response to the end of World War II**
+
+- Thomas Pynchon, *Gravity's Rainbow*, excerpts
+- Philip K. Dick, *The Man in the High Castle*, excerpts
+- Alberto Giacometti's artwork (peruse)
+- Umberto Eco, *Foucault's Pendulum*, skim ch. 1
+- Eric Sandberg, "In Full Holocaust: Gravity's Rainbow and the Absent Atrocity," skim
+
+### Week 2: The Rise of Neo-Fascism
+
+**January 12: Italy**
+
+- Franco Ferraresi, *Threats to Democracy*, chs. 2 and 7
+- MIIS publication, "Italian Neofascism and the Years of Lead: A Closer Look at the Nuclei Armati Rivoluzionari" (skim)
+- Julius Evola, *Metaphysics of War*, ch. 1
+
+**January 13: Russia**
+
+- Benjamin Teitelbaum, *War for Eternity*, ch. 4
+- Aleksandr Dugin, *Foundations of Geopolitics*, ch. 1-2
+
+**January 14: United Kingdom**
+
+- Graham Macklin, *Failed Führers*, "Colin Jordan" (read as much as you can)
+- David Myatt, "David Myatt - A Practical Guide to the Strategy and Tactics of Revolution", read intro and skim rest
+
+**January 15: United States**
+
+- Kathleen Belew, *Bring the War Home*, ch. 2
+- William Luther Pierce, *Turner Diaries*, preface and ch. 1
+- James Mason, *Siege*, ch. 1 in fifth edition
+- Louis Beam, "Leaderless Resistance"
+
+### Week 3: Neo-Fascist Activism
+
+**January 20: Music and Visual Media**
+
+Listen and read the lyrics to some songs from fascist bands:
+
+- Skrewdriver
+- Burzum
+
+And antifascist/antiracist bands:
+
+- Dead Kennedys
+- Crass
+- The Clash
+
+Scholarly literature to check out:
+
+- Tommi Kotonen, "Politics, violence and transgression in Finnish Rock Against Communism music"
+- Corte and Edwards, "White Power music and the mobilization of racist social movements"
+- Richards, "Fashwave, Accelerationism, and the Aestheticisation of Destruction"
+- Benjamin Lee, "Siege Culture as a Subculture"
+
+**January 21: Online Activity**
+
+- Newhouse, "The Multi-Node Structure of Neo-Fascist Accelerationism"
+- Gaudette, Scrivens, Venkatesh, "The Role of the Internet in Facilitating Violent Extremism: Insights from Former Right-Wing Extremists"
+- Jamie Bartlett, "From hope to hate: how the early internet fed the far right"
+
+**January 22: Violence**
+
+- *American Insurrection* (Frontline PBS documentary), watch
+- "The Great Replacement" (manifesto), skim
+- Thorleifsson, "From cyberfascism to terrorism: On 4chan/pol/culture and the transnational production of memetic violence"
+
+### Week 4: Methods and Emerging Trends
+
+**January 26: Research Methods and Ethics**
+
+- Ashe et al., *Researching the Far Right* (pick one or two chapters to read)
+
+**January 27: Video Games**
+
+- Newhouse and Kowert, "Extremist identity creation through performative in-fighting on Steam"
+- Schlegel, "The role of gamification in radicalization processes"
+
+**January 28: Artificial Intelligence**
+
+- Watkins, "AI: The New Aesthetics of Fascism"
+- Gebru and Torres, "The TESCREAL Bundle"
+
+**January 29: Wrap-up and quick presentations**
+
+No required readings.
+
+## Campus Policies
+
+### Center for Teaching, Learning, and Research (CTLR)
+
+The Center for Teaching, Learning, and Research provides support for students in many specific academic content areas as well as in writing and quantitative studies more generally. Center staff also assist students in mastering their time management and sharpening their study skills. Students interested in pursuing health professions tracks and/or exploring opportunities for undergraduate research and post-graduate fellowships will find helpful advisors in the CTLR. All of these services are free to Middlebury students. For information on how to access support, go to [http://www.middlebury.edu/academics/resources/ctlr/students](http://www.middlebury.edu/academics/resources/ctlr/students).
+
+### Writing Center
+
+The Writing Center, located within the CTLR in Davis Family Library, encourages meaningful, exploratory writing. The trained professional and peer tutors (many of whom are embedded in FYS and CW intensive writing courses) are available to work with students on many different types of writing, as well as on the emotional (motivation, confidence, engagement) and cognitive (process, genre, metacognitive) elements of writing. Students are encouraged to schedule appointments wherever they are in their writing process (pre-writing/brainstorming, synthesizing information, revising, etc.)
+
+### Disability Resource Center (DRC)
+
+The Disability Resource Center provides support for students with disabilities and facilitates the accommodations process by helping students understand the resources and options available and by helping faculty understand how to increase access and full participation in courses. The DRC can also provide referrals for students who would like to undergo diagnostic testing. Students who are on financial aid and have never undergone diagnostic testing can apply to the CTLR for support to cover the cost of off-campus testing. DRC services are free to all students.
+
+### Student Wellness Resources
+
+As you seek balance in your life at the beginning of a new semester, please remember that the Center for Health and Wellness provides free, confidential, and readily accessible health care to Middlebury students. Same-day or next-day appointments are available, with no waitlists. 
+
+- **Counseling Services** offers one-on-one support, workshops, group programming, and guidance for managing challenges. Contact 802-443-5141 or counseling@middlebury.edu.
+- **Health and Wellness Education** provides health coaching, campus programming, and support for substance use concerns. Book appointments online.
+- **Health Services** offers care for illnesses, injuries, sexual and reproductive health, travel visits, and more. Call 802-443-3290.
+- **Timely Care** provides 24/7 medical and mental health services, including unlimited Medical Now and Talk Now appointments. Students are encouraged to use both Timely Care and on-campus services for comprehensive support.
+
+### Disability Access/Accommodation
+
+Students who have Letters of Accommodation in this class are encouraged to contact me as early in the semester as possible to ensure that such accommodations are implemented in a timely fashion. For those without Letters of Accommodation, assistance is available to eligible students through the Disability Resource Center. Please contact the ADA Coordinators in the DRC at ada@middlebury.edu for more information. All discussions will remain confidential.
+
+### Academic Integrity
+
+As an academic community devoted to the life of the mind, Middlebury requires of every student complete intellectual honesty in the preparation and submission of all academic work. Details of our Academic Honesty, Honor Code, and Related Disciplinary Policies are available in Middlebury's handbook.
+
+### Honor Code Pledge
+
+The Honor Code pledge reads as follows: "I have neither given nor received unauthorized aid on this assignment." It is the responsibility of the student to write out in full, adhere to, and sign the Honor Code pledge on all examinations, research papers, and laboratory reports. Faculty members reserve the right to require the signed Honor Code pledge on other kinds of academic work.
