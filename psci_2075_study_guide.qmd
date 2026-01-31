@@ -1,0 +1,1769 @@
+---
+title: "PSCI 2075 Final Exam Study Guide"
+subtitle: "Post-Estimation Diagnostics & Model Evaluation"
+author: "CU Boulder"
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+    embed-resources: true
+    number-sections: true
+execute:
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(car)
+library(visreg)
+library(lmtest)
+library(broom)
+
+# Create sample data for demonstrations
+set.seed(2075)
+n <- 100
+data_example <- tibble(
+  x1 = rnorm(n, 50, 10),
+  x2 = rnorm(n, 30, 5),
+  y = 10 + 2*x1 + 3*x2 + rnorm(n, 0, 15)
+)
+
+# Model for demonstrations
+model1 <- lm(y ~ x1 + x2, data = data_example)
+```
+
+# Introduction {.unnumbered}
+
+This study guide prepares you for a **90-minute handwritten exam** covering post-estimation diagnostics through counterfactual predictions. 
+
+**Focus on:**
+
+- ✍️ Writing clear definitions in your own words
+- 📊 Interpreting output and plots
+- 🧮 Working through calculation examples
+- 💡 Applying concepts to real scenarios
+
+**Exam Format:** Multiple choice, short answer, interpretation questions, and calculation problems.
+
+---
+
+# Post-Estimation Diagnostics
+
+## Definition
+**Post-estimation diagnostics** are tests and visualizations performed **after** fitting a regression to check if model assumptions hold and if the fit is appropriate.
+
+## Key Concept
+Running a regression is easy—but the results are only valid if assumptions are met! Diagnostics catch problems before we interpret coefficients.
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**After fitting a regression model, why must we check diagnostics before interpreting results?**
+
+**Answer:** Even if a model runs without errors, the results may be invalid if assumptions are violated. Diagnostics help us identify issues like heteroskedasticity, influential outliers, or non-linear relationships that would make our coefficients unreliable or our standard errors incorrect.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**List three things post-estimation diagnostics help us identify.**
+
+**Answer:** 
+1. Violated assumptions (e.g., heteroskedasticity, non-linearity)
+2. Outliers or influential observations affecting results
+3. Patterns in residuals suggesting model misspecification
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**True or False: If a regression produces significant coefficients, we don't need to check diagnostics.**
+
+**Answer:** False! Significant coefficients don't guarantee valid results. We must always check diagnostics to ensure assumptions hold and the model is appropriate.
+:::
+
+## Quick Reference
+```{r}
+#| code-fold: true
+# Using car package for diagnostics
+residualPlots(model1)  # Check for patterns in residuals
+influencePlot(model1)  # Identify influential cases
+```
+
+---
+
+# Gauss-Markov Theorem
+
+## Definition
+The **Gauss-Markov theorem** states that under certain assumptions, OLS produces the **Best Linear Unbiased Estimator (BLUE)**—meaning OLS gives the most efficient (lowest variance) estimates among all linear unbiased estimators.
+
+## The Five Key Assumptions
+1. **Linearity**: True relationship between X and Y is linear
+2. **No perfect multicollinearity**: Predictors aren't perfectly correlated
+3. **Exogeneity**: Error term has expected value of zero (E[ε|X] = 0)
+4. **Homoskedasticity**: Constant error variance across all X values
+5. **No autocorrelation**: Errors are independent
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**What does BLUE stand for, and why does it matter?**
+
+**Answer:** BLUE = Best Linear Unbiased Estimator. "Best" means minimum variance (most efficient), "Linear" means linear in Y, "Unbiased" means E[β̂] = β (correct on average). This matters because it tells us OLS is the optimal method when assumptions hold.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**If the homoskedasticity assumption is violated but all other Gauss-Markov assumptions hold, what happens to OLS estimates?**
+
+**Answer:** OLS coefficients remain unbiased but are no longer BLUE (not the most efficient). More importantly, standard errors are incorrect, making hypothesis tests and confidence intervals invalid. We would need to use robust standard errors.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**A researcher finds that error variance increases with income levels in their model. Which Gauss-Markov assumption is violated?**
+
+**Answer:** Homoskedasticity is violated. This is heteroskedasticity—non-constant error variance across levels of X (income).
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Match each violation to its consequence:**
+
+Violation A: Heteroskedasticity  
+Violation B: Omitted variable bias  
+Violation C: Non-linearity  
+
+Consequence 1: Biased coefficients  
+Consequence 2: Invalid standard errors but unbiased coefficients  
+Consequence 3: Wrong functional form
+
+**Answer:** A-2, B-1, C-3
+:::
+
+## Key Takeaway
+When Gauss-Markov assumptions hold → OLS is optimal ✓  
+When assumptions are violated → We need different methods or corrections!
+
+---
+
+# Error Variance, Homoskedasticity & Heteroskedasticity
+
+## Definitions
+
+**Error Variance**: The variability of residuals around the regression line (σ²)
+
+**Homoskedasticity**: Constant error variance across all levels of X  
+- The "spread" of residuals stays the same
+
+**Heteroskedasticity**: Non-constant error variance  
+- The "spread" of residuals changes (often increases) as X changes
+
+## Visual Identification
+
+**Homoskedastic residuals:** Look like a horizontal band with constant width  
+**Heteroskedastic residuals:** Show a funnel or cone pattern
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Explain in one sentence what heteroskedasticity means.**
+
+**Answer:** Heteroskedasticity occurs when the variability of prediction errors changes across different levels of the predictor variable(s).
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**You're modeling income as a function of education. The residual plot shows errors are small for low education but very large for high education. What problem is this?**
+
+**Answer:** This is heteroskedasticity. The error variance increases with education level, violating the constant variance assumption.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Does heteroskedasticity bias coefficient estimates? What does it affect?**
+
+**Answer:** No, heteroskedasticity does NOT bias coefficients—they remain unbiased. However, it makes standard errors incorrect, which invalidates hypothesis tests, p-values, and confidence intervals.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**In a residuals vs. fitted values plot, what pattern indicates homoskedasticity?**
+
+**Answer:** Random scatter with roughly constant vertical spread across all fitted values (horizontal band pattern with no systematic increase or decrease in spread).
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**A Breusch-Pagan test gives p = 0.03. What do you conclude?**
+
+**Answer:** With p = 0.03 < 0.05, we reject the null hypothesis of homoskedasticity. There is evidence of heteroskedasticity in the model. We should use robust standard errors.
+:::
+
+## Real-World Example
+Income prediction: People with low incomes have similar incomes (small variance), but high-earners vary widely (large variance). This creates heteroskedasticity.
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Visual check using car package
+residualPlots(model1, type = "rstandard")
+
+# Formal test
+bptest(model1)  # Breusch-Pagan test
+# p > 0.05 = homoskedastic (good!)
+# p < 0.05 = heteroskedastic (problem!)
+```
+
+---
+
+# Residual Plot
+
+## Definition
+A **residual plot** graphs residuals (observed Y - predicted Ŷ) against fitted values or predictors to visually diagnose model problems.
+
+## What to Look For
+
+| Pattern Observed | Interpretation | Action Needed |
+|-----------------|----------------|---------------|
+| Random scatter (horizontal band) | ✓ Assumptions met | None—proceed! |
+| Curved/U-shaped pattern | ✗ Non-linear relationship | Add polynomial terms or transform |
+| Funnel/cone shape | ✗ Heteroskedasticity | Use robust SEs or transform Y |
+| Clusters or gaps | ✗ Missing categories | Include categorical variable |
+| Extreme points far from others | ✗ Outliers present | Investigate these cases |
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**You see a U-shaped pattern in your residual plot. What does this suggest?**
+
+**Answer:** A U-shaped pattern indicates non-linearity—the true relationship between X and Y is curved, not linear. We should consider adding a quadratic term (X²) or transforming variables.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**Draw what a residual plot looks like when assumptions are met.**
+
+**Answer:** [Student would draw a horizontal band around zero with random scatter, roughly constant width, no patterns—dots scattered randomly above and below the zero line]
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**A residual plot shows increasing spread from left to right (funnel shape). What specific problem is this, and what assumption does it violate?**
+
+**Answer:** This is heteroskedasticity (non-constant variance). It violates the homoskedasticity assumption of the Gauss-Markov theorem.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Why do we plot residuals against fitted values rather than just looking at them in a table?**
+
+**Answer:** Visual patterns are much easier to detect than looking at numbers. Plots reveal systematic issues like non-linearity, heteroskedasticity, or outliers that would be hard to spot in a table of values.
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Using car package for enhanced residual plots
+residualPlots(model1)
+
+# Or using visreg for clearer visualization
+visreg(model1, "x1", gg = TRUE) +
+  theme_minimal() +
+  labs(title = "Partial Residual Plot for X1")
+```
+
+---
+
+# Outliers
+
+## Definition
+**Outliers** are observations with unusually large residuals—they don't fit the pattern established by the rest of the data. These are Y-outliers (unusual outcome values given their X values).
+
+## Key Distinction
+- **Outlier**: Unusual Y value (large residual) → Far from regression line
+- **High leverage**: Unusual X value → Far from mean of X
+- **Influential**: BOTH unusual X and Y → Changes regression results
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**In a study of 100 students' test scores and study hours, one student studied 10 hours (typical) but scored 15/100 (when model predicts 85). Is this an outlier, high leverage, or both?**
+
+**Answer:** This is an outlier only (not high leverage). The X value (study hours = 10) is typical, but the Y value (score = 15) is very unusual given X, creating a large residual.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**How do we typically identify outliers in regression?**
+
+**Answer:** We look for observations with standardized residuals greater than |2| or |3| (more than 2-3 standard deviations from the predicted value). These can be seen in residual plots as points far from the bulk of data.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**True or False: All outliers should be removed from the analysis.**
+
+**Answer:** False! Outliers might represent data errors (which should be fixed), but they might also be legitimate unusual cases. We should investigate them, understand why they're unusual, and report analyses with and without them rather than automatically deleting them.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**What's the difference between an outlier and an influential case?**
+
+**Answer:** An outlier has an unusual Y value (large residual) but may not affect the regression line much. An influential case both has unusual values AND substantially changes the regression coefficients when removed—it "pulls" the line toward itself.
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Identify outliers using car package
+outlierTest(model1)  # Most extreme outlier with Bonferroni p-value
+
+# Standardized residuals
+model1 %>%
+  augment() %>%
+  filter(abs(.std.resid) > 2) %>%
+  select(y, .fitted, .resid, .std.resid)
+```
+
+---
+
+# Leverage
+
+## Definition
+**Leverage** measures how unusual an observation's X values are. High-leverage points have predictor values far from the mean(s) of X.
+
+## Key Concept
+- **High leverage** = Unusual X (position gives *potential* to influence)
+- Does NOT mean the point IS influential (that requires unusual Y too)
+- Think of it as "potential influence"
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**In a study of college students aged 18-22, one student is 45 years old. Their grades perfectly fit the model prediction. Does this observation have high leverage, a large residual, or both?**
+
+**Answer:** High leverage only. The X value (age = 45) is extreme/unusual compared to other students, but since their Y value (grades) fits the model well, the residual is small. This point has potential to influence but doesn't actually pull the line because it fits the pattern.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**What is the "rule of thumb" threshold for identifying high leverage points?**
+
+**Answer:** Leverage values greater than 2(k+1)/n are considered high leverage, where k = number of predictors and n = sample size.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**You have a model with 3 predictors and n = 100. Calculate the high leverage threshold.**
+
+**Answer:** Threshold = 2(k+1)/n = 2(3+1)/100 = 2(4)/100 = 8/100 = 0.08. Points with leverage > 0.08 have high leverage.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Can a point have high leverage but NOT be influential? Explain.**
+
+**Answer:** Yes! A high-leverage point (unusual X) is only influential if it ALSO has a large residual (unusual Y). If the high-leverage point fits the pattern (small residual), it doesn't pull the regression line and thus isn't influential, even though it has potential to be.
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**Why do we care about leverage?**
+
+**Answer:** High-leverage points have the potential to strongly influence regression results because they're far from other data. We need to check if they're also outliers (large residuals), because high leverage + large residual = influential case that could distort our findings.
+:::
+
+## Visual Example
+Imagine a seesaw: A person standing far from the center (high leverage) *could* tip it dramatically, but only if they also push hard (large residual).
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Calculate and visualize leverage using car
+influenceIndexPlot(model1, vars = "hat")  # "hat" = leverage
+
+# Check for high leverage
+k <- length(coef(model1)) - 1  # number of predictors
+n <- nobs(model1)
+threshold <- 2 * (k + 1) / n
+
+model1 %>%
+  augment() %>%
+  filter(.hat > threshold)
+```
+
+---
+
+# Large Residual Value
+
+## Definition
+A **large residual** means the difference between observed Y and predicted Ŷ is substantial—the model's prediction was way off for that observation.
+
+## Formula
+Residual = Observed - Predicted = $y_i - \hat{y}_i$
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**A model predicts a student will score 88 on an exam, but they actually score 42. Calculate and interpret the residual.**
+
+**Answer:** Residual = 42 - 88 = -46. The model over-predicted by 46 points. This is a large negative residual indicating the student performed much worse than expected.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**Why do we use standardized residuals rather than raw residuals to identify outliers?**
+
+**Answer:** Standardized residuals account for the fact that residuals naturally vary in size. They're scaled to have standard deviation = 1, making them comparable across observations. Values greater than |2| or |3| indicate outliers regardless of the scale of Y.
+:::
+
+---
+
+# Influential Cases (and How to Handle)
+
+## Definition
+**Influential cases** are observations that substantially change regression results when removed. They have BOTH high leverage (unusual X) AND large residuals (unusual Y)—a dangerous combination!
+
+## Measures of Influence
+
+**Cook's Distance (most common)**
+- Combines leverage and residual size
+- Values > 1 or > 4/n suggest high influence
+- Measures change in ALL fitted values when case is removed
+
+**DFBETAS**
+- Measures change in individual coefficients
+- Values > 2/√n are concerning
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**What makes a case "influential" in regression?**
+
+**Answer:** An influential case has both (1) high leverage (unusual X values) and (2) a large residual (doesn't fit the model well). This combination means the point has the potential to change results AND actually does pull the regression line. Removing it would substantially change coefficient estimates.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**You find one observation with Cook's D = 1.8 in a sample of n = 50. Is this influential? Show your reasoning.**
+
+**Answer:** Yes, very influential. Cook's D = 1.8 exceeds both common thresholds:
+- It's > 1 (first threshold) ✓
+- It's > 4/n = 4/50 = 0.08 (second threshold) ✓
+This case should be investigated carefully.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Match each situation to whether the observation is influential:**
+
+A. High leverage + small residual  
+B. Low leverage + large residual  
+C. High leverage + large residual  
+
+Options: (1) Influential, (2) Not influential
+
+**Answer:** A-2 (not influential—fits the pattern despite unusual X), B-2 (not influential—can't pull line from typical X position), C-1 (influential—unusual position AND pulls the line)
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**You discover an influential case in your model. List three appropriate ways to handle it.**
+
+**Answer:**
+1. Investigate: Check if it's a data entry error (if so, correct it)
+2. Report both: Show results with and without the case to assess sensitivity
+3. Transform: Consider whether variable transformations reduce influence
+(Note: Do NOT automatically delete without justification!)
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**Why is it problematic to simply delete influential cases without investigation?**
+
+**Answer:** Influential cases might represent legitimate but unusual observations (like a rare event or unique case). Deleting them without understanding why they're unusual can bias results and lose important information. We should investigate, understand, and transparently report our handling of them rather than quietly removing "inconvenient" data.
+:::
+
+## Real-World Example
+In a housing study, one mansion in Beverly Hills (high X) that sells for far more than predicted (large residual) would be influential—it pulls the regression line upward, making the slope steeper than it would be without it.
+
+## How to Handle Influential Cases: Decision Tree
+
+1. **Investigate** → Data error? Fix it!
+2. **Legitimate case?** → Consider these options:
+   - Report results with and without
+   - Use robust regression methods
+   - Transform variables (log, etc.)
+   - Acknowledge as limitation
+3. **Document** → Explain your decision transparently
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Comprehensive influence plot using car
+influencePlot(model1, main = "Influence Plot")
+# Large circles = high Cook's D
+# Right side = high leverage
+# Top/bottom = large residuals
+
+# Cook's Distance specifically
+influenceIndexPlot(model1, vars = "Cook")
+
+# Check specific thresholds
+model1 %>%
+  augment() %>%
+  mutate(cooks_threshold = 4/n()) %>%
+  filter(.cooksd > cooks_threshold) %>%
+  select(y, .fitted, .resid, .hat, .cooksd)
+```
+
+---
+
+# Influence Plot
+
+## Definition
+An **influence plot** combines three diagnostics in one visualization to identify problematic observations:
+- **X-axis**: Leverage (hat values)
+- **Y-axis**: Studentized residuals
+- **Bubble size**: Cook's Distance (influence)
+
+## How to Read It
+
+| Location | Interpretation | Action |
+|----------|---------------|---------|
+| Center | Normal observation | None |
+| Right side | High leverage | Monitor |
+| Top or bottom | Large residual | Investigate |
+| Top-right OR bottom-right | HIGH INFLUENCE! | Examine carefully |
+| Large bubble anywhere | Cook's D elevated | Check sensitivity |
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**On an influence plot, where would you find the most concerning observations?**
+
+**Answer:** The most concerning observations are in the top-right or bottom-right corners with large bubbles. These have high leverage (right side), large residuals (top/bottom), and high Cook's Distance (large bubble)—all three indicating they're influential.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**An observation appears on the right side of an influence plot with a small bubble and is near the middle vertically. Should you be concerned?**
+
+**Answer:** Not very concerned. This indicates high leverage (unusual X) but small residual (fits the pattern) and small Cook's D (not influential). It's worth noting but not problematic since it doesn't pull the regression line.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Why is an influence plot more useful than looking at leverage, residuals, and Cook's D separately?**
+
+**Answer:** An influence plot shows all three diagnostics simultaneously, making it easy to identify observations that are problematic on multiple dimensions. We can immediately see which points combine high leverage with large residuals (the dangerous combination), rather than checking three separate diagnostics.
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Create influence plot using car package
+influencePlot(model1, 
+              id = list(method = "noteworthy", n = 3),
+              main = "Influence Plot",
+              sub = "Bubble size ∝ Cook's Distance")
+```
+
+---
+
+# Added Variable Plots
+
+## Definition
+**Added variable plots** (also called partial regression plots or AVPs) show the relationship between Y and one predictor X **after removing the effects of all other predictors** in the model.
+
+## What They Show
+The unique contribution of one predictor, holding all others constant. It's the "partial" effect.
+
+## Why Use Them?
+
+1. **Visualize partial relationships** that multivariate regression captures
+2. **Identify influential observations** for specific predictors
+3. **Assess linearity** of each predictor's relationship with Y
+4. **Understand multicollinearity** effects
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**What does an added variable plot show that a simple scatterplot of Y vs. X doesn't show?**
+
+**Answer:** An added variable plot shows the relationship between Y and X after removing the effects of all other predictors. It shows X's unique contribution holding other variables constant, whereas a simple scatterplot includes the confounded effects of all variables.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**In a model with Y = income, X1 = education, X2 = experience, the AVP for education shows a strong positive relationship, but the simple scatterplot of income vs. education shows almost no relationship. What explains this?**
+
+**Answer:** Experience is likely a confounder. In the simple scatterplot, education's effect is masked by experience (more educated people may have less experience). The AVP removes experience's effect, revealing education's true positive relationship with income after accounting for experience.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**You see a non-linear curve in an added variable plot for one predictor. What does this suggest?**
+
+**Answer:** The relationship between that predictor and Y is non-linear, even after controlling for other variables. We should consider adding a polynomial term (e.g., X²) or transforming the variable.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**On an AVP, one observation is far from the others on both axes. What diagnostic information does this provide?**
+
+**Answer:** This observation is influential for this specific predictor. It has unusual values on both the predictor (after removing other X's effects) and the outcome (after removing other X's effects), meaning it's pulling the partial regression line for this predictor.
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Create AVPs using car package
+avPlots(model1, id = list(n = 3))
+
+# Or create individual AVP with visreg for better visualization
+visreg(model1, "x1", gg = TRUE) +
+  theme_minimal() +
+  labs(title = "Partial Effect of X1 on Y",
+       subtitle = "Controlling for X2")
+```
+
+---
+
+# Dichotomous Dependent Variable
+
+## Definition
+A **dichotomous (binary) dependent variable** has only two possible outcomes, typically coded as 0 and 1.
+
+## Common Examples
+- Voted (1) vs. Didn't Vote (0)
+- Passed (1) vs. Failed (0)
+- Won (1) vs. Lost (0)
+- Event occurred (1) vs. Didn't occur (0)
+
+## Why It Matters
+Standard OLS regression assumes Y is continuous. When Y is binary, we need specialized models to properly handle:
+- Predictions that must be between 0 and 1
+- Non-linear relationships
+- Heteroskedasticity (variance depends on X)
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Why can't we use regular OLS regression with a binary dependent variable?**
+
+**Answer:** OLS can produce predicted probabilities outside the valid range [0,1] (e.g., predicting someone has a 120% chance of voting or -30% chance). Additionally, OLS assumes constant variance, but binary outcomes inherently have non-constant variance—p(1-p) varies with predicted probability.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**Give three examples of research questions with dichotomous dependent variables.**
+
+**Answer:** 
+1. Does education predict whether someone votes (yes/no)?
+2. Do economic conditions affect whether countries experience civil war (yes/no)?
+3. Does campaign spending influence election outcomes (win/lose)?
+:::
+
+---
+
+# Linear Probability Model (LPM)
+
+## Definition
+A **linear probability model** uses OLS regression with a binary dependent variable, directly estimating the probability that Y = 1.
+
+## Model Form
+$$P(Y=1) = \beta_0 + \beta_1X_1 + \beta_2X_2 + ... + \varepsilon$$
+
+## Interpretation
+Coefficients represent the **change in probability** (in percentage points) of Y = 1 for a one-unit increase in X.
+
+## Example
+```
+P(vote) = 0.20 + 0.05(education)
+```
+Each additional year of education increases the probability of voting by 0.05 (5 percentage points).
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Interpret this LPM coefficient: In a model predicting college enrollment (1=enrolled, 0=not), the coefficient on family income (in $10,000s) is 0.03. What does this mean?**
+
+**Answer:** Each additional $10,000 in family income increases the probability of college enrollment by 0.03 (3 percentage points). For example, going from $50,000 to $60,000 increases enrollment probability from, say, 0.60 to 0.63.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**What are two advantages of the linear probability model?**
+
+**Answer:**
+1. Easy interpretation—coefficients are changes in probability (percentage points)
+2. Simple to estimate—just use regular OLS
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**What are three disadvantages/problems with the linear probability model?**
+
+**Answer:**
+1. Can predict probabilities < 0 or > 1 (impossible!)
+2. Heteroskedasticity is guaranteed (variance = p(1-p) varies)
+3. Assumes constant marginal effects (same effect at all X values)
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**A LPM predicts someone has a 1.15 probability of graduating. What problem does this illustrate?**
+
+**Answer:** This illustrates the main problem with LPM—predicted probabilities can exceed 1.0 (or fall below 0), which is impossible since probabilities must be between 0 and 1. This occurs especially for extreme values of X.
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**When might we prefer LPM despite its problems?**
+
+**Answer:** When predicted probabilities all fall within [0,1] and we want easily interpretable coefficients (percentage point changes), LPM can be acceptable. It's also useful for quick preliminary analysis before fitting a more complex logistic model.
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Create binary outcome
+data_binary <- data_example %>%
+  mutate(y_binary = if_else(y > median(y), 1, 0))
+
+# Fit LPM (just regular OLS with binary Y)
+lpm <- lm(y_binary ~ x1 + x2, data = data_binary)
+
+# Check predictions
+lpm %>%
+  augment() %>%
+  summarise(
+    min_pred = min(.fitted),
+    max_pred = max(.fitted),
+    n_below_0 = sum(.fitted < 0),
+    n_above_1 = sum(.fitted > 1)
+  )
+```
+
+---
+
+# Logit Model / Logistic Regression
+
+## Definition
+**Logistic regression** models the log-odds of Y = 1 as a linear function of X. It guarantees all predictions are between 0 and 1 by using the logistic (S-shaped) curve.
+
+## The Logistic Function
+$$P(Y=1) = \frac{e^{\beta_0 + \beta_1 X}}{1 + e^{\beta_0 + \beta_1 X}} = \frac{1}{1 + e^{-(\beta_0 + \beta_1 X)}}$$
+
+## Key Features
+- **S-shaped curve**: Predictions asymptote at 0 and 1
+- **Non-linear**: Effect of X varies depending on probability level
+- **Coefficients in log-odds**: Not directly interpretable as probabilities
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Why do we use logistic regression instead of LPM for binary outcomes?**
+
+**Answer:** Logistic regression solves the main problems of LPM: (1) predictions are always between 0 and 1 (never impossible probabilities), (2) it accounts for the natural S-shaped relationship between predictors and binary outcomes, and (3) it properly handles the heteroskedasticity inherent in binary data.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**What does the logistic curve (S-shape) represent in terms of how X affects P(Y=1)?**
+
+**Answer:** The S-curve shows that X's effect on probability is non-linear: small when probability is near 0 or 1 (curve is flat), and largest when probability is near 0.5 (curve is steepest). This reflects reality—it's harder to move someone from 95% to 99% likely than from 50% to 54%.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**What is the main challenge in interpreting logistic regression coefficients?**
+
+**Answer:** Coefficients are in log-odds units, which aren't intuitive. We can't say "a one-unit increase in X increases probability by β," because the effect depends on where you start on the curve. We need to either exponentiate to get odds ratios or calculate predicted probabilities.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Compare LPM and logistic regression on three dimensions:**
+
+**Answer:**
+| Dimension | LPM | Logistic |
+|-----------|-----|----------|
+| Predictions | Can be <0 or >1 | Always [0,1] ✓ |
+| Interpretation | Easy (percentage points) | Harder (log-odds) |
+| Marginal effects | Constant | Vary by X value |
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Fit logistic regression
+logit_model <- glm(y_binary ~ x1 + x2, 
+                   data = data_binary,
+                   family = binomial(link = "logit"))
+
+# Check that predictions are valid
+logit_model %>%
+  augment(type.predict = "response") %>%
+  summarise(
+    min_pred = min(.fitted),
+    max_pred = max(.fitted)
+  )
+
+# All predictions between 0 and 1 ✓
+```
+
+---
+
+# Logged Odds (and Odds)
+
+## Definitions
+
+**Probability**: P(Y=1), ranges from 0 to 1
+
+**Odds**: $\frac{P(Y=1)}{P(Y=0)} = \frac{P(Y=1)}{1-P(Y=1)}$  
+- Ranges from 0 to ∞
+- Odds = 1 means 50-50 chance
+
+**Log-Odds (Logit)**: $\ln\left(\frac{P(Y=1)}{1-P(Y=1)}\right)$  
+- Ranges from -∞ to +∞
+- This is what logistic regression directly models!
+
+## Conversion Table
+
+| Probability | Odds | Log-Odds | Interpretation |
+|------------|------|----------|----------------|
+| 0.10 | 0.11 | -2.20 | Unlikely |
+| 0.25 | 0.33 | -1.10 | Somewhat unlikely |
+| 0.50 | 1.00 | 0.00 | 50-50 |
+| 0.75 | 3.00 | 1.10 | Likely |
+| 0.90 | 9.00 | 2.20 | Very likely |
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**If P(vote) = 0.80, calculate the odds and log-odds of voting.**
+
+**Answer:** 
+- Odds = 0.80/(1-0.80) = 0.80/0.20 = 4.0
+- Log-odds = ln(4.0) = 1.39
+
+Interpretation: The odds of voting are 4 to 1, or the log-odds are 1.39.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**In logistic regression, what does a coefficient of 0.5 mean in terms of odds?**
+
+**Answer:** A coefficient of 0.5 means a one-unit increase in X multiplies the odds by e^0.5 = 1.65. The odds increase by 65%. (NOT that probability increases by 0.5!)
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**A logistic regression shows β = -0.4 for the variable "age". Interpret this coefficient.**
+
+**Answer:** Each one-year increase in age multiplies the odds by e^(-0.4) = 0.67, meaning the odds decrease by 33% (since 1 - 0.67 = 0.33). Older people have lower odds of the outcome.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Why do we use log-odds in logistic regression instead of probabilities directly?**
+
+**Answer:** Log-odds can range from -∞ to +∞, making them suitable for linear modeling (like regular regression). We can then transform log-odds back to probabilities using the logistic function, ensuring predictions stay within [0,1].
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**Convert these interpretations:**
+
+If odds = 2: Probability = ?  
+If probability = 0.20: Odds = ?
+
+**Answer:** 
+- Odds = 2 → P = 2/(1+2) = 2/3 = 0.67
+- P = 0.20 → Odds = 0.20/0.80 = 0.25
+:::
+
+## Formulas to Remember
+
+**Odds to Probability:** $P = \frac{Odds}{1 + Odds}$
+
+**Probability to Odds:** $Odds = \frac{P}{1-P}$
+
+**Logit to Probability:** $P = \frac{e^{logit}}{1 + e^{logit}}$
+
+**Coefficient to Odds Ratio:** $OR = e^{\beta}$
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Get odds ratios from logistic regression
+logit_model %>%
+  tidy() %>%
+  mutate(odds_ratio = exp(estimate)) %>%
+  select(term, estimate, odds_ratio)
+
+# Example interpretation:
+# If odds_ratio = 1.5, a one-unit increase in X multiplies odds by 1.5
+# (50% increase in odds)
+```
+
+---
+
+# Plotting Predictions from Logit Models
+
+## Why Plot?
+Logit coefficients (log-odds) are difficult to interpret directly. **Plotting predicted probabilities** across values of X makes results clear, intuitive, and shows the S-shaped relationship.
+
+## What to Show
+- **X-axis**: Predictor variable of interest
+- **Y-axis**: Predicted probability of Y = 1
+- **Curve**: The characteristic S-shape of logistic function
+- **Hold other variables constant** (typically at means)
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Why do we plot predicted probabilities from logistic regression rather than just reporting coefficients?**
+
+**Answer:** Coefficients are in log-odds, which are hard to interpret. Plots show predicted probabilities (intuitive!) and reveal how the effect of X varies across its range (stronger effect near p=0.5, weaker near 0 or 1). The visualization makes results accessible to non-technical audiences.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**When creating predicted probabilities from a logit model with multiple predictors, what should you do with the other variables not being plotted?**
+
+**Answer:** Hold them constant at meaningful values, typically at their means (for continuous variables) or at common categories (for categorical variables). This allows you to see the isolated effect of the variable of interest.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**You plot predicted probabilities from age (20 to 80) predicting voting. The curve is steepest between ages 30-50 and flatter at the extremes. What does this tell you about age's effect?**
+
+**Answer:** Age has the strongest effect on voting probability for middle-aged people (where the curve is steep). For very young people (already low probability) and elderly (already high probability), additional years of age change voting probability less. This is the non-linear marginal effect in logistic regression.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Why does a logistic curve flatten out at the top and bottom?**
+
+**Answer:** Probabilities are bounded at 0 and 1, so as predictions approach these limits, additional increases in X have smaller effects on probability. It's hard to move from 95% to 99% (near ceiling) or from 5% to 1% (near floor), creating the flat parts of the S-curve.
+:::
+
+## Diagnostic Code Reference
+```{r}
+#| code-fold: true
+# Create prediction data using visreg (easiest method)
+visreg(logit_model, "x1", 
+       scale = "response",  # Get probabilities, not log-odds
+       gg = TRUE) +
+  theme_minimal() +
+  labs(title = "Predicted Probability by X1",
+       y = "P(Y = 1)") +
+  ylim(0, 1)
+
+# Manual method for more control
+pred_data <- data_binary %>%
+  summarise(
+    x1 = seq(min(x1), max(x1), length.out = 100),
+    x2 = mean(x2)
+  ) %>%
+  mutate(
+    pred_prob = predict(logit_model, 
+                       newdata = ., 
+                       type = "response")
+  )
+
+ggplot(pred_data, aes(x = x1, y = pred_prob)) +
+  geom_line(color = "blue", size = 1.2) +
+  theme_minimal() +
+  labs(title = "Predicted Probability from Logistic Regression",
+       x = "X1", y = "P(Y = 1)") +
+  ylim(0, 1)
+```
+
+---
+
+# R-squared (R²)
+
+## Definition
+**R-squared** is the proportion of variance in Y explained by the model. It tells us how well our predictors account for variation in the outcome.
+
+$$R^2 = 1 - \frac{SSR}{TSS} = \frac{\text{Explained Variance}}{\text{Total Variance}}$$
+
+Ranges from 0 to 1 (often reported as 0% to 100%).
+
+## Interpretation Guide
+
+| R² Value | Meaning | Assessment |
+|----------|---------|------------|
+| 0.00-0.10 | 0-10% explained | Very weak model |
+| 0.10-0.30 | 10-30% explained | Weak model |
+| 0.30-0.50 | 30-50% explained | Moderate model |
+| 0.50-0.70 | 50-70% explained | Good model |
+| 0.70-0.90 | 70-90% explained | Strong model |
+| 0.90-1.00 | 90-100% explained | Very strong (check for overfitting!) |
+
+**Note:** Standards vary by field! Social sciences typically have lower R² than physical sciences.
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**A model has R² = 0.42. Explain what this means in plain English.**
+
+**Answer:** The model explains 42% of the variance in the dependent variable. The predictors account for 42% of why Y varies, while 58% of the variation is due to other factors not in the model (captured by the error term).
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**Two students fit models:**
+- Model A: Education + Experience predicting income, R² = 0.38
+- Model B: Education + Experience + Age predicting income, R² = 0.39
+
+Student B claims their model is better because R² is higher. What's wrong with this reasoning?
+
+**Answer:** R² always increases (or stays same) when adding predictors, even useless ones! A 0.01 increase is tiny and may not justify adding Age. We should use adjusted R² which penalizes adding predictors, or compare out-of-sample fit, to determine if Age meaningfully improves the model.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Calculate R² given SSR = 400 and TSS = 1000.**
+
+**Answer:** 
+R² = 1 - (SSR/TSS) = 1 - (400/1000) = 1 - 0.4 = 0.6
+
+The model explains 60% of the variance in Y.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**True or False: A model with R² = 0.95 is always better than one with R² = 0.65.**
+
+**Answer:** False! R² = 0.95 might indicate overfitting (fitting noise rather than signal). What matters more is: (1) out-of-sample performance, (2) theoretical justification for predictors, and (3) whether additional complexity is warranted. Also, the 0.95 model might have too many predictors.
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**Why can't we use R² to compare models with different dependent variables?**
+
+**Answer:** R² measures explained variance in Y. Different Y variables have different amounts of total variance, making R² non-comparable. For example, R² = 0.40 explaining income in dollars is different from R² = 0.40 explaining log(income).
+:::
+
+---
+
+# Adjusted R-squared (Adjusted R²)
+
+## Definition
+**Adjusted R²** penalizes adding predictors that don't sufficiently improve the model. It only increases if a new predictor improves fit more than expected by chance.
+
+$$\text{Adj } R^2 = 1 - \frac{(1-R^2)(n-1)}{n-k-1}$$
+
+Where: n = sample size, k = number of predictors
+
+## Why Use It?
+- Regular R² is "optimistic" — always increases with more predictors
+- Adjusted R² can decrease if a predictor doesn't help enough
+- Better for comparing models with different numbers of predictors
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**When comparing two models with the same dependent variable, which should we use: R² or Adjusted R²?**
+
+**Answer:** Adjusted R², especially if the models have different numbers of predictors. Adjusted R² accounts for model complexity, while regular R² will favor the model with more predictors regardless of whether they're useful.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**A researcher adds a predictor to their model. R² increases from 0.650 to 0.652, but Adjusted R² decreases from 0.638 to 0.636. What does this tell you?**
+
+**Answer:** The new predictor doesn't improve the model enough to justify its inclusion. While R² increased slightly (as it always does), the Adjusted R² penalty shows the predictor added complexity without sufficient benefit. The simpler model is better.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Why is Adjusted R² always less than or equal to R²?**
+
+**Answer:** Adjusted R² includes a penalty term (n-1)/(n-k-1) that accounts for the number of predictors. This penalty reduces the value, making Adjusted R² ≤ R². The more predictors relative to sample size, the larger the penalty.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Compare these models:**
+- Model A: R² = 0.55, Adj R² = 0.52 (5 predictors)
+- Model B: R² = 0.54, Adj R² = 0.53 (2 predictors)
+
+Which is preferable?
+
+**Answer:** Model B. Though it has slightly lower R², its Adjusted R² is higher, indicating it achieves similar explanatory power with fewer predictors (more parsimonious). The 3 extra predictors in Model A don't add enough value to justify their inclusion.
+:::
+
+---
+
+# Sum of Squared Residuals (SSR)
+
+## Definition
+**SSR** is the sum of all squared prediction errors. It measures total model error.
+
+$$SSR = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 = \sum_{i=1}^{n} e_i^2$$
+
+## Why Square Residuals?
+1. Positive and negative errors don't cancel out
+2. Larger errors penalized more heavily (quadratic)
+3. Mathematical convenience (differentiable for optimization)
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**A model makes errors of +3, -2, +4, -1. Calculate SSR.**
+
+**Answer:** 
+SSR = (3)² + (-2)² + (4)² + (-1)² = 9 + 4 + 16 + 1 = 30
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**What does SSR = 0 mean?**
+
+**Answer:** Perfect fit—all predictions exactly equal observed values (no prediction error). This is suspicious and likely indicates overfitting, where the model memorizes data rather than learning generalizable patterns.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Why do we minimize SSR in OLS regression?**
+
+**Answer:** Minimizing SSR means finding the line (coefficients) that makes prediction errors as small as possible overall. This is the "best fit" line—the one that comes closest to all data points simultaneously, balancing errors across all observations.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Model A has SSR = 500, Model B has SSR = 750. Which model fits better?**
+
+**Answer:** Model A fits better (assuming same data/same Y). Lower SSR means smaller total prediction errors. However, we should also check if Model A is more complex (more predictors), which might indicate overfitting.
+:::
+
+---
+
+# Total Sum of Squares (TSS)
+
+## Definition
+**TSS** measures total variance in Y—how much Y varies around its mean, ignoring any predictors.
+
+$$TSS = \sum_{i=1}^{n}(y_i - \bar{y})^2$$
+
+## Relationship to R²
+$$R^2 = \frac{TSS - SSR}{TSS} = 1 - \frac{SSR}{TSS}$$
+
+TSS = SSR + Explained Sum of Squares
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Given: TSS = 800, SSR = 200. Calculate R².**
+
+**Answer:** 
+R² = 1 - (SSR/TSS) = 1 - (200/800) = 1 - 0.25 = 0.75
+
+The model explains 75% of variance in Y.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**Why is TSS the same for all models predicting the same Y?**
+
+**Answer:** TSS only depends on Y and its mean—it measures total variation in the outcome variable before considering any predictors. It's the baseline we're trying to explain with our models. All models start with the same TSS because they're all trying to explain the same dependent variable.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**What does it mean if SSR = TSS?**
+
+**Answer:** R² = 0, meaning the model explains none of the variance in Y. The predictions are no better than simply guessing the mean of Y for everyone. The predictors are useless.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**A model has TSS = 1000, SSR = 300. How much variance is explained by the model?**
+
+**Answer:** 
+Explained variance = TSS - SSR = 1000 - 300 = 700
+This is 70% of the total (700/1000 = 0.70 = R²)
+:::
+
+## Key Formula Summary
+
+| Component | Formula | Meaning |
+|-----------|---------|---------|
+| TSS | $\sum(y_i - \bar{y})^2$ | Total variance |
+| SSR | $\sum(y_i - \hat{y}_i)^2$ | Unexplained variance (error) |
+| ESS | TSS - SSR | Explained variance |
+| R² | 1 - SSR/TSS | Proportion explained |
+
+---
+
+# Out of Sample Fit
+
+## Definition
+**Out of sample fit** measures how well a model predicts **new data it hasn't seen**. This is the ultimate test of model quality and generalizability!
+
+## In-Sample vs. Out-of-Sample
+
+| Aspect | In-Sample | Out-of-Sample |
+|--------|-----------|---------------|
+| Data | Used to fit model | New, unseen data |
+| Performance | Always looks better | True test |
+| Risk | Can overfit | Shows real predictive power |
+| Purpose | Model development | Model evaluation |
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Why is out-of-sample performance more important than in-sample performance?**
+
+**Answer:** In-sample performance can be misleadingly good because the model has "seen" the data and can overfit to its specific patterns and noise. Out-of-sample performance shows whether the model learned genuine relationships that generalize to new data—the true test of a model's usefulness.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**A model has in-sample R² = 0.92 but out-of-sample R² = 0.35. What's the problem?**
+
+**Answer:** Overfitting! The model memorized the training data's peculiarities (achieving 92% fit) but failed to learn generalizable patterns (only 35% fit on new data). The model is too complex for the amount of data or includes spurious relationships.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Give an example of evaluating out-of-sample fit in a real research context.**
+
+**Answer:** Train an election prediction model on data from 2000-2016 elections, then test it on 2020 election data (held out). If predictions are accurate for 2020, the model generalizes well. If not, it overfit to historical patterns that didn't hold.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**True or False: A model that perfectly fits training data (R² = 1.00) is ideal.**
+
+**Answer:** False! Perfect in-sample fit likely indicates severe overfitting—the model memorized noise and outliers rather than learning true patterns. It will perform poorly on new data.
+:::
+
+---
+
+# Mean Squared Error / Root Mean Squared Error
+
+## Definitions
+
+**Mean Squared Error (MSE)**: Average squared prediction error
+$$MSE = \frac{1}{n}\sum_{i=1}^{n}(y_i - \hat{y}_i)^2$$
+
+**Root Mean Squared Error (RMSE)**: Square root of MSE (original units!)
+$$RMSE = \sqrt{MSE}$$
+
+## Why RMSE is Useful
+- In same units as Y (interpretable!)
+- "On average, predictions are off by RMSE units"
+- Lower is better
+- Can compare across models
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Calculate RMSE given these prediction errors: -10, 5, -8, 12**
+
+**Answer:**
+MSE = [(-10)² + (5)² + (-8)² + (12)²] / 4
+    = [100 + 25 + 64 + 144] / 4
+    = 333 / 4 = 83.25
+
+RMSE = √83.25 = 9.12
+
+On average, predictions are off by about 9.12 units.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**A model predicting house prices has RMSE = $45,000. Interpret this.**
+
+**Answer:** On average, the model's predictions are off by $45,000. For example, if the model predicts a house costs $300,000, the actual price is typically within the range of $255,000 to $345,000.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Model A: RMSE = 12.5, Model B: RMSE = 18.3. Which is better?**
+
+**Answer:** Model A is better—it has lower average prediction error. Its predictions are typically about 6 units more accurate than Model B's (18.3 - 12.5 = 5.8).
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**Why do we take the square root of MSE to get RMSE?**
+
+**Answer:** MSE is in squared units (e.g., dollars²), which isn't interpretable. Taking the square root returns RMSE to the original units of Y (dollars), making it meaningful—we can say "predictions are off by $X on average."
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**Training RMSE = 15, Test RMSE = 35. What does this indicate?**
+
+**Answer:** Overfitting. The model fits training data well (RMSE = 15) but performs much worse on new data (RMSE = 35). The large gap suggests the model learned training-specific patterns that don't generalize.
+:::
+
+---
+
+# Training, Testing, and Validation Data
+
+## Definitions
+
+**Training Data (60-80%)**: Used to fit the model (estimate coefficients)
+
+**Testing Data (20-30%)**: Used to evaluate final model performance  
+- NEVER used during model development
+- Provides unbiased performance estimate
+
+**Validation Data (optional, ~10-20%)**: Used to tune/compare models  
+- Select between model specifications
+- Tune hyperparameters
+- Common in complex modeling
+
+## Standard Workflows
+
+### Simple Split (Training/Testing)
+1. Split data (e.g., 70% train, 30% test)
+2. Fit model on training data
+3. Evaluate on test data (ONCE at the end)
+4. Report test performance
+
+### Three-Way Split (Training/Validation/Testing)
+1. Split data (e.g., 60% train, 20% validation, 20% test)
+2. Fit models on training data
+3. Compare models using validation data
+4. Select best model
+5. Final evaluation on test data (ONCE)
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Why can't we use the same data to both fit and evaluate a model?**
+
+**Answer:** Using the same data for both gives an overly optimistic assessment. The model has already "seen" and adapted to that data's patterns, so performance will be artificially inflated. We need unseen test data to get an honest estimate of how the model will perform on new observations.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**You have 1,000 observations. Create a training/testing split.**
+
+**Answer:** 
+- Training: 700 observations (70%)
+- Testing: 300 observations (30%)
+
+Or 80/20: 800 training, 200 testing. Either is acceptable; 70/30 or 80/20 are standard.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**What is the golden rule of test data?**
+
+**Answer:** NEVER use test data to make modeling decisions! It must remain completely unseen until final evaluation. Once you look at test performance and adjust your model, the test set is "contaminated" and no longer provides an unbiased assessment.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**What's the purpose of a validation set?**
+
+**Answer:** The validation set lets us compare models or tune parameters without "using up" our test set. We can try different specifications and see which performs best on validation data, then get a final unbiased evaluation on the still-untouched test set.
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**A researcher splits data into train/test, fits a model, sees poor test performance, changes the model, and re-evaluates on the same test set. What's wrong?**
+
+**Answer:** The researcher is using the test set to make modeling decisions, which "contaminates" it. The test performance is no longer an unbiased estimate because the model has been adapted based on that data. Should have used a validation set for model selection, saving the test set for final evaluation.
+:::
+
+## Key Principles
+
+✓ **Random split**: Shuffle before splitting  
+✓ **No leakage**: Test data never influences model fitting  
+✓ **Hold out**: Test set untouched until final evaluation  
+✓ **Stratify** (if needed): Maintain proportion of outcome in splits  
+✗ **Don't peek**: Looking at test data to make decisions invalidates it
+
+---
+
+# Predicted Values (In vs. Out of Sample)
+
+## Definitions
+
+**In-Sample Predictions**: $\hat{y}_i$ for observations used to fit the model  
+- Based on training data
+- Model has "seen" these observations
+
+**Out-of-Sample Predictions**: $\hat{y}_i$ for new observations not used in fitting  
+- Based on test/new data  
+- Model has NOT seen these observations
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Why are in-sample predictions typically more accurate than out-of-sample predictions?**
+
+**Answer:** In-sample predictions are for data the model was fit to, so it has optimized its parameters specifically for these observations. Out-of-sample predictions are for new data, testing whether the model learned generalizable patterns rather than memorizing training data specifics.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**You fit a model on 2010-2018 data to predict voter turnout:**
+- In-sample: RMSE = 4.2
+- Out-of-sample (2020 data): RMSE = 12.8
+
+What do these numbers tell you?
+
+**Answer:** The model fits historical data well (RMSE = 4.2) but generalizes poorly to 2020 (RMSE = 12.8). This large gap suggests either: (1) overfitting to 2010-2018 patterns, or (2) 2020 was fundamentally different (e.g., COVID effects), making historical patterns less applicable.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**What's the purpose of generating in-sample predictions if out-of-sample predictions are what we really care about?**
+
+**Answer:** In-sample predictions are useful for diagnostics (residual plots, identifying outliers, checking assumptions). Comparing in-sample vs. out-of-sample performance also reveals overfitting. But you're right—ultimately, out-of-sample predictive accuracy is the real test.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**True or False: We should report in-sample fit as our model's expected performance.**
+
+**Answer:** False! In-sample fit is optimistically biased. We should report out-of-sample performance as the expected performance on new data, since that's an honest assessment of generalizability.
+:::
+
+---
+
+# Counterfactual Predictions
+
+## Definition
+**Counterfactual predictions** answer "what if" questions by predicting outcomes under hypothetical scenarios that didn't actually occur.
+
+## The Process
+1. Fit model on observed data
+2. Create hypothetical scenarios (manipulate X values)
+3. Generate predictions for these counterfactuals
+4. Compare to observed outcomes
+
+## Types of Counterfactuals
+
+**Individual-level**: "What would this person's income be if they had 2 more years of education?"
+
+**Population-level**: "What would average turnout be if all states expanded voting access?"
+
+**Policy simulation**: "What would crime rates be under different policing strategies?"
+
+## Example Exam Questions
+
+::: {.callout-note icon=false}
+## Question 1
+**Define counterfactual prediction in one sentence.**
+
+**Answer:** A counterfactual prediction estimates what an outcome would be under hypothetical conditions that differ from what was actually observed.
+:::
+
+::: {.callout-note icon=false}
+## Question 2
+**Given the model: Income = 20,000 + 5,000(Education)**
+
+Person A has 12 years of education and earns $80,000.
+- Calculate Person A's predicted income (in-sample prediction)
+- Calculate Person A's counterfactual income if they had 16 years of education
+
+**Answer:**
+- Observed: Income = 20,000 + 5,000(12) = $80,000 ✓ (prediction matches actual)
+- Counterfactual: Income = 20,000 + 5,000(16) = $100,000
+
+Person A would be predicted to earn $100,000 if they had 16 years of education instead of 12.
+:::
+
+::: {.callout-note icon=false}
+## Question 3
+**Why are counterfactual predictions useful for policy analysis?**
+
+**Answer:** They let us estimate policy effects before implementation. For example, we can predict what would happen if we changed a policy (e.g., "What if minimum wage increased?") without actually implementing it. This helps policymakers make informed decisions and compare alternative policies.
+:::
+
+::: {.callout-note icon=false}
+## Question 4
+**What's the key assumption when making counterfactual predictions?**
+
+**Answer:** That the relationships estimated from observed data will hold under the counterfactual scenario. This may not be true if the counterfactual is far outside the range of observed data (extrapolation) or if the relationship is context-dependent.
+:::
+
+::: {.callout-note icon=false}
+## Question 5
+**A model is trained on cities with population 100K-500K. A researcher uses it to predict outcomes for a city of 5 million. What's the concern?**
+
+**Answer:** Extrapolation! The counterfactual (5M population) is far outside the range of observed data (100K-500K). The model may not accurately capture relationships at that scale—city dynamics might be fundamentally different at 5M than at the observed sizes.
+:::
+
+::: {.callout-note icon=false}
+## Question 6
+**Create two counterfactual scenarios for this model:**
+
+Test Score = 50 + 10(Study Hours) + 15(Tutoring)
+
+Student studied 3 hours without tutoring (Tutoring = 0).
+
+**Answer:**
+Observed: Score = 50 + 10(3) + 15(0) = 80
+
+Counterfactual 1 (more study): 
+Score = 50 + 10(5) + 15(0) = 100 (+20 points)
+
+Counterfactual 2 (add tutoring): 
+Score = 50 + 10(3) + 15(1) = 95 (+15 points)
+
+These show the student would gain more from extra study (20) than from tutoring (15).
+:::
+
+## Real-World Applications
+
+- **Medicine**: "What would patient outcomes be under different treatments?"
+- **Economics**: "What would GDP be under alternative tax policies?"
+- **Political Science**: "What would election results be if turnout increased?"
+- **Public Policy**: "What would crime rates be with different enforcement?"
+
+## Cautions
+
+⚠️ **Extrapolation**: Predictions far outside observed data may be unreliable  
+⚠️ **Assumption violations**: Relationships may differ in counterfactual scenarios  
+⚠️ **Causal claims**: Counterfactuals suggest but don't prove causation  
+⚠️ **Confounding**: Unmeasured variables may affect both X and Y
+
+---
+
+# Study Tips for Handwritten Exam
+
+## What to Memorize
+
+### Key Formulas
+- R² = 1 - SSR/TSS
+- RMSE = √(MSE) = √(Σ(y - ŷ)²/n)
+- Odds = P/(1-P)
+- Log-odds = ln(odds)
+- Leverage threshold = 2(k+1)/n
+- Cook's D threshold = 4/n or 1
+
+### Interpretation Templates
+- **Coefficient**: "A one-unit increase in X changes Y by β units, holding other variables constant"
+- **R²**: "The model explains X% of the variance in Y"
+- **RMSE**: "On average, predictions are off by X units"
+- **Odds ratio**: "A one-unit increase in X multiplies the odds by e^β"
+
+## Exam Strategies
+
+### Multiple Choice
+✓ Eliminate obviously wrong answers  
+✓ Watch for "always/never" (usually wrong)  
+✓ Check units and magnitudes  
+✓ Remember assumptions matter!
+
+### Short Answer
+✓ Define terms clearly  
+✓ Give concrete examples  
+✓ Show your reasoning  
+✓ Use proper terminology
+
+### Calculations
+✓ Show all work  
+✓ Write formulas first  
+✓ Check if answer makes sense  
+✓ Include units
+
+### Interpretation Questions
+✓ State what numbers mean in plain English  
+✓ Connect to real-world context  
+✓ Note limitations if relevant  
+✓ Be precise with "holding constant" language
+
+## Common Mistakes to Avoid
+
+❌ Confusing correlation with causation  
+❌ Saying "significant" without specifying statistical vs. practical  
+❌ Mixing up leverage, outliers, and influence  
+❌ Treating log-odds as probabilities  
+❌ Claiming R² measures causation  
+❌ Ignoring assumptions when interpreting  
+❌ Extrapolating beyond data range  
+❌ Using test data for model selection
+
+## Quick Reference: Decision Trees
+
+### Is this observation problematic?
+```
+High leverage? → Yes → Large residual? → Yes → INFLUENTIAL! ⚠️
+                 ↓                        ↓
+                 No                       No → Monitor, not urgent
+                 ↓
+        Large residual? → Yes → Outlier, investigate
+                         ↓
+                         No → Normal observation ✓
+```
+
+### Which model fit metric should I use?
+```
+Same DV, different predictors? → Different # predictors? → Yes → Adjusted R²
+                                                           ↓
+                                                           No → R² or RMSE
+Different DVs? → Cannot compare with R² or RMSE!
+```
+
+### Train/test or just train?
+```
+Need honest performance assessment? → Yes → Split train/test
+                                     ↓
+                                     No → Just training (exploratory only)
+```
+
+---
+
+# Practice Problems
+
+## Problem Set 1: Diagnostics
+
+**Q1:** Observation #47 has standardized residual = 3.2, leverage = 0.15, Cook's D = 0.02, n = 100, k = 3. Is it problematic? Why or why not?
+
+<details>
+<summary>Answer</summary>
+Leverage threshold = 2(3+1)/100 = 0.08. Leverage = 0.15 > 0.08 ✓ (high)  
+Standardized residual = 3.2 > 2 ✓ (large)  
+Cook's D = 0.02 < 4/100 = 0.04 ✓ (acceptable)
+
+**Conclusion**: Has high leverage and large residual, but Cook's D suggests it's not very influential. Worth investigating but not urgent. The low Cook's D indicates it's not substantially changing regression results despite having concerning individual diagnostics.
+</details>
+
+**Q2:** You see a funnel shape in your residual plot. What problem is this? What should you do?
+
+<details>
+<summary>Answer</summary>
+**Problem**: Heteroskedasticity (non-constant variance)
+
+**Actions**:
+1. Use robust standard errors (immediate fix for inference)
+2. Transform Y (e.g., log transformation) to stabilize variance
+3. Acknowledge limitation if transformations don't help
+4. Note: Coefficients are still unbiased; only SEs are affected
+</details>
+
+## Problem Set 2: Calculations
+
+**Q3:** Calculate R² and interpret: TSS = 500, SSR = 125
+
+<details>
+<summary>Answer</summary>
+R² = 1 - (SSR/TSS) = 1 - (125/500) = 1 - 0.25 = 0.75
+
+**Interpretation**: The model explains 75% of the variance in the dependent variable. The predictors account for three-quarters of why Y varies across observations.
+</details>
+
+**Q4:** Errors: +15, -8, +12, -20. Calculate RMSE.
+
+<details>
+<summary>Answer</summary>
+MSE = [(15)² + (-8)² + (12)² + (-20)²] / 4  
+    = [225 + 64 + 144 + 400] / 4  
+    = 833 / 4 = 208.25
+
+RMSE = √208.25 = 14.43
+
+**Interpretation**: On average, predictions are off by about 14.43 units.
+</details>
+
+## Problem Set 3: Interpretation
+
+**Q5:** Logistic regression: β = 0.8 for Education. Interpret.
+
+<details>
+<summary>Answer</summary>
+Each additional year of education multiplies the odds of the outcome by e^0.8 = 2.23. The odds increase by 123% (since 2.23 - 1 = 1.23). 
+
+For example, if someone has odds of 1.0 (50% probability) with 12 years of education, they would have odds of 2.23 (69% probability) with 13 years of education, all else equal.
+</details>
+
+**Q6:** Model A (training RMSE = 10, test RMSE = 12) vs. Model B (training RMSE = 8, test RMSE = 18). Which is better?
+
+<details>
+<summary>Answer</summary>
+**Model A is better!**
+
+Although Model B fits training data better (RMSE = 8 vs. 10), Model A generalizes much better to new data (test RMSE = 12 vs. 18). The large gap in Model B (8 → 18) indicates severe overfitting. Model A's smaller gap (10 → 12) shows it learned generalizable patterns.
+
+Out-of-sample performance is what matters for real predictive accuracy.
+</details>
+
+---
+
+# Final Checklist
+
+Before the exam, make sure you can:
+
+## Definitions (No Notes)
+- [ ] Define each term in your own words
+- [ ] Give an example for each concept
+- [ ] Explain why it matters
+
+## Visual Recognition
+- [ ] Identify problems from residual plots
+- [ ] Read influence plots
+- [ ] Interpret added variable plots
+
+## Calculations
+- [ ] Calculate R², SSR, TSS
+- [ ] Calculate RMSE from errors
+- [ ] Compute odds and log-odds
+- [ ] Find leverage and Cook's D thresholds
+
+## Interpretations
+- [ ] Explain coefficients in context
+- [ ] Interpret model fit statistics
+- [ ] Compare models appropriately
+- [ ] Identify assumption violations
+
+## Conceptual Understanding
+- [ ] Explain difference between outliers, leverage, influence
+- [ ] Describe when to use LPM vs. logistic
+- [ ] Explain training/testing/validation purposes
+- [ ] Articulate in-sample vs. out-of-sample importance
+
+---
+
+**Good luck on your PSCI 2075 final exam! 🎓**
+
+*Remember: Understanding concepts > memorizing formulas*
+
+---
+
+*Study guide created for PSCI 2075, CU Boulder | December 2025*
+

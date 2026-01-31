@@ -1,0 +1,99 @@
+---
+title: "Dissertation"
+subtitle: "Measuring Online-Offline Relationships in Political Violence"
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+## Overview
+
+My dissertation develops computational frameworks to measure how digital engagement translates into offline political action, with a focus on political violence and extremism. This project bridges persistent gaps between online behavior research and studies of political violence by developing novel methods to trace the mechanisms connecting digital communities to real-world mobilization.
+
+---
+
+## The Puzzle
+
+Scholars of political violence have long recognized that collective action requires coordination, resource mobilization, and ideological commitment. Yet we lack systematic tools to measure how these processes unfold across online and offline spaces. Existing research tends to study online communities in isolation from their offline consequences, or treats digital platforms as mere communication channels rather than constitutive environments for political identity formation.
+
+**Central Question:** Under what conditions do online extremist communities produce offline political violence, and how can we measure these relationships at scale?
+
+---
+
+## Theoretical Contribution
+
+I argue that online-offline translation is not a simple pipeline but a *multi-stage process* mediated by community structure, ideological coherence, and platform affordances. Drawing on theories of collective action, social identity, and contentious politics, I develop a framework that conceptualizes digital platforms as:
+
+1. **Identity laboratories** where political commitments are formed and tested
+2. **Coordination infrastructure** that enables rapid mobilization
+3. **Meaning-making spaces** where grievances are framed and justified
+
+This framework generates testable hypotheses about when online activity predicts offline action—and when it does not.
+
+---
+
+## Empirical Strategy
+
+The dissertation comprises three empirical chapters:
+
+### Chapter 1: Network Structures and Violence Prediction
+
+Using social network analysis of extremist forums, I examine whether specific network configurations (density, centralization, bridging ties) predict subsequent violent events. This chapter develops novel measures of "mobilization potential" based on community structure.
+
+- **Data:** Multi-platform extremist network data (2018-2024)
+- **Methods:** Social network analysis, event-study designs, time-series analysis
+
+### Chapter 2: Ideological Convergence and Escalation
+
+This chapter uses natural language processing to measure ideological convergence within online communities over time, testing whether communities that develop more coherent ideological frames are more likely to engage in collective violence.
+
+- **Data:** Longitudinal text corpora from accelerationist communities
+- **Methods:** Transformer-based text classification, topic modeling, causal inference
+
+### Chapter 3: Platform Affordances and Cross-Platform Mobilization
+
+The final empirical chapter examines how platform characteristics (anonymity, moderation, visibility) shape the translation of online grievances into offline action. I leverage variation across platforms and natural experiments in platform policy changes.
+
+- **Data:** Multi-platform data including mainstream social media, encrypted messaging, and niche forums
+- **Methods:** Difference-in-differences, regression discontinuity, machine learning
+
+---
+
+## Broader Contributions
+
+Beyond its empirical findings, this dissertation makes methodological contributions relevant to computational social science more broadly:
+
+- **Measurement innovation:** Novel approaches to quantifying online-offline relationships
+- **Methodological integration:** Combining NLP, network analysis, and causal inference in a unified framework
+- **Ethical framework:** Guidelines for responsible research on extremist communities
+
+---
+
+## Committee
+
+**Co-Chairs:**
+
+- Andrew Q. Philips, Department of Political Science, CU Boulder
+- Jennifer Fitzgerald, Department of Political Science, CU Boulder
+
+**Members:**
+
+- Alexandra Siegel, Department of Political Science, CU Boulder
+- Brian Keegan, Department of Information Science, CU Boulder (external advisor)
+
+---
+
+## Timeline
+
+| Milestone | Target Date |
+|-----------|-------------|
+| Prospectus Defense | Completed |
+| Chapter 1 Draft | Summer 2026 |
+| Chapter 2 Draft | Fall 2026 |
+| Chapter 3 Draft | Spring 2027 |
+| Defense | May 2027 |
+
+---
+
+*For questions about my dissertation research, contact [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu).*

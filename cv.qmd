@@ -38,7 +38,104 @@ Bachelor of Arts, Political Science and English Literature, Russian Minor, *Grad
 
 ---
 
-## Research Assistanceships and Labs
+## Peer-Reviewed Publications
+
+Benton, A., Newhouse, A., and Philips, A. "Mind the Gap! Policy Dissonance and Financial Markets." May 2025 *(under review)*.
+
+Newhouse, A. and Kowert, R. "Extremist Identity Creation Through Performative Infighting on Steam." *Frontiers in Psychology* *(forthcoming)*.
+
+Kowert, R., Kilmer, E., and Newhouse, A. "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*. August 2024.
+
+Kowert, R., Kilmer, E., and Newhouse, A. "Culturally Justified Hate: Prevalence and Mental Health Impact of Dark Participation in Games." *Proceedings of the 57th Hawaii International Conference on System Sciences*. January 2024.
+
+Newhouse, A. "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*. June 2021.
+
+---
+
+## Book Chapters
+
+Newhouse, A. and Kowert, R. "Recruitment and mobilization in digital gaming spaces." *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel). *Forthcoming*.
+
+Kowert, R. and Newhouse, A. "Digital games as cultural assets of influence." *The Sociology of Violent Extremism* (ed. Suraj Lakhani and Amarnath Amarasingam). May 2025.
+
+Newhouse, A. and Kowert, R. "Digital games as vehicles for extremist recruitment and mobilization." *Gaming and Extremism: The Radicalization of Digital Playgrounds* (ed. Linda Schlegel and Rachel Kowert). March 2024.
+
+---
+
+## Pre-Prints and Other Publications
+
+Kriner, M., Conroy, M., Newhouse, A., and Lewis, J. "Understanding Accelerationist Narratives: The Great Replacement Theory." *Global Network on Extremism and Technology*. May 2022.
+
+Kowert, R., Botehlo, A., and Newhouse, A. "Breaking the Building Blocks of Hate: A Case Study of Minecraft Servers." *Anti-Defamation League*. July 2022.
+
+Shadnia, D., Newhouse, A., Kriner, M., and Bradley, A. "Militant Accelerationism Coalitions: A Case-Study in Neo-Fascist Accelerationist Coalition-Building Online." *Center on Terrorism, Extremism, and Counterterrorism*. June 2022.
+
+Newhouse, A. and Gunesch, N. "The Boogaloo Movement Wants to Be Seen as Anti-Racist, But It Has a White Supremacist Fringe." *Center on Terrorism, Extremism, and Counterterrorism*. May 2021.
+
+McGuffie, K. and Newhouse, A. "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *Arxiv pre-print*. September 2020.
+
+[Author list truncated] "Release Strategies and the Social Impacts of Language Models." *Arxiv pre-print*. August 2019.
+
+Newhouse, A. "From classifieds to crypto: how white supremacist groups have embraced crowdfunding." *Center on Terrorism, Extremism, and Counterterrorism*. 2019.
+
+---
+
+## Public Writing
+
+Jackson, D., Conroy, M., and Newhouse, A. "Insiders' View of the January 6th Committee's Social Media Investigation." *Just Security*. January 2023.
+
+Newhouse, A. "Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol." *The Conversation*. January 2021. **(35,400 views)**
+
+Newhouse, A. "Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters." *The Conversation*. November 2020, updated January 2021. **(241,000 views)**
+
+---
+
+## Conference Presentations
+
+"Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media." Paper Presentation. *Midwest Political Science Association Annual Meeting*. April 2025.
+
+"Elite Influence in an Online Neo-Fascist Forum." Paper Presentation. *Midwest Political Science Association Annual Meeting*. April 2025.
+
+"Media Bias in COVID-19 Coverage." Paper Presentation. *Midwest Political Science Association Annual Meeting*. April 2024.
+
+"Manifesting a Coup: Cross-Website Toxicity and Extremism on the Dot Win Network Prior to January 6, 2021." Poster Session. *New Frontiers in Text as Data*. November 2023.
+
+"Mitigating Harm in Design." *Game Developers Conference*. March 2023.
+
+"Accelerationism Research in Practice." *Terrorism and Social Media Conference*. June 2022.
+
+"The Landscape of Extremist Behavior in Games." *Game Developers Conference*. March 2022.
+
+"The Aesthetics of Acceleration." *Reactionary Digital Politics: Ideologies, Rhetorics, Aesthetics*. June 2021.
+
+---
+
+## Grants and Funding
+
+**Middlebury Conflict Transformation Grant**, FY 2022 - $50,000, *Principal Investigator*
+
+**DHS Terrorism and Targeted Violence Prevention Grant**, FY 2022 - $700,000, *Principal Investigator*
+
+**DHS Terrorism and Targeted Violence Prevention Grant**, FY 2021 – $630,000, *Principal Investigator*
+
+---
+
+## Teaching Experience
+
+### As Instructor of Record
+- Digital Extremism, Middlebury Institute of International Studies, *Spring 2023* (self-designed)
+- The Study of Post-War Fascism, Middlebury College, *Winter 2026* (self-designed)
+- Online Extremism, Middlebury College, *Jan. 2021* (self-designed)
+
+### As Teaching Assistant
+- Introduction to Western Political Thought, CU Boulder, *Spring 2025*
+- Introduction to Comparative Politics, CU Boulder, *Fall 2024*
+- Quantitative Research Methods, CU Boulder, *Spring 2024*
+- Introduction to International Relations, CU Boulder, *Fall 2023*
+
+---
+
+## Research Positions and Labs
 
 ### Fellowships
 
@@ -89,20 +186,6 @@ Bachelor of Arts, Political Science and English Literature, Russian Minor, *Grad
 
 ---
 
-## Teaching Experience
-
-### As Teaching Assistant
-- Introduction to Western Political Thought, CU Boulder, *Spring 2025*
-- Introduction to Comparative Politics, CU Boulder, *Fall 2024*
-- Quantitative Research Methods, CU Boulder, *Spring 2024*
-- Introduction to International Relations, CU Boulder, *Fall 2023*
-
-### As Adjunct Professor
-- Digital Extremism, Middlebury Institute of International Studies, *Spring 2023* (self-designed)
-- Online Extremism, Middlebury College, *Jan. 2021* (self-designed)
-
----
-
 ## Mentorship and Supervision
 
 Managed a total of **30 Middlebury undergraduate and graduate research assistants** between 2019-2023.
@@ -125,17 +208,7 @@ Supervised independent projects for **15 Middlebury undergraduate interns and 4 
 
 ---
 
-## Grants and Fundraising
-
-**Middlebury Conflict Transformation Grant**, FY 2022 - $50,000, *Principal Investigator*
-
-**DHS Terrorism and Targeted Violence Prevention Grant**, FY 2022 - $700,000, *Principal Investigator*
-
-**DHS Terrorism and Targeted Violence Prevention Grant**, FY 2021 – $630,000, *Principal Investigator*
-
----
-
-## Employment
+## Professional Experience
 
 **Middlebury Institute of International Studies, Monterey, CA**
 
@@ -202,78 +275,6 @@ Supervised independent projects for **15 Middlebury undergraduate interns and 4 
 
 ---
 
-## Peer-Reviewed Publications
-
-Benton, A., Newhouse, A., and Philips, A. "Mind the Gap! Policy Dissonance and Financial Markets." May 2025 *(under review)*.
-
-Newhouse, A. and Kowert, R. "Extremist Identity Creation Through Performative Infighting on Steam." *Frontiers in Psychology* *(forthcoming)*.
-
-Kowert, R., Kilmer, E., and Newhouse, A. "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*. August 2024.
-
-Kowert, R., Kilmer, E., and Newhouse, A. "Culturally Justified Hate: Prevalence and Mental Health Impact of Dark Participation in Games." *Proceedings of the 57th Hawaii International Conference on System Sciences*. January 2024.
-
-Newhouse, A. "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*. June 2021.
-
----
-
-## Book Chapters
-
-Newhouse, A. and Kowert, R. "Recruitment and mobilization in digital gaming spaces." *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel). *Forthcoming*.
-
-Kowert, R. and Newhouse, A. "Digital games as cultural assets of influence." *The Sociology of Violent Extremism* (ed. Suraj Lakhani and Amarnath Amarasingam). May 2025.
-
-Newhouse, A. and Kowert, R. "Digital games as vehicles for extremist recruitment and mobilization." *Gaming and Extremism: The Radicalization of Digital Playgrounds* (ed. Linda Schlegel and Rachel Kowert). March 2024.
-
----
-
-## Pre-Prints and Other Research Publications
-
-Kriner, M., Conroy, M., Newhouse, A., and Lewis, J. "Understanding Accelerationist Narratives: The Great Replacement Theory." *Global Network on Extremism and Technology*. May 2022.
-
-Kowert, R., Botehlo, A., and Newhouse, A. "Breaking the Building Blocks of Hate: A Case Study of Minecraft Servers." *Anti-Defamation League*. July 2022.
-
-Shadnia, D., Newhouse, A., Kriner, M., and Bradley, A. "Militant Accelerationism Coalitions: A Case-Study in Neo-Fascist Accelerationist Coalition-Building Online." *Center on Terrorism, Extremism, and Counterterrorism*. June 2022.
-
-Newhouse, A. and Gunesch, N. "The Boogaloo Movement Wants to Be Seen as Anti-Racist, But It Has a White Supremacist Fringe." *Center on Terrorism, Extremism, and Counterterrorism*. May 2021.
-
-McGuffie, K. and Newhouse, A. "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *Arxiv pre-print*. September 2020.
-
-[Author list truncated] "Release Strategies and the Social Impacts of Language Models." *Arxiv pre-print*. August 2019.
-
-Newhouse, A. "From classifieds to crypto: how white supremacist groups have embraced crowdfunding." *Center on Terrorism, Extremism, and Counterterrorism*. 2019.
-
----
-
-## Editorials
-
-Jackson, D., Conroy, M., and Newhouse, A. "Insiders' View of the January 6th Committee's Social Media Investigation." *Just Security*. January 2023.
-
-Newhouse, A. "Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol." *The Conversation*. January 2021. **(35,400 views)**
-
-Newhouse, A. "Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters." *The Conversation*. November 2020, updated January 2021. **(241,000 views)**
-
----
-
-## Public Speaking and Conferences
-
-"Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media." Paper Presentation. *Midwest Political Science Association Annual Meeting*. April 2025.
-
-"Elite Influence in an Online Neo-Fascist Forum." Paper Presentation. *Midwest Political Science Association Annual Meeting*. April 2025.
-
-"Media Bias in COVID-19 Coverage." Paper Presentation. *Midwest Political Science Association Annual Meeting*. April 2024.
-
-"Manifesting a Coup: Cross-Website Toxicity and Extremism on the Dot Win Network Prior to January 6, 2021." Poster Session. *New Frontiers in Text as Data*. November 2023.
-
-"Mitigating Harm in Design." *Game Developers Conference*. March 2023.
-
-"Accelerationism Research in Practice." *Terrorism and Social Media Conference*. June 2022.
-
-"The Landscape of Extremist Behavior in Games." *Game Developers Conference*. March 2022.
-
-"The Aesthetics of Acceleration." *Reactionary Digital Politics: Ideologies, Rhetorics, Aesthetics*. June 2021.
-
----
-
 ## Media Appearances
 
 **Radio/Podcast:** Bloomberg, BBC, NPR's *Morning Edition*, *All Things Considered*, and *On Point*.
@@ -284,7 +285,7 @@ Newhouse, A. "Parler is bringing together mainstream conservatives, anti-Semites
 
 ---
 
-## Skills
+## Technical Skills
 
 **Programming languages:** R, Python, MATLAB, Stata
 

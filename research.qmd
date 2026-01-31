@@ -7,15 +7,23 @@ format:
     toc-location: right
 ---
 
-## Research Overview
+## Research Statement
 
-My research program sits at the intersection of **computational social science**, **political violence**, and **technology studies**. I develop and apply cutting-edge computational methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.
+My research addresses a fundamental question in the study of political violence: **How do online communities translate into offline political action?** I argue that digital platforms are not mere communication channels but *constitutive environments* where political identities are formed, grievances are framed, and collective action is coordinated. Understanding political violence in the 21st century requires new theoretical frameworks and computational methods capable of tracing these online-offline dynamics.
 
-**Core Questions:**
+This research agenda makes three interconnected contributions:
 
-- How do digital platforms facilitate political radicalization and mobilization?
-- What role do emerging technologies play in extremist recruitment and organization?  
-- How can computational methods help us understand and counter political violence?
+1. **Theoretical:** I develop a framework conceptualizing digital platforms as identity laboratories, coordination infrastructure, and meaning-making spaces—each with distinct implications for mobilization potential.
+
+2. **Methodological:** I combine machine learning, natural language processing, and social network analysis to measure phenomena that traditional methods cannot capture at scale.
+
+3. **Substantive:** My empirical work reveals how network structures, ideological coherence, and platform affordances shape when online extremism produces real-world violence.
+
+**Core Research Questions:**
+
+- Under what conditions do online communities produce offline political violence?
+- How do platform characteristics shape radicalization and mobilization processes?
+- What role do emerging technologies (AI, gaming platforms) play in extremist recruitment?
 
 ---
 

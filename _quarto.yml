@@ -10,14 +10,12 @@ website:
         left:
             - text: "CV"
               href: cv.html
-            - text: "Blog"
-              href: posts.html
-            - text: "Teaching" 
-              href: teaching.html
+            - text: "Dissertation"
+              href: dissertation.html
             - text: "Research"
               href: research.html
-            - text: "Notes" 
-              href: notes.html
+            - text: "Teaching" 
+              href: teaching.html
 
 format:
   html:
