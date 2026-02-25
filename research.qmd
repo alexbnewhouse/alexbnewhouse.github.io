@@ -121,9 +121,9 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 ## Current Research Projects
 
 ### Dissertation Research
-**"Measuring Online-Offline Relationships in Political Violence"**
+**"Social Processes and Collective Mobilization in the Online Extreme Right"**
 
-Developing computational frameworks to understand how digital engagement translates into offline political action. Uses machine learning, natural language processing, social network analysis, and time-series causal inference to examine extremist community dynamics.
+Investigating how decentralized, leaderless online extremist communities produce collective mobilization and political violence despite the absence of formal organizational hierarchy. The dissertation develops a theory of collective mobilization in the online extreme right and tests it across three empirical chapters examining apocalyptic rhetoric on 4chan, the crystallization of ideology on a neo-fascist forum, and the "canonization" of violent attackers. Uses transformer-based NLP, intervention analysis, interrupted time-series, network contagion analysis, and regression with novel datasets.
 
 - **Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel
 - **External Advisor:** Brian Keegan (Information Science)

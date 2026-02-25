@@ -1,6 +1,6 @@
 ---
 title: "Dissertation"
-subtitle: "Measuring Online-Offline Relationships in Political Violence"
+subtitle: "Social Processes and Collective Mobilization in the Online Extreme Right"
 format:
   html:
     toc: true
@@ -9,64 +9,67 @@ format:
 
 ## Overview
 
-My dissertation develops computational frameworks to measure how digital engagement translates into offline political action, with a focus on political violence and extremism. This project bridges persistent gaps between online behavior research and studies of political violence by developing novel methods to trace the mechanisms connecting digital communities to real-world mobilization.
+My dissertation investigates the mobilizing capacity of the online extreme right — a movement characterized by physical dispersion, organizational fragmentation, and demographic breadth, yet exhibiting a striking level of strategic convergence and aesthetic unity. Drawing on literatures from political science, social psychology, extremism studies, and social computing, I develop and test a theory of how collective mobilization occurs among decentralized online extremist communities despite the absence of formal organizational hierarchy, fluid and transient memberships, and geographic dispersion.
 
 ---
 
 ## The Puzzle
 
-Scholars of political violence have long recognized that collective action requires coordination, resource mobilization, and ideological commitment. Yet we lack systematic tools to measure how these processes unfold across online and offline spaces. Existing research tends to study online communities in isolation from their offline consequences, or treats digital platforms as mere communication channels rather than constitutive environments for political identity formation.
+Conventional understandings of social movements and terrorism suggest that cohesion, organizational unity, and well-defined systems of resource mobilization are important — if not necessary — to achieve movement goals. Yet the online extreme right has produced a wave of mass-casualty political violence with perpetrators who are seemingly diffused throughout the world, often know few fellow believers offline, and plan attacks independently with support and guidance coming only from online communities. The proscription of specific groups and increasing law enforcement pressure have not managed to disrupt ongoing apocalyptic-oriented violence.
 
-**Central Question:** Under what conditions do online extremist communities produce offline political violence, and how can we measure these relationships at scale?
+This pattern of "templatized" violence has developed within and across leaderless online communities like 4chan, Telegram, and Gab. Perpetrators reproduce elements from prior attacks — tactical choices, manifestos, symbols — in ways that suggest powerful but informal social processes at work.
+
+**Central Questions:**
+
+- Given the physical dispersion, organizational fragmentation, and demographic breadth of the online extreme right, from where does its mobilizing capacity emerge?
+- What drives the contagion of the form and intended function of apocalyptic violence?
+- Is it possible to empirically describe the latent relational infrastructure of a movement as decentralized as this?
 
 ---
 
 ## Theoretical Contribution
 
-I argue that online-offline translation is not a simple pipeline but a *multi-stage process* mediated by community structure, ideological coherence, and platform affordances. Drawing on theories of collective action, social identity, and contentious politics, I develop a framework that conceptualizes digital platforms as:
+I propose that extreme-right collectivities produce violent attacks when they establish social processes such as the widespread adoption of apocalypticism, the crystallization of mobilizing artifacts (like texts), and the establishment of a "canon" of attackers. Integrating findings from the literatures of political violence, contentious politics, and social computing, I identify where conventional expectations of movements and mobilization may miss more complex dynamics in online contexts.
 
-1. **Identity laboratories** where political commitments are formed and tested
-2. **Coordination infrastructure** that enables rapid mobilization
-3. **Meaning-making spaces** where grievances are framed and justified
-
-This framework generates testable hypotheses about when online activity predicts offline action—and when it does not.
+I use digital archival materials to qualitatively build a theory of collective mobilization in the online extreme right and identify testable implications of this theory across three empirical chapters.
 
 ---
 
-## Empirical Strategy
+## Empirical Chapters
 
-The dissertation comprises three empirical chapters:
+### Chapter 2: "The Happening. This Time It's Real": Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks
 
-### Chapter 1: Network Structures and Violence Prediction
+4chan's Politically Incorrect (/pol/) image board has been linked to numerous hate crimes, physical violence, and acts of mass-casualty terrorism, yet the mechanics of radicalization and mobilization on /pol/ are still largely unexplored. This chapter investigates the relationship between offline attacks and online communities of extreme actors by exploring how apocalypticism on /pol/ responds to real-world acts of mass-casualty violence.
 
-Using social network analysis of extremist forums, I examine whether specific network configurations (density, centralization, bridging ties) predict subsequent violent events. This chapter develops novel measures of "mobilization potential" based on community structure.
+- **Data:** Archived posts from 4chan's /pol/ board
+- **Methods:** Transformer-based language classifier applied to identify apocalyptic rhetoric; intervention analysis on resulting time series
+- **Key Finding:** Online apocalypticism significantly increases in the immediate aftermath of mass-casualty terrorist attacks, providing evidence for feedback loops between online communities and violent attacks
 
-- **Data:** Multi-platform extremist network data (2018-2024)
-- **Methods:** Social network analysis, event-study designs, time-series analysis
+### Chapter 3: Resurrecting James Mason: The Development of "Siegism" on Iron March
 
-### Chapter 2: Ideological Convergence and Escalation
+This chapter investigates the crystallization of ideology and culture on Iron March, a neo-fascist web forum active between 2011–2017. I theorize that Iron March developed a cohesive and sustainable collective identity through its establishment of a "memory artifact" in the form of a forum-published edition of James Mason's *Siege*. The adoption of *Siege* was foundational to Iron March's capacity to produce anti-democratic militancy, including revolutionary fascist paramilitary groups and terrorist collectives.
 
-This chapter uses natural language processing to measure ideological convergence within online communities over time, testing whether communities that develop more coherent ideological frames are more likely to engage in collective violence.
+- **Data:** Complete archive of Iron March forum posts
+- **Methods:** Interrupted time-series analysis, network contagion analysis
+- **Argument:** Communities can contribute to offline mobilization despite no formal organizational hierarchy, fluid and transient membership, and geographic dispersion through the crystallization of mobilizing artifacts
 
-- **Data:** Longitudinal text corpora from accelerationist communities
-- **Methods:** Transformer-based text classification, topic modeling, causal inference
+### Chapter 4: "Canonization" of Violent Attackers in the Extreme-Right Apocalyptic Movement
 
-### Chapter 3: Platform Affordances and Cross-Platform Mobilization
+This chapter argues that symbolic and tactical contagion in decentralized social movements is facilitated through a cyclical process of collective commemoration and canonization. Beginning with the observation that extreme-right communities refer to their heroized attackers as "Saints," I develop a measure to describe the extent to which these communities canonize particular attackers using NLP techniques applied to eleven years of 4chan /pol/ posts.
 
-The final empirical chapter examines how platform characteristics (anonymity, moderation, visibility) shape the translation of online grievances into offline action. I leverage variation across platforms and natural experiments in platform policy changes.
-
-- **Data:** Multi-platform data including mainstream social media, encrypted messaging, and niche forums
-- **Methods:** Difference-in-differences, regression discontinuity, machine learning
+- **Data:** Large-scale 4chan /pol/ archive; novel dataset of every attempted or successful mass-casualty attack in OECD countries over the past 20 years (drawing from ACLED, START's Global Terrorism Database, the RTV dataset, and other sources)
+- **Methods:** Natural language processing, regression analysis with novel "Sainthood" measure as dependent variable
+- **Expected Findings:** Attacks that are more severe and more explicitly connected to the extreme-right apocalyptic movement become canonized at higher rates; attackers that adopt the tactics and aesthetics of past "Saints" are more likely to become Saints themselves
 
 ---
 
 ## Broader Contributions
 
-Beyond its empirical findings, this dissertation makes methodological contributions relevant to computational social science more broadly:
+Beyond its empirical findings, this dissertation makes contributions relevant to computational social science and the study of political violence more broadly:
 
-- **Measurement innovation:** Novel approaches to quantifying online-offline relationships
-- **Methodological integration:** Combining NLP, network analysis, and causal inference in a unified framework
-- **Ethical framework:** Guidelines for responsible research on extremist communities
+- **Theoretical:** Understanding collective processes can significantly improve our understanding of political violence in online and leaderless contexts
+- **Methodological:** Combining NLP, network analysis, and causal inference in a unified framework to study decentralized movements
+- **Policy:** Efforts to mitigate political violence should take into account "background social conditions" — the communities from which violent attackers emerge, and which connect many attacks into a constantly growing web of violence
 
 ---
 
@@ -74,9 +77,9 @@ Beyond its empirical findings, this dissertation makes methodological contributi
 
 Each dissertation chapter offers opportunities for undergraduate research assistants to contribute meaningfully:
 
-- **Chapter 1 (Network Structures):** Students can assist with data collection from public forums, network data coding, and replication of network analysis measures
-- **Chapter 2 (Ideological Convergence):** Students can contribute to qualitative coding of extremist texts, annotation for text classification training data, and topic model validation
-- **Chapter 3 (Platform Affordances):** Students can help with cross-platform data collection, content analysis, and documentation of platform policy changes
+- **Chapter 2 (Apocalyptic Rhetoric):** Students can assist with annotation of 4chan posts for training the transformer-based classifier, validation of time-series coding, and data preparation
+- **Chapter 3 (Siegism on Iron March):** Students can contribute to qualitative coding of forum posts, network data construction, and analysis of ideological diffusion patterns
+- **Chapter 4 (Canonization):** Students can help build the novel mass-casualty attack dataset, code attack characteristics, and assist with variable construction for the regression analysis
 
 I have supervised 45+ undergraduate and graduate research assistants across my research career, and I actively seek to integrate students into all stages of the research process.
 
@@ -101,9 +104,9 @@ I have supervised 45+ undergraduate and graduate research assistants across my r
 | Milestone | Target Date |
 |-----------|-------------|
 | Prospectus Defense | Completed |
-| Chapter 1 Draft | Summer 2026 |
-| Chapter 2 Draft | Fall 2026 |
-| Chapter 3 Draft | Spring 2027 |
+| Chapter 2 Draft | Summer 2026 |
+| Chapter 3 Draft | Fall 2026 |
+| Chapter 4 Draft | Spring 2027 |
 | Defense | May 2027 |
 
 ---

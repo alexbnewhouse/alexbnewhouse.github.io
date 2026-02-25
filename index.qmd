@@ -84,7 +84,7 @@ Research and expertise featured in: **Washington Post** â€¢ **New York Times** â
 
 ## Current Projects
 
-**Dissertation Research:** Developing computational frameworks to measure online-offline relationships in political violence
+**Dissertation Research:** Investigating social processes and collective mobilization in the online extreme right using NLP, network analysis, and causal inference
 
 **COVID-19 Visual Politics:** Analyzing partisan differences in pandemic media coverage using computer vision and text analysis
 

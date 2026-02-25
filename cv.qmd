@@ -16,7 +16,8 @@ alex.newhouse@colorado.edu | Boulder, CO | [linkedin.com/in/alexbnewhouse](https
 **University of Colorado Boulder, Boulder, CO**  
 Doctor of Philosophy, Political Science, *Anticipated Graduation: May 2027*
 
-- Research focus: Measuring online-offline relationships in political violence using machine learning, natural language processing, social network analysis, and time-series causal inference
+- Dissertation: "Social Processes and Collective Mobilization in the Online Extreme Right"
+- Methods: machine learning, natural language processing, social network analysis, and time-series causal inference
 - Comparative Politics and Political Methodology subfields
 - PSCI committee: Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel
 - Other advisor: Brian Keegan (Information Science, CU Boulder)
