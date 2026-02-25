@@ -1,14 +1,20 @@
 ---
 title: "Teaching & Mentorship"
 format:
-  html
+  html:
+    toc: true
+    toc-location: right
 ---
 
 ## Teaching Philosophy
 
-My approach centers on **active learning**, **methodological rigor**, and **practical application**—helping students develop both theoretical understanding and technical skills they can apply to pressing societal challenges.
+As a product of the liberal arts myself—I graduated *summa cum laude* from Middlebury College—I experienced firsthand how rigorous, small-classroom teaching can transform how students think about the world. That experience profoundly shapes my approach to teaching political science: I believe that quantitative and computational methods become most powerful when students understand *why* they matter, not just *how* to execute them.
 
-I believe in making complex political science concepts accessible through hands-on learning and real-world applications, particularly in quantitative methods and comparative politics.
+My approach centers on **active learning**, **methodological rigor**, and **practical application**. In quantitative methods courses, I structure lessons around real political science questions—students learn regression not in the abstract but by analyzing actual datasets on topics like political violence, public opinion, or democratic institutions. I develop original tutorials and educational materials (available below) specifically designed to guide students with no prior coding experience through foundational concepts in R, from Greek notation to working directories. I meet students where they are and build their confidence through scaffolded assignments that progressively introduce complexity.
+
+I also believe strongly in integrating my research into the classroom. My self-designed courses at Middlebury College and the Middlebury Institute of International Studies have all included substantial original research components, where students work with real data and produce their own analyses. In my Post-War Fascism seminar, for example, students developed original research designs on topics in contemporary fascism studies, learning both substantive expertise and methodological skills simultaneously.
+
+Finally, I am committed to inclusive pedagogy. Quantitative methods can be intimidating for students who see themselves as "not math people." I work to break down that barrier by connecting statistical reasoning to students' existing intuitions about politics, by creating a classroom environment where questions are encouraged, and by developing resources—like my tutorial on using AI chatbots to learn R—that give students multiple pathways into the material.
 
 ------------------------------------------------------------------------
 
@@ -62,15 +68,36 @@ I believe in making complex political science concepts accessible through hands-
 
 ------------------------------------------------------------------------
 
+## Courses Prepared to Teach
+
+In addition to the courses I have already taught, I am prepared to teach the following:
+
+- Introduction to Political Science / American Government
+- Introduction to Comparative Politics
+- Quantitative Research Methods (introductory and advanced)
+- Data Science for Social Scientists
+- Political Violence & Extremism
+- Technology, Media & Politics
+- Senior Seminar / Capstone in Computational Social Science
+
+------------------------------------------------------------------------
+
 ## Teaching Resources
 
 ### Quantitative Methods Materials
 
+I develop original, open-source educational materials for my courses, designed to make quantitative methods accessible to students with no prior coding or statistics experience. These tutorials are used in CU Boulder's PSCI 2075 course and are freely available:
+
 * [**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
 * [**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)
+* [**Tutorial 3: Grouping, Filtering, Mutating, Selecting, and Plotting**](tutorial3.html)
 * [**Tutorial 4: Variable Transformations in R**](tutorial4.html) - Understanding distributions, log transforms, and data recoding
 * [**Tutorial 5: Using AI Chatbots to Learn R Programming**](tutorial5.html) - Effective strategies for LLM-assisted coding and learning
 * [**Tutorial 6: Understanding File Systems and Working Directories in R and RStudio**](tutorial6.html)
+
+### Sample Syllabi
+
+* [**INTD 1027: The Study of Post-War Fascism**](intd1027-syllabus.html) - Self-designed interdisciplinary seminar integrating history, political theory, sociology, and computational methods
 
 ------------------------------------------------------------------------
 

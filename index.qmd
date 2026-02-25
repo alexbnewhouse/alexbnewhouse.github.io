@@ -1,6 +1,6 @@
 ---
 title: "Alex Newhouse"
-subtitle: "Political Scientist & Data Scientist"
+subtitle: "Computational Political Scientist"
 about:
   template: trestles
   image: profpic.jpeg
@@ -25,14 +25,14 @@ format:
 
 ## About
 
-I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action.
+I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action. I am equally committed to teaching and mentoring undergraduates, drawing on my own liberal arts education at Middlebury College to make computational methods accessible and engaging for students across disciplines.
 
 **Key Experience:**
 
 -   **Investigative Consultant** to the House Select Committee on January 6th\
 -   **Deputy Director** of the Center on Terrorism, Extremism & Counterterrorism
 -   **Principal Investigator** on \$1.38M in federal research grants
--   **Research partnerships** with major technology companies
+-   **Instructor of Record** at Middlebury College and MIIS
 
 ------------------------------------------------------------------------
 
@@ -70,9 +70,9 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 
 ------------------------------------------------------------------------
 
-## Research Impact
+## Impact
 
-**\$1.38M** in grant funding (Principal Investigator) \| **45+** students mentored \| **276K** article views \| Featured in **8** major media outlets
+**7** courses taught \| **45+** students mentored \| **\$1.38M** in grant funding (PI) \| **276K** article views \| Featured in **8** major media outlets
 
 ------------------------------------------------------------------------
 

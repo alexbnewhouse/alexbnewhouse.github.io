@@ -70,6 +70,18 @@ Beyond its empirical findings, this dissertation makes methodological contributi
 
 ---
 
+## Student Research Involvement
+
+Each dissertation chapter offers opportunities for undergraduate research assistants to contribute meaningfully:
+
+- **Chapter 1 (Network Structures):** Students can assist with data collection from public forums, network data coding, and replication of network analysis measures
+- **Chapter 2 (Ideological Convergence):** Students can contribute to qualitative coding of extremist texts, annotation for text classification training data, and topic model validation
+- **Chapter 3 (Platform Affordances):** Students can help with cross-platform data collection, content analysis, and documentation of platform policy changes
+
+I have supervised 45+ undergraduate and graduate research assistants across my research career, and I actively seek to integrate students into all stages of the research process.
+
+---
+
 ## Committee
 
 **Co-Chairs:**

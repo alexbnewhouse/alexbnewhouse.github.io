@@ -5,7 +5,7 @@ date: "2024-12-15"
 categories: [research, technology, academia]
 image: "thumbnail.jpg"  # optional
 description: "Brief description of your post"
-draft: false  # set to true to hide from listing
+draft: true  # set to true to hide from listing
 ---
 
 Testing blog!

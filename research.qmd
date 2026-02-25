@@ -192,6 +192,18 @@ Washington Post • New York Times • NPR (*Morning Edition*, *All Things Consi
 
 ---
 
+## Undergraduate and Graduate Research Involvement
+
+My research agenda is designed to actively involve students at every stage. Since 2019, I have supervised **45 undergraduate and graduate research assistants** and **15 independent student projects** across multiple institutions. Students contribute meaningfully to my work through:
+
+- **Data collection and annotation** — coding social media content, building datasets of extremist rhetoric, and collecting primary-source documents
+- **Qualitative and quantitative analysis** — contributing to network analysis, text classification, and content analysis tasks
+- **Independent research projects** — developing their own research questions within my broader agenda, with several student projects resulting in published reports
+
+Past student projects have included investigations of Italian neofascism, militant accelerationist coalition-building, the French far-right on encrypted platforms, and AI implications for counterterrorism. I currently supervise four undergraduate RAs working on apocalyptic language analysis in social media data.
+
+---
+
 ## Future Research Directions
 
 **Emerging Technologies & Political Violence**
