@@ -985,10 +985,9 @@ visreg(logit_model, "x1",
   ylim(0, 1)
 
 # Manual method for more control
-pred_data <- data_binary %>%
-  summarise(
-    x1 = seq(min(x1), max(x1), length.out = 100),
-    x2 = mean(x2)
+pred_data <- data.frame(
+    x1 = seq(min(data_binary$x1), max(data_binary$x1), length.out = 100),
+    x2 = mean(data_binary$x2)
   ) %>%
   mutate(
     pred_prob = predict(logit_model, 

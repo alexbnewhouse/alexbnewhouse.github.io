@@ -1,0 +1,9 @@
+---
+title: "Teaching Statement"
+subtitle: "Alex Newhouse"
+format:
+  html:
+    toc: false
+---
+
+*This page is currently a placeholder. A full teaching statement is available upon request — please email [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu).*

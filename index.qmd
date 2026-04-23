@@ -1,9 +1,11 @@
 ---
 title: "Alex Newhouse"
 subtitle: "Computational Political Scientist"
+description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
 about:
   template: trestles
   image: profpic.jpeg
+  image-alt: "Alex Newhouse"
   image-width: 18em
   image-shape: round
   links:
@@ -19,13 +21,21 @@ about:
     - icon: github
       text: GitHub
       href: https://github.com/alexbnewhouse
+    - icon: mortarboard-fill
+      text: Google Scholar
+      href: https://scholar.google.com/citations?user=NLXqzpoAAAAJ
+    - text: "ORCID"
+      href: https://orcid.org/0009-0003-6346-9527
+    - icon: file-earmark-pdf
+      text: Download CV (PDF)
+      href: cv.pdf
 format:
   html
 ---
 
 ## About
 
-I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies cutting-edge methods—machine learning, natural language processing, and social network analysis—to understand how online communities translate into offline political action. I am equally committed to teaching and mentoring undergraduates, drawing on my own liberal arts education at Middlebury College to make computational methods accessible and engaging for students across disciplines.
+I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies transformer-based NLP, network analysis, and time-series causal inference to understand how online communities translate into offline political action. I am also committed to teaching and mentoring undergraduates, drawing on my own liberal arts education at Middlebury College to make computational methods accessible and engaging for students across disciplines.
 
 **Key Experience:**
 
@@ -33,7 +43,7 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 -   **Humane Studies Fellow**, Institute for Humane Studies (2025-Present)
 -   **Investigative Consultant** to the House Select Committee on January 6th
 -   **Deputy Director** of the Center on Terrorism, Extremism & Counterterrorism
--   **Principal Investigator** on \$1.38M in federal research grants
+-   **Principal Investigator** on \$1.38M in externally funded grants
 -   **Instructor of Record** at Middlebury College and MIIS
 
 ------------------------------------------------------------------------
@@ -64,6 +74,10 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 
 ## Featured Publications
 
+::: {.callout-note appearance="minimal"}
+**Job Market Paper:** "'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks" — presented at APSA 2025. PDF available upon request.
+:::
+
 **Newhouse, A. and Kowert, R.** "Extremist Identity Creation Through Performative Infighting on Steam." *Frontiers in Psychology*, August 2025.
 
 **Kowert, R., Kilmer, E., and Newhouse, A.** "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*, 2024.
@@ -76,13 +90,13 @@ I am a **PhD candidate in Political Science** at the University of Colorado Boul
 
 ## Impact
 
-**7** courses taught \| **45+** students mentored \| **\$1.38M** in grant funding (PI) \| **276K** article views \| Featured in **8** major media outlets
+**3** courses as instructor of record; **4** as teaching assistant \| **52** students mentored \| **\$1.38M** in externally funded grants (PI) \| **276K** article views
 
 ------------------------------------------------------------------------
 
 ## Media Recognition
 
-Research and expertise featured in: **Washington Post** • **New York Times** • **NPR** • **BBC** • **Politico** • **Wired** • **Bloomberg** • **Meet the Press**
+Research and expertise featured in major outlets including: **Washington Post** • **New York Times** • **NPR** • **BBC** • **Politico** • **Wired** • **Bloomberg** • **Meet the Press** • **Vice** • **Axios** • **FiveThirtyEight** • **ProPublica** • **Denver7**
 
 ------------------------------------------------------------------------
 

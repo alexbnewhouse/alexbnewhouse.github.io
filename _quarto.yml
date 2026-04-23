@@ -4,20 +4,34 @@ project:
 
 website:
     title: "Alex Newhouse"
+    description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
+    open-graph:
+      description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
+      image: profpic.jpeg
+    twitter-card:
+      description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
+      image: profpic.jpeg
+      creator: "@alexbnewhouse"
     navbar:
         background: primary
         search: true
         left:
             - text: "Research"
               href: research.html
-            - text: "Teaching" 
+            - text: "Teaching"
               href: teaching.html
             - text: "Dissertation"
               href: dissertation.html
             - text: "CV"
               href: cv.html
-            - text: "Blog"
+            - text: "Writing"
               href: posts.html
+            - text: "Statements"
+              menu:
+                - text: "Research Statement"
+                  href: research-statement.html
+                - text: "Teaching Statement"
+                  href: teaching-statement.html
 
 format:
   html:

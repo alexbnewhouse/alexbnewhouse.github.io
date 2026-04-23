@@ -1,20 +1,43 @@
 ---
-title: "Blog Posts"
-subtitle: "Thoughts on Research, Technology, and Academia"
+title: "Writing"
+subtitle: "Public Writing, Commentary, and Research Communication"
 format:
-  html
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-  fields: [image, date, title, author, reading-time, description, categories]
-  feed: true
-page-layout: full
+  html:
+    toc: true
+    toc-location: right
 ---
 
-Welcome to my blog, where I share thoughts on computational social science, extremism research, technology policy, and academic life.
+Selected public writing on extremism, technology, and political violence. For peer-reviewed publications, book chapters, and pre-prints, see my [Research page](research.html).
 
-*Subscribe to the RSS feed to stay updated on new posts.*
+---
+
+## Academic & Policy Articles
+
+**Jackson, D., Conroy, M., and Newhouse, A.** "Insiders' View of the January 6th Committee's Social Media Investigation." [*Just Security*](https://www.justsecurity.org/). January 2023.
+
+---
+
+## The Conversation
+
+**Newhouse, A.** "Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol." [*The Conversation*](https://theconversation.com/far-right-activists-on-social-media-telegraphed-violence-weeks-in-advance-of-the-attack-on-the-us-capitol-153759). January 2021. **(35,400 views)**
+
+**Newhouse, A.** "Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters." [*The Conversation*](https://theconversation.com/parler-is-bringing-together-mainstream-conservatives-anti-semites-and-white-supremacists-as-the-social-media-platform-attracts-millions-of-trump-supporters-148923). November 2020, updated January 2021. **(241,000 views)**
+
+---
+
+## GNET Research Reports
+
+[**Global Network on Extremism and Technology (GNET)**](https://gnet-research.org/) research reports on accelerationist movements and extremist narratives, 2021–2022:
+
+- Kriner, M., Conroy, M., Newhouse, A., and Lewis, J. "Understanding Accelerationist Narratives: The Great Replacement Theory." May 2022.
+- Shadnia, D., Newhouse, A., Kriner, M., and Bradley, A. "Militant Accelerationism Coalitions: A Case-Study in Neo-Fascist Accelerationist Coalition-Building Online." June 2022.
+- Newhouse, A. and Gunesch, N. "The Boogaloo Movement Wants to Be Seen as Anti-Racist, But It Has a White Supremacist Fringe." May 2021.
+
+---
+
+## CTEC Reports
+
+Reports produced at the Center on Terrorism, Extremism, and Counterterrorism (CTEC), Middlebury Institute of International Studies, 2019–2022.
+
+- Kowert, R., Botelho, A., and Newhouse, A. "Breaking the Building Blocks of Hate: A Case Study of Minecraft Servers." *Anti-Defamation League*. July 2022.
+- Newhouse, A. "From classifieds to crypto: how white supremacist groups have embraced crowdfunding." 2019.

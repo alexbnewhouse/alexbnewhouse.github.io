@@ -1,13 +1,16 @@
 ---
-title: "Alex Newhouse"
-subtitle: "Curriculum Vitae"
+title: "Curriculum Vitae"
+subtitle: "Alex Newhouse"
+description: "Curriculum vitae of Alex Newhouse, PhD candidate in Political Science at CU Boulder."
 format: 
   html:
     toc: true
     toc-location: right
 ---
 
-alex.newhouse\@colorado.edu \| Boulder, CO \| [linkedin.com/in/alexbnewhouse](https://linkedin.com/in/alexbnewhouse)
+alex.newhouse\@colorado.edu \| Boulder, CO \| [linkedin.com/in/alexbnewhouse](https://linkedin.com/in/alexbnewhouse) \| [Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ) \| [ORCID](https://orcid.org/0009-0003-6346-9527)
+
+[**Download CV (PDF)**](cv.pdf){.btn .btn-primary}
 
 ------------------------------------------------------------------------
 
@@ -45,11 +48,9 @@ Bachelor of Arts, Political Science and English Literature, Russian Minor, *Grad
 
 ------------------------------------------------------------------------
 
-## Peer-Reviewed Publications
+## Publications
 
-Benton, A., Newhouse, A., and Philips, A. "Mind the Gap! Policy Dissonance and Financial Markets." September 2025 *(under review)*.
-
-Newhouse, A., Kaur, K., and Philips, A. "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media." September 2025 *(under review)*.
+### Peer-Reviewed Articles
 
 Newhouse, A. and Kowert, R. "Extremist Identity Creation Through Performative Infighting on Steam." *Frontiers in Psychology*. August 2025.
 
@@ -58,6 +59,12 @@ Kowert, R., Kilmer, E., and Newhouse, A. "Taking it to the Extreme: Prevalence a
 Kowert, R., Kilmer, E., and Newhouse, A. "Culturally Justified Hate: Prevalence and Mental Health Impact of Dark Participation in Games." *Proceedings of the 57th Hawaii International Conference on System Sciences*. January 2024.
 
 Newhouse, A. "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*. June 2021.
+
+### Under Review
+
+Benton, A., Newhouse, A., and Philips, A. "Mind the Gap! Policy Dissonance and Financial Markets." September 2025 *(under review)*.
+
+Newhouse, A., Kaur, K., and Philips, A. "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media." September 2025 *(under review)*.
 
 ------------------------------------------------------------------------
 
@@ -192,7 +199,7 @@ Supervised independent projects for **15 Middlebury undergraduate interns and 4 
 
 ------------------------------------------------------------------------
 
-## Research Assistantships and Labs
+## Research Positions
 
 ### Fellowships
 
@@ -201,13 +208,13 @@ Supervised independent projects for **15 Middlebury undergraduate interns and 4 
 
 **Senior Non-Resident Fellow, MIIS**, *Mar. 2025 – Present*
 
-### Labs
+### Affiliations
 
 **Graduate Affiliate**, Institute for Behavioral Science, *2023 – Present*
 
 **Lab Member**, Colorado Laboratory on Users, Media, and Networks, *2023 – Present*
 
-**Lab Member**, American Politics Research Lab, *2024 - Present*
+**Lab Member**, American Politics Research Lab, *2024 – Present*
 
 ### Paid Research Positions
 
@@ -246,7 +253,7 @@ Supervised independent projects for **15 Middlebury undergraduate interns and 4 
 
 ------------------------------------------------------------------------
 
-
+## Professional Experience
 
 **National Humanities Alliance, Washington, D.C.** *(Remote)*
 
@@ -311,42 +318,3 @@ Supervised independent projects for **15 Middlebury undergraduate interns and 4 
 
 **Query languages:** SQL, Splunk
 
-------------------------------------------------------------------------
-
-## Research Positions and Labs
-
-### Fellowships
-
-**Senior Non-Resident Fellow**, MIIS, *Mar. 2025 – Present*
-
-### Labs
-
-**Graduate Affiliate**, Institute for Behavioral Science, *2023 – Present*
-
-**Lab Member**, Colorado Laboratory on Users, Media, and Networks, *2023 – Present*
-
-**Lab Member**, American Politics Research Lab, *2024 - Present*
-
-### Paid Research Positions
-
-**Graduate Research Assistant**, CU Boulder, *2025 – Present* - Exploratory quantitative and qualitative analysis for Jennifer Fitzgerald and Jeffrey Nonmacher's work on global perceptions of inequality
-
-**Graduate Research Assistant**, CU Boulder, *2025 – Present* - Qualitative and quantitative support for Alexandra Siegel's book project on the interactions between online influencers and political regimes
-
-**Graduate Research Assistant**, CU Boulder, *2024 – Present* - "'Mind the Gap!' Policy Dissonance and Financial Markets", supervised by Andrew Q. Philips and in collaboration with Allyson L. Benton
-
-**Graduate Research Assistant**, CU Boulder, *2023 – Present* - "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media", supervised by Andrew Q. Philips and in collaboration with Komal P. Kaur
-
-**Graduate Research Assistant**, CU Boulder, *Summer 2024* - Data analysis and synthesis of original survey data on Australian attitudes around Voice to Parliament referendum, supervised by Carew Boulding
-
-**Graduate Research Assistant**, MIIS, *Fall 2018* - Assisted with launch of the Center on Terrorism, Extremism, and Counterterrorism, and built first project to secure funding from technology industry partner, supervised by Jason Blazakis
-
-**Graduate Research Assistant**, MIIS, *Fall 2018* - UNIDIR-funded project collecting data on global cybersecurity projects, supervised by Elaine Korzak
-
-**Graduate Research Assistant**, MIIS, *Feb. 2018 – Dec. 2018* - Contributed to META Lab research and education projects, supervised by Philip Murphy
-
-**Graduate Research Assistant**, MIIS and Naval Postgraduate School, *Feb. 2018 – Aug. 2018* - Lead data analyst on processing and analysis of Islamic State primary-source documents, supervised by Craig Whiteside
-
-**Undergraduate Research Assistant**, Middlebury, *Aug. 2016 – May 2017* - Data analysis and background research on intervention, civil conflict, and the CNN Effect, supervised by Orion Lewis
-
-**Undergraduate Research Assistant**, MIIS, *Feb. 2016 – May 2016* - Contributed to various research and analysis projects at the James Martin Center for Nonproliferation Studies

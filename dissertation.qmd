@@ -1,6 +1,7 @@
 ---
 title: "Dissertation"
 subtitle: "Social Processes and Collective Mobilization in the Online Extreme Right"
+description: "Alex Newhouse's dissertation on collective mobilization in online extremist communities, combining NLP, network analysis, and causal inference."
 format:
   html:
     toc: true
@@ -81,7 +82,7 @@ Each dissertation chapter offers opportunities for undergraduate research assist
 - **Chapter 3 (Siegism on Iron March):** Students can contribute to qualitative coding of forum posts, network data construction, and analysis of ideological diffusion patterns
 - **Chapter 4 (Canonization):** Students can help build the novel mass-casualty attack dataset, code attack characteristics, and assist with variable construction for the regression analysis
 
-I have supervised 45+ undergraduate and graduate research assistants across my research career, and I actively seek to integrate students into all stages of the research process.
+I have supervised **52 undergraduate and graduate research assistants** across my research career, and I actively seek to integrate students into all stages of the research process.
 
 ---
 
@@ -89,13 +90,19 @@ I have supervised 45+ undergraduate and graduate research assistants across my r
 
 **Co-Chairs:**
 
-- Andrew Q. Philips, Department of Political Science, CU Boulder
-- Jennifer Fitzgerald, Department of Political Science, CU Boulder
+- [Andrew Q. Philips](https://www.colorado.edu/polisci/andrew-philips), Department of Political Science, CU Boulder
+- [Jennifer Fitzgerald](https://www.colorado.edu/polisci/jennifer-fitzgerald), Department of Political Science, CU Boulder
 
 **Members:**
 
-- Alexandra Siegel, Department of Political Science, CU Boulder
-- Brian Keegan, Department of Information Science, CU Boulder (external advisor)
+- [Alexandra Siegel](https://www.colorado.edu/polisci/alexandra-siegel), Department of Political Science, CU Boulder
+- [Brian Keegan](https://www.colorado.edu/cmci/people/information-science/brian-keegan), Department of Information Science, CU Boulder (external advisor)
+
+---
+
+## Dissertation Prospectus
+
+The prospectus, defended April 14, 2026, is available as a PDF: [Download Prospectus (PDF)](prospectus.pdf).
 
 ---
 
@@ -103,10 +110,11 @@ I have supervised 45+ undergraduate and graduate research assistants across my r
 
 | Milestone | Target Date |
 |-----------|-------------|
-| Prospectus Defense | Completed |
+| Prospectus Defense | Completed (April 14, 2026) |
 | Chapter 2 Draft | Summer 2026 |
 | Chapter 3 Draft | Fall 2026 |
 | Chapter 4 Draft | Spring 2027 |
+| Revision & Job Market Period | AY 2027–2028 |
 | Defense | May 2028 |
 
 ---

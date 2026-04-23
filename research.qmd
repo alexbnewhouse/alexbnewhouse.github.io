@@ -1,6 +1,7 @@
 ---
 title: "Research"
 subtitle: "Computational Political Science & Extremism Studies"
+description: "Research by Alex Newhouse on political violence, online extremism, and computational social science."
 format:
   html:
     toc: true
@@ -29,11 +30,11 @@ This research agenda makes three interconnected contributions:
 
 ## Citation Metrics
 
-**Google Scholar Profile:** 1,093 total citations | **Research Areas:** collective behavior, online communities, extremism, conspiracy theories, video games
+**[Google Scholar Profile](https://scholar.google.com/citations?user=NLXqzpoAAAAJ):** 1,093 total citations | **h-index:** 7 | **i10-index:** 5 | **Research Areas:** collective behavior, online communities, extremism, conspiracy theories, video games
 
 **Impact Highlights:**
 
-- Featured in 8+ major media outlets
+- Featured in major outlets including Washington Post, NYT, NPR, BBC
 - 276K+ total article views
 - Research cited in policy reports and academic literature
 
@@ -41,9 +42,13 @@ This research agenda makes three interconnected contributions:
 
 ## Featured Publications
 
+::: {.callout-note appearance="minimal"}
+**Job Market Paper:** "'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks" — presented at APSA 2025. PDF available upon request.
+:::
+
 ### Peer-Reviewed Articles
 
-**Newhouse, A. and Kowert, R.** (2025). "Extremist Identity Creation Through Performative Infighting on Steam." [*Frontiers in Psychology*](https://www.frontiersin.org/), August 2025.
+**Newhouse, A. and Kowert, R.** (2025). "Extremist Identity Creation Through Performative Infighting on Steam." [*Frontiers in Psychology*](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1586566/full), August 2025.
 
 Analysis of how extremist identity crystallizes through performative displays of ideological purity and intra-group conflict within gaming platform communities, revealing mechanisms of community cohesion and radicalization without central leadership.
 
@@ -66,17 +71,25 @@ Since 2015, the Atomwaffen Division has received bulk academic and media attenti
 
 We show GPT-3's strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI's preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.
 
-- **Impact:** 28 citations and featured in major tech policy discussions
+- **Impact:** Among the first assessments of generative-LM misuse risk; cited in subsequent work on AI and extremism
 - **Media Coverage:** Extensive coverage in *The Register*, *Vice*, and other tech outlets
 - **Policy Influence:** Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment
 
-### Book Chapters & Other Major Publications
+### Book Chapters
 
 **Newhouse, A. and Kowert, R.** (2025). "Recruitment and mobilization in digital gaming spaces." *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel), October 2025.
 
-**Benton, A., Newhouse, A., and Philips, A.** (2025). "Mind the Gap! Policy Dissonance and Financial Markets." *September 2025* *(under review)*.
+**Kowert, R. and Newhouse, A.** (2025). "Digital games as cultural assets of influence." *The Sociology of Violent Extremism* (ed. Suraj Lakhani and Amarnath Amarasingam), May 2025.
 
-**Newhouse, A., Kaur, K., and Philips, A.** (2025). "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media." *September 2025* *(under review)*.
+**Newhouse, A. and Kowert, R.** (2024). "Digital games as vehicles for extremist recruitment and mobilization." *Gaming and Extremism: The Radicalization of Digital Playgrounds* (ed. Linda Schlegel and Rachel Kowert), March 2024.
+
+### Under Review
+
+**Benton, A., Newhouse, A., and Philips, A.** (2025). "Mind the Gap! Policy Dissonance and Financial Markets."
+
+**Newhouse, A., Kaur, K., and Philips, A.** (2025). "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media."
+
+### Public Writing
 
 **Newhouse, A.** (2021). "Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol." *The Conversation*. (**35,400 views**)
 
@@ -133,8 +146,8 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 
 Investigating how decentralized, leaderless online extremist communities produce collective mobilization and political violence despite the absence of formal organizational hierarchy. Recent work examines apocalyptic rhetoric on 4chan and the crystallization of ideology within extremist forums. Uses transformer-based NLP, intervention analysis, interrupted time-series, network contagion analysis, and regression with novel datasets.
 
-- **Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel
-- **External Advisor:** Brian Keegan (Information Science)
+- **Committee:** [Andrew Q. Philips](https://www.colorado.edu/polisci/andrew-philips) (co-chair), [Jennifer Fitzgerald](https://www.colorado.edu/polisci/jennifer-fitzgerald) (co-chair), [Alexandra Siegel](https://www.colorado.edu/polisci/alexandra-siegel)
+- **External Advisor:** [Brian Keegan](https://www.colorado.edu/cmci/people/information-science/brian-keegan) (Information Science)
 - **Expected Completion:** May 2028
 - **Recent Presentations:** "'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks" (APSA, September 2025); "Elite Influence in an Online Neo-Fascist Forum" (MPSA, April 2025)
 
@@ -176,7 +189,7 @@ Overseeing large-scale computational study of the American humanities workforce 
 
 - **January 6th Committee:** Investigative consultant providing expertise on extremist movements
 - **Technology Partnerships:** Direct collaboration with gaming companies (Roblox, Spectrum Labs)
-- **Federal Funding:** $1.38M in grants as Principal Investigator
+- **External Funding:** $1.38M in externally funded grants as Principal Investigator
 
 ### Media & Public Engagement
 

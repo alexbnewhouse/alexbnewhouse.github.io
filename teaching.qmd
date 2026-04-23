@@ -1,5 +1,6 @@
 ---
 title: "Teaching & Mentorship"
+description: "Teaching experience, courses, and mentorship by Alex Newhouse at CU Boulder, Middlebury College, and MIIS."
 format:
   html:
     toc: true
@@ -20,7 +21,7 @@ Finally, I am committed to inclusive pedagogy. Quantitative methods can be intim
 
 ## Teaching Impact
 
-**45+** students mentored \| **15** independent projects supervised \| **7** courses taught \| **3** institutions
+**52** students mentored \| **15** independent projects supervised \| **3** courses as instructor of record \| **4** courses as teaching assistant \| **3** institutions
 
 ------------------------------------------------------------------------
 
@@ -52,11 +53,11 @@ Finally, I am committed to inclusive pedagogy. Quantitative methods can be intim
 
 [**INTD 1027: The Study of Post-War Fascism**](intd1027-syllabus.html) (Winter 2026)
 
-:   **Self-designed interdisciplinary course** examining the transformation of fascism and fascist movements following World War II. Covered philosophical and political roots, activism, violence, and research ethics across Italy, Russia, the UK, and the US. Students produced original research designs on topics in contemporary fascism studies.
+:   **Self-designed interdisciplinary course** (distinct from the January 2021 Online Extremism course below) examining the transformation of fascism and fascist movements following World War II. Covered philosophical and political roots, activism, violence, and research ethics across Italy, Russia, the UK, and the US. Students produced original research designs on topics in contemporary fascism studies.
 
 **Online Extremism** (January 2021)
 
-:   **Intensive winter term course** on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis.
+:   **Separate self-designed intensive winter term course** on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis.
 
 ### Middlebury Institute of International Studies
 
@@ -103,7 +104,7 @@ I develop original, open-source educational materials for my courses, designed t
 
 ## Student Research Mentorship
 
-I have supervised **45 undergraduate and graduate research assistants** and **15 independent projects** since 2019. My mentorship philosophy emphasizes **methodological rigor**, **ethical research practices**, and **practical skill development**.
+I have supervised **52 undergraduate and graduate research assistants** and **15 independent projects** since 2019. My mentorship philosophy emphasizes **methodological rigor**, **ethical research practices**, and **practical skill development**.
 
 ### Current Projects
 

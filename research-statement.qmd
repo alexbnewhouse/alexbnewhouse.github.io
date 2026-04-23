@@ -1,0 +1,9 @@
+---
+title: "Research Statement"
+subtitle: "Alex Newhouse"
+format:
+  html:
+    toc: false
+---
+
+*This page is currently a placeholder. A full research statement is available upon request — please email [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu).*
