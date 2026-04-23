@@ -43,6 +43,10 @@ This research agenda makes three interconnected contributions:
 
 ### Peer-Reviewed Articles
 
+**Newhouse, A. and Kowert, R.** (2025). "Extremist Identity Creation Through Performative Infighting on Steam." [*Frontiers in Psychology*](https://www.frontiersin.org/), August 2025.
+
+Analysis of how extremist identity crystallizes through performative displays of ideological purity and intra-group conflict within gaming platform communities, revealing mechanisms of community cohesion and radicalization without central leadership.
+
 **Kowert, R., Kilmer, E., and Newhouse, A.** (2024). "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." [*Frontiers in Psychology*](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1410620/full), 15:1410620.
 
 This study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.
@@ -66,13 +70,17 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 - **Media Coverage:** Extensive coverage in *The Register*, *Vice*, and other tech outlets
 - **Policy Influence:** Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment
 
-### Other Major Publications
+### Book Chapters & Other Major Publications
 
-**Newhouse, A.** (2020). "Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol." *The Conversation*. 
+**Newhouse, A. and Kowert, R.** (2025). "Recruitment and mobilization in digital gaming spaces." *Handbuch Gaming & Rechtsextremismus* (ed. Linda Schlegel), October 2025.
 
-**Newhouse, A.** (2020). "Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters." *The Conversation*. 
+**Benton, A., Newhouse, A., and Philips, A.** (2025). "Mind the Gap! Policy Dissonance and Financial Markets." *September 2025* *(under review)*.
 
-- **Impact:** 241,000 views for Parler analysis
+**Newhouse, A., Kaur, K., and Philips, A.** (2025). "Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media." *September 2025* *(under review)*.
+
+**Newhouse, A.** (2021). "Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol." *The Conversation*. (**35,400 views**)
+
+**Newhouse, A.** (2020). "Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters." *The Conversation*. (**241,000 views**)
 
 **Multiple GNET Research Reports** (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement.
 
@@ -123,26 +131,36 @@ We show GPT-3's strength in generating text that accurately emulates interactive
 ### Dissertation Research
 **"Social Processes and Collective Mobilization in the Online Extreme Right"**
 
-Investigating how decentralized, leaderless online extremist communities produce collective mobilization and political violence despite the absence of formal organizational hierarchy. The dissertation develops a theory of collective mobilization in the online extreme right and tests it across three empirical chapters examining apocalyptic rhetoric on 4chan, the crystallization of ideology on a neo-fascist forum, and the "canonization" of violent attackers. Uses transformer-based NLP, intervention analysis, interrupted time-series, network contagion analysis, and regression with novel datasets.
+Investigating how decentralized, leaderless online extremist communities produce collective mobilization and political violence despite the absence of formal organizational hierarchy. Recent work examines apocalyptic rhetoric on 4chan and the crystallization of ideology within extremist forums. Uses transformer-based NLP, intervention analysis, interrupted time-series, network contagion analysis, and regression with novel datasets.
 
 - **Committee:** Andrew Q. Philips (co-chair), Jennifer Fitzgerald (co-chair), Alexandra Siegel
 - **External Advisor:** Brian Keegan (Information Science)
-- **Expected Completion:** May 2027
+- **Expected Completion:** May 2028
+- **Recent Presentations:** "'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks" (APSA, September 2025); "Elite Influence in an Online Neo-Fascist Forum" (MPSA, April 2025)
 
-### COVID-19 Media Framing Study
-**"Partisan Visual Politics During a Pandemic"** (with Andrew Q. Philips and Komal P. Kaur)
+### Partisan Media Framing Study
+**"Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media"** (with Andrew Q. Philips and Komal P. Kaur)
 
-Investigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets using computer vision and text analysis methods.
+Investigating partisan differences in visual and textual framing of pandemic coverage across U.S. news outlets using computer vision and text analysis methods. Paper presented at APSA (September 2025) and MPSA (April 2025).
+
+**Status:** Under review for publication
 
 ### Gaming & Extremism Research
 **"Multi-Platform Radicalization in Digital Gaming"**
 
-Comprehensive study of recruitment and radicalization processes within digital gaming environments, including direct partnerships with major gaming platforms for harm mitigation strategies.
+Comprehensive study of recruitment and radicalization processes within digital gaming environments, including partnerships with major gaming platforms for harm mitigation strategies. Recent publication: "Extremist Identity Creation Through Performative Infighting on Steam" (Frontiers in Psychology, August 2025).
 
 ### Policy & Financial Markets  
-**"Political Messaging and Market Responses"** (under review)
+**"Mind the Gap! Policy Dissonance and Financial Markets"** (with Allyson L. Benton and Andrew Q. Philips)
 
 Analysis of how political communications affect financial market behavior and investor decision-making.
+
+**Status:** Under review
+
+### Humanities Workforce Analysis
+**Computational Study of the American Humanities Workforce**
+
+Overseeing large-scale computational study of the American humanities workforce using anonymized LinkedIn data at the National Humanities Alliance. Developing innovative mixed-methods approaches combining LLM ensembles with conventional NLP for analyzing career trajectories, diversity, and adaptability in the humanities sector.
 
 ---
 
@@ -194,13 +212,13 @@ Washington Post • New York Times • NPR (*Morning Edition*, *All Things Consi
 
 ## Undergraduate and Graduate Research Involvement
 
-My research agenda is designed to actively involve students at every stage. Since 2019, I have supervised **45 undergraduate and graduate research assistants** and **15 independent student projects** across multiple institutions. Students contribute meaningfully to my work through:
+My research agenda is designed to actively involve students at every stage. Since 2019, I have supervised **45 undergraduate and graduate research assistants** and **15 independent student projects** across multiple institutions. Currently, I supervise **3 CU Boulder undergraduate research assistants** in Fall 2025. Students contribute meaningfully to my work through:
 
 - **Data collection and annotation** — coding social media content, building datasets of extremist rhetoric, and collecting primary-source documents
 - **Qualitative and quantitative analysis** — contributing to network analysis, text classification, and content analysis tasks
 - **Independent research projects** — developing their own research questions within my broader agenda, with several student projects resulting in published reports
 
-Past student projects have included investigations of Italian neofascism, militant accelerationist coalition-building, the French far-right on encrypted platforms, and AI implications for counterterrorism. I currently supervise four undergraduate RAs working on apocalyptic language analysis in social media data.
+Past student projects have included investigations of Italian neofascism, militant accelerationist coalition-building, the French far-right on encrypted platforms, and AI implications for counterterrorism.
 
 ---
 

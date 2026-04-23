@@ -46,19 +46,11 @@ Finally, I am committed to inclusive pedagogy. Quantitative methods can be intim
 
 :   Comprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.
 
-### Middlebury Institute of International Studies
-
-*Adjunct Professor*
-
-**Digital Extremism** (Spring 2023)
-
-:   **Self-designed course** examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.
-
 ### Middlebury College
 
-*Adjunct Professor*
+*Instructor of Record*
 
-**[INTD 1027: The Study of Post-War Fascism](intd1027-syllabus.html)** (Winter 2026)
+[**INTD 1027: The Study of Post-War Fascism**](intd1027-syllabus.html) (Winter 2026)
 
 :   **Self-designed interdisciplinary course** examining the transformation of fascism and fascist movements following World War II. Covered philosophical and political roots, activism, violence, and research ethics across Italy, Russia, the UK, and the US. Students produced original research designs on topics in contemporary fascism studies.
 
@@ -66,19 +58,27 @@ Finally, I am committed to inclusive pedagogy. Quantitative methods can be intim
 
 :   **Intensive winter term course** on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis.
 
+### Middlebury Institute of International Studies
+
+*Instructor of Record*
+
+**Digital Extremism** (Spring 2023)
+
+:   **Self-designed course** examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms.
+
 ------------------------------------------------------------------------
 
 ## Courses Prepared to Teach
 
 In addition to the courses I have already taught, I am prepared to teach the following:
 
-- Introduction to Political Science / American Government
-- Introduction to Comparative Politics
-- Quantitative Research Methods (introductory and advanced)
-- Data Science for Social Scientists
-- Political Violence & Extremism
-- Technology, Media & Politics
-- Senior Seminar / Capstone in Computational Social Science
+-   Introduction to Political Science / American Government
+-   Introduction to Comparative Politics
+-   Quantitative Research Methods (introductory and advanced)
+-   Data Science for Social Scientists
+-   Political Violence & Extremism
+-   Technology, Media & Politics
+-   Senior Seminar / Capstone in Computational Social Science
 
 ------------------------------------------------------------------------
 
@@ -88,16 +88,16 @@ In addition to the courses I have already taught, I am prepared to teach the fol
 
 I develop original, open-source educational materials for my courses, designed to make quantitative methods accessible to students with no prior coding or statistics experience. These tutorials are used in CU Boulder's PSCI 2075 course and are freely available:
 
-* [**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
-* [**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)
-* [**Tutorial 3: Grouping, Filtering, Mutating, Selecting, and Plotting**](tutorial3.html)
-* [**Tutorial 4: Variable Transformations in R**](tutorial4.html) - Understanding distributions, log transforms, and data recoding
-* [**Tutorial 5: Using AI Chatbots to Learn R Programming**](tutorial5.html) - Effective strategies for LLM-assisted coding and learning
-* [**Tutorial 6: Understanding File Systems and Working Directories in R and RStudio**](tutorial6.html)
+-   [**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
+-   [**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)
+-   [**Tutorial 3: Grouping, Filtering, Mutating, Selecting, and Plotting**](tutorial3.html)
+-   [**Tutorial 4: Variable Transformations in R**](tutorial4.html) - Understanding distributions, log transforms, and data recoding
+-   [**Tutorial 5: Using AI Chatbots to Learn R Programming**](tutorial5.html) - Effective strategies for LLM-assisted coding and learning
+-   [**Tutorial 6: Understanding File Systems and Working Directories in R and RStudio**](tutorial6.html)
 
 ### Sample Syllabi
 
-* [**INTD 1027: The Study of Post-War Fascism**](intd1027-syllabus.html) - Self-designed interdisciplinary seminar integrating history, political theory, sociology, and computational methods
+-   [**INTD 1027: The Study of Post-War Fascism**](intd1027-syllabus.html) - Self-designed interdisciplinary seminar integrating history, political theory, sociology, and computational methods
 
 ------------------------------------------------------------------------
 

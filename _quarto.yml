@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-    title: "Alex Bradley Newhouse"
+    title: "Alex Newhouse"
     navbar:
         background: primary
         search: true
@@ -16,6 +16,8 @@ website:
               href: dissertation.html
             - text: "CV"
               href: cv.html
+            - text: "Blog"
+              href: posts.html
 
 format:
   html:
