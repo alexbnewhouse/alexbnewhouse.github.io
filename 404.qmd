@@ -1,0 +1,22 @@
+---
+title: "Page not found"
+description: "404"
+format:
+  html:
+    toc: false
+---
+
+## This page doesn't exist (yet).
+
+The link you followed may be outdated, or the page has moved.
+
+A few useful starting points:
+
+- [Home](index.html)
+- [Research](research.html)
+- [Tools & Code](tools.html)
+- [Teaching](teaching.html)
+- [Writing](posts.html)
+- [CV (PDF)](cv.pdf)
+
+If you reached this page by following a link from somewhere else, [let me know](mailto:alex.newhouse@colorado.edu) and I'll fix it.

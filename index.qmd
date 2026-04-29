@@ -1,113 +1,161 @@
 ---
 title: "Alex Newhouse"
-subtitle: "Computational Political Scientist"
-description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
+subtitle: "PhD Candidate · Computational Political Science · CU Boulder"
+description: "Alex Newhouse — computational political scientist at CU Boulder. Online extremism, political violence, NLP, networks, and causal inference."
+pagetitle: "Alex Newhouse"
 about:
   template: trestles
   image: profpic.jpeg
   image-alt: "Alex Newhouse"
-  image-width: 18em
+  image-width: 16em
   image-shape: round
   links:
     - icon: envelope
       text: Email
       href: mailto:alex.newhouse@colorado.edu
-    - icon: linkedin
-      text: LinkedIn  
-      href: https://linkedin.com/in/alexbnewhouse
-    - icon: bluesky
-      text: Bluesky
-      href: https://bsky.app/profile/alexbnewhouse.bsky.social
-    - icon: github
-      text: GitHub
-      href: https://github.com/alexbnewhouse
+    - icon: file-earmark-pdf
+      text: CV (PDF)
+      href: cv.pdf
     - icon: mortarboard-fill
       text: Google Scholar
       href: https://scholar.google.com/citations?user=NLXqzpoAAAAJ
-    - text: "ORCID"
-      href: https://orcid.org/0009-0003-6346-9527
-    - icon: file-earmark-pdf
-      text: Download CV (PDF)
-      href: cv.pdf
+    - icon: github
+      text: GitHub
+      href: https://github.com/alexbnewhouse
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/alexbnewhouse
+    - icon: cloud
+      text: Bluesky
+      href: https://bsky.app/profile/alexbnewhouse.bsky.social
 format:
-  html
+  html:
+    toc: false
 ---
 
-## About
+[On the academic job market · 2027–28]{.jobmarket-banner}
 
-I am a **PhD candidate in Political Science** at the University of Colorado Boulder, specializing in computational analysis of political violence and extremism. My research develops and applies transformer-based NLP, network analysis, and time-series causal inference to understand how online communities translate into offline political action. I am also committed to teaching and mentoring undergraduates, drawing on my own liberal arts education at Middlebury College to make computational methods accessible and engaging for students across disciplines.
+I study **how online communities turn into offline political violence** — using transformer-based NLP, social network analysis, and time-series causal inference. I'm a PhD candidate in Political Science at CU Boulder, a Humane Studies Fellow, and a Research Fellow at the National Humanities Alliance. I previously served as Deputy Director of the Center on Terrorism, Extremism & Counterterrorism and as an investigative consultant to the U.S. House Select Committee on January 6th.
 
-**Key Experience:**
+::: {.callout-jmp}
+[Job Market Paper]{.jmp-label}
 
--   **Research Fellow**, National Humanities Alliance Humanities Workforce Program
--   **Humane Studies Fellow**, Institute for Humane Studies (2025-Present)
--   **Investigative Consultant** to the House Select Committee on January 6th
--   **Deputy Director** of the Center on Terrorism, Extremism & Counterterrorism
--   **Principal Investigator** on \$1.38M in externally funded grants
--   **Instructor of Record** at Middlebury College and MIIS
-
-------------------------------------------------------------------------
-
-## Research Expertise
-
-::::: columns
-::: {.column width="50%"}
-**Methods:**
-
--   Machine Learning & NLP
--   Social Network Analysis\
--   Causal Inference
--   Data Science & Visualization
+**"'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks"** — presented at APSA 2025. A transformer classifier + intervention analysis showing that online apocalypticism spikes in the immediate aftermath of mass-casualty terrorist attacks — evidence of feedback loops between digital communities and offline violence. PDF available on request.
 :::
 
-::: {.column width="50%"}
-**Substantive Areas:**
+## What I work on
 
--   Political Violence & Extremism
--   Digital Platform Research
--   Technology & Society
--   Computational Social Science
-:::
-:::::
+::: {.an-grid}
 
-------------------------------------------------------------------------
+::: {.an-card}
+### [Research](research.html)
 
-## Featured Publications
+Online radicalization, neo-fascist networks, AI safety, and gaming as a site of political socialization.
 
-::: {.callout-note appearance="minimal"}
-**Job Market Paper:** "'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks" — presented at APSA 2025. PDF available upon request.
+[See research →]{.an-card-cta}
 :::
 
-**Newhouse, A. and Kowert, R.** "Extremist Identity Creation Through Performative Infighting on Steam." *Frontiers in Psychology*, August 2025.
+::: {.an-card}
+### [Tools & Code](tools.html)
 
-**Kowert, R., Kilmer, E., and Newhouse, A.** "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." *Frontiers in Psychology*, 2024.
+Open-source NLP classifiers, datasets, and reproducible pipelines for studying extremist text at scale.
 
-**Newhouse, A.** "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." *CTC Sentinel*, 2021.
+[See tools →]{.an-card-cta}
+:::
 
-**McGuffie, K. and Newhouse, A.** "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." *arXiv*, 2020.
+::: {.an-card}
+### [Teaching](teaching.html)
 
-------------------------------------------------------------------------
+Quantitative methods, computational social science, and original R tutorials used at CU Boulder.
+
+[See teaching →]{.an-card-cta}
+:::
+
+:::
+
+## Selected work
+
+- **Newhouse, A. & Kowert, R.** (2025). [Extremist Identity Creation Through Performative Infighting on Steam](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1586566/full). *Frontiers in Psychology.*
+- **Kowert, R., Kilmer, E., & Newhouse, A.** (2024). [Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1410620/full). *Frontiers in Psychology.*
+- **Newhouse, A.** (2021). [The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism](https://ctc.westpoint.edu/the-threat-is-the-network-the-multi-node-structure-of-neo-fascist-accelerationism/). *CTC Sentinel.*
+- **McGuffie, K. & Newhouse, A.** (2020). [The Radicalization Risks of GPT-3 and Advanced Neural Language Models](https://arxiv.org/abs/2009.06807). *arXiv.*
+
+[Full publication list →](research.html)
 
 ## Impact
 
-**3** courses as instructor of record; **4** as teaching assistant \| **52** students mentored \| **\$1.38M** in externally funded grants (PI) \| **276K** article views
+::: {.stats-strip}
+::: {.stat-tile}
+[\$1.38M]{.stat-num}
+[Funding as PI]{.stat-label}
+:::
+::: {.stat-tile}
+[52]{.stat-num}
+[Students mentored]{.stat-label}
+:::
+::: {.stat-tile}
+[276K]{.stat-num}
+[Article reads]{.stat-label}
+:::
+::: {.stat-tile}
+[3]{.stat-num}
+[Courses as instructor]{.stat-label}
+:::
+:::
 
-------------------------------------------------------------------------
+## Featured in
 
-## Media Recognition
+::: {.press-strip}
+[Washington Post]{} [New York Times]{} [NPR]{} [BBC]{} [Politico]{} [Wired]{} [Bloomberg]{} [Meet the Press]{} [Vice]{} [Axios]{} [FiveThirtyEight]{} [ProPublica]{}
+:::
 
-Research and expertise featured in major outlets including: **Washington Post** • **New York Times** • **NPR** • **BBC** • **Politico** • **Wired** • **Bloomberg** • **Meet the Press** • **Vice** • **Axios** • **FiveThirtyEight** • **ProPublica** • **Denver7**
+## Recent
 
-------------------------------------------------------------------------
+::: {.news-list}
+- [2026-04-14]{.news-date} Successfully defended dissertation prospectus.
+- [2025-10-01]{.news-date} Awarded a Humane Studies Fellowship to study polarization in LLMs.
+- [2025-10-01]{.news-date} Began Research Fellowship with the National Humanities Alliance Humanities Workforce Program.
+- [2025-09-01]{.news-date} Presented job-market paper at APSA 2025.
+- [2025-08-01]{.news-date} New article in *Frontiers in Psychology* on extremist identity formation on Steam.
+:::
 
-## Current Projects
+[See more writing and updates →](posts.html)
 
-**Dissertation Research:** Investigating social processes and collective mobilization in the online extreme right using NLP, network analysis, and causal inference
-
-**COVID-19 Visual Politics:** Analyzing partisan differences in pandemic media coverage using computer vision and text analysis
-
-**Gaming & Extremism:** Multi-platform investigation of recruitment and radicalization in digital gaming environments
-
-------------------------------------------------------------------------
-
-*Contact: alex.newhouse\@colorado.edu*
+```{=html}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Alex Newhouse",
+  "givenName": "Alex",
+  "familyName": "Newhouse",
+  "url": "https://alexbnewhouse.github.io",
+  "image": "https://alexbnewhouse.github.io/profpic.jpeg",
+  "jobTitle": "PhD Candidate in Political Science",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Colorado Boulder"
+  },
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Middlebury College"},
+    {"@type": "CollegeOrUniversity", "name": "Middlebury Institute of International Studies"},
+    {"@type": "CollegeOrUniversity", "name": "Georgia Institute of Technology"}
+  ],
+  "sameAs": [
+    "https://scholar.google.com/citations?user=NLXqzpoAAAAJ",
+    "https://orcid.org/0009-0003-6346-9527",
+    "https://github.com/alexbnewhouse",
+    "https://linkedin.com/in/alexbnewhouse",
+    "https://bsky.app/profile/alexbnewhouse.bsky.social"
+  ],
+  "knowsAbout": [
+    "Political Violence",
+    "Online Extremism",
+    "Computational Social Science",
+    "Natural Language Processing",
+    "Social Network Analysis",
+    "Causal Inference"
+  ]
+}
+</script>
+```

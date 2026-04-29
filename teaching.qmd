@@ -7,6 +7,8 @@ format:
     toc-location: right
 ---
 
+[Last updated: April 2026]{.last-updated}
+
 ## Teaching Philosophy
 
 As a product of the liberal arts myself—I graduated *summa cum laude* from Middlebury College—I experienced firsthand how rigorous, small-classroom teaching can transform how students think about the world. That experience profoundly shapes my approach to teaching political science: I believe that quantitative and computational methods become most powerful when students understand *why* they matter, not just *how* to execute them.
@@ -87,7 +89,7 @@ In addition to the courses I have already taught, I am prepared to teach the fol
 
 ### Quantitative Methods Materials
 
-I develop original, open-source educational materials for my courses, designed to make quantitative methods accessible to students with no prior coding or statistics experience. These tutorials are used in CU Boulder's PSCI 2075 course and are freely available:
+I develop original, open-source educational materials for my courses, designed to make quantitative methods accessible to students with no prior coding or statistics experience. These tutorials are used in CU Boulder's PSCI 2075 course and are freely available — [browse the full tutorial hub](tutorials.html).
 
 -   [**Tutorial 1: Getting Started with Greek Notation and Descriptive Stats**](tutorial1.html)
 -   [**Tutorial 2: An Introduction to R's pipe operator**](tutorial2-pipe.html)

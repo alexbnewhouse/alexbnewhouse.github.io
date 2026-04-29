@@ -8,6 +8,8 @@ format:
     toc-location: right
 ---
 
+[Last updated: April 2026]{.last-updated}
+
 ## Research Statement
 
 My research addresses a fundamental question in the study of political violence: **How do online communities translate into offline political action?** I argue that digital platforms are not mere communication channels but *constitutive environments* where political identities are formed, grievances are framed, and collective action is coordinated. Understanding political violence in the 21st century requires new theoretical frameworks and computational methods capable of tracing these online-offline dynamics.

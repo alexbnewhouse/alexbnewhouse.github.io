@@ -1,0 +1,63 @@
+---
+title: "Speaking & Press"
+subtitle: "Talks, conference presentations, and media coverage"
+description: "Invited talks, conference presentations, and media coverage of Alex Newhouse's research on online extremism and political violence."
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+[Last updated: April 2026]{.last-updated}
+
+## Book me to speak
+
+I give talks for academic, policy, and industry audiences on online extremism, AI safety, gaming and political violence, and computational methods. For invitations, contact [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu).
+
+## Conference presentations
+
+- **APSA 2025** — *"'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks."*
+- **APSA 2025** — *"Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media"* (with Philips & Kaur).
+- **MPSA 2025** — *"Elite Influence in an Online Neo-Fascist Forum."*
+- **MPSA 2025** — *"Partisan Polarization Shapes Visual Framing of COVID-19."*
+- **MPSA 2024** — *"Media Bias in COVID-19 Coverage."*
+- **New Frontiers in Text as Data 2023** — *"Manifesting a Coup: Cross-Website Toxicity and Extremism on the Dot-Win Network Prior to January 6, 2021"* (poster).
+- **Game Developers Conference 2023** — *"Mitigating Harm in Design."*
+- **Terrorism and Social Media 2022** — *"Accelerationism Research in Practice."*
+- **Game Developers Conference 2022** — *"The Landscape of Extremist Behavior in Games."*
+- **Reactionary Digital Politics 2021** — *"The Aesthetics of Acceleration."*
+
+## Media coverage
+
+::: {.press-strip}
+[Washington Post]{} [New York Times]{} [NPR]{} [BBC]{} [Politico]{} [Wired]{} [Bloomberg]{} [Meet the Press]{} [Vice]{} [Axios]{} [FiveThirtyEight]{} [ProPublica]{} [Denver7]{}
+:::
+
+### Radio & podcast
+
+NPR's *Morning Edition*, *All Things Considered*, *On Point* · BBC · Bloomberg Radio.
+
+### Written features
+
+Washington Post · New York Times · Vice · Axios · Politico · FiveThirtyEight · Wired · ProPublica.
+
+### Video
+
+Meet the Press Now · Denver7.
+
+## Public writing
+
+For full list of public-facing writing, see [Writing](posts.html). Highlights:
+
+- **The Conversation** — *"Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol"* (Jan 2021, **35,400 reads**).
+- **The Conversation** — *"Parler is bringing together mainstream conservatives, anti-Semites and white supremacists…"* (Nov 2020, **241,000 reads**).
+- **Just Security** — *"Insiders' View of the January 6th Committee's Social Media Investigation"* (Jackson, Conroy, Newhouse, Jan 2023).
+
+## Topics I speak on
+
+- Online radicalization and the structure of decentralized extremist movements
+- AI safety, generative models, and the misuse of LLMs
+- Gaming platforms as sites of political socialization and recruitment
+- Trust & Safety: research-to-practice translation
+- Computational social science methods for policy audiences
+- The January 6th investigation: lessons for studying online-to-offline mobilization

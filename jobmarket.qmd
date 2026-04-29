@@ -1,0 +1,54 @@
+---
+title: "Job Market Materials"
+subtitle: "AY 2027–28"
+description: "Job market materials packet for Alex Newhouse, PhD candidate in Political Science at CU Boulder."
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+[On the academic job market · 2027–28]{.jobmarket-banner}
+
+This page collects everything a search committee, chair, or recruiter needs in one link. For anything else, please [email me](mailto:alex.newhouse@colorado.edu).
+
+## At a glance
+
+- **Field:** Political Science (Comparative Politics + Methodology)
+- **Subfields:** Computational social science, political violence, technology & politics
+- **Methods:** Transformer NLP, social network analysis, time-series causal inference
+- **Advisors:** Andrew Q. Philips & Jennifer Fitzgerald (co-chairs); Alexandra Siegel; Brian Keegan (Information Science, external)
+- **Expected defense:** May 2028
+- **Available to start:** Fall 2028
+
+## Job market paper
+
+::: {.callout-jmp}
+**"'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks"**
+
+A transformer classifier and intervention-analysis study of 11 years of 4chan /pol/ posts, showing that online apocalyptic rhetoric spikes in the immediate aftermath of mass-casualty terrorist attacks. Evidence of a feedback loop between digital communities and offline violence.
+
+Presented at APSA 2025. **Full PDF available on request** — [email me](mailto:alex.newhouse@colorado.edu).
+:::
+
+## Materials
+
+- [Curriculum Vitae (PDF)](cv.pdf)
+- [Research statement](research-statement.html)
+- [Teaching statement](teaching-statement.html)
+- [Dissertation overview](dissertation.html)
+- [Sample syllabus — INTD 1027 Post-War Fascism](intd1027-syllabus.html)
+- [Sample teaching materials — R tutorial series](tutorials.html)
+- [Code portfolio — DistilBERT for Political Text Classification](political-text-classification.html)
+
+## References
+
+Available on request — please email me and I will arrange introductions.
+
+## Other useful links
+
+- [Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ)
+- [ORCID](https://orcid.org/0009-0003-6346-9527)
+- [GitHub](https://github.com/alexbnewhouse)
+
+[Last updated: April 2026]{.last-updated}

@@ -1,0 +1,413 @@
+/* ============================================================
+   Alex Newhouse — site design system
+   Type · Color · Components · Light + Dark
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  --font-serif: "Source Serif 4", Georgia, "Iowan Old Style", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Light palette */
+  --color-paper: #fafaf7;
+  --color-surface: #ffffff;
+  --color-ink: #1a1a1a;
+  --color-muted: #5f5f63;
+  --color-border: #e6e3dc;
+  --color-accent: #3a2e6b;          /* deep slate-indigo */
+  --color-accent-soft: #ece8f7;
+  --color-accent-ink: #2a1f55;
+  --color-warm: #b04a2f;             /* oxidized copper, secondary */
+
+  --shadow-sm: 0 1px 2px rgba(20, 20, 30, 0.04), 0 1px 3px rgba(20, 20, 30, 0.06);
+  --shadow-md: 0 2px 6px rgba(20, 20, 30, 0.06), 0 6px 18px rgba(20, 20, 30, 0.08);
+
+  --radius: 10px;
+  --measure: 70ch;
+}
+
+/* Dark mode (Quarto adds .quarto-dark to <body>) */
+.quarto-dark {
+  --color-paper: #15151a;
+  --color-surface: #1d1d24;
+  --color-ink: #ececec;
+  --color-muted: #a3a3ad;
+  --color-border: #2c2c36;
+  --color-accent: #b8a8ff;
+  --color-accent-soft: #2a2546;
+  --color-accent-ink: #d8cfff;
+  --color-warm: #ff9870;
+}
+
+/* ---------- Base ---------- */
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-paper);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, .quarto-title > h1 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+
+h1 { font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.15; }
+h2 { font-size: clamp(1.45rem, 2.4vw, 1.75rem); line-height: 1.2; margin-top: 2.2em; }
+h3 { font-size: 1.25rem; line-height: 1.3; margin-top: 1.6em; }
+
+p, li { line-height: 1.65; }
+p { max-width: var(--measure); }
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+a:hover { border-bottom-color: var(--color-accent); }
+
+code, pre { font-family: var(--font-mono); font-size: 0.92em; }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2.5rem 0;
+}
+
+::selection { background: var(--color-accent-soft); color: var(--color-accent-ink); }
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+  background: var(--color-paper) !important;
+  border-bottom: 1px solid var(--color-border);
+  backdrop-filter: saturate(140%) blur(8px);
+}
+.navbar .navbar-brand,
+.navbar .nav-link {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--color-ink) !important;
+  letter-spacing: 0.01em;
+}
+.navbar .nav-link:hover { color: var(--color-accent) !important; }
+
+.navbar .navbar-brand {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Primary CTA in navbar (rendered as a link with .btn-primary class) */
+.navbar .nav-link.btn-cv,
+.navbar .btn-cv {
+  background: var(--color-accent);
+  color: #fff !important;
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem !important;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+.navbar .btn-cv:hover { background: var(--color-accent-ink); border-bottom: none; }
+
+/* ---------- Layout helpers ---------- */
+
+.page-columns,
+main.content {
+  background: var(--color-paper);
+}
+
+main > * { max-width: 100%; }
+
+/* ---------- Hero / about block (homepage) ---------- */
+
+#about-block .about-image,
+.quarto-about-trestles .about-image,
+.about-image img {
+  border-radius: 50% !important;
+  box-shadow: var(--shadow-md);
+}
+
+.about-links a {
+  color: var(--color-ink) !important;
+}
+.about-links a:hover { color: var(--color-accent) !important; }
+
+/* ---------- Cards ---------- */
+
+.an-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 1.75rem 0;
+}
+
+.an-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.4rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+.an-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-soft);
+}
+.an-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.4rem;
+}
+.an-card h3 a { color: var(--color-ink); }
+.an-card h3 a:hover { color: var(--color-accent); }
+.an-card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  margin: 0 0 0.75rem;
+}
+.an-card .an-card-cta {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  margin-top: auto;
+}
+
+/* Paper card (for research listing) */
+.paper-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: 6px;
+  padding: 1rem 1.25rem;
+  margin: 0.85rem 0;
+}
+.paper-card .paper-meta {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin: 0.2rem 0 0.5rem;
+}
+.paper-card .paper-summary { margin: 0.4rem 0 0.4rem; font-size: 0.95rem; }
+.paper-card .paper-links a { font-size: 0.85rem; margin-right: 0.85rem; font-weight: 500; }
+
+/* ---------- Stat tiles ---------- */
+
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--color-accent-soft);
+  border-radius: var(--radius);
+}
+.stat-tile { text-align: center; }
+.stat-tile .stat-num {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-accent-ink);
+  line-height: 1;
+  display: block;
+}
+.stat-tile .stat-label {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  margin-top: 0.4rem;
+  display: block;
+}
+
+/* ---------- JMP callout ---------- */
+
+.callout-jmp {
+  background: linear-gradient(135deg, var(--color-accent-soft) 0%, var(--color-surface) 100%);
+  border: 1px solid var(--color-accent-soft);
+  border-left: 4px solid var(--color-accent);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin: 1.75rem 0;
+}
+.callout-jmp .jmp-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+.callout-jmp h3, .callout-jmp p:first-of-type strong {
+  margin-top: 0.25rem;
+  font-family: var(--font-serif);
+}
+
+/* ---------- Job market banner ---------- */
+
+.jobmarket-banner {
+  display: inline-block;
+  background: var(--color-warm);
+  color: #fff;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Logo / press strip ---------- */
+
+.press-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  align-items: center;
+  padding: 1rem 0;
+  font-family: var(--font-serif);
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  margin: 1rem 0 2rem;
+}
+.press-strip span {
+  font-size: 0.95rem;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Tags ---------- */
+
+.tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  margin: 0 0.25rem 0.25rem 0;
+  background: var(--color-accent-soft);
+  color: var(--color-accent-ink);
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- News list ---------- */
+
+.news-list { list-style: none; padding-left: 0; margin: 1rem 0; }
+.news-list li {
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--color-border);
+  display: grid;
+  grid-template-columns: 7.5rem 1fr;
+  gap: 0.75rem;
+  font-size: 0.96rem;
+}
+.news-list li:last-child { border-bottom: none; }
+.news-list .news-date {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+/* ---------- Last-updated stamp ---------- */
+
+.last-updated {
+  font-size: 0.82rem;
+  color: var(--color-muted);
+  font-style: italic;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-primary,
+a.btn-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 0.55rem 1.1rem;
+}
+.btn-primary:hover,
+a.btn-primary:hover {
+  background: var(--color-accent-ink);
+  border-color: var(--color-accent-ink);
+  color: #fff;
+  border-bottom: none;
+}
+
+/* ---------- Callouts (Quarto built-in) ---------- */
+
+.callout {
+  border-radius: var(--radius);
+  border-left-width: 4px;
+}
+.callout.callout-style-default .callout-title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+/* ---------- Tables ---------- */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.25rem 0;
+}
+th, td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  font-size: 0.95rem;
+}
+th { font-weight: 600; background: var(--color-accent-soft); }
+
+/* ---------- Footer ---------- */
+
+.nav-footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-paper);
+  font-size: 0.88rem;
+  color: var(--color-muted);
+}
+
+/* ---------- TOC ---------- */
+
+#TOC, .sidebar-navigation {
+  font-size: 0.92rem;
+}
+#TOC a {
+  color: var(--color-muted);
+  border-bottom: none;
+}
+#TOC a:hover, #TOC .active { color: var(--color-accent); }
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+  .navbar, .nav-footer, #TOC { display: none !important; }
+  body { background: #fff; color: #000; }
+  a { color: #000; border-bottom: none; }
+}

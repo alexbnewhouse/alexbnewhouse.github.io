@@ -1,10 +1,19 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "posts/**/*.qmd"
+  resources:
+    - "cv.pdf"
+    - "prospectus.pdf"
+    - "favicon.svg"
 
 website:
     title: "Alex Newhouse"
     description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
+    favicon: favicon.svg
+    site-url: https://alexbnewhouse.github.io
     open-graph:
       description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
       image: profpic.jpeg
@@ -12,31 +21,44 @@ website:
       description: "Alex Newhouse — computational political scientist at CU Boulder, studying political violence and online extremism."
       image: profpic.jpeg
       creator: "@alexbnewhouse"
+    page-navigation: true
+    back-to-top-navigation: true
     navbar:
-        background: primary
+        background: light
         search: true
         left:
             - text: "Research"
               href: research.html
-            - text: "Teaching"
-              href: teaching.html
-            - text: "Dissertation"
-              href: dissertation.html
-            - text: "CV"
-              href: cv.html
             - text: "Writing"
               href: posts.html
-            - text: "Statements"
-              menu:
-                - text: "Research Statement"
-                  href: research-statement.html
-                - text: "Teaching Statement"
-                  href: teaching-statement.html
+            - text: "Teaching"
+              href: teaching.html
+            - text: "Tools & Code"
+              href: tools.html
+            - text: "Speaking & Press"
+              href: speaking.html
+            - text: "About"
+              href: about.html
+        right:
+            - text: "CV (PDF)"
+              href: cv.pdf
+              icon: file-earmark-pdf
+    page-footer:
+      left: "© 2026 Alex Newhouse"
+      center: "[Email](mailto:alex.newhouse@colorado.edu) · [Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ) · [ORCID](https://orcid.org/0009-0003-6346-9527) · [GitHub](https://github.com/alexbnewhouse) · [LinkedIn](https://linkedin.com/in/alexbnewhouse) · [Bluesky](https://bsky.app/profile/alexbnewhouse.bsky.social)"
+      right: "Built with [Quarto](https://quarto.org)."
 
 format:
   html:
-    theme: lumen
+    theme:
+      light: [lumen, theme-light.scss]
+      dark: [darkly, theme-dark.scss]
     css: styles.css
     toc: true
+    toc-location: right
+    anchor-sections: true
+    smooth-scroll: true
+    link-external-newwindow: true
+    link-external-icon: true
 
 editor: visual

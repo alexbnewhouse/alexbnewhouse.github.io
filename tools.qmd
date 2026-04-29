@@ -1,0 +1,79 @@
+---
+title: "Tools & Code"
+subtitle: "Open-source classifiers, datasets, and reproducible pipelines"
+description: "Computational tools and code by Alex Newhouse for political-text classification, network analysis, and extremism research."
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+I build and release computational tools that operationalize political-science theory at scale. The artifacts below sit at the intersection of academic research and applied trust-and-safety work — the same pipelines I have deployed in partnerships with gaming platforms, federal investigators, and policy groups.
+
+[Last updated: April 2026]{.last-updated}
+
+## Featured projects
+
+::: {.an-grid}
+
+::: {.an-card}
+### [DistilBERT for Political Text Classification](political-text-classification.html)
+
+Transformer-based classifier for extremist content in political discussion. **94% F1** on a labeled corpus; full PyTorch + Hugging Face pipeline with data augmentation.
+
+[`Python` `PyTorch` `Transformers` `NLP`]{.tag}
+
+[View project →]{.an-card-cta}
+:::
+
+::: {.an-card}
+### Apocalyptic Rhetoric Classifier *(in prep)*
+
+Fine-tuned transformer model for detecting apocalyptic and millenarian rhetoric in online political forums. Used in the dissertation Chapter 2 study of /pol/ reactions to mass-casualty attacks.
+
+[`Python` `Transformers` `Time-series`]{.tag}
+
+[Coming with paper release]{.an-card-cta}
+:::
+
+::: {.an-card}
+### Network Analyses of Neo-Fascist Coalitions
+
+Reproducible R + igraph pipelines accompanying the *CTC Sentinel* and GNET reports on multi-node accelerationist networks.
+
+[`R` `igraph` `Networks`]{.tag}
+
+[On GitHub →](https://github.com/alexbnewhouse){.an-card-cta}
+:::
+
+:::
+
+## Methods stack
+
+| Layer | Tools |
+|---|---|
+| Languages | R, Python, SQL |
+| ML / NLP | PyTorch, Hugging Face Transformers, Scikit-Learn, spaCy |
+| Networks | `igraph`, `statnet`, NetworkX |
+| Causal inference | Interrupted time-series, intervention analysis, regression |
+| Data viz | `ggplot2`, `plotly`, D3 |
+| Infra | Git, Docker, HPC (SLURM), Splunk |
+
+## Datasets & resources
+
+- **Glossary of right-wing terminology, slang, and imagery** — developed at CTEC. Available on request for vetted academic use.
+- **Sainthood corpus** — 11 years of 4chan /pol/ posts annotated for canonization rhetoric (in development; dissertation Ch. 4).
+- **Mass-casualty attacks dataset (OECD, 20 yr)** — derived from ACLED, GTD, RTV; in preparation alongside the dissertation.
+
+## Industry & policy collaborations
+
+- **Roblox** — detection and mitigation of violent and hateful user networks.
+- **Spectrum Labs** — multilingual datasets of online toxicity across 7 languages.
+- **U.S. House Select Committee on January 6th** — cross-platform investigation, hearing material, and final-report contributions.
+- **Department of Homeland Security** — two TVTP grants ($1.33M total) supporting extremism and gaming research.
+
+## Code & repos
+
+GitHub: [github.com/alexbnewhouse](https://github.com/alexbnewhouse)
+
+If you'd like access to data, replication code, or a model not yet public, [email me](mailto:alex.newhouse@colorado.edu) — I'm happy to share with vetted researchers.

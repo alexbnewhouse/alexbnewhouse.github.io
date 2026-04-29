@@ -1,0 +1,74 @@
+---
+title: "Tutorials"
+subtitle: "Open-source R tutorials for quantitative methods"
+description: "Original R tutorials by Alex Newhouse for undergraduate quantitative methods courses, used in CU Boulder's PSCI 2075."
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+A series of original tutorials I developed for CU Boulder's PSCI 2075 (Quantitative Methods). They're designed for students with **no prior coding experience**, with a focus on building intuition before syntax. Free to use, share, and remix.
+
+## The series
+
+::: {.an-grid}
+
+::: {.an-card}
+### [1. Greek Notation & Descriptive Stats](tutorial1.html)
+Build the bridge from formal notation (Σ, μ, σ) to R code. Means, variance, and standard deviation from first principles.
+[`R` `Intro`]{.tag}
+
+[Open tutorial →]{.an-card-cta}
+:::
+
+::: {.an-card}
+### [2. The Pipe Operator](tutorial2-pipe.html)
+The single most important readability trick in modern R. Why `%>%` and `|>` exist and when to use each.
+[`R` `tidyverse`]{.tag}
+
+[Open tutorial →]{.an-card-cta}
+:::
+
+::: {.an-card}
+### [3. Group, Filter, Mutate, Plot](tutorial3.html)
+The everyday verbs of data manipulation in `dplyr`, with `ggplot2` to visualize the results.
+[`R` `dplyr` `ggplot2`]{.tag}
+
+[Open tutorial →]{.an-card-cta}
+:::
+
+::: {.an-card}
+### [4. Variable Transformations](tutorial4.html)
+Distributions, log transforms, and recoding — when to reach for each, and what they do to your inferences.
+[`R` `Stats`]{.tag}
+
+[Open tutorial →]{.an-card-cta}
+:::
+
+::: {.an-card}
+### [5. Using AI Chatbots to Learn R](tutorial5.html)
+Strategies for productive LLM-assisted coding without short-circuiting your own learning.
+[`R` `LLMs` `Pedagogy`]{.tag}
+
+[Open tutorial →]{.an-card-cta}
+:::
+
+::: {.an-card}
+### [6. File Systems & Working Directories](tutorial6.html)
+The single biggest source of "it works on my machine" pain. Paths, projects, and `here::here()`.
+[`R` `RStudio`]{.tag}
+
+[Open tutorial →]{.an-card-cta}
+:::
+
+:::
+
+## Sample syllabi
+
+- [INTD 1027 — The Study of Post-War Fascism](intd1027-syllabus.html) (Middlebury College)
+- [PSCI 2075 — Study Guide](psci_2075_study_guide.html) (CU Boulder)
+
+## Feedback
+
+Spotted an error? Have a suggestion? [Email me](mailto:alex.newhouse@colorado.edu) — I update these every term.

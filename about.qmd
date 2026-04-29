@@ -1,0 +1,49 @@
+---
+title: "About"
+subtitle: "Bio, contact, and current activity"
+description: "About Alex Newhouse, computational political scientist at CU Boulder."
+format:
+  html:
+    toc: true
+    toc-location: right
+---
+
+## Short bio
+
+Alex Newhouse is a PhD candidate in Political Science at the University of Colorado Boulder, specializing in the computational analysis of political violence and online extremism. His research develops and applies transformer-based NLP, social network analysis, and time-series causal inference to understand how decentralized digital communities translate into offline collective action.
+
+He is a Humane Studies Fellow at the Institute for Humane Studies, a Research Fellow with the National Humanities Alliance Humanities Workforce Program, and a Senior Non-Resident Fellow at the Middlebury Institute of International Studies. He previously served as Deputy Director of the Center on Terrorism, Extremism, and Counterterrorism (CTEC) and as an investigative consultant to the U.S. House Select Committee on January 6th.
+
+His work has appeared in *Frontiers in Psychology*, *CTC Sentinel*, and a series of book chapters on gaming and extremism, and has been featured in the *Washington Post*, *New York Times*, NPR, BBC, *Politico*, *Wired*, and *Meet the Press*. He has been Principal Investigator on $1.38M in externally funded grants.
+
+Alex graduated *summa cum laude* from Middlebury College and holds master's degrees from MIIS (Nonproliferation & Terrorism Studies) and Georgia Tech (Analytics).
+
+## Currently
+
+- Drafting Chapter 2 of the dissertation (apocalyptic rhetoric on 4chan).
+- Leading computational analysis of the U.S. humanities workforce at the National Humanities Alliance.
+- Studying polarization and political behavior in large language models (Humane Studies Fellowship).
+- Co-developing harm-mitigation pipelines with gaming-industry partners.
+
+## Contact
+
+- **Email:** [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu)
+- **Office:** Department of Political Science, University of Colorado Boulder, Ketchum 106
+- **Mail:** 333 UCB, Boulder, CO 80309
+
+I respond to email within a few business days. For media inquiries, please include outlet, deadline, and topic in your first message.
+
+## Find me elsewhere
+
+- [Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ)
+- [ORCID](https://orcid.org/0009-0003-6346-9527)
+- [GitHub](https://github.com/alexbnewhouse)
+- [LinkedIn](https://linkedin.com/in/alexbnewhouse)
+- [Bluesky](https://bsky.app/profile/alexbnewhouse.bsky.social)
+
+## Statements
+
+- [Research statement](research-statement.html)
+- [Teaching statement](teaching-statement.html)
+
+[Last updated: April 2026]{.last-updated}
