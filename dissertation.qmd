@@ -8,6 +8,32 @@ format:
     toc-location: right
 ---
 
+::: {.callout-jmp}
+**Dissertation:** *Social Processes and Collective Mobilization in the Online Extreme Right*
+
+I study how decentralized online extremist communities generate collective mobilization despite organizational fragmentation and geographic dispersion. The project combines transformer NLP, network analysis, interrupted time series, and regression with novel datasets from 4chan, Iron March, and mass-casualty attack archives.
+
+::: {.action-row}
+[Download prospectus](prospectus.pdf){.btn .btn-primary}
+[Email about the project](mailto:alex.newhouse@colorado.edu?subject=Dissertation%20inquiry){.btn .btn-secondary}
+:::
+:::
+
+::: {.stats-strip}
+::: {.stat-tile}
+[Apr. 2026]{.stat-num}
+[Prospectus defended]{.stat-label}
+:::
+::: {.stat-tile}
+[3]{.stat-num}
+[Empirical chapters]{.stat-label}
+:::
+::: {.stat-tile}
+[May 2028]{.stat-num}
+[Expected defense]{.stat-label}
+:::
+:::
+
 ## Overview
 
 My dissertation investigates the mobilizing capacity of the online extreme right — a movement characterized by physical dispersion, organizational fragmentation, and demographic breadth, yet exhibiting a striking level of strategic convergence and aesthetic unity. Drawing on literatures from political science, social psychology, extremism studies, and social computing, I develop and test a theory of how collective mobilization occurs among decentralized online extremist communities despite the absence of formal organizational hierarchy, fluid and transient memberships, and geographic dispersion.

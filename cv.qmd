@@ -8,9 +8,15 @@ format:
     toc-location: right
 ---
 
-alex.newhouse\@colorado.edu \| Boulder, CO \| [linkedin.com/in/alexbnewhouse](https://linkedin.com/in/alexbnewhouse) \| [Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ) \| [ORCID](https://orcid.org/0009-0003-6346-9527)
+::: {.contact-panel}
+alex.newhouse\@colorado.edu · Boulder, CO · [LinkedIn](https://linkedin.com/in/alexbnewhouse) · [Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ) · [ORCID](https://orcid.org/0009-0003-6346-9527)
 
-[**Download CV (PDF)**](cv.pdf){.btn .btn-primary}
+::: {.action-row}
+[Download CV (PDF)](cv.pdf){.btn .btn-primary}
+[Job-market materials](jobmarket.html){.btn .btn-secondary}
+[Research](research.html){.btn .btn-secondary}
+:::
+:::
 
 [Last updated: April 2026]{.last-updated}
 

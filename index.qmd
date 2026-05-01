@@ -1,47 +1,55 @@
 ---
 title: "Alex Newhouse"
-subtitle: "PhD Candidate · Computational Political Science · CU Boulder"
+subtitle: "Political violence · online extremism · computational social science"
 description: "Alex Newhouse — computational political scientist at CU Boulder. Online extremism, political violence, NLP, networks, and causal inference."
 pagetitle: "Alex Newhouse"
-about:
-  template: trestles
-  image: profpic.jpeg
-  image-alt: "Alex Newhouse"
-  image-width: 16em
-  image-shape: round
-  links:
-    - icon: envelope
-      text: Email
-      href: mailto:alex.newhouse@colorado.edu
-    - icon: file-earmark-pdf
-      text: CV (PDF)
-      href: cv.pdf
-    - icon: mortarboard-fill
-      text: Google Scholar
-      href: https://scholar.google.com/citations?user=NLXqzpoAAAAJ
-    - icon: github
-      text: GitHub
-      href: https://github.com/alexbnewhouse
-    - icon: linkedin
-      text: LinkedIn
-      href: https://linkedin.com/in/alexbnewhouse
-    - icon: cloud
-      text: Bluesky
-      href: https://bsky.app/profile/alexbnewhouse.bsky.social
 format:
   html:
     toc: false
 ---
 
+::: {.home-hero}
+::: {.hero-copy}
 [On the academic job market · 2027–28]{.jobmarket-banner}
 
-I study **how online communities turn into offline political violence** — using transformer-based NLP, social network analysis, and time-series causal inference. I'm a PhD candidate in Political Science at CU Boulder, a Humane Studies Fellow, and a Research Fellow at the National Humanities Alliance. I previously served as Deputy Director of the Center on Terrorism, Extremism & Counterterrorism and as an investigative consultant to the U.S. House Select Committee on January 6th.
+[PhD Candidate · Political Science · CU Boulder]{.hero-kicker}
+
+<h1 class="hero-title">Alex Newhouse</h1>
+
+::: {.hero-dek}
+I study **how online communities turn into offline political violence** — using transformer NLP, social network analysis, and time-series causal inference.
+:::
+
+::: {.hero-summary}
+I'm a computational political scientist, Humane Studies Fellow, and National Humanities Alliance Research Fellow. Before CU Boulder, I served as Deputy Director of the Center on Terrorism, Extremism & Counterterrorism and as an investigative consultant to the U.S. House Select Committee on January 6th.
+:::
+
+::: {.action-row}
+[Download CV](cv.pdf){.btn .btn-primary}
+[Job-market packet](jobmarket.html){.btn .btn-secondary}
+[Email](mailto:alex.newhouse@colorado.edu){.btn .btn-secondary}
+[Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ){.btn .btn-secondary}
+:::
+:::
+
+::: {.hero-portrait}
+```{=html}
+<img src="profpic.jpeg" alt="Alex Newhouse">
+```
+:::
+:::
+
+[Job market paper]{.section-eyebrow}
 
 ::: {.callout-jmp}
-[Job Market Paper]{.jmp-label}
+**"'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks"**
 
-**"'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks"** — presented at APSA 2025. A transformer classifier + intervention analysis showing that online apocalypticism spikes in the immediate aftermath of mass-casualty terrorist attacks — evidence of feedback loops between digital communities and offline violence. PDF available on request.
+A transformer classifier and intervention analysis of 11 years of 4chan /pol/ posts showing that online apocalypticism spikes after mass-casualty terrorist attacks — evidence of feedback loops between digital communities and offline violence. Presented at APSA 2025. PDF available on request.
+
+[Read dissertation overview](dissertation.html){.btn .btn-primary} [Request paper](mailto:alex.newhouse@colorado.edu?subject=Job%20market%20paper%20request){.btn .btn-secondary}
 :::
+
+[Start here]{.section-eyebrow}
 
 ## What I work on
 
@@ -50,7 +58,7 @@ I study **how online communities turn into offline political violence** — usin
 ::: {.an-card}
 ### [Research](research.html)
 
-Online radicalization, neo-fascist networks, AI safety, and gaming as a site of political socialization.
+Online-offline radicalization, neo-fascist networks, AI safety, and gaming as a site of political socialization.
 
 [See research →]{.an-card-cta}
 :::
@@ -58,7 +66,7 @@ Online radicalization, neo-fascist networks, AI safety, and gaming as a site of 
 ::: {.an-card}
 ### [Tools & Code](tools.html)
 
-Open-source NLP classifiers, datasets, and reproducible pipelines for studying extremist text at scale.
+NLP classifiers, datasets, and reproducible pipelines for studying extremist text, networks, and online communities at scale.
 
 [See tools →]{.an-card-cta}
 :::
@@ -66,12 +74,46 @@ Open-source NLP classifiers, datasets, and reproducible pipelines for studying e
 ::: {.an-card}
 ### [Teaching](teaching.html)
 
-Quantitative methods, computational social science, and original R tutorials used at CU Boulder.
+Quantitative methods, computational social science, political violence, and original R tutorials for undergraduate methods students.
 
 [See teaching →]{.an-card-cta}
 :::
 
 :::
+
+[For hiring committees, policy teams, and collaborators]{.section-eyebrow}
+
+## At a glance
+
+::: {.an-grid}
+
+::: {.an-card}
+### Scholarly identity
+
+Comparative politics and methodology scholar focused on decentralized political violence, platform affordances, and online collective action.
+
+[Political violence]{.tag} [Extremism]{.tag} [Computational social science]{.tag}
+:::
+
+::: {.an-card}
+### Technical depth
+
+I build production-grade pipelines with transformer models, network analysis, interrupted time series, and large-scale social media data.
+
+[NLP]{.tag} [Networks]{.tag} [Causal inference]{.tag}
+:::
+
+::: {.an-card}
+### Applied impact
+
+My work has supported federal investigations, gaming-platform trust & safety, media explainers, and policy-facing extremism research.
+
+[Jan. 6 Committee]{.tag} [Gaming platforms]{.tag} [Policy translation]{.tag}
+:::
+
+:::
+
+[Selected outputs]{.section-eyebrow}
 
 ## Selected work
 
@@ -81,6 +123,8 @@ Quantitative methods, computational social science, and original R tutorials use
 - **McGuffie, K. & Newhouse, A.** (2020). [The Radicalization Risks of GPT-3 and Advanced Neural Language Models](https://arxiv.org/abs/2009.06807). *arXiv.*
 
 [Full publication list →](research.html)
+
+[Evidence of reach]{.section-eyebrow}
 
 ## Impact
 
@@ -103,11 +147,15 @@ Quantitative methods, computational social science, and original R tutorials use
 :::
 :::
 
+[Public engagement]{.section-eyebrow}
+
 ## Featured in
 
 ::: {.press-strip}
-[Washington Post]{} [New York Times]{} [NPR]{} [BBC]{} [Politico]{} [Wired]{} [Bloomberg]{} [Meet the Press]{} [Vice]{} [Axios]{} [FiveThirtyEight]{} [ProPublica]{}
+Washington Post · New York Times · NPR · BBC · Politico · Wired · Bloomberg · Meet the Press · Vice · Axios · FiveThirtyEight · ProPublica
 :::
+
+[Freshness signal]{.section-eyebrow}
 
 ## Recent
 

@@ -12,16 +12,35 @@ I build and release computational tools that operationalize political-science th
 
 [Last updated: April 2026]{.last-updated}
 
+::: {.an-grid}
+::: {.an-card}
+### For researchers
+
+Replication-ready workflows for text classification, network analysis, and time-series designs in sensitive-data settings.
+:::
+
+::: {.an-card}
+### For trust & safety teams
+
+Applied methods for turning ambiguous policy categories into measurable model outputs and review pipelines.
+:::
+
+::: {.an-card}
+### For students
+
+Examples of how to move from social-science theory to transparent code, validation, and responsible interpretation.
+:::
+:::
+
 ## Featured projects
 
 ::: {.an-grid}
-
 ::: {.an-card}
 ### [DistilBERT for Political Text Classification](political-text-classification.html)
 
 Transformer-based classifier for extremist content in political discussion. **94% F1** on a labeled corpus; full PyTorch + Hugging Face pipeline with data augmentation.
 
-[`Python` `PyTorch` `Transformers` `NLP`]{.tag}
+[Python]{.tag} [PyTorch]{.tag} [Transformers]{.tag} [NLP]{.tag}
 
 [View project →]{.an-card-cta}
 :::
@@ -31,7 +50,7 @@ Transformer-based classifier for extremist content in political discussion. **94
 
 Fine-tuned transformer model for detecting apocalyptic and millenarian rhetoric in online political forums. Used in the dissertation Chapter 2 study of /pol/ reactions to mass-casualty attacks.
 
-[`Python` `Transformers` `Time-series`]{.tag}
+[Python]{.tag} [Transformers]{.tag} [Time-series]{.tag}
 
 [Coming with paper release]{.an-card-cta}
 :::
@@ -41,17 +60,16 @@ Fine-tuned transformer model for detecting apocalyptic and millenarian rhetoric 
 
 Reproducible R + igraph pipelines accompanying the *CTC Sentinel* and GNET reports on multi-node accelerationist networks.
 
-[`R` `igraph` `Networks`]{.tag}
+[R]{.tag} [igraph]{.tag} [Networks]{.tag}
 
 [On GitHub →](https://github.com/alexbnewhouse){.an-card-cta}
 :::
-
 :::
 
 ## Methods stack
 
 | Layer | Tools |
-|---|---|
+|------------------------------------|------------------------------------|
 | Languages | R, Python, SQL |
 | ML / NLP | PyTorch, Hugging Face Transformers, Scikit-Learn, spaCy |
 | Networks | `igraph`, `statnet`, NetworkX |
@@ -61,16 +79,16 @@ Reproducible R + igraph pipelines accompanying the *CTC Sentinel* and GNET repor
 
 ## Datasets & resources
 
-- **Glossary of right-wing terminology, slang, and imagery** — developed at CTEC. Available on request for vetted academic use.
-- **Sainthood corpus** — 11 years of 4chan /pol/ posts annotated for canonization rhetoric (in development; dissertation Ch. 4).
-- **Mass-casualty attacks dataset (OECD, 20 yr)** — derived from ACLED, GTD, RTV; in preparation alongside the dissertation.
+-   **Glossary of right-wing terminology, slang, and imagery** — developed at CTEC. Available on request for vetted academic use.
+-   **Sainthood corpus** — 11 years of 4chan /pol/ posts annotated for canonization rhetoric (in development; dissertation Ch. 4).
+-   **Mass-casualty attacks dataset (OECD, 20 yr)** — derived from ACLED, GTD, RTV; in preparation alongside the dissertation.
 
 ## Industry & policy collaborations
 
-- **Roblox** — detection and mitigation of violent and hateful user networks.
-- **Spectrum Labs** — multilingual datasets of online toxicity across 7 languages.
-- **U.S. House Select Committee on January 6th** — cross-platform investigation, hearing material, and final-report contributions.
-- **Department of Homeland Security** — two TVTP grants ($1.33M total) supporting extremism and gaming research.
+-   **Roblox** — detection and mitigation of violent and hateful user networks.
+-   **Spectrum Labs** — multilingual datasets of online toxicity across 7 languages.
+-   **U.S. House Select Committee on January 6th** — cross-platform investigation, hearing material, and final-report contributions.
+-   **Department of Homeland Security** — two TVTP grants (\$1.33M total) supporting extremism and gaming research.
 
 ## Code & repos
 

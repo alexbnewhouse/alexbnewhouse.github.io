@@ -8,6 +8,17 @@ format:
     toc-location: right
 ---
 
+::: {.contact-panel}
+**Alex Newhouse** is a PhD candidate in Political Science at CU Boulder studying political violence, online extremism, and computational social science.
+
+::: {.action-row}
+[Email](mailto:alex.newhouse@colorado.edu){.btn .btn-primary}
+[Download CV](cv.pdf){.btn .btn-secondary}
+[Google Scholar](https://scholar.google.com/citations?user=NLXqzpoAAAAJ){.btn .btn-secondary}
+[GitHub](https://github.com/alexbnewhouse){.btn .btn-secondary}
+:::
+:::
+
 ## Short bio
 
 Alex Newhouse is a PhD candidate in Political Science at the University of Colorado Boulder, specializing in the computational analysis of political violence and online extremism. His research develops and applies transformer-based NLP, social network analysis, and time-series causal inference to understand how decentralized digital communities translate into offline collective action.
@@ -20,16 +31,33 @@ Alex graduated *summa cum laude* from Middlebury College and holds master's degr
 
 ## Currently
 
-- Drafting Chapter 2 of the dissertation (apocalyptic rhetoric on 4chan).
-- Leading computational analysis of the U.S. humanities workforce at the National Humanities Alliance.
-- Studying polarization and political behavior in large language models (Humane Studies Fellowship).
-- Co-developing harm-mitigation pipelines with gaming-industry partners.
+::: {.an-grid}
+::: {.an-card}
+### Dissertation
+
+Drafting Chapter 2 on apocalyptic rhetoric on 4chan after mass-casualty attacks.
+:::
+
+::: {.an-card}
+### Humanities workforce
+
+Leading computational analysis of U.S. humanities career trajectories at the National Humanities Alliance.
+:::
+
+::: {.an-card}
+### AI and politics
+
+Studying polarization and political behavior in large language models through a Humane Studies Fellowship.
+:::
+:::
 
 ## Contact
 
+::: {.compact-list}
 - **Email:** [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu)
 - **Office:** Department of Political Science, University of Colorado Boulder, Ketchum 106
 - **Mail:** 333 UCB, Boulder, CO 80309
+:::
 
 I respond to email within a few business days. For media inquiries, please include outlet, deadline, and topic in your first message.
 

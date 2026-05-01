@@ -12,7 +12,11 @@ format:
 
 ## Book me to speak
 
-I give talks for academic, policy, and industry audiences on online extremism, AI safety, gaming and political violence, and computational methods. For invitations, contact [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu).
+::: {.contact-panel}
+I give talks for academic, policy, and industry audiences on online extremism, AI safety, gaming and political violence, and computational methods.
+
+For invitations, contact [alex.newhouse@colorado.edu](mailto:alex.newhouse@colorado.edu) with the audience, date, format, and topic.
+:::
 
 ## Conference presentations
 
@@ -30,7 +34,7 @@ I give talks for academic, policy, and industry audiences on online extremism, A
 ## Media coverage
 
 ::: {.press-strip}
-[Washington Post]{} [New York Times]{} [NPR]{} [BBC]{} [Politico]{} [Wired]{} [Bloomberg]{} [Meet the Press]{} [Vice]{} [Axios]{} [FiveThirtyEight]{} [ProPublica]{} [Denver7]{}
+Washington Post · New York Times · NPR · BBC · Politico · Wired · Bloomberg · Meet the Press · Vice · Axios · FiveThirtyEight · ProPublica · Denver7
 :::
 
 ### Radio & podcast

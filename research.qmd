@@ -10,6 +10,35 @@ format:
 
 [Last updated: April 2026]{.last-updated}
 
+::: {.stats-strip}
+::: {.stat-tile}
+[1,093]{.stat-num}
+[Google Scholar citations]{.stat-label}
+:::
+::: {.stat-tile}
+[7]{.stat-num}
+[h-index]{.stat-label}
+:::
+::: {.stat-tile}
+[4]{.stat-num}
+[Peer-reviewed articles]{.stat-label}
+:::
+::: {.stat-tile}
+[3]{.stat-num}
+[Book chapters]{.stat-label}
+:::
+:::
+
+::: {.callout-jmp}
+[Job Market Paper]{.jmp-label}
+
+**"'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks"**
+
+A transformer classifier and intervention-analysis study showing that apocalyptic rhetoric on 4chan /pol/ spikes after mass-casualty terrorist attacks. The paper provides evidence of feedback loops between digital communities and offline violence. Presented at APSA 2025; PDF available on request.
+
+[Email for PDF](mailto:alex.newhouse@colorado.edu?subject=Job%20market%20paper%20request){.btn .btn-primary} [Dissertation overview](dissertation.html){.btn .btn-secondary}
+:::
+
 ## Research Statement
 
 My research addresses a fundamental question in the study of political violence: **How do online communities translate into offline political action?** I argue that digital platforms are not mere communication channels but *constitutive environments* where political identities are formed, grievances are framed, and collective action is coordinated. Understanding political violence in the 21st century requires new theoretical frameworks and computational methods capable of tracing these online-offline dynamics.
@@ -30,52 +59,52 @@ This research agenda makes three interconnected contributions:
 
 ---
 
-## Citation Metrics
-
-**[Google Scholar Profile](https://scholar.google.com/citations?user=NLXqzpoAAAAJ):** 1,093 total citations | **h-index:** 7 | **i10-index:** 5 | **Research Areas:** collective behavior, online communities, extremism, conspiracy theories, video games
-
-**Impact Highlights:**
-
-- Featured in major outlets including Washington Post, NYT, NPR, BBC
-- 276K+ total article views
-- Research cited in policy reports and academic literature
-
----
-
 ## Featured Publications
-
-::: {.callout-note appearance="minimal"}
-**Job Market Paper:** "'The Happening Is Coming': Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks" — presented at APSA 2025. PDF available upon request.
-:::
 
 ### Peer-Reviewed Articles
 
+::: {.paper-card}
 **Newhouse, A. and Kowert, R.** (2025). "Extremist Identity Creation Through Performative Infighting on Steam." [*Frontiers in Psychology*](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2025.1586566/full), August 2025.
 
-Analysis of how extremist identity crystallizes through performative displays of ideological purity and intra-group conflict within gaming platform communities, revealing mechanisms of community cohesion and radicalization without central leadership.
+[Gaming]{.tag} [Extremism]{.tag} [Identity formation]{.tag}
 
+Analysis of how extremist identity crystallizes through performative displays of ideological purity and intra-group conflict within gaming platform communities, revealing mechanisms of community cohesion and radicalization without central leadership.
+:::
+
+::: {.paper-card}
 **Kowert, R., Kilmer, E., and Newhouse, A.** (2024). "Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games." [*Frontiers in Psychology*](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2024.1410620/full), 15:1410620.
+
+[Gaming]{.tag} [Survey research]{.tag} [Online harm]{.tag}
 
 This study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.
 
 - **Funded by:** Department of Homeland Security (DHS # EMW-2022-GR-00036)
 - **Key Finding:** More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized
+:::
 
+::: {.paper-card}
 **Newhouse, A.** (2021). "The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism." [*CTC Sentinel*](https://ctc.westpoint.edu/the-threat-is-the-network-the-multi-node-structure-of-neo-fascist-accelerationism/), 14(5).
+
+[Networks]{.tag} [Accelerationism]{.tag} [Political violence]{.tag}
 
 Since 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.
 
 - **Innovation:** Novel network-based framework for understanding extremist movements
 - **Policy Impact:** Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue
 - **Citations:** Extensively cited in terrorism studies and cited in recent *Studies in Conflict & Terrorism* article
+:::
 
+::: {.paper-card}
 **McGuffie, K. and Newhouse, A.** (2020). "The Radicalization Risks of GPT-3 and Advanced Neural Language Models." [*arXiv preprint*](https://arxiv.org/abs/2009.06807), 2009.06807.
+
+[AI safety]{.tag} [LLM misuse]{.tag} [Extremism]{.tag}
 
 We show GPT-3's strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI's preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.
 
 - **Impact:** Among the first assessments of generative-LM misuse risk; cited in subsequent work on AI and extremism
 - **Media Coverage:** Extensive coverage in *The Register*, *Vice*, and other tech outlets
 - **Policy Influence:** Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment
+:::
 
 ### Book Chapters
 

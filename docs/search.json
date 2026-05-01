@@ -161,18 +161,11 @@
     "text": "Last updated: April 2026"
   },
   {
-    "objectID": "teaching.html#teaching-philosophy",
-    "href": "teaching.html#teaching-philosophy",
+    "objectID": "teaching.html#teaching-at-a-glance",
+    "href": "teaching.html#teaching-at-a-glance",
     "title": "Teaching & Mentorship",
-    "section": "Teaching Philosophy",
-    "text": "Teaching Philosophy\nAs a product of the liberal arts myself—I graduated summa cum laude from Middlebury College—I experienced firsthand how rigorous, small-classroom teaching can transform how students think about the world. That experience profoundly shapes my approach to teaching political science: I believe that quantitative and computational methods become most powerful when students understand why they matter, not just how to execute them.\nMy approach centers on active learning, methodological rigor, and practical application. In quantitative methods courses, I structure lessons around real political science questions—students learn regression not in the abstract but by analyzing actual datasets on topics like political violence, public opinion, or democratic institutions. I develop original tutorials and educational materials (available below) specifically designed to guide students with no prior coding experience through foundational concepts in R, from Greek notation to working directories. I meet students where they are and build their confidence through scaffolded assignments that progressively introduce complexity.\nI also believe strongly in integrating my research into the classroom. My self-designed courses at Middlebury College and the Middlebury Institute of International Studies have all included substantial original research components, where students work with real data and produce their own analyses. In my Post-War Fascism seminar, for example, students developed original research designs on topics in contemporary fascism studies, learning both substantive expertise and methodological skills simultaneously.\nFinally, I am committed to inclusive pedagogy. Quantitative methods can be intimidating for students who see themselves as “not math people.” I work to break down that barrier by connecting statistical reasoning to students’ existing intuitions about politics, by creating a classroom environment where questions are encouraged, and by developing resources—like my tutorial on using AI chatbots to learn R—that give students multiple pathways into the material."
-  },
-  {
-    "objectID": "teaching.html#teaching-impact",
-    "href": "teaching.html#teaching-impact",
-    "title": "Teaching & Mentorship",
-    "section": "Teaching Impact",
-    "text": "Teaching Impact\n52 students mentored | 15 independent projects supervised | 3 courses as instructor of record | 4 courses as teaching assistant | 3 institutions"
+    "section": "Teaching at a glance",
+    "text": "Teaching at a glance\n\n\n52 Students mentored\n\n\n15 Independent projects\n\n\n3 Courses as instructor\n\n\n6 Open R tutorials\n\n\nMy teaching portfolio centers on quantitative methods, computational social science, political violence, and technology & politics. I have taught self-designed courses at Middlebury College and MIIS, served as a TA across the CU Boulder political science curriculum, and built open R tutorials for students with no prior coding background.\n\nBrowse tutorials Teaching statement Sample syllabus"
   },
   {
     "objectID": "teaching.html#courses-taught",
@@ -180,6 +173,13 @@
     "title": "Teaching & Mentorship",
     "section": "Courses Taught",
     "text": "Courses Taught\n\nUniversity of Colorado Boulder\nTeaching Assistant\n\nPSCI 2075: Quantitative Methods (Fall 2025, Spring 2024)\n\nComprehensive introduction to statistical analysis in political science, covering descriptive statistics, hypothesis testing, regression analysis, and research design. Emphasized practical application using R and real political datasets.\n\nPSCI 1101: Introduction to Western Political Thought (Spring 2025)\n\nSurvey of foundational political philosophy from ancient Greece through Enlightenment thinkers, connecting classical ideas to contemporary political challenges.\n\nPSCI 2223: Introduction to Comparative Politics (Fall 2024)\n\nExploration of political systems, institutions, and processes across different countries and regions, with emphasis on democratization, authoritarianism, and political development.\n\nPSCI 1824: Introduction to International Relations (Fall 2023)\n\nComprehensive overview of international relations theory and practice, covering security studies, international political economy, and global governance challenges.\n\n\n\n\nMiddlebury College\nInstructor of Record\n\nINTD 1027: The Study of Post-War Fascism (Winter 2026)\n\nSelf-designed interdisciplinary course (distinct from the January 2021 Online Extremism course below) examining the transformation of fascism and fascist movements following World War II. Covered philosophical and political roots, activism, violence, and research ethics across Italy, Russia, the UK, and the US. Students produced original research designs on topics in contemporary fascism studies.\n\nOnline Extremism (January 2021)\n\nSeparate self-designed intensive winter term course on digital radicalization and online political violence. Integrated computational methods with political science theory, providing students hands-on experience with social media data analysis.\n\n\n\n\nMiddlebury Institute of International Studies\nInstructor of Record\n\nDigital Extremism (Spring 2023)\n\nSelf-designed course examining the intersection of technology and political violence. Covered online radicalization processes, platform dynamics, and content moderation strategies. Students conducted original research on extremist communities across digital platforms."
+  },
+  {
+    "objectID": "teaching.html#teaching-philosophy",
+    "href": "teaching.html#teaching-philosophy",
+    "title": "Teaching & Mentorship",
+    "section": "Teaching Philosophy",
+    "text": "Teaching Philosophy\nAs a product of the liberal arts myself—I graduated summa cum laude from Middlebury College—I experienced firsthand how rigorous, small-classroom teaching can transform how students think about the world. That experience profoundly shapes my approach to teaching political science: I believe that quantitative and computational methods become most powerful when students understand why they matter, not just how to execute them.\nMy approach centers on active learning, methodological rigor, and practical application. In quantitative methods courses, I structure lessons around real political science questions—students learn regression not in the abstract but by analyzing actual datasets on topics like political violence, public opinion, or democratic institutions. I develop original tutorials and educational materials (available below) specifically designed to guide students with no prior coding experience through foundational concepts in R, from Greek notation to working directories. I meet students where they are and build their confidence through scaffolded assignments that progressively introduce complexity.\nI also believe strongly in integrating my research into the classroom. My self-designed courses at Middlebury College and the Middlebury Institute of International Studies have all included substantial original research components, where students work with real data and produce their own analyses. In my Post-War Fascism seminar, for example, students developed original research designs on topics in contemporary fascism studies, learning both substantive expertise and methodological skills simultaneously.\nFinally, I am committed to inclusive pedagogy. Quantitative methods can be intimidating for students who see themselves as “not math people.” I work to break down that barrier by connecting statistical reasoning to students’ existing intuitions about politics, by creating a classroom environment where questions are encouraged, and by developing resources—like my tutorial on using AI chatbots to learn R—that give students multiple pathways into the material."
   },
   {
     "objectID": "teaching.html#courses-prepared-to-teach",
@@ -221,7 +221,7 @@
     "href": "speaking.html#book-me-to-speak",
     "title": "Speaking & Press",
     "section": "Book me to speak",
-    "text": "Book me to speak\nI give talks for academic, policy, and industry audiences on online extremism, AI safety, gaming and political violence, and computational methods. For invitations, contact alex.newhouse@colorado.edu."
+    "text": "Book me to speak\n\nI give talks for academic, policy, and industry audiences on online extremism, AI safety, gaming and political violence, and computational methods.\nFor invitations, contact alex.newhouse@colorado.edu with the audience, date, format, and topic."
   },
   {
     "objectID": "speaking.html#conference-presentations",
@@ -235,7 +235,7 @@
     "href": "speaking.html#media-coverage",
     "title": "Speaking & Press",
     "section": "Media coverage",
-    "text": "Media coverage\n\nWashington Post New York Times NPR BBC Politico Wired Bloomberg Meet the Press Vice Axios FiveThirtyEight ProPublica Denver7\n\n\nRadio & podcast\nNPR’s Morning Edition, All Things Considered, On Point · BBC · Bloomberg Radio.\n\n\nWritten features\nWashington Post · New York Times · Vice · Axios · Politico · FiveThirtyEight · Wired · ProPublica.\n\n\nVideo\nMeet the Press Now · Denver7."
+    "text": "Media coverage\n\nWashington Post · New York Times · NPR · BBC · Politico · Wired · Bloomberg · Meet the Press · Vice · Axios · FiveThirtyEight · ProPublica · Denver7\n\n\nRadio & podcast\nNPR’s Morning Edition, All Things Considered, On Point · BBC · Bloomberg Radio.\n\n\nWritten features\nWashington Post · New York Times · Vice · Axios · Politico · FiveThirtyEight · Wired · ProPublica.\n\n\nVideo\nMeet the Press Now · Denver7."
   },
   {
     "objectID": "speaking.html#public-writing",
@@ -417,14 +417,14 @@
     "href": "dissertation.html",
     "title": "Dissertation",
     "section": "",
-    "text": "My dissertation investigates the mobilizing capacity of the online extreme right — a movement characterized by physical dispersion, organizational fragmentation, and demographic breadth, yet exhibiting a striking level of strategic convergence and aesthetic unity. Drawing on literatures from political science, social psychology, extremism studies, and social computing, I develop and test a theory of how collective mobilization occurs among decentralized online extremist communities despite the absence of formal organizational hierarchy, fluid and transient memberships, and geographic dispersion."
+    "text": "Dissertation: Social Processes and Collective Mobilization in the Online Extreme Right\nI study how decentralized online extremist communities generate collective mobilization despite organizational fragmentation and geographic dispersion. The project combines transformer NLP, network analysis, interrupted time series, and regression with novel datasets from 4chan, Iron March, and mass-casualty attack archives.\n\nDownload prospectus Email about the project"
   },
   {
     "objectID": "dissertation.html#overview",
     "href": "dissertation.html#overview",
     "title": "Dissertation",
-    "section": "",
-    "text": "My dissertation investigates the mobilizing capacity of the online extreme right — a movement characterized by physical dispersion, organizational fragmentation, and demographic breadth, yet exhibiting a striking level of strategic convergence and aesthetic unity. Drawing on literatures from political science, social psychology, extremism studies, and social computing, I develop and test a theory of how collective mobilization occurs among decentralized online extremist communities despite the absence of formal organizational hierarchy, fluid and transient memberships, and geographic dispersion."
+    "section": "Overview",
+    "text": "Overview\nMy dissertation investigates the mobilizing capacity of the online extreme right — a movement characterized by physical dispersion, organizational fragmentation, and demographic breadth, yet exhibiting a striking level of strategic convergence and aesthetic unity. Drawing on literatures from political science, social psychology, extremism studies, and social computing, I develop and test a theory of how collective mobilization occurs among decentralized online extremist communities despite the absence of formal organizational hierarchy, fluid and transient memberships, and geographic dispersion."
   },
   {
     "objectID": "dissertation.html#the-puzzle",
@@ -487,28 +487,28 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Alex Newhouse is a PhD candidate in Political Science at the University of Colorado Boulder, specializing in the computational analysis of political violence and online extremism. His research develops and applies transformer-based NLP, social network analysis, and time-series causal inference to understand how decentralized digital communities translate into offline collective action.\nHe is a Humane Studies Fellow at the Institute for Humane Studies, a Research Fellow with the National Humanities Alliance Humanities Workforce Program, and a Senior Non-Resident Fellow at the Middlebury Institute of International Studies. He previously served as Deputy Director of the Center on Terrorism, Extremism, and Counterterrorism (CTEC) and as an investigative consultant to the U.S. House Select Committee on January 6th.\nHis work has appeared in Frontiers in Psychology, CTC Sentinel, and a series of book chapters on gaming and extremism, and has been featured in the Washington Post, New York Times, NPR, BBC, Politico, Wired, and Meet the Press. He has been Principal Investigator on $1.38M in externally funded grants.\nAlex graduated summa cum laude from Middlebury College and holds master’s degrees from MIIS (Nonproliferation & Terrorism Studies) and Georgia Tech (Analytics)."
+    "text": "Alex Newhouse is a PhD candidate in Political Science at CU Boulder studying political violence, online extremism, and computational social science.\n\nEmail Download CV Google Scholar GitHub"
   },
   {
     "objectID": "about.html#short-bio",
     "href": "about.html#short-bio",
     "title": "About",
-    "section": "",
-    "text": "Alex Newhouse is a PhD candidate in Political Science at the University of Colorado Boulder, specializing in the computational analysis of political violence and online extremism. His research develops and applies transformer-based NLP, social network analysis, and time-series causal inference to understand how decentralized digital communities translate into offline collective action.\nHe is a Humane Studies Fellow at the Institute for Humane Studies, a Research Fellow with the National Humanities Alliance Humanities Workforce Program, and a Senior Non-Resident Fellow at the Middlebury Institute of International Studies. He previously served as Deputy Director of the Center on Terrorism, Extremism, and Counterterrorism (CTEC) and as an investigative consultant to the U.S. House Select Committee on January 6th.\nHis work has appeared in Frontiers in Psychology, CTC Sentinel, and a series of book chapters on gaming and extremism, and has been featured in the Washington Post, New York Times, NPR, BBC, Politico, Wired, and Meet the Press. He has been Principal Investigator on $1.38M in externally funded grants.\nAlex graduated summa cum laude from Middlebury College and holds master’s degrees from MIIS (Nonproliferation & Terrorism Studies) and Georgia Tech (Analytics)."
+    "section": "Short bio",
+    "text": "Short bio\nAlex Newhouse is a PhD candidate in Political Science at the University of Colorado Boulder, specializing in the computational analysis of political violence and online extremism. His research develops and applies transformer-based NLP, social network analysis, and time-series causal inference to understand how decentralized digital communities translate into offline collective action.\nHe is a Humane Studies Fellow at the Institute for Humane Studies, a Research Fellow with the National Humanities Alliance Humanities Workforce Program, and a Senior Non-Resident Fellow at the Middlebury Institute of International Studies. He previously served as Deputy Director of the Center on Terrorism, Extremism, and Counterterrorism (CTEC) and as an investigative consultant to the U.S. House Select Committee on January 6th.\nHis work has appeared in Frontiers in Psychology, CTC Sentinel, and a series of book chapters on gaming and extremism, and has been featured in the Washington Post, New York Times, NPR, BBC, Politico, Wired, and Meet the Press. He has been Principal Investigator on $1.38M in externally funded grants.\nAlex graduated summa cum laude from Middlebury College and holds master’s degrees from MIIS (Nonproliferation & Terrorism Studies) and Georgia Tech (Analytics)."
   },
   {
     "objectID": "about.html#currently",
     "href": "about.html#currently",
     "title": "About",
     "section": "Currently",
-    "text": "Currently\n\nDrafting Chapter 2 of the dissertation (apocalyptic rhetoric on 4chan).\nLeading computational analysis of the U.S. humanities workforce at the National Humanities Alliance.\nStudying polarization and political behavior in large language models (Humane Studies Fellowship).\nCo-developing harm-mitigation pipelines with gaming-industry partners."
+    "text": "Currently\n\n\nDissertation\nDrafting Chapter 2 on apocalyptic rhetoric on 4chan after mass-casualty attacks.\n\n\nHumanities workforce\nLeading computational analysis of U.S. humanities career trajectories at the National Humanities Alliance.\n\n\nAI and politics\nStudying polarization and political behavior in large language models through a Humane Studies Fellowship."
   },
   {
     "objectID": "about.html#contact",
     "href": "about.html#contact",
     "title": "About",
     "section": "Contact",
-    "text": "Contact\n\nEmail: alex.newhouse@colorado.edu\nOffice: Department of Political Science, University of Colorado Boulder, Ketchum 106\nMail: 333 UCB, Boulder, CO 80309\n\nI respond to email within a few business days. For media inquiries, please include outlet, deadline, and topic in your first message."
+    "text": "Contact\n\n\nEmail: alex.newhouse@colorado.edu\nOffice: Department of Political Science, University of Colorado Boulder, Ketchum 106\nMail: 333 UCB, Boulder, CO 80309\n\n\nI respond to email within a few business days. For media inquiries, please include outlet, deadline, and topic in your first message."
   },
   {
     "objectID": "about.html#find-me-elsewhere",
@@ -529,7 +529,7 @@
     "href": "cv.html",
     "title": "Curriculum Vitae",
     "section": "",
-    "text": "alex.newhouse@colorado.edu | Boulder, CO | linkedin.com/in/alexbnewhouse | Google Scholar | ORCID\nDownload CV (PDF)\nLast updated: April 2026"
+    "text": "alex.newhouse@colorado.edu · Boulder, CO · LinkedIn · Google Scholar · ORCID\n\nDownload CV (PDF) Job-market materials Research\nLast updated: April 2026"
   },
   {
     "objectID": "cv.html#education",
@@ -634,35 +634,42 @@
     "href": "index.html",
     "title": "Alex Newhouse",
     "section": "",
-    "text": "On the academic job market · 2027–28\nI study how online communities turn into offline political violence — using transformer-based NLP, social network analysis, and time-series causal inference. I’m a PhD candidate in Political Science at CU Boulder, a Humane Studies Fellow, and a Research Fellow at the National Humanities Alliance. I previously served as Deputy Director of the Center on Terrorism, Extremism & Counterterrorism and as an investigative consultant to the U.S. House Select Committee on January 6th."
+    "text": "On the academic job market · 2027–28\nPhD Candidate · Political Science · CU Boulder\n\n\nI study how online communities turn into offline political violence — using transformer NLP, social network analysis, and time-series causal inference.\n\n\nI’m a computational political scientist, Humane Studies Fellow, and National Humanities Alliance Research Fellow. Before CU Boulder, I served as Deputy Director of the Center on Terrorism, Extremism & Counterterrorism and as an investigative consultant to the U.S. House Select Committee on January 6th.\n\n\nDownload CV Job-market packet Email Google Scholar\nJob market paper\nStart here"
   },
   {
     "objectID": "index.html#what-i-work-on",
     "href": "index.html#what-i-work-on",
     "title": "Alex Newhouse",
     "section": "What I work on",
-    "text": "What I work on\n\n\nResearch\nOnline radicalization, neo-fascist networks, AI safety, and gaming as a site of political socialization.\nSee research →\n\n\nTools & Code\nOpen-source NLP classifiers, datasets, and reproducible pipelines for studying extremist text at scale.\nSee tools →\n\n\nTeaching\nQuantitative methods, computational social science, and original R tutorials used at CU Boulder.\nSee teaching →"
+    "text": "What I work on\n\n\nResearch\nOnline-offline radicalization, neo-fascist networks, AI safety, and gaming as a site of political socialization.\nSee research →\n\n\nTools & Code\nNLP classifiers, datasets, and reproducible pipelines for studying extremist text, networks, and online communities at scale.\nSee tools →\n\n\nTeaching\nQuantitative methods, computational social science, political violence, and original R tutorials for undergraduate methods students.\nSee teaching →\n\n\nFor hiring committees, policy teams, and collaborators"
+  },
+  {
+    "objectID": "index.html#at-a-glance",
+    "href": "index.html#at-a-glance",
+    "title": "Alex Newhouse",
+    "section": "At a glance",
+    "text": "At a glance\n\n\nScholarly identity\nComparative politics and methodology scholar focused on decentralized political violence, platform affordances, and online collective action.\nPolitical violence Extremism Computational social science\n\n\nTechnical depth\nI build production-grade pipelines with transformer models, network analysis, interrupted time series, and large-scale social media data.\nNLP Networks Causal inference\n\n\nApplied impact\nMy work has supported federal investigations, gaming-platform trust & safety, media explainers, and policy-facing extremism research.\nJan. 6 Committee Gaming platforms Policy translation\n\n\nSelected outputs"
   },
   {
     "objectID": "index.html#selected-work",
     "href": "index.html#selected-work",
     "title": "Alex Newhouse",
     "section": "Selected work",
-    "text": "Selected work\n\nNewhouse, A. & Kowert, R. (2025). Extremist Identity Creation Through Performative Infighting on Steam. Frontiers in Psychology.\nKowert, R., Kilmer, E., & Newhouse, A. (2024). Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games. Frontiers in Psychology.\nNewhouse, A. (2021). The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism. CTC Sentinel.\nMcGuffie, K. & Newhouse, A. (2020). The Radicalization Risks of GPT-3 and Advanced Neural Language Models. arXiv.\n\nFull publication list →"
+    "text": "Selected work\n\nNewhouse, A. & Kowert, R. (2025). Extremist Identity Creation Through Performative Infighting on Steam. Frontiers in Psychology.\nKowert, R., Kilmer, E., & Newhouse, A. (2024). Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games. Frontiers in Psychology.\nNewhouse, A. (2021). The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism. CTC Sentinel.\nMcGuffie, K. & Newhouse, A. (2020). The Radicalization Risks of GPT-3 and Advanced Neural Language Models. arXiv.\n\nFull publication list →\nEvidence of reach"
   },
   {
     "objectID": "index.html#impact",
     "href": "index.html#impact",
     "title": "Alex Newhouse",
     "section": "Impact",
-    "text": "Impact\n\n\n$1.38M Funding as PI\n\n\n52 Students mentored\n\n\n276K Article reads\n\n\n3 Courses as instructor"
+    "text": "Impact\n\n\n$1.38M Funding as PI\n\n\n52 Students mentored\n\n\n276K Article reads\n\n\n3 Courses as instructor\n\n\nPublic engagement"
   },
   {
     "objectID": "index.html#featured-in",
     "href": "index.html#featured-in",
     "title": "Alex Newhouse",
     "section": "Featured in",
-    "text": "Featured in\n\nWashington Post New York Times NPR BBC Politico Wired Bloomberg Meet the Press Vice Axios FiveThirtyEight ProPublica"
+    "text": "Featured in\n\nWashington Post · New York Times · NPR · BBC · Politico · Wired · Bloomberg · Meet the Press · Vice · Axios · FiveThirtyEight · ProPublica\n\nFreshness signal"
   },
   {
     "objectID": "index.html#recent",
@@ -1547,18 +1554,11 @@
     "text": "Research Statement\nMy research addresses a fundamental question in the study of political violence: How do online communities translate into offline political action? I argue that digital platforms are not mere communication channels but constitutive environments where political identities are formed, grievances are framed, and collective action is coordinated. Understanding political violence in the 21st century requires new theoretical frameworks and computational methods capable of tracing these online-offline dynamics.\nThis research agenda makes three interconnected contributions:\n\nTheoretical: I develop a framework conceptualizing digital platforms as identity laboratories, coordination infrastructure, and meaning-making spaces—each with distinct implications for mobilization potential.\nMethodological: I combine machine learning, natural language processing, and social network analysis to measure phenomena that traditional methods cannot capture at scale.\nSubstantive: My empirical work reveals how network structures, ideological coherence, and platform affordances shape when online extremism produces real-world violence.\n\nCore Research Questions:\n\nUnder what conditions do online communities produce offline political violence?\nHow do platform characteristics shape radicalization and mobilization processes?\nWhat role do emerging technologies (AI, gaming platforms) play in extremist recruitment?"
   },
   {
-    "objectID": "research.html#citation-metrics",
-    "href": "research.html#citation-metrics",
-    "title": "Research",
-    "section": "Citation Metrics",
-    "text": "Citation Metrics\nGoogle Scholar Profile: 1,093 total citations | h-index: 7 | i10-index: 5 | Research Areas: collective behavior, online communities, extremism, conspiracy theories, video games\nImpact Highlights:\n\nFeatured in major outlets including Washington Post, NYT, NPR, BBC\n276K+ total article views\nResearch cited in policy reports and academic literature"
-  },
-  {
     "objectID": "research.html#featured-publications",
     "href": "research.html#featured-publications",
     "title": "Research",
     "section": "Featured Publications",
-    "text": "Featured Publications\n\n\n\n\n\n\nJob Market Paper: “‘The Happening Is Coming’: Apocalyptic Rhetoric on 4chan Following Mass Casualty Attacks” — presented at APSA 2025. PDF available upon request.\n\n\n\n\nPeer-Reviewed Articles\nNewhouse, A. and Kowert, R. (2025). “Extremist Identity Creation Through Performative Infighting on Steam.” Frontiers in Psychology, August 2025.\nAnalysis of how extremist identity crystallizes through performative displays of ideological purity and intra-group conflict within gaming platform communities, revealing mechanisms of community cohesion and radicalization without central leadership.\nKowert, R., Kilmer, E., and Newhouse, A. (2024). “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 15:1410620.\nThis study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.\n\nFunded by: Department of Homeland Security (DHS # EMW-2022-GR-00036)\nKey Finding: More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized\n\nNewhouse, A. (2021). “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 14(5).\nSince 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.\n\nInnovation: Novel network-based framework for understanding extremist movements\nPolicy Impact: Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue\nCitations: Extensively cited in terrorism studies and cited in recent Studies in Conflict & Terrorism article\n\nMcGuffie, K. and Newhouse, A. (2020). “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv preprint, 2009.06807.\nWe show GPT-3’s strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI’s preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.\n\nImpact: Among the first assessments of generative-LM misuse risk; cited in subsequent work on AI and extremism\nMedia Coverage: Extensive coverage in The Register, Vice, and other tech outlets\nPolicy Influence: Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment\n\n\n\nBook Chapters\nNewhouse, A. and Kowert, R. (2025). “Recruitment and mobilization in digital gaming spaces.” Handbuch Gaming & Rechtsextremismus (ed. Linda Schlegel), October 2025.\nKowert, R. and Newhouse, A. (2025). “Digital games as cultural assets of influence.” The Sociology of Violent Extremism (ed. Suraj Lakhani and Amarnath Amarasingam), May 2025.\nNewhouse, A. and Kowert, R. (2024). “Digital games as vehicles for extremist recruitment and mobilization.” Gaming and Extremism: The Radicalization of Digital Playgrounds (ed. Linda Schlegel and Rachel Kowert), March 2024.\n\n\nUnder Review\nBenton, A., Newhouse, A., and Philips, A. (2025). “Mind the Gap! Policy Dissonance and Financial Markets.”\nNewhouse, A., Kaur, K., and Philips, A. (2025). “Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media.”\n\n\nPublic Writing\nNewhouse, A. (2021). “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” The Conversation. (35,400 views)\nNewhouse, A. (2020). “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” The Conversation. (241,000 views)\nMultiple GNET Research Reports (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement."
+    "text": "Featured Publications\n\nPeer-Reviewed Articles\n\nNewhouse, A. and Kowert, R. (2025). “Extremist Identity Creation Through Performative Infighting on Steam.” Frontiers in Psychology, August 2025.\nGaming Extremism Identity formation\nAnalysis of how extremist identity crystallizes through performative displays of ideological purity and intra-group conflict within gaming platform communities, revealing mechanisms of community cohesion and radicalization without central leadership.\n\n\nKowert, R., Kilmer, E., and Newhouse, A. (2024). “Taking it to the Extreme: Prevalence and Nature of Extremist Sentiment in Games.” Frontiers in Psychology, 15:1410620.\nGaming Survey research Online harm\nThis study addresses the gap in research knowledge around extremist sentiment in games by evaluating prevalence, location, nature, and impact through an online survey of 423 game players, revealing alarmingly high rates of extremist content exposure and normalization within gaming cultures.\n\nFunded by: Department of Homeland Security (DHS # EMW-2022-GR-00036)\nKey Finding: More than half of all game players report experiencing some form of hate, harassment or abuse within gaming spaces, with extremist rhetoric becoming culturally normalized\n\n\n\nNewhouse, A. (2021). “The Threat is the Network: The Multi-Node Structure of Neo-Fascist Accelerationism.” CTC Sentinel, 14(5).\nNetworks Accelerationism Political violence\nSince 2015, the Atomwaffen Division has received bulk academic and media attention in coverage of the neo-fascist accelerationist movement, but evidence reveals it was not the apex of a hierarchy but rather one node in a larger network of violent accelerationists built on membership fluidity, frequent communications, and a shared goal of social destruction.\n\nInnovation: Novel network-based framework for understanding extremist movements\nPolicy Impact: Enforcement against individuals and groups is necessary but not sufficient—focus on specific groups may not tackle the root of the issue\nCitations: Extensively cited in terrorism studies and cited in recent Studies in Conflict & Terrorism article\n\n\n\nMcGuffie, K. and Newhouse, A. (2020). “The Radicalization Risks of GPT-3 and Advanced Neural Language Models.” arXiv preprint, 2009.06807.\nAI safety LLM misuse Extremism\nWe show GPT-3’s strength in generating text that accurately emulates interactive, informational, and influential content that could be utilized for radicalizing individuals into violent far-right extremist ideologies and behaviors. While OpenAI’s preventative measures are strong, the possibility of unregulated copycat technology represents significant risk for large-scale online radicalization and recruitment.\n\nImpact: Among the first assessments of generative-LM misuse risk; cited in subsequent work on AI and extremism\nMedia Coverage: Extensive coverage in The Register, Vice, and other tech outlets\nPolicy Influence: Already in 2020, Kris McGuffie and Alex Newhouse highlighted the potential for abuse of generative language models by assessing GPT-3, revealing significant risk for large-scale online radicalization and recruitment\n\n\n\n\nBook Chapters\nNewhouse, A. and Kowert, R. (2025). “Recruitment and mobilization in digital gaming spaces.” Handbuch Gaming & Rechtsextremismus (ed. Linda Schlegel), October 2025.\nKowert, R. and Newhouse, A. (2025). “Digital games as cultural assets of influence.” The Sociology of Violent Extremism (ed. Suraj Lakhani and Amarnath Amarasingam), May 2025.\nNewhouse, A. and Kowert, R. (2024). “Digital games as vehicles for extremist recruitment and mobilization.” Gaming and Extremism: The Radicalization of Digital Playgrounds (ed. Linda Schlegel and Rachel Kowert), March 2024.\n\n\nUnder Review\nBenton, A., Newhouse, A., and Philips, A. (2025). “Mind the Gap! Policy Dissonance and Financial Markets.”\nNewhouse, A., Kaur, K., and Philips, A. (2025). “Partisan Polarization Shapes Visual Framing of COVID-19 in U.S. Media.”\n\n\nPublic Writing\nNewhouse, A. (2021). “Far-right activists on social media telegraphed violence weeks in advance of the attack on the US Capitol.” The Conversation. (35,400 views)\nNewhouse, A. (2020). “Parler is bringing together mainstream conservatives, anti-Semites and white supremacists as the social media platform attracts millions of Trump supporters.” The Conversation. (241,000 views)\nMultiple GNET Research Reports (2021-2022) on accelerationist movements and extremist narratives, including analysis of the Great Replacement theory and Boogaloo movement."
   },
   {
     "objectID": "research.html#research-areas-methods",
